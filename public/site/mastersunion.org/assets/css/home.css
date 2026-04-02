@@ -1,0 +1,170 @@
+.bluePrintNew {
+    background: var(--black);
+    padding: 60px 0 !important;
+    border-bottom: 1px solid var(--black5);
+
+    .headingWrap.masterleft {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .bannerSubheading {
+      color: var(--grey10);
+    }
+
+    .masterImage video{
+        width: 100%;
+    }
+
+  
+}
+
+
+
+
+.magazineSection {
+    background: linear-gradient(to bottom, var(--white) 50%, var(--black) 45%);
+    position: relative;
+    border-bottom: 1px solid var(--black5);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 45%;
+      /* background: url('https://images.mastersunion.link/uploads/04072025/v1/certifiedSebiVector.svg') no-repeat center top;
+      background-size: cover; */
+    }
+
+    .magazineWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      flex-direction: column;
+    }
+
+    .scratchText {
+      font-size: 30px;
+      line-height: 120%;
+      font-family: var(--go-regular);
+    }
+
+    .magazineHeadingDivi {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .bharatPara {
+      font-size: 16px;
+      font-family: var(--go-regular);
+      line-height: 150%;
+      color: var(--grey17);
+      text-align: center;
+    }
+
+    .mastersText {
+      line-height: 150%;
+      color: var(--grey10);
+      font-family: var(--go-regular);
+    }
+
+    .magazineTabsWrapper {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+      max-width: 78%;
+    }
+
+    .magazineLeft {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      align-items: flex-start;
+      width: 100%;
+      max-width: calc(17% - 10px);
+    }
+
+    .magazineRight {
+      width: 100%;
+      max-width: calc(83% - 10px);
+      border-radius: 12px;
+    }
+
+    .magazineImageWrapper {
+      border: 4px solid var(--grey10);
+      border-radius: 4px;
+      cursor: pointer;
+      max-width: 100%;
+      max-height: 218px;
+      filter: brightness(0.5);
+      transition: all 0.3s ease;
+    }
+
+    .magazineImage {
+      background-size: contain;
+      min-height: 211px;
+    }
+
+    .magazineImageWrapper.active {
+      filter: brightness(1);
+      border-radius: 4px;
+      border: 4px solid transparent;
+      background: linear-gradient(var(--black) 0) padding-box, linear-gradient(90deg, #39B6D8 6.41%, #F7D344 51.47%, #E38330 96.52%) border-box;
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+
+    }
+  }
+
+.convocationright img{
+   border-radius: 8px;
+}
+
+/* Hero Section Image Animation */
+.bgHeroVideoWrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.animationweb,
+.animationmob {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+@media (max-width: 767px) {
+.magazineSection{
+   &::before{
+    content: unset;
+   }
+}
+.font-white.go-HighlightHeading.stickyHead{
+  top: 60px !important;
+}
+
+.impactScroll {
+  .font-white.go-HighlightHeading.stickyHead {
+    top: 52px !important;
+    padding: 10px 0;
+    padding-top: 20px !important;
+  }
+
+}
+
+}
+
+
+
+
+

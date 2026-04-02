@@ -1,0 +1,8 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+track.nopaperforms.com	TRUE	/	FALSE	1999999999	AWSALB	gVmj1qk/Hlfo31mwXUfnRzOg2E+um0HtTI9ugQF5dzPa4WZZE0tCbeTlS6DC0sLtM0EjyDd3vCMw2YFPjfqIdboqEYX8WKcFjxre8egQ2QMZo/FX1GhttGNUJELq
+track.nopaperforms.com	TRUE	/	FALSE	1999999999	AWSALBCORS	gVmj1qk/Hlfo31mwXUfnRzOg2E+um0HtTI9ugQF5dzPa4WZZE0tCbeTlS6DC0sLtM0EjyDd3vCMw2YFPjfqIdboqEYX8WKcFjxre8egQ2QMZo/FX1GhttGNUJELq
+track.nopaperforms.com	TRUE	/	FALSE	1999999999	SameSite	None
+.hindustantimes.com	TRUE	/	FALSE	1999999999	Meta-Geo	IN--GA--CHICALIM
+.hindustantimes.com	TRUE	/	FALSE	1999999999	ht-location	IN
+
