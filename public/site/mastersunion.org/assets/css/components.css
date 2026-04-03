@@ -228,7 +228,7 @@
 .btnWhite.borderGradient {
     border: 1px solid transparent;
     background: linear-gradient(var(--white) 0 0) padding-box,
-        linear-gradient(119deg, #39b6d8 -2.47%, #f7d344 47.29%, #e38330 112.78%) border-box;
+        linear-gradient(119deg, #459EE7 -2.47%, #4040DD 47.29%, #AA1834 112.78%) border-box;
     backdrop-filter: blur(2.5px);
     color: #090909;
 
@@ -241,7 +241,7 @@
 .btnBlack.borderGradient {
     border: 1px solid transparent;
     background: linear-gradient(var(--black) 0 0) padding-box,
-        linear-gradient(119deg, #39b6d8 -2.47%, #f7d344 47.29%, #e38330 112.78%) border-box;
+        linear-gradient(119deg, #459EE7 -2.47%, #4040DD 47.29%, #AA1834 112.78%) border-box;
     backdrop-filter: blur(2.5px);
     color: white;
 
@@ -397,7 +397,7 @@
 
 /* UG Banner Styles */
 .ug-banner {
-    background: #F7D544;
+    background: #4040DD;
     position: fixed;
     top: 0;
     left: 0;

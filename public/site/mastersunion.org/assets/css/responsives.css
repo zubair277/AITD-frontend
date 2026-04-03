@@ -3137,7 +3137,7 @@
   }
 
   .hostel .knowledgeHub .learningLeft .faqtabs .courseName.active {
-    background: linear-gradient(102deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+    background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -3168,7 +3168,7 @@
   }
 
   .studentLifeCampus .knowledgeHub .learningLeft .faqtabs .courseName.active {
-    background: linear-gradient(102deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+    background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -9658,9 +9658,9 @@
 
   /* .mobMenuItem.active .mobMenuItemHeader .heading {
     background: linear-gradient(90deg,
-        #39b6d8 4.12%,
-        #f7d344 52.06%,
-        #e38330 100%);
+        #459EE7 4.12%,
+        #4040DD 52.06%,
+        #AA1834 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -12187,7 +12187,7 @@
   }
 
   .abouttimeline .yearBoxWrap .yearBox.active .leftSection .year {
-    background: linear-gradient(102deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+    background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -15294,7 +15294,7 @@
     height: 4px;
     width: 100%;
     left: 0;
-    background: linear-gradient(102deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+    background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   }
 
   .mobAccordian {
@@ -17504,7 +17504,7 @@
       .ratioBoxi {
         width: 100%;
         padding-left: 12px;
-        border-left: 2px solid #e38330;
+        border-left: 2px solid #AA1834;
         display: flex;
         align-items: center;
         min-height: 84px;
@@ -21029,9 +21029,9 @@
 
     .hostel .knowledgeHub .learningLeft .faqtabs .courseName.active {
       background: linear-gradient(102deg,
-          #39b6d8 0%,
-          #f7d344 50%,
-          #e38330 100%);
+          #459EE7 0%,
+          #4040DD 50%,
+          #AA1834 100%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -21063,9 +21063,9 @@
 
     .studentLifeCampus .knowledgeHub .learningLeft .faqtabs .courseName.active {
       background: linear-gradient(102deg,
-          #39b6d8 0%,
-          #f7d344 50%,
-          #e38330 100%);
+          #459EE7 0%,
+          #4040DD 50%,
+          #AA1834 100%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -26725,7 +26725,7 @@
     .mobHeader .number {
       font-size: 1.25rem;
       background: var(--masters-union-gradients-1,
-          linear-gradient(180deg, #39b6d8 0%, #f7d344 50%, #e38330 100%));
+          linear-gradient(180deg, #459EE7 0%, #4040DD 50%, #AA1834 100%));
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -27553,9 +27553,9 @@
 
     /* .mobMenuItem.active .mobMenuItemHeader .heading {
       background: linear-gradient(90deg,
-          #39b6d8 4.12%,
-          #f7d344 52.06%,
-          #e38330 100%);
+          #459EE7 4.12%,
+          #4040DD 52.06%,
+          #AA1834 100%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -30054,9 +30054,9 @@
 
     .abouttimeline .yearBoxWrap .yearBox.active .leftSection .year {
       background: linear-gradient(102deg,
-          #39b6d8 0%,
-          #f7d344 50%,
-          #e38330 100%);
+          #459EE7 0%,
+          #4040DD 50%,
+          #AA1834 100%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;

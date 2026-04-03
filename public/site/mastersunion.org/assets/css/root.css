@@ -1,7 +1,7 @@
 :root {
-    --yellow: #FAD133;
-    --darkYellow: #C5B64D;
-    --darkYellow: #C5B64D;
+    --yellow: #FFA52C;
+    --darkYellow: #4040DD;
+    --darkYellow: #4040DD;
     --white: #ffffff;
     --white3: #FAFAFA;
     --white2: #e6e6e6;
@@ -42,24 +42,24 @@
     --blurBG:rgba(255, 255, 255, 0.20);
 
 
-    --red: #9B0909;
-    --red1: #B2212A;
-    --warning: #DC0000;
-    --gradient: linear-gradient(90deg, #39B6D8 6.41%, #F7D344 51.47%, #E38330 96.52%);
-    --gradient2: linear-gradient(90deg, #39B6D8 6.41%, #F7D344 51.47%);
+    --red: #AA1834;
+    --red1: #AA1834;
+    --warning: #AA1834;
+    --gradient: linear-gradient(90deg, #459EE7 0%, #00006B 100%);
+    --gradient2: linear-gradient(90deg, #459EE7 0%, #4040DD 100%);
 
-    --orange: #eca63919;
-    --darkOrange: #E38330;
+    --orange: #FFA52C19;
+    --darkOrange: #FFA52C;
 
-    --green: #8cbe5019;
-    --darkGreen: #648937;
-    --green2: #1C7C54;
+    --green: #6E727619;
+    --darkGreen: #6E7276;
+    --green2: #6E7276;
 
-    --darkYellow: #E5BE32;
+    --darkYellow: #4040DD;
 
-    --blue: #5bbcbd19;
-    --darkBlue: #399394;
-    --newYellow: #febe00;
+    --blue: #459EE719;
+    --darkBlue: #00006B;
+    --newYellow: #FFA52C;
     --newWhite: #f1f1f1;
     --lowYellow: #FEFCF5;
 }
@@ -401,7 +401,7 @@ select {
 }
 
 .gradientText {
-    background: linear-gradient(102deg, #39B6D8 0%, #F7D344 50%, #E38330 100%);
+    background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -414,7 +414,7 @@ select {
 }
 
 .gradientTextMenaLanding {
-    background: linear-gradient(102deg, #39B6D8 0%, #F7D344 50%, #E38330 100%);
+    background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -812,7 +812,7 @@ button.BlackBtn {
 }
 
 .gradientMuBg {
-    background: url('https://files.mastersunion.link/resources/svg/gradientBgMuLogo.svg'), linear-gradient(125deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+    background: url('https://files.mastersunion.link/resources/svg/gradientBgMuLogo.svg'), linear-gradient(125deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
     padding: 40px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -854,7 +854,7 @@ button.BlackBtn {
 
 .gradientButton::before {
     content: "";
-    background: linear-gradient(102deg, #39B6D8 0%, #F7D344 50%, #E38330 100%);
+    background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
     position: absolute;
     /* top: -1px;
     left: -1px;
@@ -1248,6 +1248,6 @@ video.video-element {
 }
 
 .yellowGradient {
-    color: #E38330;
+    color: #AA1834;
     font-family: 'go-semibold';
 }

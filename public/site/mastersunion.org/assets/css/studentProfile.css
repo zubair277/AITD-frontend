@@ -402,7 +402,7 @@
     padding: 8px 10px;
     align-items: center;
     gap: 6px;
-    background: #E38330;
+    background: #AA1834;
     color: var(--white);
     font-size: 10px;
     line-height: 120%;
@@ -433,7 +433,7 @@
 
 
   .secondPosition .positionBtn {
-    background: #e38330;
+    background: #AA1834;
   }
   .profilePara.aboutPara{
     font-size: 14px;
@@ -682,9 +682,9 @@
 
   .industryImmersionTech .cardContentHeading {
     background: linear-gradient(92deg,
-        #39b6d8 7.6%,
-        #f7d344 53.43%,
-        #e38330 99.26%);
+        #459EE7 7.6%,
+        #4040DD 53.43%,
+        #AA1834 99.26%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1015,7 +1015,7 @@ padding-top: 16px;
     border-bottom: 3px solid transparent;
     padding: 20px;
     background: linear-gradient(var(--white) 0 0) padding-box,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%) border-box;
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%) border-box;
   }
 
   .gradientEffectBlack {
@@ -1023,7 +1023,7 @@ padding-top: 16px;
     padding: 30px;
     border-bottom: 3px solid transparent;
     background: linear-gradient(var(--black) 0 0) padding-box,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%) border-box;
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%) border-box;
   }
 
 
@@ -1234,7 +1234,7 @@ padding-top: 16px;
     font-weight: 400;
     line-height: 103%;
     background: var(--Linear,
-        linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+        linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1957,7 +1957,7 @@ padding-top: 16px;
 input:focus {
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(91.25deg, #39B5D7 1.8%, #F7D544 50.99%, #E38330 99.75%);
+  border-image-source: linear-gradient(91.25deg, #459EE7 1.8%, #4040DD 50.99%, #AA1834 99.75%);
   border-radius: 4px;
   color: black;
 }
@@ -1965,7 +1965,7 @@ input:focus {
 textarea:focus {
   border: 1px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(91.25deg, #39B5D7 1.8%, #F7D544 50.99%, #E38330 99.75%);
+  border-image-source: linear-gradient(91.25deg, #459EE7 1.8%, #4040DD 50.99%, #AA1834 99.75%);
   border-radius: 4px;
   color: black;
 }
@@ -2073,7 +2073,7 @@ textarea:focus {
 }
 
 .addAnother {
-  color: #E38330;
+  color: #AA1834;
   font-family: var(--go-medium);
   font-size: 12px;
   font-style: normal;

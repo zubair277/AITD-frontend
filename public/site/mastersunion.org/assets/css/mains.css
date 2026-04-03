@@ -455,7 +455,7 @@ header:hover {
   }
 
   .yellowBannerParent {
-    background: #f7d344;
+    background: #4040DD;
     overflow: hidden;
 
     .diviBanner {
@@ -855,9 +855,9 @@ header:hover {
 
   .reachoutBreatherSection {
     background: linear-gradient(96deg,
-        #39b5d7 -31.01%,
-        #f7d544 49.05%,
-        #e38330 109.58%);
+        #459EE7 -31.01%,
+        #4040DD 49.05%,
+        #AA1834 109.58%);
     padding: 60px 0 !important;
 
     .reachoutBreatherWrapper {
@@ -1054,9 +1054,9 @@ header:hover {
 
   .podcastSection {
     background: linear-gradient(125deg,
-        #39b6d8 -20%,
-        #f7d344 50%,
-        #e38330 100%);
+        #459EE7 -20%,
+        #4040DD 50%,
+        #AA1834 100%);
     padding: 40px 0;
 
     .podcastLeft a {
@@ -1126,7 +1126,7 @@ header:hover {
 
   .podcastSection.redefining {
     background: url("https://images.mastersunion.link/uploads/25072025/v1/Vector1351.svg") no-repeat,
-      linear-gradient(125deg, #39b6d8 -20%, #f7d344 50%, #e38330 100%);
+      linear-gradient(125deg, #459EE7 -20%, #4040DD 50%, #AA1834 100%);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -1520,7 +1520,7 @@ header:hover {
     .ratioBoxi {
       width: 100%;
       padding-left: 24px;
-      border-left: 2px solid #e38330;
+      border-left: 2px solid #AA1834;
       display: flex;
       align-items: center;
       min-height: 84px;
@@ -3792,7 +3792,7 @@ input[type="file"]:focus {
   justify-content: space-between;
   align-items: center;
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -4097,7 +4097,7 @@ input[type="file"]:focus {
 
 .gradient-Text {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   font-family: "go-medium";
   -webkit-background-clip: text;
@@ -4116,7 +4116,7 @@ input[type="file"]:focus {
   gap: 6px;
   align-items: center;
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -4578,9 +4578,9 @@ header.menuActive {
 
 .topLinks:hover {
   background: linear-gradient(92deg,
-      #39b6d8 -9.11%,
-      #f7d344 45.44%,
-      #e38330 100%);
+      #459EE7 -9.11%,
+      #4040DD 45.44%,
+      #AA1834 100%);
   background-clip: text;
   -webkit-background-clip: text;
   font-family: "go-semibold";
@@ -4589,9 +4589,9 @@ header.menuActive {
 
 .topLinks.active {
   background: linear-gradient(92deg,
-      #39b6d8 -9.11%,
-      #f7d344 45.44%,
-      #e38330 100%);
+      #459EE7 -9.11%,
+      #4040DD 45.44%,
+      #AA1834 100%);
   background-clip: text;
   -webkit-background-clip: text;
   font-family: "go-semibold";
@@ -4606,7 +4606,7 @@ header.menuActive {
   height: 1px;
   z-index: -1;
   width: 90%;
-  background: linear-gradient(102deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   opacity: 0.7;
 }
 
@@ -4619,9 +4619,9 @@ header.menuActive {
 /* .megaLink.active,
 .megaLink:hover {
   background: linear-gradient(92deg,
-      #39b6d8 -9.11%,
-      #f7d344 45.44%,
-      #e38330 100%);
+      #459EE7 -9.11%,
+      #4040DD 45.44%,
+      #AA1834 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -4646,9 +4646,9 @@ header.menuActive {
 
 /* .megaLink:active {
   background: linear-gradient(92deg,
-      #39b6d8 -9.11%,
-      #f7d344 45.44%,
-      #e38330 100%);
+      #459EE7 -9.11%,
+      #4040DD 45.44%,
+      #AA1834 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -4746,7 +4746,7 @@ header.menuActive {
   display: block;
   max-width: max-content;
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -4800,7 +4800,7 @@ header.menuActive {
   align-items: center;
   border: 2px solid transparent;
   background: linear-gradient(var(--black) 0 0) padding-box,
-    linear-gradient(119deg, #39b6d8 -19.47%, #f7d344 47.29%, #e38330 112.78%) border-box;
+    linear-gradient(119deg, #459EE7 -19.47%, #4040DD 47.29%, #AA1834 112.78%) border-box;
 }
 
 .Quetioncard .gradientCard::after {
@@ -4995,9 +4995,9 @@ section {
 
 .socialLinks:hover {
   background: linear-gradient(92deg,
-      #39b6d8 -9.11%,
-      #f7d344 45.44%,
-      #e38330 100%);
+      #459EE7 -9.11%,
+      #4040DD 45.44%,
+      #AA1834 100%);
   background-clip: text;
   -webkit-background-clip: text;
   font-family: "go-semibold";
@@ -5133,7 +5133,7 @@ section {
   font-size: 0.875rem;
   line-height: 24px;
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 7.41%, #f7d344 21.47%, #e38330 45.52%));
+      linear-gradient(90deg, #459EE7 7.41%, #4040DD 21.47%, #AA1834 45.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -5285,7 +5285,7 @@ section {
   line-height: 150%;
   text-transform: capitalize;
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -5420,9 +5420,9 @@ section {
 
 .instaCard span {
   background: linear-gradient(96deg,
-      #39b6d8 9.01%,
-      #f7d344 34.6%,
-      #e38330 60.19%);
+      #459EE7 9.01%,
+      #4040DD 34.6%,
+      #AA1834 60.19%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -5443,15 +5443,15 @@ section {
   border-radius: 12px;
   width: 100%;
   min-width: 454px;
-  border: 1px solid linear-gradient(96deg, #39b6d8 9.01%, #f7d344 34.6%, #e38330 60.19%);
+  border: 1px solid linear-gradient(96deg, #459EE7 9.01%, #4040DD 34.6%, #AA1834 60.19%);
 }
 
 .outSideCard .header {
   padding: 13px 10px;
   background: linear-gradient(96deg,
-      #39b6d8 9.01%,
-      #f7d344 34.6%,
-      #e38330 60.19%);
+      #459EE7 9.01%,
+      #4040DD 34.6%,
+      #AA1834 60.19%);
   width: 100%;
 }
 
@@ -5489,9 +5489,9 @@ section {
 
 .outSideCard span {
   background: linear-gradient(96deg,
-      #39b6d8 9.01%,
-      #f7d344 34.6%,
-      #e38330 60.19%);
+      #459EE7 9.01%,
+      #4040DD 34.6%,
+      #AA1834 60.19%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -5786,7 +5786,7 @@ section {
   top: 25px;
   width: 100%;
   height: 5px;
-  background: #fad133;
+  background: #FFA52C;
   z-index: 1;
 }
 
@@ -5987,7 +5987,7 @@ section {
 }
 
 .navigationWrapper li.active {
-  background: linear-gradient(102deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -6198,7 +6198,7 @@ section {
 }
 
 .navigationWrapper li:hover {
-  background: linear-gradient(102deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -6364,7 +6364,7 @@ section {
 
 .Tag.black p {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -6380,7 +6380,7 @@ section {
 
 .Tag.gradient p {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -6491,9 +6491,9 @@ section {
   padding: 45px 50px;
   border-radius: 16px;
   background: linear-gradient(119deg,
-      #39b6d8 -19.47%,
-      #f7d344 47.29%,
-      #e38330 112.78%);
+      #459EE7 -19.47%,
+      #4040DD 47.29%,
+      #AA1834 112.78%);
   background-size: cover;
   max-width: 47.45%;
   min-width: 47.45%;
@@ -7309,7 +7309,7 @@ img.playsvg {
 
 .circleArrow::before {
   content: "";
-  background: linear-gradient(102deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   border: none;
   position: absolute;
   left: calc(0% - 1px);
@@ -7508,7 +7508,7 @@ img.playsvg {
   width: 100%;
   padding: 80px 20px 25px;
   color: var(--black);
-  background: linear-gradient(204deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(204deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
 
   display: flex;
   align-items: flex-start;
@@ -7578,9 +7578,9 @@ img.playsvg {
 
 /* .visitHeding:hover {
   background: linear-gradient(93deg,
-      #39b6d8 3.94%,
-      #f7d344 49.4%,
-      #e38330 94.86%);
+      #459EE7 3.94%,
+      #4040DD 49.4%,
+      #AA1834 94.86%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -7608,7 +7608,7 @@ img.playsvg {
   bottom: 0;
   height: 3px;
   width: 0;
-  background: linear-gradient(138deg, #39b5d7 0%, #f7d544 50.22%, #e38330 100%);
+  background: linear-gradient(138deg, #459EE7 0%, #4040DD 50.22%, #AA1834 100%);
   border-radius: 4px;
   transition: 0.4s;
 }
@@ -7976,14 +7976,14 @@ footer .addressWrapper .address.mailaddressfooter {
 .link-red-gradient {
   text-decoration: underline !important;
   background: var(--Linear,
-      linear-gradient(90deg, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .link-red {
-  color: #e38330 !important;
+  color: #AA1834 !important;
   text-decoration: underline !important;
   cursor: pointer;
   font-family: "go-medium";
@@ -8795,9 +8795,9 @@ footer .addressWrapper .address.mailaddressfooter {
 
 .rateBox h5 span {
   background: linear-gradient(101deg,
-      #39b6d8 -9.06%,
-      #f7d344 42.57%,
-      #e38330 94.19%);
+      #459EE7 -9.06%,
+      #4040DD 42.57%,
+      #AA1834 94.19%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -9203,7 +9203,7 @@ footer .addressWrapper .address.mailaddressfooter {
 
 .studentPercentageBox h4 span {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -10286,9 +10286,9 @@ input:focus {
   font-family: "go-medium";
   line-height: 140%;
   background: linear-gradient(68deg,
-      #39b6d8 19.48%,
-      #f7d344 50.16%,
-      #e38330 80.83%);
+      #459EE7 19.48%,
+      #4040DD 50.16%,
+      #AA1834 80.83%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -10627,9 +10627,9 @@ input:focus {
 .highlightsec .list.active {
   border-bottom: 5px solid yellow;
   background: linear-gradient(92deg,
-      #39b6d8 7.6%,
-      #f7d344 53.43%,
-      #e38330 99.26%);
+      #459EE7 7.6%,
+      #4040DD 53.43%,
+      #AA1834 99.26%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -10683,9 +10683,9 @@ input:focus {
 /* .seondtabs .list:hover, */
 .seondtabs .list.active {
   background: linear-gradient(92deg,
-      #39b6d8 7.6%,
-      #f7d344 53.43%,
-      #e38330 99.26%);
+      #459EE7 7.6%,
+      #4040DD 53.43%,
+      #AA1834 99.26%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -10808,7 +10808,7 @@ input:focus {
 
 .highlightBanner span {
   background: var(--masters-union-gradients-1,
-      linear-gradient(162deg, #39b6d8 0%, #f7d344 50%, #e38330 100%));
+      linear-gradient(162deg, #459EE7 0%, #4040DD 50%, #AA1834 100%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -10968,7 +10968,7 @@ input:focus {
   justify-content: center;
   align-items: flex-start;
   border-radius: 16px;
-  /* border: 1px solid #39B6D8; */
+  /* border: 1px solid #459EE7; */
   background: var(--black3);
   top: 75%;
   left: 0;
@@ -11012,7 +11012,7 @@ input:focus {
 
 .investimgbox .investimgboxWrap::before {
   content: "";
-  background: linear-gradient(102deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   position: absolute;
   top: -1px;
   left: -1px;
@@ -11055,7 +11055,7 @@ input:focus {
   line-height: 120%;
   letter-spacing: 0.16px;
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -11306,9 +11306,9 @@ input:focus {
   width: 40%;
   height: 100%;
   background: linear-gradient(92deg,
-      #39b5d7 -4%,
-      #f7d544 51.91%,
-      #e38330 107.32%);
+      #459EE7 -4%,
+      #4040DD 51.91%,
+      #AA1834 107.32%);
 }
 
 .headText {
@@ -11411,7 +11411,7 @@ input:focus {
   position: absolute;
   left: 0;
   top: 0;
-  background: linear-gradient(181deg, #f7d544 9.5%, #e38330 65.09%);
+  background: linear-gradient(181deg, #4040DD 9.5%, #AA1834 65.09%);
   height: 0%;
   width: 100%;
   transition: 0.2s ease-in;
@@ -11453,7 +11453,7 @@ input:focus {
   font-family: "go-medium";
   line-height: 130%;
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -11550,7 +11550,7 @@ input:focus {
 
 .gradientMuBg.feestructure {
   background: url("https://files.mastersunion.link/resources/svg/gradientBgMuLogo.svg"),
-    linear-gradient(125deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+    linear-gradient(125deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   padding: 40px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12115,9 +12115,9 @@ input:focus {
 
 .counting span {
   background: linear-gradient(114deg,
-      #39b6d8 17.86%,
-      #f7d344 80.86%,
-      #e38330 93.85%);
+      #459EE7 17.86%,
+      #4040DD 80.86%,
+      #AA1834 93.85%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -12677,7 +12677,7 @@ input:focus {
 }
 
 .joinOurTeam {
-  background: linear-gradient(125deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(125deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   padding: 40px 0;
 }
 
@@ -13280,7 +13280,7 @@ input:focus {
   justify-content: flex-start;
   border-radius: 12px;
   overflow: hidden;
-  background: linear-gradient(335deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(335deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
 }
 
 .clubActivityBox .right .detailBox {
@@ -13544,9 +13544,9 @@ input:focus {
   width: 100%;
   height: 1px;
   background: linear-gradient(90deg,
-      #39b6d8 6.41%,
-      #f7d344 51.47%,
-      #e38330 96.52%);
+      #459EE7 6.41%,
+      #4040DD 51.47%,
+      #AA1834 96.52%);
 }
 
 .gradientVector {
@@ -13707,7 +13707,7 @@ input:focus {
   content: "";
   width: 4px;
   max-height: 363%;
-  background: linear-gradient(180deg, #f7d344, #e38330);
+  background: linear-gradient(180deg, #4040DD, #AA1834);
   position: absolute;
   left: calc(33% - 0px);
   z-index: 1;
@@ -14048,7 +14048,7 @@ input:focus {
 
 .pathwrapper .text-64 span {
   background: var(--masters-union-gradients-1,
-      linear-gradient(180deg, #39b6d8 0%, #f7d344 50%, #e38330 100%));
+      linear-gradient(180deg, #459EE7 0%, #4040DD 50%, #AA1834 100%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -14144,9 +14144,9 @@ input:focus {
 
 .becomeamaster .circles .semi-c.active {
   background: linear-gradient(154deg,
-      #39b6d8 0%,
-      #f7d344 60.47%,
-      #e38330 131.52%);
+      #459EE7 0%,
+      #4040DD 60.47%,
+      #AA1834 131.52%);
 }
 
 .becomeamaster .circles .semi-c {
@@ -14372,7 +14372,7 @@ input:focus {
   bottom: 1px;
   height: 4px;
   width: 99%;
-  background: linear-gradient(102deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   border-radius: 53px;
 }
 
@@ -14686,9 +14686,9 @@ input:focus {
 .engageablist li.active,
 .engageablist li:hover {
   background: linear-gradient(93deg,
-      #39b6d8 5.54%,
-      #f7d344 50.34%,
-      #e38330 95.14%);
+      #459EE7 5.54%,
+      #4040DD 50.34%,
+      #AA1834 95.14%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -14923,13 +14923,13 @@ input:focus {
 }
 
 .timelineouter.active .grey-border {
-  background: linear-gradient(91deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(91deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   width: 150px;
 }
 
 .timelineouter.active p:first-child {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -15145,7 +15145,7 @@ body {
 }
 
 .cityWrapper .clubbox .text-64 span {
-  background: linear-gradient(180deg, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(180deg, #4040DD 50%, #AA1834 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -15472,7 +15472,7 @@ body {
   letter-spacing: 1px;
   text-transform: capitalize;
 
-  background: linear-gradient(180deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(180deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -15543,7 +15543,7 @@ body {
 }
 
 .countValuePgp h4 span {
-  background: linear-gradient(90deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(90deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -15551,7 +15551,7 @@ body {
 }
 
 .newMapCity h4 {
-  background: linear-gradient(90deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(90deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -16229,9 +16229,9 @@ body {
   position: absolute;
   left: 0;
   background: linear-gradient(90deg,
-      #39b6d8 1.48%,
-      #f7d344 49.34%,
-      #e38330 97.21%);
+      #459EE7 1.48%,
+      #4040DD 49.34%,
+      #AA1834 97.21%);
 }
 
 .ourTeam {
@@ -17575,9 +17575,9 @@ body {
   bottom: 0;
   left: 19%;
   background: linear-gradient(92deg,
-      #39b5d7 -4%,
-      #f7d544 51.91%,
-      #e38330 107.32%);
+      #459EE7 -4%,
+      #4040DD 51.91%,
+      #AA1834 107.32%);
 }
 
 .studentBox.active::after {
@@ -17766,7 +17766,7 @@ body {
 }
 
 .stepOuter {
-  background: linear-gradient(102deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   border-radius: 50%;
   height: 61px;
   width: 61px;
@@ -17803,7 +17803,7 @@ body {
 
 .step:first-child::before {
   height: 2px;
-  background: linear-gradient(102deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
 }
 
 .font-red {
@@ -17937,7 +17937,7 @@ body {
   content: "";
   width: 12px;
   height: 12px;
-  background: linear-gradient(180deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(180deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   position: absolute;
   top: 4px;
   left: 4px;
@@ -17999,7 +17999,7 @@ body {
   bottom: 0;
   left: 0;
   height: 3px;
-  background: linear-gradient(90deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(90deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
 }
 
 .muAfterHomepage .eventsMU .eventSlide:hover .font-16 {
@@ -18359,7 +18359,7 @@ body {
 }
 
 .eventSection .pagelocation li.active {
-  background: linear-gradient(102deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -18805,7 +18805,7 @@ body {
 .leftWrapBox li.active {
   font-family: "go-semibold";
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -18929,7 +18929,7 @@ body {
 
 .gradientTxtBtn {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -19406,7 +19406,7 @@ body {
 
 .educationGroup:hover p {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -19532,9 +19532,9 @@ body {
   font-size: 0.813rem;
   font-family: "go-regular";
   background: linear-gradient(90deg,
-      #39b6d8 6.41%,
-      #f7d344 51.47%,
-      #e38330 96.52%);
+      #459EE7 6.41%,
+      #4040DD 51.47%,
+      #AA1834 96.52%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -19609,9 +19609,9 @@ body {
 
 .classEffect:hover::before {
   background: linear-gradient(96deg,
-      #39b6d8 6.41%,
-      #f7d344 51.47%,
-      #e38330 96.52%) !important;
+      #459EE7 6.41%,
+      #4040DD 51.47%,
+      #AA1834 96.52%) !important;
   transition: 0.4s ease-in;
   height: 110%;
 }
@@ -19713,7 +19713,7 @@ body {
   line-height: 171%;
   margin-top: 40px;
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -19890,7 +19890,7 @@ body {
 
 .overLayDetail .weightage .heading {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -20850,7 +20850,7 @@ body {
 .alumniSpotlightWrap .alumniheroLeft .top h2 {
   font: 1.5rem "go-bold";
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -21297,7 +21297,7 @@ body {
 .inclasstabs li:hover .gradientTxt,
 .inclasstabs li.active .gradientTxt {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -21349,9 +21349,9 @@ body {
 
 .newtabs li.active {
   background: linear-gradient(93deg,
-      #39b6d8 5.54%,
-      #f7d344 50.34%,
-      #e38330 95.14%);
+      #459EE7 5.54%,
+      #4040DD 50.34%,
+      #AA1834 95.14%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -21402,7 +21402,7 @@ body {
 .programtabLists li img {
   border-radius: 50%;
   background: linear-gradient(var(--black) 0 0) padding-box,
-    linear-gradient(119deg, #39b6d8 -19.47%, #f7d344 47.29%, #e38330 112.78%) border-box;
+    linear-gradient(119deg, #459EE7 -19.47%, #4040DD 47.29%, #AA1834 112.78%) border-box;
   border: transparent;
   transition: 0.4s ease-in-out;
 }
@@ -21426,7 +21426,7 @@ body {
 
 .programtabLists li.active h3 {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -21512,7 +21512,7 @@ body {
 
 .gradientinlineText {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -22018,7 +22018,7 @@ body {
 
 .honorContentBox p {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 -3.85%, #f7d344 50%, #e38330 103.85%));
+      linear-gradient(90deg, #459EE7 -3.85%, #4040DD 50%, #AA1834 103.85%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -22167,7 +22167,7 @@ body {
 
 .getprepped {
   background: url(https://files.mastersunion.link/media/svg/gradientBackground.svg),
-    linear-gradient(125deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+    linear-gradient(125deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -22247,9 +22247,9 @@ body {
 .domainWrapper .navigationWrapper.upcomingNew-Events ul li.active::after {
   content: "";
   background: linear-gradient(92deg,
-      #39b5d7 -4%,
-      #f7d544 51.91%,
-      #e38330 107.32%);
+      #459EE7 -4%,
+      #4040DD 51.91%,
+      #AA1834 107.32%);
   position: absolute;
   left: 0;
   width: 100%;
@@ -23296,7 +23296,7 @@ body {
   font: 1.5rem "go-bold";
   line-height: 130%;
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -23318,7 +23318,7 @@ body {
 
 .LinkButton {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -23343,7 +23343,7 @@ body {
 }
 
 .gradientBold {
-  background: linear-gradient(93deg, #39b6d8 5.94%, #f7d344 72.4%, #e38330 105.86%);
+  background: linear-gradient(93deg, #459EE7 5.94%, #4040DD 72.4%, #AA1834 105.86%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -23376,7 +23376,7 @@ body {
 
 .blackTag p {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -23676,7 +23676,7 @@ body {
 
 .tab-link.active {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -23915,7 +23915,7 @@ body {
 
 .newGradRadio:checked+.newEventLabel {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -23992,7 +23992,7 @@ body {
 
 .rgbGradient {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   font: 12px/14.4px "go-medium";
   -webkit-background-clip: text;
@@ -24712,9 +24712,9 @@ body {
 
 .verifyCertificate .deg-nav th p {
   background: linear-gradient(90deg,
-      #39b6d8 6.41%,
-      #f7d344 51.47%,
-      #e38330 96.52%);
+      #459EE7 6.41%,
+      #4040DD 51.47%,
+      #AA1834 96.52%);
   font-family: var(--go-regular);
   background-clip: text;
   -webkit-background-clip: text;
@@ -25483,7 +25483,7 @@ body {
 
 .attentWebinar .adCardsWrapper .adCard .adCardDetail .eventTag span {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -25570,7 +25570,7 @@ body {
 
 .adPage .adWrapper .adCardsWrapper .adCard .adCardDetail .eventTag span {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -25622,7 +25622,7 @@ body {
 
 .adPageEvents .eventTag span {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -25698,7 +25698,7 @@ body {
 }
 
 .meetYourAlumini .pagelocation .active {
-  background: linear-gradient(102deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -26590,7 +26590,7 @@ body {
 
 .blackboxBtnHeading span {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -28048,9 +28048,9 @@ body {
 
 .ugIntersectProgramme .titleHeadingTag {
   background: linear-gradient(90deg,
-      #39b6d8 6.41%,
-      #f7d344 51.47%,
-      #e38330 96.52%);
+      #459EE7 6.41%,
+      #4040DD 51.47%,
+      #AA1834 96.52%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -28168,9 +28168,9 @@ body {
 
 .ugIntersectProgramme .gradientText {
   background: linear-gradient(90deg,
-      #39b6d8 -11.91%,
-      #f7d344 43.92%,
-      #e38330 99.74%);
+      #459EE7 -11.91%,
+      #4040DD 43.92%,
+      #AA1834 99.74%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -28297,9 +28297,9 @@ body {
 
 .ugIntersectProgramme .agendaIntersectPage.fellowshipVideo {
   background: linear-gradient(96deg,
-      #39b6d8 -30.59%,
-      #f7d344 17.26%,
-      #e38330 113.11%);
+      #459EE7 -30.59%,
+      #4040DD 17.26%,
+      #AA1834 113.11%);
 }
 
 .ugIntersectProgramme .agendaIntersectPage .fellowshipVideoWrapper {
@@ -28706,9 +28706,9 @@ body {
 
 .ugPastIntersect .speakerPast .titleHeadingLite {
   background-image: linear-gradient(90deg,
-      #39b6d8 6.41%,
-      #f7d344 51.47%,
-      #e38330 96.52%);
+      #459EE7 6.41%,
+      #4040DD 51.47%,
+      #AA1834 96.52%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -29397,7 +29397,7 @@ body {
 
 .fresherBanner .fresherBannerWrap span {
   background: var(--masters-union-gradients-1,
-      linear-gradient(162deg, #39b6d8 0%, #f7d344 50%, #e38330 100%));
+      linear-gradient(162deg, #459EE7 0%, #4040DD 50%, #AA1834 100%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -29778,9 +29778,9 @@ body {
 
 .viewAgendaBtn {
   background: linear-gradient(90deg,
-      #39b6d8 6.41%,
-      #f7d344 51.47%,
-      #e38330 96.52%);
+      #459EE7 6.41%,
+      #4040DD 51.47%,
+      #AA1834 96.52%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -30114,7 +30114,7 @@ body {
 
   .tangiblelabelChild:hover .labelChildPara {
     background: var(--Linear,
-        linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+        linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 0.4s ease-in-out;
@@ -30355,10 +30355,10 @@ body {
   position: relative;
   border-left: none;
   background: linear-gradient(var(--white), var(--white)) padding-box,
-    linear-gradient(180deg, #39b5d7, #f7d544, #e38330) border-box;
+    linear-gradient(180deg, #459EE7, #4040DD, #AA1834) border-box;
   border-left: 5px solid transparent;
   border-radius: 8px;
-  border-image-source: linear-gradient(180deg, #39b5d7, #f7d544, #e38330);
+  border-image-source: linear-gradient(180deg, #459EE7, #4040DD, #AA1834);
   border-image-slice: 0;
 }
 
@@ -30694,9 +30694,9 @@ body {
       width: 100%;
       height: 1px;
       background: linear-gradient(90deg,
-          #39b6d8 6.41%,
-          #f7d344 51.47%,
-          #e38330 96.52%);
+          #459EE7 6.41%,
+          #4040DD 51.47%,
+          #AA1834 96.52%);
     }
   }
 
@@ -30747,7 +30747,7 @@ body {
 
 .certificationLotte {
   background: linear-gradient(var(--black) 0 0) padding-box,
-    linear-gradient(119deg, #39b6d8 -19.47%, #f7d344 47.29%, #e38330 112.78%) border-box;
+    linear-gradient(119deg, #459EE7 -19.47%, #4040DD 47.29%, #AA1834 112.78%) border-box;
   border: 1px solid transparent;
   border-radius: 8px;
   margin-top: 30px;
@@ -30827,9 +30827,9 @@ body {
   width: 100%;
   height: 1px;
   background: linear-gradient(93deg,
-      #39b6d8 3.94%,
-      #f7d344 49.4%,
-      #e38330 94.86%);
+      #459EE7 3.94%,
+      #4040DD 49.4%,
+      #AA1834 94.86%);
   bottom: 0;
   left: 0;
 }
@@ -30862,9 +30862,9 @@ body {
       font-weight: 400;
       font-family: "Fraunces", serif;
       background: linear-gradient(90deg,
-          #39b6d8 -2.82%,
-          #f7d344 81.64%,
-          #e38330 101.1%);
+          #459EE7 -2.82%,
+          #4040DD 81.64%,
+          #AA1834 101.1%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -31430,14 +31430,14 @@ body {
     height: 1px;
     width: 100%;
     background: linear-gradient(90deg,
-        #39b6d8 6.41%,
-        #f7d344 51.47%,
-        #e38330 96.52%);
+        #459EE7 6.41%,
+        #4040DD 51.47%,
+        #AA1834 96.52%);
   }
 
   .tab-btn.active {
     background: var(--Linear,
-        linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+        linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -31858,7 +31858,7 @@ body {
   }
 
   .digitsPara {
-    background: linear-gradient(280deg, #f7d344 9.39%, #e38330 101.03%);
+    background: linear-gradient(280deg, #4040DD 9.39%, #AA1834 101.03%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -31878,9 +31878,9 @@ body {
     align-items: center;
     border-bottom: 6px solid;
     border-image: linear-gradient(90deg,
-        #39b6d8 6.41%,
-        #f7d344 51.47%,
-        #e38330 96.52%);
+        #459EE7 6.41%,
+        #4040DD 51.47%,
+        #AA1834 96.52%);
     border-image-slice: 1;
   }
 
@@ -32056,7 +32056,7 @@ body {
 
   .comitteeClubItem.active {
     background: var(--Linear,
-        linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+        linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -32071,9 +32071,9 @@ body {
     height: 2px;
     width: 100%;
     background: linear-gradient(90deg,
-        #39b6d8 6.41%,
-        #f7d344 51.47%,
-        #e38330 96.52%);
+        #459EE7 6.41%,
+        #4040DD 51.47%,
+        #AA1834 96.52%);
   }
 
   .ClubsTypes {
@@ -32169,9 +32169,9 @@ body {
 
   .gradientTextMarketing {
     background: linear-gradient(91deg,
-        #39b6d8 -33.27%,
-        #f7d344 48.31%,
-        #e38330 63.35%);
+        #459EE7 -33.27%,
+        #4040DD 48.31%,
+        #AA1834 63.35%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -32391,9 +32391,9 @@ body {
 
   .loginAnchor {
     background: linear-gradient(92deg,
-        #39b5d7 21.26%,
-        #f7d544 91.67%,
-        #e38330 100%);
+        #459EE7 21.26%,
+        #4040DD 91.67%,
+        #AA1834 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -32619,9 +32619,9 @@ body {
         p {
           background: var(--Gradient,
               linear-gradient(92deg,
-                #39b5d7 -7.14%,
-                #f7d544 49.78%,
-                #e38330 106.19%));
+                #459EE7 -7.14%,
+                #4040DD 49.78%,
+                #AA1834 106.19%));
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -33129,9 +33129,9 @@ body {
 
       .rightSubText {
         background: linear-gradient(92deg,
-            #39b6d8 7.6%,
-            #f7d344 53.43%,
-            #e38330 99.26%);
+            #459EE7 7.6%,
+            #4040DD 53.43%,
+            #AA1834 99.26%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -34540,7 +34540,7 @@ body {
 
   .productDivi:hover {
     background: linear-gradient(var(--white) 0 0) padding-box,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%) border-box;
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%) border-box;
     border-bottom: 3px solid transparent !important;
     border: 2px solid transparent;
     /* transform: scale(1.01); */
@@ -35443,9 +35443,9 @@ body {
   .moreText {
     font-family: "go-medium";
     background: linear-gradient(91deg,
-        #39b6d8 73.51%,
-        #f7d344 75.93%,
-        #e38330 78.35%);
+        #459EE7 73.51%,
+        #4040DD 75.93%,
+        #AA1834 78.35%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -35553,9 +35553,9 @@ body {
   .moreText {
     font-family: "go-medium";
     background: linear-gradient(88deg,
-        #39b6d8 53.51%,
-        #f7d344 105.93%,
-        #e38330 78.35%);
+        #459EE7 53.51%,
+        #4040DD 105.93%,
+        #AA1834 78.35%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -35676,7 +35676,7 @@ option:disabled {
 
 .toggleText {
   background: var(--Linear,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -36252,7 +36252,7 @@ option:disabled {
 
   .fundBoxi {
     padding: 20px 20px 40px 0;
-    border-left: 4px solid #f7d344;
+    border-left: 4px solid #4040DD;
   }
 
   .fundsWrapper {
@@ -36462,7 +36462,7 @@ option:disabled {
     padding: 0px;
     /* background: var(--black); */
     background: linear-gradient(var(--black) 0 0) padding-box,
-      linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%) border-box;
+      linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%) border-box;
     border-bottom: 4px solid transparent;
     padding-bottom: 40px;
   }
@@ -36611,7 +36611,7 @@ option:disabled {
   }
 
   .founderFellowship .fundBoxi {
-    border-left: 4px solid #e38330;
+    border-left: 4px solid #AA1834;
   }
 
   .sharkTank.studentExperience {
@@ -37191,7 +37191,7 @@ filter: brightness(2);
 }
 
 .programmeBreather {
-  background: linear-gradient(125deg, #39b6d8 -20%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(125deg, #459EE7 -20%, #4040DD 50%, #AA1834 100%);
   padding: 60px 0;
 
   .programmeBreatherWrapper {
@@ -37845,7 +37845,7 @@ filter: brightness(2);
 
     p {
       font: 13px "go-medium";
-      color: #1c7c54;
+      color: #6E7276;
     }
   }
 
@@ -39351,7 +39351,7 @@ filter: brightness(2);
 
 #growingDivWhite {
   width: 3px;
-  background: linear-gradient(280deg, #f7d344 9.52%, #e38330 104.78%);
+  background: linear-gradient(280deg, #4040DD 9.52%, #AA1834 104.78%);
   position: relative;
   z-index: -1;
   left: 0;
@@ -39545,9 +39545,9 @@ filter: brightness(2);
 
     span {
       background: linear-gradient(92deg,
-          #39b5d7 46.88%,
-          #f7d544 73.88%,
-          #e38330 100.65%);
+          #459EE7 46.88%,
+          #4040DD 73.88%,
+          #AA1834 100.65%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -40596,7 +40596,7 @@ filter: brightness(2);
 
   .scheduleCallText {
     font: 12px "go-regular";
-    color: #e38330;
+    color: #AA1834;
     cursor: pointer;
   }
 
@@ -40822,9 +40822,9 @@ filter: brightness(2);
   .highlightsec {
     .counting span {
       background: linear-gradient(119deg,
-          var(--color-cyan-54, #39b6d8) 8.65%,
-          var(--color-yellow-62, #f7d344) 54.81%,
-          var(--color-orange-54, #e38330) 84.13%);
+          var(--color-cyan-54, #459EE7) 8.65%,
+          var(--color-yellow-62, #4040DD) 54.81%,
+          var(--color-orange-54, #AA1834) 84.13%);
       background-clip: text;
       /* -webkit-background-clip: text;
 -webkit-text-fill-color: transparent; */
@@ -40959,9 +40959,9 @@ filter: brightness(2);
 
   .link_Gradient {
     background: linear-gradient(91deg,
-        #39b5d7 1.8%,
-        #f7d544 30.53%,
-        #e38330 84.04%);
+        #459EE7 1.8%,
+        #4040DD 30.53%,
+        #AA1834 84.04%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -41134,9 +41134,9 @@ filter: brightness(2);
 
 .pgpRise-Mena .reachoutBreatherSection {
   background: linear-gradient(96deg,
-      #39b5d7 -31.01%,
-      #f7d544 49.05%,
-      #e38330 109.58%);
+      #459EE7 -31.01%,
+      #4040DD 49.05%,
+      #AA1834 109.58%);
   padding: 60px 0 !important;
 
   .reachoutBreatherWrapper {

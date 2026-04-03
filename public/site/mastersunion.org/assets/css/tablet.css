@@ -2156,9 +2156,9 @@
 
     .mobMenuItem.active .mobMenuItemHeader .heading {
         background: linear-gradient(90deg,
-                #39b6d8 4.12%,
-                #f7d344 52.06%,
-                #e38330 100%);
+                #459EE7 4.12%,
+                #4040DD 52.06%,
+                #AA1834 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

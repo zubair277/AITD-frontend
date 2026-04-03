@@ -316,7 +316,7 @@
             top: -160px;
             z-index: 1;
             pointer-events: none;
-            background: linear-gradient(60deg, #39b5d7 18.74%, #f7d544 104.82%);
+            background: linear-gradient(60deg, #459EE7 18.74%, #4040DD 104.82%);
             filter: blur(180px);
             /* backdrop-filter: blur(48.75px); */
             width: 500px;

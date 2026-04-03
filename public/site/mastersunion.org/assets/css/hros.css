@@ -269,9 +269,9 @@
 
 .reachoutBreatherSection {
   background: linear-gradient(96deg,
-      #39b5d7 -31.01%,
-      #f7d544 49.05%,
-      #e38330 109.58%);
+      #459EE7 -31.01%,
+      #4040DD 49.05%,
+      #AA1834 109.58%);
   padding: 60px 0 !important;
 
   .reachoutBreatherWrapper {
@@ -521,7 +521,7 @@
   }
 
   .inclassTab.active::after {
-    border-bottom: 1px solid #e38330;
+    border-bottom: 1px solid #AA1834;
     content: "";
     position: absolute;
     bottom: -1px;
@@ -771,9 +771,9 @@
 
   .gradientWhiteBtn {
     background: linear-gradient(119deg,
-        #39b6d8 -19.47%,
-        #f7d344 47.29%,
-        #e38330 112.78%) border-box;
+        #459EE7 -19.47%,
+        #4040DD 47.29%,
+        #AA1834 112.78%) border-box;
     border: 1px solid transparent;
     display: flex;
     flex-direction: column;
@@ -829,7 +829,7 @@
 
   .futureInvestTextWrap::before {
     content: "";
-    background: linear-gradient(102deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+    background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
     position: absolute;
     top: -1px;
     left: -1px;
@@ -1122,7 +1122,7 @@
 }
 
 .programmeBreatherNew {
-  background: linear-gradient(125deg, #39b6d8 -20%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(125deg, #459EE7 -20%, #4040DD 50%, #AA1834 100%);
   padding: 60px 0;
 
   .twelthSup {
@@ -1831,7 +1831,7 @@
 }
 
 .podcastSection.aon {
-  background: linear-gradient(125deg, #39b6d8 -20%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(125deg, #459EE7 -20%, #4040DD 50%, #AA1834 100%);
   padding: 60px 0;
 
   .podcastLeft a {
@@ -1907,7 +1907,7 @@
 }
 
 .podcastSection {
-  background: linear-gradient(125deg, #39b6d8 -20%, #f7d344 50%, #e38330 100%);
+  background: linear-gradient(125deg, #459EE7 -20%, #4040DD 50%, #AA1834 100%);
   padding: 60px 0;
 
   .podcastLeft a {
@@ -2650,7 +2650,7 @@
 
   .fellowshipVideo {
     background: url(https://images.mastersunion.link/uploads/17042025/v1/gradientVector.svg),
-      linear-gradient(100deg, #39b6d8 -19.33%, #f7d344 40.46%, #e38330 100.24%);
+      linear-gradient(100deg, #459EE7 -19.33%, #4040DD 40.46%, #AA1834 100.24%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3030,7 +3030,7 @@
 
   .inclassTabBoxi.active {
     background: linear-gradient(var(--grey17), var(--grey17)) padding-box,
-      linear-gradient(#e38330 100%) border-box;
+      linear-gradient(#AA1834 100%) border-box;
     border: 1px solid transparent;
     border-radius: 6px 6px 0 0;
     background-clip: padding-box, border-box;
@@ -3128,9 +3128,9 @@
 
   .coreInclass:hover::before {
     background: linear-gradient(96deg,
-        #39b6d8 6.41%,
-        #f7d344 51.47%,
-        #e38330 96.52%) !important;
+        #459EE7 6.41%,
+        #4040DD 51.47%,
+        #AA1834 96.52%) !important;
     transition: 0.4s ease-in;
     height: 110%;
   }
@@ -3144,9 +3144,9 @@
 
   .coreOutClass:hover::before {
     background: linear-gradient(96deg,
-        #39b6d8 6.41%,
-        #f7d344 51.47%,
-        #e38330 96.52%) !important;
+        #459EE7 6.41%,
+        #4040DD 51.47%,
+        #AA1834 96.52%) !important;
     transition: 0.4s ease-in;
     height: 100%;
   }
@@ -3433,7 +3433,7 @@
   .listGradientBold {
     font-weight: 600;
     line-height: 120%;
-    color: var(--Orange, #e38330);
+    color: var(--Orange, #AA1834);
   }
 
   .yellowArrow {
@@ -3592,9 +3592,9 @@
 
   .link_Gradient {
     background: linear-gradient(91deg,
-        #39b5d7 1.8%,
-        #f7d544 30.53%,
-        #e38330 84.04%);
+        #459EE7 1.8%,
+        #4040DD 30.53%,
+        #AA1834 84.04%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -4677,7 +4677,7 @@
   .ratioBoxi {
     width: 100%;
     padding-left: 24px;
-    border-left: 2px solid #e38330;
+    border-left: 2px solid #AA1834;
     display: flex;
     align-items: center;
     min-height: 84px;
@@ -5266,7 +5266,7 @@
     font-style: italic;
     font-weight: 400;
     line-height: 120%;
-    color: #1c7c54;
+    color: #6E7276;
     border-radius: 60px;
     padding: 4px 15px;
   }
@@ -5338,7 +5338,7 @@
     font-style: italic;
     font-weight: 400;
     line-height: 120%;
-    color: #1c7c54;
+    color: #6E7276;
   }
 
   .roundRow {
@@ -5570,7 +5570,7 @@
     font-family: var(--go-regular);
     text-transform: uppercase;
     background: var(--Linear-Gradient,
-        linear-gradient(91deg, #39b5d7 1.8%, #f7d544 50.99%, #e38330 99.75%));
+        linear-gradient(91deg, #459EE7 1.8%, #4040DD 50.99%, #AA1834 99.75%));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -6541,7 +6541,7 @@
     .ratioBoxi {
       width: 100%;
       padding-left: 12px;
-      border-left: 2px solid #e38330;
+      border-left: 2px solid #AA1834;
       display: flex;
       align-items: center;
       min-height: 84px;

@@ -104,26 +104,26 @@
         }
 
         .dropdownItems:hover {
-            color: #E38330;
+            color: #AA1834;
             font-family: "go-bold";
             transition: 0.4s ease-in-out;
         }
 
         .megaLink.active {
             .dropdownItems {
-                color: #E38330;
+                color: #AA1834;
                 font-family: "go-bold";
                 transition: 0.4s ease-in-out;
 
                 .dropdown-icon path {
-                    stroke: #E38330;
+                    stroke: #AA1834;
                 }
             }
         }
     }
 
     .navItem:hover {
-        color: #E38330;
+        color: #AA1834;
         font-family: "go-semibold";
     }
 
@@ -347,12 +347,12 @@
     .upperHeader {
         .megaLink.active {
             .dropdown-icon path {
-                stroke: #E38330;
+                stroke: #AA1834;
 
             }
 
             .dropdownItems {
-                color: #E38330;
+                color: #AA1834;
                 font-family: "go-bold";
                 transition: 0.4s ease-in-out;
             }
@@ -655,7 +655,7 @@
 
             .subDropdown.active {
                 .subLinkHeading {
-                    color: #E38330;
+                    color: #AA1834;
                 }
 
                 .togglerDownSub {
@@ -821,7 +821,7 @@
                 border-radius: 8px 8px 0px 0px;
                 border-bottom: 3px solid;
                 /* Required for border-image to apply */
-                border-image: linear-gradient(90deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+                border-image: linear-gradient(90deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
                 border-image-slice: 1;
 
                 .togglerDown {
@@ -830,7 +830,7 @@
                 }
 
                 .heading {
-                    color: #E38330;
+                    color: #AA1834;
                 }
             }
         }

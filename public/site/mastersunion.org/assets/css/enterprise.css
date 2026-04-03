@@ -536,7 +536,7 @@ width: 100%;
     }
 
     .driveResult {
-        background: linear-gradient(var(--white) 0 0) padding-box, linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%) border-box;
+        background: linear-gradient(var(--white) 0 0) padding-box, linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%) border-box;
         border-top: 4px solid transparent;
         padding: 100px 0;
 
@@ -938,7 +938,7 @@ width: 100%;
 
         .pathFilter.active {
             background: var(--white);
-            border: 1px solid #E38330;
+            border: 1px solid #AA1834;
 
         }
 
@@ -2254,7 +2254,7 @@ width: 100%;
             bottom: 520px;
             /* bottom: 30px; */
 
-            background: linear-gradient(60deg, #39B5D7 18.74%, #F7D544 104.82%);
+            background: linear-gradient(60deg, #459EE7 18.74%, #4040DD 104.82%);
             filter: blur(120px);
             width: 374px;
             height: 374px;
@@ -2406,7 +2406,7 @@ width: 100%;
             bottom: 520px;
             /* bottom: 30px; */
 
-            background: linear-gradient(60deg, #39B5D7 18.74%, #F7D544 104.82%);
+            background: linear-gradient(60deg, #459EE7 18.74%, #4040DD 104.82%);
             filter: blur(120px);
             width: 374px;
             height: 374px;
@@ -2630,7 +2630,7 @@ width: 100%;
             bottom: 520px;
             /* bottom: 30px; */
 
-            background: linear-gradient(60deg, #39B5D7 18.74%, #F7D544 104.82%);
+            background: linear-gradient(60deg, #459EE7 18.74%, #4040DD 104.82%);
             filter: blur(120px);
             width: 374px;
             height: 374px;
