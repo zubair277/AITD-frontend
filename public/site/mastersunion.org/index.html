@@ -36,7 +36,7 @@
 
   <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="../cdn.jsdelivr.net/npm/swiper%4010/swiper-bundle.min.css" />
-  <script src="../cdn.jsdelivr.net/npm/jquery%403.7.1/dist/jquery.min.js"></script>
+  <script src="../code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="../cdn.jsdelivr.net/npm/swiper%4010/swiper-bundle.min.js"></script>
   <script src="../static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
   <link rel="stylesheet" href="assets/css/masters.css">
@@ -256,11 +256,21 @@
 <script>
   // Function to hide preloader
   function hidePreloader() {
-    $("#preloader").fadeOut(1000);
+    if (window.jQuery && typeof window.jQuery == 'function') {
+      $("#preloader").fadeOut(1000);
+    } else {
+      const el = document.getElementById('preloader');
+      if (el) { el.style.display = 'none'; }
+    }
   }
 
   // Hide preloader after 2 seconds on page load
-  $("#preloader").fadeOut(1000);
+  if (window.jQuery && typeof window.jQuery == 'function') {
+    $("#preloader").fadeOut(1000);
+  } else {
+    const el = document.getElementById('preloader');
+    if (el) { el.style.display = 'none'; }
+  }
 
   // Handle page visibility change (browser back/forward)
   document.addEventListener("visibilitychange", function() {
@@ -13209,59 +13219,22 @@
             <div class="headingWrap">
 
                 <h2 class="font-white go-HighlightHeading">
-                    Learn at One of India's <br>
-                    <span class="fr-HeadingItalic textGradient">Biggest Corporate Hubs</span>
+                    Life at AITD <br>
+                    <span class="fr-HeadingItalic textGradient">Campus Culture & Community</span>
                 </h2>
             </div>
 
-            <div class="beatingWraps flexbox leftBeat">
-                <div class="beatingLeft">
-                    <h3 class="font-white go-BlockHeading">Thrive Amidst Fortune <br> <span
+            <div class="beatingWraps flexbox leftBeat" style="gap: 30px; align-items: flex-start;">
+                <div class="beatingLeft" style="flex: 0 0 38%; max-width: 38%; text-align: left;">
+                    <h3 class="font-white go-BlockHeading">Live the AITD Experience <br> <span
                             class="fr-BlockHeadingItalic">
-                            500 Companies at DLF CyberPark </span></h3>
-                    <p class="font-13  font-regular font-grey4">Located in a vibrant business district with top
-                        recruiters such as BCG, EY, Gartner just an elevator ride away, Masters' Union boasts of a
-                        unique locale.
-                    </p>
+                            Student Growth and Campus Spirit</span></h3>
+                    <p class="font-13  font-regular font-grey4">Discover classroom energy, club action and campus
+                        moments from AITD life. Real student stories, events and spaces in one place.</p>
                 </div>
-                <img src="../images.mastersunion.link/uploads/10102025/v1/muBuilding.webp"
-                    alt="Masters Union Gartner" class="mubuildingImg mob-hide">
-                <img src="../images.mastersunion.link/uploads/26062025/v1/Frame1171279945.webp"
-                    alt="Masters Union Gartner" class=" mob-visible">
-
-                <div class="leftBeatingWrap">
-                    <h3 class="font-22 font-bold font-white">Thrive Amidst Fortune 500 Companies at DLF CyberPark
-                    </h3>
-                    <p class="font-13  font-regular font-grey8">Located in a vibrant business district with top
-                        recruiters such as BCG, EY, Gartner just an elevator ride away, Masters' Union boasts of a
-                        unique locale.
-                    </p>
-                </div>
-                <div class="beatingRight">
-                    <a href="careers.html" class="muLinks ">
-                        Explore Careers
-                        <span class="circleArrow">
-                            <img src="../images.mastersunion.link/uploads/02072025/v1/doubleArrow1.svg" alt="Icon">
-                        </span>
-                    </a>
-                    <a href="about-us.html#boardOfDirectors" class="muLinks ">
-                        Know the Leadership Team
-                        <span class="circleArrow">
-                            <img src="../images.mastersunion.link/uploads/02072025/v1/doubleArrow1.svg" alt="Icon">
-                        </span>
-                    </a>
-                    <a href="about-us.html#newsSetion" class="muLinks ">
-                        In the News
-                        <span class="circleArrow">
-                            <img src="../images.mastersunion.link/uploads/02072025/v1/doubleArrow1.svg" alt="Icon">
-                        </span>
-                    </a>
-                    <a href="student-life-campus.html" class="muLinks ">
-                        Glimpse of Student Life
-                        <span class="circleArrow">
-                            <img src="../images.mastersunion.link/uploads/02072025/v1/doubleArrow1.svg" alt="Icon">
-                        </span>
-                    </a>
+                <div class="beatingRight" style="flex: 0 0 62%; max-width: 62%;">
+                    <img src="/images/Life%20at%20AITD/Life7.jpeg"
+                        alt="AITD Campus Life" style="display:block !important; width:100%; height:520px; max-height:520px; object-fit:cover; border-radius:16px;" onerror="this.src='/images/Life%20at%20AITD/Life8.jpg';" >
                 </div>
             </div>
 
@@ -13269,102 +13242,27 @@
                 <div class="gridboxClubs flexbox">
                     <div class="gridLeft flexbox tab-hide newGridBox">
                         <div class="gridBox">
-                            <img src="../images.mastersunion.link/uploads/28042025/v1/grid1.webp" class="mob-hide "
-                                alt="Students Project Details">
-                            <img src="../images.mastersunion.link/uploads/28042025/v1/grid1.webp"
-                                class="mob-visible" alt="Students Project Details">
-                            <div class="floatingText">
-                                Student Projects
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="https://www.w3.org/2000/svg">
-                                    <path
-                                        d="M17.3317 5.47695L3.73242 19.0478L4.93211 20.25L18.5314 6.67915L17.3317 5.47695Z"
-                                        fill="white" />
-                                    <path
-                                        d="M18.5694 17.2828C17.8901 16.3045 17.333 15.3127 16.9661 14.2393C16.5857 13.1795 16.3819 12.0789 16.3411 10.9784C16.2868 9.8778 16.4906 8.77724 16.7895 7.73103C17.1156 6.68482 17.5911 5.69296 18.2026 4.75545H18.189L19.1808 5.80166C17.3602 7.01091 15.1862 7.67668 12.9715 7.60875C10.7568 7.54081 8.59646 6.69841 6.77578 5.35328L8.21602 3.75C9.3981 5.13589 11.1916 6.01905 13.0395 6.12775C14.8873 6.26362 16.8031 5.6522 18.352 4.5924L19.3439 5.6522H19.3303C18.6917 6.34514 18.2162 7.20113 17.9172 8.11147C17.5911 9.02181 17.5232 9.9865 17.5911 10.9376C17.6591 11.8887 17.958 12.8126 18.42 13.6143C18.8955 14.4159 19.5069 15.1496 20.2678 15.6387L18.5694 17.31V17.2828Z"
-                                        fill="white" />
-                                </svg>
-
-                            </div>
-                            <a class="overLayDetailBeating" href="challenges.html">
-                                <img src="../images.mastersunion.link/uploads/30062025/v1/IconTag6.svg" alt="icon">
-                                <div class="liveOverlayContent">
-                                    <h2 class="lifeCardHeading font-white">Explore
-                                        Student Projects</h2>
-
-                                    <p class="lifeOverlayPara">Experience the excellence of our student community - a
-                                        glimpse into what you can achieve here.</p>
-                                </div>
-                            </a>
+                            <img src="/images/Life%20at%20AITD/Life3.jpg" class="mob-hide "
+                                alt="Life at AITD" style="display:block !important; width:100%; height:100%; object-fit:cover;">
+                            <img src="/images/Life%20at%20AITD/Life3.jpg"
+                                class="mob-visible" alt="Life at AITD" style="display:block !important; width:100%; height:100%; object-fit:cover;">
                         </div>
                         <div class="gridBox">
-                            <img src="../images.mastersunion.link/uploads/28042025/v1/ghrid2.webp"
-                                alt="Student Clubs" class="mob-hide ">
-                            <img src="../images.mastersunion.link/uploads/28042025/v1/ghrid2.webp"
-                                alt="Student Clubs" class="mob-visible">
-                            <div class="floatingText">
-                                Clubs &amp; more
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="https://www.w3.org/2000/svg">
-                                    <path
-                                        d="M17.3317 5.47695L3.73242 19.0478L4.93211 20.25L18.5314 6.67915L17.3317 5.47695Z"
-                                        fill="white" />
-                                    <path
-                                        d="M18.5694 17.2828C17.8901 16.3045 17.333 15.3127 16.9661 14.2393C16.5857 13.1795 16.3819 12.0789 16.3411 10.9784C16.2868 9.8778 16.4906 8.77724 16.7895 7.73103C17.1156 6.68482 17.5911 5.69296 18.2026 4.75545H18.189L19.1808 5.80166C17.3602 7.01091 15.1862 7.67668 12.9715 7.60875C10.7568 7.54081 8.59646 6.69841 6.77578 5.35328L8.21602 3.75C9.3981 5.13589 11.1916 6.01905 13.0395 6.12775C14.8873 6.26362 16.8031 5.6522 18.352 4.5924L19.3439 5.6522H19.3303C18.6917 6.34514 18.2162 7.20113 17.9172 8.11147C17.5911 9.02181 17.5232 9.9865 17.5911 10.9376C17.6591 11.8887 17.958 12.8126 18.42 13.6143C18.8955 14.4159 19.5069 15.1496 20.2678 15.6387L18.5694 17.31V17.2828Z"
-                                        fill="white" />
-                                </svg>
-
-                            </div>
-
-                            <a class="overLayDetailBeating" href="clubs-and-fests.html">
-                                <img src="../images.mastersunion.link/uploads/30062025/v1/IconTag6.svg" alt="icon">
-                                <div class="liveOverlayContent">
-                                    <h2 class="lifeCardHeading font-white">Clubs &amp; more</h2>
-
-                                    <p class="lifeOverlayPara">Discover your passion and forge
-                                        lifelong
-                                        connections. Know more on how
-                                        our clubs work and how you can participate.</p>
-                                </div>
-                            </a>
+                            <img src="/images/Life%20at%20AITD/Life4.jpg"
+                                alt="AITD Club Culture" class="mob-hide " style="display:block !important; width:100%; height:100%; object-fit:cover;">
+                            <img src="/images/Life%20at%20AITD/Life4.jpg"
+                                alt="AITD Club Culture" class="mob-visible" style="display:block !important; width:100%; height:100%; object-fit:cover;">
                         </div>
                         <div class="gridBox">
-                            <img src="../images.mastersunion.link/uploads/03072025/v2/LinkCard.webp"
-                                alt="MU Student Life" class="mob-hide">
-                            <img src="../images.mastersunion.link/uploads/28042025/v1/grid3mob.webp"
-                                alt="MU Student Life" class="mob-visible">
-                            <div class="floatingText">
-                                Dive into Entrepreneurship
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="https://www.w3.org/2000/svg">
-                                    <path
-                                        d="M17.3317 5.47695L3.73242 19.0478L4.93211 20.25L18.5314 6.67915L17.3317 5.47695Z"
-                                        fill="white" />
-                                    <path
-                                        d="M18.5694 17.2828C17.8901 16.3045 17.333 15.3127 16.9661 14.2393C16.5857 13.1795 16.3819 12.0789 16.3411 10.9784C16.2868 9.8778 16.4906 8.77724 16.7895 7.73103C17.1156 6.68482 17.5911 5.69296 18.2026 4.75545H18.189L19.1808 5.80166C17.3602 7.01091 15.1862 7.67668 12.9715 7.60875C10.7568 7.54081 8.59646 6.69841 6.77578 5.35328L8.21602 3.75C9.3981 5.13589 11.1916 6.01905 13.0395 6.12775C14.8873 6.26362 16.8031 5.6522 18.352 4.5924L19.3439 5.6522H19.3303C18.6917 6.34514 18.2162 7.20113 17.9172 8.11147C17.5911 9.02181 17.5232 9.9865 17.5911 10.9376C17.6591 11.8887 17.958 12.8126 18.42 13.6143C18.8955 14.4159 19.5069 15.1496 20.2678 15.6387L18.5694 17.31V17.2828Z"
-                                        fill="white" />
-                                </svg>
-
-                            </div>
-
-
-                            <a class="overLayDetailBeating" href="student-entrepreneurship.html">
-                                <img src="../images.mastersunion.link/uploads/30062025/v1/IconTag6.svg" alt="icon">
-
-                                <div class="liveOverlayContent">
-                                    <h2 class="lifeCardHeading font-white">Dive into Entrepreneurship</h2>
-
-                                    <p class="lifeOverlayPara">Discover how you can learn
-                                        business
-                                        by running a business in
-                                        real-time.</p>
-                                </div>
-                            </a>
+                            <img src="/images/Life%20at%20AITD/Life5.jpg"
+                                alt="AITD Classrooms" class="mob-hide" style="display:block !important; width:100%; height:100%; object-fit:cover;">
+                            <img src="/images/Life%20at%20AITD/Life5.jpg"
+                                alt="AITD Classrooms" class="mob-visible" style="display:block !important; width:100%; height:100%; object-fit:cover;">
                         </div>
                     </div>
                     <div class="gridRight">
                         <a href="student-life-campus.html" class=" visitHeding  font-white">
-                            Experience a Virtual Campus Tour
+                            Explore AITD Campus Moments
                             <span class="arrowWrap">
                                 <img class="arrow arrow1"
                                     src="../images.mastersunion.link/uploads/18022025/v1/black_arrow_image.svg"
@@ -13375,9 +13273,10 @@
                             </span>
                         </a>
 
-                        <iframe class="mt20" id="iframe_embedded" width="100%" height="480px"
-                            src="https://my.matterport.com/show/?m=H94FKdNQbTi&amp;play=1&amp;brand=1" frameborder="0"
-                            allowfullscreen="" allow="vr"></iframe>
+                        <video class="mt20" width="100%" height="480px" style="object-fit: cover;" autoplay muted loop playsinline>
+                            <source src="/images/Life%20at%20AITD/Life10.mp4" type="video/mp4">
+                            <img src="/images/Life%20at%20AITD/Life6.JPG" alt="AITD Event" style="display:block; width:100%; height:100%; object-fit:cover;" />
+                        </video>
                     </div>
                 </div>
             </div>
