@@ -518,7 +518,7 @@
             position: absolute;
             left: -184px;
             bottom: 350px;
-            background: linear-gradient(60deg, #39b5d7 18.74%, #f7d544 104.82%);
+            background: linear-gradient(60deg, #459EE7 18.74%, #4040DD 104.82%);
             filter: blur(120px);
             /* backdrop-filter: blur(48.75px); */
             width: 374px;
@@ -681,7 +681,7 @@
                 position: absolute;
                 left: -140px;
                 bottom: 40px;
-                background: linear-gradient(106deg, #39b5d7 16%, #f7d544 80.82% 104.82%);
+                background: linear-gradient(106deg, #459EE7 16%, #4040DD 80.82% 104.82%);
                 filter: blur(120px);
                 backdrop-filter: blur(48.75px);
                 width: 374px;
@@ -1204,7 +1204,7 @@
             bottom: 520px;
             /* bottom: 30px; */
 
-            background: linear-gradient(60deg, #39B5D7 18.74%, #F7D544 104.82%);
+            background: linear-gradient(60deg, #459EE7 18.74%, #4040DD 104.82%);
             filter: blur(120px);
             /* backdrop-filter: blur(48.75px); */
             width: 374px;
@@ -1286,7 +1286,7 @@
 
         .masterBoxi.active {
             border: 6px solid var(--white);
-            background: #F7D344;
+            background: #4040DD;
 
             .coreTeamImg {
                 filter: grayscale(0);
@@ -2157,7 +2157,7 @@
                 right: -200px;
                 top: -100px;
 
-                background: linear-gradient(60deg, #39b5d7 18.74%, #f7d544 104.82%);
+                background: linear-gradient(60deg, #459EE7 18.74%, #4040DD 104.82%);
                 filter: blur(120px);
                 backdrop-filter: blur(48.75px);
                 width: 350px;
@@ -2344,7 +2344,7 @@
                 position: fixed;
                 top: 450px;
                 right: -120px;
-                background: linear-gradient(60deg, #39B5D7 18.74%, #F7D544 104.82%);
+                background: linear-gradient(60deg, #459EE7 18.74%, #4040DD 104.82%);
                 filter: blur(120px);
                 width: 374px;
                 height: 244px;

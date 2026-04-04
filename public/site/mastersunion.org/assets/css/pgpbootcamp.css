@@ -53,7 +53,7 @@
     .gradientBold {
         font-size: 16px;
         font-weight: 700;
-        background: linear-gradient(93deg, #39b6d8 3.94%, #f7d344 49.4%, #e38330 94.86%);
+        background: linear-gradient(93deg, #459EE7 3.94%, #4040DD 49.4%, #AA1834 94.86%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -221,7 +221,7 @@
 }
 
 .link-red {
-    color: #E38330 !important;
+    color: #AA1834 !important;
     font-size: 14px;
     line-height: 160%;
 }
@@ -748,7 +748,7 @@
     .inclassTabBoxi.active {
         background:
             linear-gradient(var(--grey17), var(--grey17)) padding-box,
-            linear-gradient(#e38330 100%) border-box;
+            linear-gradient(#AA1834 100%) border-box;
         border: 1px solid transparent;
         border-radius: 6px 6px 0 0;
         background-clip: padding-box, border-box;
@@ -848,14 +848,14 @@
     }
 
     .coreInclass:hover::before {
-        background: linear-gradient(96deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%) !important;
+        background: linear-gradient(96deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%) !important;
         transition: 0.6s ease-in 0.25s;
         /* delay line animation after 0.25s */
         height: 110%;
     }
 
     .coreOutClass:hover::before {
-        background: linear-gradient(96deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%) !important;
+        background: linear-gradient(96deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%) !important;
         transition: 0.6s ease-in 0.25s;
         /* delay line animation */
         height: 100%;
@@ -984,7 +984,7 @@
         font-weight: 500;
         line-height: 150%;
         font-family: var(--go-medium);
-        color: var(--Orange, #E38330);
+        color: var(--Orange, #AA1834);
         font-size: 16px;
         display: inline-flex;
         gap: 8px;
@@ -1229,7 +1229,7 @@
         position: absolute;
         left: -140px;
         bottom: 40px;
-        background: linear-gradient(106deg, #39b5d7 16%, #f7d544 80.82% 104.82%);
+        background: linear-gradient(106deg, #459EE7 16%, #4040DD 80.82% 104.82%);
         filter: blur(120px);
         backdrop-filter: blur(48.75px);
         width: 374px;
@@ -2212,7 +2212,7 @@
     .ratioBoxi {
         width: 100%;
         padding-left: 24px;
-        border-left: 2px solid #E38330;
+        border-left: 2px solid #AA1834;
         display: flex;
         align-items: center;
         min-height: 84px;
@@ -2430,7 +2430,7 @@
 }
 
 .programmeBreatherNew {
-    background: linear-gradient(125deg, #39b6d8 -20%, #f7d344 50%, #e38330 100%);
+    background: linear-gradient(125deg, #459EE7 -20%, #4040DD 50%, #AA1834 100%);
     padding: 60px 0;
 
     .twelthSup {
@@ -2747,7 +2747,7 @@
     .listGradientBold {
         font-weight: 600;
         line-height: 120%;
-        color: var(--Orange, #E38330);
+        color: var(--Orange, #AA1834);
     }
 
     .yellowArrow {
@@ -2987,7 +2987,7 @@
 }
 
 .reachoutBreatherSection {
-    background: linear-gradient(96deg, #39B5D7 -31.01%, #F7D544 49.05%, #E38330 109.58%);
+    background: linear-gradient(96deg, #459EE7 -31.01%, #4040DD 49.05%, #AA1834 109.58%);
     padding: 60px 0 !important;
 
     .reachoutBreatherWrapper {
@@ -3300,7 +3300,7 @@
             font-style: italic;
             font-weight: 400;
             line-height: 120%;
-            color: #1C7C54;
+            color: #6E7276;
         }
 
         .roundRow {
@@ -3404,7 +3404,7 @@
         font-style: italic;
         font-weight: 400;
         line-height: 120%;
-        color: #1C7C54;
+        color: #6E7276;
     }
 
     .roundRow {
@@ -4305,7 +4305,7 @@
 
     .feeProcessContainer .rightSection::before {
         top: 2px;
-        background: linear-gradient(180deg, #f7d344, #e38330) !important;
+        background: linear-gradient(180deg, #4040DD, #AA1834) !important;
     }
 
     .caution>svg {
@@ -4530,7 +4530,7 @@
         line-height: 150%;
         font-family: var(--go-regular);
         text-transform: uppercase;
-        background: var(--Linear-Gradient, linear-gradient(91deg, #39B5D7 1.8%, #F7D544 50.99%, #E38330 99.75%));
+        background: var(--Linear-Gradient, linear-gradient(91deg, #459EE7 1.8%, #4040DD 50.99%, #AA1834 99.75%));
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -4787,7 +4787,7 @@
             font-weight: 500;
             line-height: 150%;
             font-family: var(--go-medium);
-            color: var(--Orange, #E38330);
+            color: var(--Orange, #AA1834);
             font-size: 13px;
             display: inline-flex;
             gap: 8px;
@@ -5786,7 +5786,7 @@
         .ratioBoxi {
             width: 100%;
             padding-left: 12px;
-            border-left: 2px solid #E38330;
+            border-left: 2px solid #AA1834;
             display: flex;
             align-items: center;
             min-height: 84px;

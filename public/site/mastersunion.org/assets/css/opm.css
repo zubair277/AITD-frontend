@@ -66,7 +66,7 @@
 }
 
 .reachoutBreatherSection {
-    background: linear-gradient(96deg, #39B5D7 -31.01%, #F7D544 49.05%, #E38330 109.58%);
+    background: linear-gradient(96deg, #459EE7 -31.01%, #4040DD 49.05%, #AA1834 109.58%);
     padding: 60px 0 !important;
 
     .reachoutBreatherWrapper {
@@ -177,7 +177,7 @@
 
 
 .programmeBreatherNew {
-    background: linear-gradient(125deg, #39b6d8 -20%, #f7d344 50%, #e38330 100%);
+    background: linear-gradient(125deg, #459EE7 -20%, #4040DD 50%, #AA1834 100%);
     padding: 60px 0;
 
     .twelthSup {
@@ -608,7 +608,7 @@
 }
 
 .ranveerShowNew {
-    background: linear-gradient(101deg, #39B5D7 -2.87%, #F7D544 49.39%, #E38330 101.2%);
+    background: linear-gradient(101deg, #459EE7 -2.87%, #4040DD 49.39%, #AA1834 101.2%);
     padding: 60px 0 !important;
 
     .container {
@@ -1096,7 +1096,7 @@
 }
 
 .podcastSection {
-    background: linear-gradient(125deg, #39b6d8 -20%, #f7d344 50%, #e38330 100%);
+    background: linear-gradient(125deg, #459EE7 -20%, #4040DD 50%, #AA1834 100%);
     padding: 60px 0;
 
     .podcastLeft a {
@@ -1167,7 +1167,7 @@
 .podcastSection.trulySection {
     background:
         url('https://images.mastersunion.link/uploads/25072025/v1/Vector1351.svg') no-repeat,
-        linear-gradient(125deg, #39b6d8 -20%, #f7d344 50%, #e38330 100%);
+        linear-gradient(125deg, #459EE7 -20%, #4040DD 50%, #AA1834 100%);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -1961,7 +1961,7 @@
     .listGradientBold {
         font-weight: 600;
         line-height: 120%;
-        color: var(--Orange, #E38330);
+        color: var(--Orange, #AA1834);
     }
 
     .yellowArrow {
@@ -2253,7 +2253,7 @@
     .inclassTabBoxi.active {
         background:
             linear-gradient(var(--grey17), var(--grey17)) padding-box,
-            linear-gradient(#e38330 100%) border-box;
+            linear-gradient(#AA1834 100%) border-box;
         border: 1px solid transparent;
         border-radius: 6px 6px 0 0;
         background-clip: padding-box, border-box;
@@ -2354,7 +2354,7 @@
     }
 
     .coreInclass:hover::before {
-        background: linear-gradient(96deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%) !important;
+        background: linear-gradient(96deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%) !important;
         transition: 0.4s ease-in;
         height: 110%;
     }
@@ -2367,7 +2367,7 @@
     }
 
     .coreOutClass:hover::before {
-        background: linear-gradient(96deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%) !important;
+        background: linear-gradient(96deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%) !important;
         transition: 0.4s ease-in;
         height: 100%;
     }
@@ -2685,7 +2685,7 @@
 
     .futureInvestTextWrap::before {
         content: "";
-        background: linear-gradient(102deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+        background: linear-gradient(102deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
         position: absolute;
         top: -1px;
         left: -1px;
@@ -3050,7 +3050,7 @@
         font-style: italic;
         font-weight: 400;
         line-height: 120%;
-        color: #1C7C54;
+        color: #6E7276;
     }
 
     .roundRow {
@@ -3098,7 +3098,7 @@
 }
 
 .businessTemplate {
-  background: url("https://images.mastersunion.link/uploads/26032026/v1/backgroundVector.webp"), linear-gradient(var(--black) 0 0) padding-box, linear-gradient(91deg, #39B5D7 1.8%, #F7D544 50.99%, #E38330 99.75%) border-box;
+  background: url("https://images.mastersunion.link/uploads/26032026/v1/backgroundVector.webp"), linear-gradient(var(--black) 0 0) padding-box, linear-gradient(91deg, #459EE7 1.8%, #4040DD 50.99%, #AA1834 99.75%) border-box;
   background-repeat: no-repeat;
   background-size: cover;
   border-top: 4px solid transparent;

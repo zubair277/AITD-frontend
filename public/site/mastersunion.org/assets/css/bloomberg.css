@@ -72,7 +72,7 @@
   }
 
   .programmeBreatherNew {
-      background: linear-gradient(125deg, #39b6d8 -20%, #f7d344 50%, #e38330 100%);
+      background: linear-gradient(125deg, #459EE7 -20%, #4040DD 50%, #AA1834 100%);
       padding: 60px 0;
 
       .twelthSup {
@@ -534,7 +534,7 @@
           background: var(--black);
 
           .tradingHeading {
-              color: #e38330;
+              color: #AA1834;
           }
 
           .stepContent img {
@@ -973,7 +973,7 @@
           line-height: 150%;
           font-family: var(--go-regular);
           text-transform: uppercase;
-          background: var(--Linear-Gradient, linear-gradient(91deg, #39B5D7 1.8%, #F7D544 50.99%, #E38330 99.75%));
+          background: var(--Linear-Gradient, linear-gradient(91deg, #459EE7 1.8%, #4040DD 50.99%, #AA1834 99.75%));
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -1056,7 +1056,7 @@
 
 
   .reachoutBreatherSection {
-      background: linear-gradient(96deg, #39B5D7 -31.01%, #F7D544 49.05%, #E38330 109.58%);
+      background: linear-gradient(96deg, #459EE7 -31.01%, #4040DD 49.05%, #AA1834 109.58%);
       padding: 60px 0 !important;
 
       .reachoutBreatherWrapper {
@@ -1370,7 +1370,7 @@
       .listGradientBold {
           font-weight: 600;
           line-height: 120%;
-          color: var(--Orange, #E38330);
+          color: var(--Orange, #AA1834);
       }
 
       .yellowArrow {

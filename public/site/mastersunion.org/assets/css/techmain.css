@@ -53,7 +53,7 @@
     }
 
     .sectionGradientHeadIt {
-        background: var(--Linear, linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+        background: var(--Linear, linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -65,7 +65,7 @@
     }
 
     .sectionGradientHead {
-        background: var(--Linear, linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+        background: var(--Linear, linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -117,7 +117,7 @@
     }
 
     .gradientBackground {
-        background: linear-gradient(125deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+        background: linear-gradient(125deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
         padding: 60px;
         background-size: cover;
 
@@ -194,7 +194,7 @@
     }
 
     .reachout {
-        background: linear-gradient(125deg, #39b6d8 0%, #f7d344 50%, #e38330 100%);
+        background: linear-gradient(125deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
         padding: 60px;
         background-size: cover;
 
@@ -504,7 +504,7 @@
 
     .gradientItalicText {
         background: var(--Linear,
-                linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+                linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -1154,7 +1154,7 @@
 
         p {
             background: var(--Linear,
-                    linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+                    linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -1836,7 +1836,7 @@
         .countValuePgp h4 {
             font-size: 50px;
             background: var(--Linear,
-                    linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+                    linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -1845,7 +1845,7 @@
 
         .countValuePgp h4 span {
             background: var(--Linear,
-                    linear-gradient(90deg, #39b6d8 6.41%, #f7d344 51.47%, #e38330 96.52%));
+                    linear-gradient(90deg, #459EE7 6.41%, #4040DD 51.47%, #AA1834 96.52%));
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -2517,9 +2517,9 @@
 
     .gradientWhiteBtn {
         background: linear-gradient(119deg,
-                #39b6d8 -19.47%,
-                #f7d344 47.29%,
-                #e38330 112.78%) border-box;
+                #459EE7 -19.47%,
+                #4040DD 47.29%,
+                #AA1834 112.78%) border-box;
         border: 2px solid transparent;
         display: flex;
         flex-direction: column;
@@ -2635,7 +2635,7 @@
 
 
 .ranveerShow {
-    background: linear-gradient(101deg, #39B5D7 -2.87%, #F7D544 49.39%, #E38330 101.2%);
+    background: linear-gradient(101deg, #459EE7 -2.87%, #4040DD 49.39%, #AA1834 101.2%);
     padding: 60px 0 !important;
 
     .container {
@@ -2790,7 +2790,7 @@
 .studentJourneyWrap.borderGradient .gridBox:hover {
     border: 1px solid transparent;
     background: linear-gradient(var(--black) 0 0) padding-box,
-        linear-gradient(119deg, #39b6d8 -19.47%, #f7d344 47.29%, #e38330 112.78%) border-box;
+        linear-gradient(119deg, #459EE7 -19.47%, #4040DD 47.29%, #AA1834 112.78%) border-box;
 }
 
 .borderGradient .overLayDetail::after {
@@ -3455,9 +3455,9 @@
 
         .tradingHeading {
             background: linear-gradient(92deg,
-                    #39b6d8 7.6%,
-                    #f7d344 53.43%,
-                    #e38330 99.26%);
+                    #459EE7 7.6%,
+                    #4040DD 53.43%,
+                    #AA1834 99.26%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -3768,7 +3768,7 @@
 
             font-weight: 400;
             line-height: 120%;
-            background: linear-gradient(92deg, #39b6d8 7.6%, #f7d344 53.43%, #e38330 99.26%);
+            background: linear-gradient(92deg, #459EE7 7.6%, #4040DD 53.43%, #AA1834 99.26%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-family: "Fraunces", serif;
@@ -3847,7 +3847,7 @@
             margin-bottom: 10px;
 
             span {
-                background: linear-gradient(92deg, #39B5D7 46.88%, #F7D544 73.88%, #E38330 100.65%);
+                background: linear-gradient(92deg, #459EE7 46.88%, #4040DD 73.88%, #AA1834 100.65%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -4201,7 +4201,7 @@
 
 
     .fellowshipVideo {
-        background: url(https://images.mastersunion.link/uploads/17042025/v1/gradientVector.svg), linear-gradient(100deg, #39B6D8 -19.33%, #F7D344 40.46%, #E38330 100.24%);
+        background: url(https://images.mastersunion.link/uploads/17042025/v1/gradientVector.svg), linear-gradient(100deg, #459EE7 -19.33%, #4040DD 40.46%, #AA1834 100.24%);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -5563,7 +5563,7 @@
     }
 
     .countValuePgp h4 {
-        background: linear-gradient(104deg, #39B6D8 8.05%, #F7D344 52.68%, #E38330 97.3%);
+        background: linear-gradient(104deg, #459EE7 8.05%, #4040DD 52.68%, #AA1834 97.3%);
         background-clip: text;
     }
 
@@ -5632,7 +5632,7 @@
     }
 
     .link-red {
-        color: #E38330 !important;
+        color: #AA1834 !important;
         font-size: 14px;
         line-height: 160%;
     }
@@ -5714,7 +5714,7 @@
     }
 
     .gradientBoxiSection {
-        background: linear-gradient(125deg, #39b6d8 -20%, #f7d344 50%, #e38330 100%);
+        background: linear-gradient(125deg, #459EE7 -20%, #4040DD 50%, #AA1834 100%);
 
         .gradientSectionLeft {
             width: 100%;
@@ -5953,7 +5953,7 @@
     }
 
     .podcastSection {
-        background: linear-gradient(125deg, #39b6d8 -20%, #f7d344 50%, #e38330 100%);
+        background: linear-gradient(125deg, #459EE7 -20%, #4040DD 50%, #AA1834 100%);
         padding: 60px 0;
 
         .podcastWrapper {
@@ -6058,7 +6058,7 @@
     }
 
     .yellowGradient {
-        color: #E38330;
+        color: #AA1834;
         font-family: 'go-bold';
     }
 
@@ -6121,7 +6121,7 @@
     }
 
     .illinoisTech .sectionGradientHeadIt {
-        background: var(--Linear, linear-gradient(90deg, #39b6d8 -24.59%, #f7d344 51.47%, #e38330 96.52%));
+        background: var(--Linear, linear-gradient(90deg, #459EE7 -24.59%, #4040DD 51.47%, #AA1834 96.52%));
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
