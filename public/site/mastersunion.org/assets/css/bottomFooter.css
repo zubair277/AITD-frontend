@@ -124,6 +124,51 @@
     transition-delay: 0s;
 }
 
+/* Chatbot-only launcher: hide all menu items and show only the FAQ chat button */
+.bottomNav {
+    width: 70px;
+    height: 70px;
+    padding: 0;
+    gap: 0;
+    border-radius: 50%;
+}
+
+.bottomNav .dizzlingImage,
+.bottomNav > a,
+.bottomNav .logosFoot.crossBar {
+    display: none !important;
+}
+
+.bottomNav button:not(.crossBar) {
+    display: flex !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.bottomNav button:not(.crossBar) svg {
+    width: 28px;
+    height: 28px;
+}
+
+.bottomNav.is-expanded {
+    width: 70px !important;
+    height: 70px !important;
+    padding: 0 !important;
+    justify-content: center !important;
+}
+
+.bottomNav.is-expanded .logosFoot,
+.bottomNav:not(.is-expanded) .logosFoot {
+    display: none !important;
+}
+
 
 @media (min-width: 320px) and (max-width: 380px) {
     .bottomNav {
@@ -135,86 +180,149 @@
 @media (max-width: 767px) {
     .bottomNav {
         position: fixed;
-        bottom: 75px;
+        bottom: 30px;
         right: 20px;
         top: auto;
         left: auto;
         z-index: 99999;
         display: flex;
-        width: 60px;
-        height: 60px;
-        padding: 8px 16px;
+        width: 70px;
+        height: 70px;
+        padding: 0;
         justify-content: center;
         align-items: center;
-        gap: 16px;
-        border-radius: 45px;
+        gap: 0;
+        border-radius: 50%;
         cursor: pointer;
         background: linear-gradient(0deg, rgba(12, 12, 12, 0.10) 0%, rgba(12, 12, 12, 0.10) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.16) 100%), linear-gradient(89deg, rgba(57, 181, 215, 0.70) -6.74%, rgba(247, 213, 68, 0.70) 54.11%, rgba(227, 131, 48, 0.70) 114.42%);
         backdrop-filter: blur(4px);
-        transition: width 0.3s ease !important;
         transform: translate3d(0, 0, 0);
         -webkit-transform: translate3d(0, 0, 0);
         will-change: transform;
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
         overflow: hidden !important;
-        flex-direction: row;
+        flex-direction: column;
     }
 
-    .bottomNav .logosFoot {
-        display: none;
-        width: 100%;
-        height: 100%;
-        max-width: 24px;
-        max-height: 24px;
-        display: none;
-        transform: translateX(100px);
-        transition: opacity 0.4s ease, transform 0.4s ease;
-        pointer-events: none;
-    }
-
-    /* CrossBar should not slide in from outside */
+    .bottomNav .dizzlingImage,
+    .bottomNav > a,
     .bottomNav .logosFoot.crossBar {
-        transform: translateX(0);
+        display: none !important;
     }
 
-    .bottomNav .dizzlingImage {
-        display: block;
-        max-width: 24px;
-        max-height: 20px;
-        transition: opacity 0.3s ease, transform 0.3s ease;
+    .bottomNav button:not(.crossBar) {
+        display: flex !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        pointer-events: auto;
+    }
+
+    .bottomNav button:not(.crossBar) svg {
+        width: 28px;
+        height: 28px;
     }
 
     .bottomNav.is-expanded {
-        width: 92%;
-        padding: 10px 16px;
-        justify-content: space-around;
-        height: 60px;
+        width: 70px !important;
+        height: 70px !important;
+        padding: 0 !important;
+        justify-content: center !important;
     }
 
-    .bottomNav.is-expanded .dizzlingImage {
-        display: none;
-        transform: scale(0);
-        pointer-events: none;
+    .bottomNav.is-expanded .logosFoot,
+    .bottomNav:not(.is-expanded) .logosFoot {
+        display: none !important;
     }
 
-    .bottomNav.is-expanded .logosFoot:not(.crossBar) {
-        display: block;
-        transform: translateX(0);
-        pointer-events: auto;
-    }
+}
 
-    /* CrossBar should appear immediately without slide animation */
-    .bottomNav.is-expanded .logosFoot.crossBar {
-        display: block;
-        transform: translateX(0);
-        pointer-events: auto;
-        transition-delay: 0s !important;
-    }
+/* Strong chat launcher override to ensure the icon is visible */
+.bottomNav {
+    min-width: 70px;
+    min-height: 70px;
+    width: 70px !important;
+    height: 70px !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    border-radius: 50% !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: visible !important;
+}
 
-    /* Reverse animation when collapsing - faster and no delay */
-    .bottomNav:not(.is-expanded) .logosFoot:not(.crossBar) {
-        transition-delay: 0s;
-    }
+.bottomNav .dizzlingImage,
+.bottomNav > a,
+.bottomNav .logosFoot.crossBar {
+    display: none !important;
+}
 
+.bottomNav button:not(.crossBar) {
+    display: flex !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.bottomNav button:not(.crossBar) svg {
+    width: 28px !important;
+    height: 28px !important;
+}
+
+.bottomNav {
+    display: none !important;
+}
+
+.faq-chat-launcher {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background:
+        linear-gradient(0deg, rgba(12, 12, 12, 0.10) 0%, rgba(12, 12, 12, 0.10) 100%),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.16) 100%),
+        linear-gradient(180deg, rgba(57, 181, 215, 0.95) 0%, rgba(247, 213, 68, 0.95) 50%, rgba(227, 131, 48, 0.95) 100%);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.20);
+    border: 0;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100000;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faq-chat-launcher:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 24px 45px rgba(0, 0, 0, 0.25);
+}
+
+.faq-chat-launcher svg {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+@media (max-width: 767px) {
+    .faq-chat-launcher {
+        bottom: 20px;
+        right: 20px;
+        width: 64px;
+        height: 64px;
+    }
 }

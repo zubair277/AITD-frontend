@@ -206,7 +206,6 @@ addClassOnScroll2();
 
 
 
-
 // js tabs
 
 // (function () {
