@@ -66,12 +66,49 @@
             display: none !important;
         }
 
+        .meetMastersSection .meetMastersRight {
+            max-width: 860px;
+            width: 100%;
+        }
+
+        .meetMastersSection .meetMastersLeft {
+            max-width: 520px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
         .aboutAitdSnippet {
-            margin-top: 20px;
+            margin-top: 0;
+            width: 420px;
+            max-width: 100%;
+            padding: 30px 32px;
+            border-radius: 22px;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(4px);
         }
 
         .aboutAitdSnippet h3 {
-            margin-bottom: 8px;
+            margin-bottom: 14px;
+        }
+
+        .aboutAitdSnippet .go-BlockHeading {
+            font-size: clamp(56px, 4.6vw, 74px) !important;
+            line-height: 108% !important;
+            letter-spacing: -0.02em !important;
+        }
+
+        .aboutAitdSnippet .headingPara {
+            font-size: clamp(21px, 1.35vw, 26px) !important;
+            line-height: 152% !important;
+            color: rgba(255, 255, 255, 0.92) !important;
+            max-width: 26ch;
+        }
+
+        .meetMastersSection .meetmastersSwiperBtn {
+            margin-top: 28px;
         }
 
         .footerBrand {
@@ -84,6 +121,28 @@
         @media (max-width: 768px) {
             .meetMastersSection .meetMastersRight .masterImage {
                 min-height: 380px;
+            }
+
+            .aboutAitdSnippet {
+                padding: 22px 18px;
+                border-radius: 16px;
+            }
+
+            .aboutAitdSnippet .go-BlockHeading {
+                font-size: clamp(46px, 13vw, 56px) !important;
+                line-height: 108% !important;
+            }
+
+            .aboutAitdSnippet .headingPara {
+                font-size: clamp(18px, 4.8vw, 22px) !important;
+                line-height: 148% !important;
+                max-width: 100%;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .meetMastersSection .meetMastersLeft {
+                transform: translateX(-120px);
             }
         }
     </style>
