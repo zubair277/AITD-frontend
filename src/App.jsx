@@ -1,9 +1,11 @@
 import './App.css'
 
 function App() {
-  return (
-    <iframe className="site-frame" src="/site/mastersunion.org/index.html" title="Cloned frontend" />
-  )
+  // Load the local static site directly (no iframe).
+  if (typeof window !== 'undefined') {
+    window.location.replace('/site/mastersunion.org/index.html')
+  }
+  return null
 }
 
 export default App
