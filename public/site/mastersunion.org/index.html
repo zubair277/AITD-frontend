@@ -5662,8 +5662,8 @@
             <div class="headingWrapperButton">
                 <div class="headingWrapper">
                     <div class="newsTabs">
-                        <button type="button" class="newsTabBtn active" data-mode="latest">Latest News</button>
-                        <button type="button" class="newsTabBtn" data-mode="events">Events</button>
+                        <button type="button" class="newsTabBtn" data-mode="latest">Latest News</button>
+                        <button type="button" class="newsTabBtn active" data-mode="events">Events</button>
                     </div>
                     <div id="newsStatus" class="newsStatus"></div>
                 </div>
@@ -5709,6 +5709,36 @@
         /* News: card-only, uniform sizing */
         #section__news .swiper-slide {
             height: auto;
+        }
+
+        /* Override global .eventSlider .swiper-slide card styling (removes extra padding/space) */
+        #section__news .eventSlider .swiper-slide {
+            display: block;
+            padding: 0;
+            background: transparent;
+            box-shadow: none;
+            border-radius: 0;
+            gap: 0;
+            align-items: stretch;
+            justify-content: stretch;
+        }
+
+        /* Continuous motion (no easing gaps) */
+        #section__news .eventSlider .swiper-wrapper {
+            transition-timing-function: linear !important;
+        }
+
+        /* Fixed slide width helps fill edges smoothly */
+        #section__news .eventSlider .swiper-slide {
+            width: 280px;
+        }
+
+        @media (min-width: 768px) {
+            #section__news .eventSlider .swiper-slide { width: 320px; }
+        }
+
+        @media (min-width: 1024px) {
+            #section__news .eventSlider .swiper-slide { width: 360px; }
         }
 
         /* News: arrow button sizing + alignment */
@@ -5807,6 +5837,130 @@
                 height: 160px;
             }
         }
+
+        /* Latest News: text cards (date + title) */
+        #section__news .latestTextCard {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            min-height: 150px;
+            border-radius: 16px;
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+            padding: 14px 14px 16px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        #section__news .latestTextDate {
+            display: inline-flex;
+            align-items: center;
+            width: fit-content;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            line-height: 1;
+            background: #3f47cc;
+            color: #fff;
+            margin-bottom: 10px;
+            font-family: var(--go-medium);
+        }
+
+        #section__news .latestTextTitle {
+            font-family: var(--go-medium);
+            font-size: 16px;
+            line-height: 1.25;
+            color: #0b0b0b;
+            margin: 0;
+        }
+
+        /* Events: detailed card */
+        #section__news .eventCard {
+            display: grid;
+            grid-template-rows: 150px 1fr;
+            width: 100%;
+            min-height: 260px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        #section__news .eventCardImage {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        #section__news .eventCardImage::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.25));
+            pointer-events: none;
+        }
+
+        #section__news .eventCardBody {
+            padding: 12px 14px 14px;
+        }
+
+        #section__news .eventMetaRow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        #section__news .eventPill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: 12px;
+            line-height: 1;
+            background: rgba(0, 0, 0, 0.05);
+            color: #111;
+            white-space: nowrap;
+        }
+
+        #section__news .eventPillDark {
+            background: #111;
+            color: #fff;
+        }
+
+        #section__news .eventTitle {
+            font-family: var(--go-medium);
+            font-size: 14px;
+            line-height: 1.25;
+            margin: 0 0 6px 0;
+            color: #0b0b0b;
+        }
+
+        #section__news .eventDesc {
+            font-family: var(--go-regular);
+            font-size: 13px;
+            line-height: 1.35;
+            margin: 0;
+            color: rgba(0, 0, 0, 0.72);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        #section__news .eventHint {
+            margin-top: 10px;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.55);
+        }
     </style>
     
     
@@ -5820,22 +5974,28 @@
             if (!el || typeof Swiper === "undefined") return;
             // eslint-disable-next-line no-new
             window.latestNewsSwiper = new Swiper(el, {
-                slidesPerView: 1.15,
-                spaceBetween: 16,
-                speed: 450,
+                slidesPerView: 'auto',
+                spaceBetween: 18,
+                // Moderate continuous scroll speed
+                speed: 8000,
                 loop: true,
+                centeredSlides: false,
+                watchSlidesProgress: true,
+                // Keep looping smooth without us duplicating data
+                loopAdditionalSlides: 10,
+                loopedSlides: 5,
+                loopPreventsSliding: false,
+                freeMode: { enabled: true, momentum: false },
+                allowTouchMove: false,
                 autoplay: {
-                    delay: 2500,
+                    delay: 0,
                     disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
+                    pauseOnMouseEnter: false,
+                    waitForTransition: false,
                 },
                 navigation: {
                     nextEl: ".latestNews-Next",
                     prevEl: ".latestNews-Prev",
-                },
-                breakpoints: {
-                    768: { slidesPerView: 2.1, spaceBetween: 18 },
-                    1024: { slidesPerView: 3, spaceBetween: 20 },
                 },
             });
         });
@@ -5990,99 +6150,26 @@
         ///    - - - START LATEST NEWS BIND - --   
     
         const latestNewsArray = [
-          {
-                newsTitle: "A new generation of institutions is trying to find India’s next founders.",
-                newsSource: "The Economic Times",
-                newsDate: "13th March",
-                newsBannerCDN: "https://images.mastersunion.link/uploads/13032026/v1/Frame2043683388.webp",
-                nextLinkText: "Apply Now",
-                nextLink: "https://entrepreneur.economictimes.indiatimes.com/news/long-reads/indias-startup-revolution-transforming-classrooms-into-launchpads/129550869"
+            {
+                newsTitle: "MBA Admission 2026 Open – Apply Now!",
+                newsDate: "February 2, 2026",
+                nextLink: "https://aitdgoa.edu.in/2026/02/mba-admission-2026-open-apply-now-copy/"
             },
             {
-                newsTitle: "Indian B-schools see rising global demand for tech-skilled graduates",
-                newsSource: "INDIA TODAY",
-                newsDate: "17th December",
-                newsBannerCDN: "https://images.mastersunion.link/uploads/25022026/v1/Frame1321317756.webp",
-                nextLinkText: "Apply Now",
-                nextLink: "https://www.indiatoday.in/education-today/jobs-and-careers/story/indian-business-schools-rise-international-hiring-tech-leadership-roles-2837077-2025-12-17"
-            },
-          
-            {
-                newsTitle: "Indian B-schools see rising global demand for tech-skilled graduates",
-                newsSource: "edex live",
-                newsDate: "17th December",
-                newsBannerCDN: "https://images.mastersunion.link/uploads/25022026/v1/Frame1618873876.webp",
-                nextLinkText: "Apply Now",
-                nextLink: "https://www.edexlive.com/news/indian-b-schools-see-rising-global-demand-for-tech-skilled-graduates"
-            },
-    
-            {
-                newsTitle: "Global Demand Grows for Tech-Skilled Graduates from Indian B-Schools",
-                newsSource: "bold news",
-                newsDate: "17th December",
-                newsBannerCDN: "https://images.mastersunion.link/uploads/25022026/v1/Frame1618873877.webp",
-                nextLinkText: "Apply Now",
-                nextLink: "https://boldnewsonline.com/amp/global-demand-grows-for-tech-skilled-graduates-from-indian-b-schools/"
+                newsTitle: "Circular regarding MBA SEM III FEE DETAILS",
+                newsDate: "July 1, 2025",
+                nextLink: "https://aitdgoa.edu.in/2025/07/circular-regarding-mba-sem-iii-fee-details/"
             },
             {
-                newsTitle: "Leading business school Masters’ Union places 30 students in global companies",
-                newsSource: "businessline",
-                newsDate: "8th December",
-                newsBannerCDN: "https://images.mastersunion.link/uploads/25022026/v1/Frame1618873878.webp",
-                nextLinkText: "Apply Now",
-                nextLink: "https://www.thehindubusinessline.com/news/education/leading-business-school-masters-union-places-30-students-in-global-companies/article70372236.ece/amp/"
-            },
-    
-            {
-                newsTitle: "Gurugram B-school records strongest placement season; sees high recruiter interest",
-                newsSource: "financial express",
-                newsDate: "5th December",
-                newsBannerCDN: "https://images.mastersunion.link/uploads/25022026/v1/Frame1618873879.webp",
-                nextLinkText: "Apply Now",
-                nextLink: "https://www.financialexpress.com/jobs-career/education-gurugram-b-school-records-strongest-placement-season-sees-high-recruiter-interest-4067378/"
+                newsTitle: "MBA Admission 2025 Open – Apply Now!",
+                newsDate: "April 1, 2025",
+                nextLink: "https://aitdgoa.edu.in/2025/04/mba-admission-2025-open-apply-now/"
             },
             {
-                newsTitle: "Masters’ Union reports INR 33.39 LPA average for 2025 cohort",
-                newsSource: "education world",
-                newsDate: "25th November",
-                newsBannerCDN: "https://images.mastersunion.link/uploads/25022026/v1/Frame1618873880.webp",
-                nextLinkText: "Apply Now",
-                nextLink: "https://educationworld.in/masters-union-reports-inr-33-39-lpa-average-for-2025-cohort/"
-            },
-            {
-                newsTitle: "Masters’ Union Reports ₹1.28 Crore Highest Package; 3x Rise in Global Offers, 4 Students Bag ₹1 Crore+ Jobs",
-                newsSource: "collegedunia",
-                newsDate: "25th November",
-                newsBannerCDN: "https://images.mastersunion.link/uploads/25022026/v1/Frame1618873881.webp",
-                nextLinkText: "Apply Now",
-                nextLink: "https://collegedunia.com/news/masters-union-reports-1-point-28-crore-highest-package-3x-rise-in-global-offers-four-students-bag-one-crore-jobs-alertid-140531"
-            },
-            {
-                newsTitle: "In a first for the region, 5 UAE companies recruit 13+ students from Indian B-School Masters’ Union",
-                newsSource: "khaleej times",
-                newsDate: "25th November",
-                newsBannerCDN: "https://images.mastersunion.link/uploads/25022026/v1/Frame1618873882.webp",
-                nextLinkText: "Apply Now",
-                nextLink: "https://www.khaleejtimes.com/business/in-a-first-for-the-region-5-uae-companies-recruit-13-students-from-indian-b-school-masters-union"
-            },
-            {
-                newsTitle: "Masters’ Union B-School records INR 33.39 LPA average for 2025 Batch; 30 international Offers & 4 above INR 1 crore",
-                newsSource: "shiksha",
-                newsDate: "24th November",
-                newsBannerCDN: "https://images.mastersunion.link/uploads/25022026/v1/Frame1618873883.webp",
-                nextLinkText: "Apply Now",
-                nextLink: "https://www.shiksha.com/news/mba-masters-union-b-school-records-inr-33-39-lpa-average-for-2025-batch-30-international-offers-4-above-inr-1-crore-blogId-214370"
-            },
-            {
-                newsTitle: "Masters’ Union B-School records INR 33.39 LPA average for 2025 Batch; 30 international Offers & 4 above INR 1 crore",
-                newsSource: "Business Standard",
-                newsDate: "24th July",
-                newsBannerCDN: "https://images.mastersunion.link/uploads/25022026/v1/Frame1618873884.webp",
-                nextLinkText: "Apply Now",
-                nextLink: "https://www.business-standard.com/content/press-releases-ani/in-a-first-100-of-masters-union-first-year-undergrads-land-global-high-stakes-internships-125072400507_1.html"
+                newsTitle: "MBA Syllabus",
+                newsDate: "May 13, 2023",
+                nextLink: "https://aitdgoa.edu.in/2023/05/mba-syllabus/"
             }
-    
-    
         ];
     
     
@@ -6091,18 +6178,59 @@
             if (!container) return;
             container.innerHTML = '';
 
-            latestNewsArray.forEach((news) => {
-                // Card only: no internal content (image is applied as a background)
+            // Render exactly the provided items (no manual duplication of cards)
+            (Array.isArray(latestNewsArray) ? latestNewsArray : []).forEach((item) => {
+                const currentMode = mode || 'latest';
+                const safeTitle = String(item.newsTitle || item.title || 'View').replace(/"/g, '&quot;');
+                const imageUrl = item.newsBannerCDN || item.imageUrl || '';
+                const url = item.nextLink ? String(item.nextLink).replace(/"/g, '&quot;') : '';
+
+                if (currentMode === 'events') {
+                    const dateText = item.eventDate || item.dateText || '';
+                    const locationText = item.location || item.venue || '';
+                    const descText = item.description || item.desc || '';
+                    const filename = (item.downloadFilename || safeTitle || 'event-image')
+                        .toLowerCase()
+                        .replace(/[^a-z0-9]+/g, '-')
+                        .replace(/(^-|-$)/g, '') + '.jpg';
+
+                    const slideHtml = `
+                        <div class="swiper-slide">
+                            <a class="eventCard"
+                               href="${imageUrl}"
+                               data-mode="events"
+                               data-download-image="${String(imageUrl).replace(/"/g, '&quot;')}"
+                               data-download-filename="${filename}"
+                               aria-label="Download image: ${safeTitle}">
+                                <div class="eventCardImage" style="background-image:url('${imageUrl}')"></div>
+                                <div class="eventCardBody">
+                                    <div class="eventMetaRow">
+                                        ${dateText ? `<span class="eventPill">${String(dateText).replace(/</g, '&lt;')}</span>` : ``}
+                                        ${locationText ? `<span class="eventPill eventPillDark">${String(locationText).replace(/</g, '&lt;')}</span>` : ``}
+                                    </div>
+                                    <p class="eventTitle">${safeTitle}</p>
+                                    ${descText ? `<p class="eventDesc">${String(descText).replace(/</g, '&lt;')}</p>` : ``}
+                                    <div class="eventHint">Click to download image</div>
+                                </div>
+                            </a>
+                        </div>`;
+                    container.insertAdjacentHTML('beforeend', slideHtml);
+                    return;
+                }
+
+                // Latest News: text card (date + title)
+                const dateText = item.newsDate || item.dateText || '';
                 const slideHtml = `
                     <div class="swiper-slide">
-                        <a class="newsCardOnly"
-                           data-mode="${mode || 'latest'}"
-                           data-url="${news.nextLink ? String(news.nextLink).replace(/"/g, '&quot;') : ''}"
+                        <a class="latestTextCard"
+                           data-mode="${currentMode}"
+                           data-url="${url}"
                            target="_blank"
                            rel="noopener noreferrer"
-                           href="${news.nextLink}"
-                           aria-label="${String(news.newsTitle || 'View article').replace(/"/g, '&quot;')}"
-                           style="background-image:url('${news.newsBannerCDN}')">
+                           href="${url}"
+                           aria-label="${safeTitle}">
+                            ${dateText ? `<div class="latestTextDate">${String(dateText).replace(/</g, '&lt;')}</div>` : ``}
+                            <p class="latestTextTitle">${safeTitle}</p>
                         </a>
                     </div>`;
                 container.insertAdjacentHTML('beforeend', slideHtml);
@@ -6136,16 +6264,44 @@
         const staticEvents = [
             {
                 id: 'event-1',
-                newsTitle: 'AITD Business Conclave 2025',
-                newsBannerCDN: '/images/Life%20at%20AITD/Life4.jpg',
-                nextLink: '/brochures/aitd-business-conclave-2025.pdf'
+                newsTitle: 'AITD Event Highlights: Conclave',
+                eventDate: '24 Apr 2026',
+                location: 'New Delhi',
+                description: 'Key moments from our flagship conclave — speakers, sessions, and networking.',
+                newsBannerCDN: '/images/events/Screenshot%202026-04-16%20221902.png'
             },
             {
                 id: 'event-2',
-                newsTitle: 'Industry Speaker Series: Emerging Markets',
-                newsBannerCDN: '/images/Life%20at%20AITD/Life5.jpg',
-                nextLink: '/brochures/aitd-industry-speaker-series.pdf'
-            }
+                newsTitle: 'AITD Event Highlights: Speaker Series',
+                eventDate: '30 Apr 2026',
+                location: 'Campus Auditorium',
+                description: 'Snapshots from the industry talk — insights, Q&A, and student interaction.',
+                newsBannerCDN: '/images/events/Screenshot%202026-04-16%20221911.png'
+            },
+            {
+                id: 'event-3',
+                newsTitle: 'AITD Event Highlights: Pitch Night',
+                eventDate: '05 May 2026',
+                location: 'Innovation Lab',
+                description: 'Pitching, feedback, and mentor moments from our startup showcase.',
+                newsBannerCDN: '/images/events/Screenshot%202026-04-16%20221921.png'
+            },
+            {
+                id: 'event-4',
+                newsTitle: 'AITD Event Highlights: Case Challenge',
+                eventDate: '10 May 2026',
+                location: 'Lecture Hall 2',
+                description: 'Teams in action — problem solving, presentations, and jury evaluation.',
+                newsBannerCDN: '/images/events/Screenshot%202026-04-16%20221931.png'
+            },
+            {
+                id: 'event-5',
+                newsTitle: 'AITD Event Highlights: Workshop Day',
+                eventDate: '15 May 2026',
+                location: 'Seminar Room',
+                description: 'Hands-on learning moments from workshops and classroom activities.',
+                newsBannerCDN: '/images/events/Screenshot%202026-04-16%20222131.png'
+            },
         ];
 
         function setNewsStatus(message) {
@@ -6161,7 +6317,7 @@
 
         function loadEventsIntoNews() {
             bindLatestNews(staticEvents, 'events');
-            setNewsStatus('Showing upcoming events. Click a card to download the brochure.');
+            setNewsStatus('Showing upcoming events. Click a card to download the image.');
         }
 
         function setupNewsTabs() {
@@ -6169,29 +6325,49 @@
             const container = document.getElementById('latestNewsHome');
             if (!wrapper || !container) return;
 
-            // Delegate click for events brochure download
+            async function downloadUrlToDevice(url, filename) {
+                if (!url) return;
+                try {
+                    const res = await fetch(url, { cache: 'no-store' });
+                    const blob = await res.blob();
+                    const objectUrl = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = objectUrl;
+                    a.download = filename || '';
+                    document.body.appendChild(a);
+                    a.click();
+                    a.remove();
+                    URL.revokeObjectURL(objectUrl);
+                } catch (e) {
+                    // Fallback: attempt direct download via anchor
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = filename || '';
+                    a.target = '_blank';
+                    document.body.appendChild(a);
+                    a.click();
+                    a.remove();
+                }
+            }
+
+            // Delegate click for events image download
             container.addEventListener('click', function (event) {
-                const link = event.target.closest('.newsCardOnly');
+                const link = event.target.closest('.newsCardOnly, .eventCard');
                 if (!link) return;
                 const mode = link.getAttribute('data-mode') || 'latest';
-                const url = link.getAttribute('data-url');
+                const url = link.getAttribute('data-url') || '';
 
                 if (mode === 'events') {
                     event.preventDefault();
-                    if (!url) return;
-                    const anchor = document.createElement('a');
-                    anchor.href = url;
-                    anchor.download = '';
-                    anchor.target = '_blank';
-                    document.body.appendChild(anchor);
-                    anchor.click();
-                    document.body.removeChild(anchor);
+                    const img = link.getAttribute('data-download-image') || link.getAttribute('href') || '';
+                    const filename = link.getAttribute('data-download-filename') || 'event-image.jpg';
+                    downloadUrlToDevice(img, filename);
                 }
                 // In "latest" mode default anchor behaviour (open article) remains
             }, { passive: false });
 
             const tabs = wrapper.querySelectorAll('.newsTabBtn');
-            let currentMode = 'latest';
+            let currentMode = 'events';
 
             function setActiveMode(mode) {
                 if (mode === currentMode) return;
@@ -6215,8 +6391,8 @@
                 });
             });
 
-            // Initial state: Latest News active
-            loadLatestNews();
+            // Initial state: Events active
+            loadEventsIntoNews();
         }
 
         // Initialise tabs only if the Latest News slider exists
@@ -7034,7 +7210,7 @@
                         videoId: null,
                         format: "Format",
                         formatDetails: "Full Time On Campus",
-                        eligibility: "Passed Bachelor Degree of minimum 3 or 4 years duration.<br>Obtained at least 50% marks (45% marks in case of candidates belonging to reserved category) in the qualifying examination.<br>Appearance in any National Level Management Aptitude Tests such as CMAT, ATMA, MAT, XAT, etc.",
+                        eligibility: "1) Bachelor’s degree (3–4 years) <br>2) Minimum 50% marks (45% for reserved categories) <br>3) Must have appeared in a national-level test (CMAT, ATMA, MAT, XAT, etc.)",
                         duration: "Duration",
                         durationDetails: "2 Years",
                         deadline: "Applications Open",
@@ -7048,7 +7224,7 @@
                         videoId: null,
                         format: "Format",
                         formatDetails: "Full Time On Campus",
-                        eligibility: "Passed Bachelor Degree of minimum 3 or 4 years duration.<br>Obtained at least 50% marks (45% marks in case of candidates belonging to reserved category) in the qualifying examination.<br>Appearance in any National Level Management Aptitude Tests such as CMAT, ATMA, MAT, XAT, etc.",
+                        eligibility: "1) Bachelor’s degree (3–4 years) <br>2) Minimum 50% marks (45% for reserved categories) <br>3) Must have appeared in a national-level test (CMAT, ATMA, MAT, XAT, etc.)",
                         duration: "Duration",
                         durationDetails: "2 Years",
                         deadline: "Applications Open",
@@ -7062,7 +7238,7 @@
                         videoId: null,
                         format: "Format",
                         formatDetails: "Full Time On Campus",
-                        eligibility: "Passed Bachelor Degree of minimum 3 or 4 years duration.<br>Obtained at least 50% marks (45% marks in case of candidates belonging to reserved category) in the qualifying examination.<br>Appearance in any National Level Management Aptitude Tests such as CMAT, ATMA, MAT, XAT, etc.",
+                        eligibility: "1) Bachelor’s degree (3–4 years) <br>2) Minimum 50% marks (45% for reserved categories) <br>3) Must have appeared in a national-level test (CMAT, ATMA, MAT, XAT, etc.)",
                         duration: "Duration",
                         durationDetails: "2 Years",
                         deadline: "Applications Open",
@@ -7076,7 +7252,7 @@
                         videoId: null,
                         format: "Format",
                         formatDetails: "Full Time On Campus",
-                        eligibility: "Passed Bachelor Degree of minimum 3 or 4 years duration.<br>Obtained at least 50% marks (45% marks in case of candidates belonging to reserved category) in the qualifying examination.<br>Appearance in any National Level Management Aptitude Tests such as CMAT, ATMA, MAT, XAT, etc.",
+                        eligibility: "1) Bachelor’s degree (3–4 years) <br>2) Minimum 50% marks (45% for reserved categories) <br>3) Must have appeared in a national-level test (CMAT, ATMA, MAT, XAT, etc.)",
                         duration: "Duration",
                         durationDetails: "2 Years",
                         deadline: "Applications Open",
@@ -7090,7 +7266,7 @@
                         videoId: null,
                         format: "Format",
                         formatDetails: "Full Time On Campus",
-                        eligibility: "Passed Bachelor Degree of minimum 3 or 4 years duration.<br>Obtained at least 50% marks (45% marks in case of candidates belonging to reserved category) in the qualifying examination.<br>Appearance in any National Level Management Aptitude Tests such as CMAT, ATMA, MAT, XAT, etc.",
+                        eligibility: "1) Bachelor’s degree (3–4 years) <br>2) Minimum 50% marks (45% for reserved categories) <br>3) Must have appeared in a national-level test (CMAT, ATMA, MAT, XAT, etc.)",
                         duration: "Duration",
                         durationDetails: "2 Years",
                         deadline: "Applications Open",
