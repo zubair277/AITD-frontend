@@ -38362,7 +38362,7 @@ filter: brightness(2);
       max-height: fit-content;
       overflow: hidden !important;
       border: 1px solid var(--grey3);
-      transition: border 0.3s ease;
+      transition: none;
       max-height: 348px;
     }
 
@@ -38373,7 +38373,7 @@ filter: brightness(2);
       position: absolute;
       padding: 0 22px;
       bottom: 26px;
-      transition: opacity 0.4s ease-in-out;
+      transition: none;
     }
 
     .lifeCardHeading {
@@ -38386,11 +38386,7 @@ filter: brightness(2);
     .lifeCardOverlay {
       position: absolute;
       border-radius: 16px;
-      background: linear-gradient(to top,
-          rgba(0, 0, 0, 1) 0%,
-          rgba(0, 0, 0, 0.85) 30%,
-          rgba(0, 0, 0, 0.6) 60%,
-          rgba(0, 0, 0, 0) 100%);
+      background: transparent;
       background-repeat: no-repeat;
       padding: 24px;
       flex-direction: column;
@@ -38400,22 +38396,22 @@ filter: brightness(2);
       display: flex;
       opacity: 0;
       left: 0;
-      bottom: -100%;
+      bottom: 0;
       height: 100%;
       width: 100%;
-      transition: bottom 0.4s ease-in-out, opacity 0.4s ease-in-out;
+      transition: none;
     }
 
     .lifeMuCard:hover {
-      border: 1px solid transparent;
+      border: 1px solid var(--grey3);
 
       .lifeCardOverlay {
-        opacity: 1;
+        opacity: 0;
         bottom: 0;
       }
 
       .lifeCardHeadWrapper {
-        opacity: 0;
+        opacity: 1;
       }
     }
 

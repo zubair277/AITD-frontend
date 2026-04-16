@@ -5087,9 +5087,8 @@
 
                     <div class="muHeroButtonWrap">
                         <div class="heroRightButtons">
-                            <a href="https://www.youtube.com/watch?feature=shared&amp;v=IyMIGNBmRrg" target="_blank"
-                                class="btnWhite">
-                                Watch Intro Video
+                            <a href="#contact-us" class="btnWhite">
+                                Contact Us
                                 <span class="arrowWrap">
                                     <img class="arrow arrow1"
                                         src="../images.mastersunion.link/uploads/18022025/v1/black_arrow_image.svg"
@@ -5662,7 +5661,11 @@
         <div class="container">
             <div class="headingWrapperButton">
                 <div class="headingWrapper">
-                    <h2 class="go-HighlightHeading">Latest <span class="fr-HeadingItalic">News</span></h2>
+                    <div class="newsTabs">
+                        <button type="button" class="newsTabBtn active" data-mode="latest">Latest News</button>
+                        <button type="button" class="newsTabBtn" data-mode="events">Events</button>
+                    </div>
+                    <div id="newsStatus" class="newsStatus"></div>
                 </div>
 
                 <div class="headingRight mob-hide">
@@ -5717,6 +5720,37 @@
             display: flex;
             align-items: center;
             gap: 10px;
+        }
+
+        #section__news .newsTabs {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        #section__news .newsTabBtn {
+            padding: 6px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.9);
+            color: #111;
+            font-size: 13px;
+            line-height: 1.2;
+            font-family: var(--go-regular);
+            cursor: pointer;
+            transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+        }
+
+        #section__news .newsTabBtn.active {
+            background: #111;
+            color: #fff;
+            border-color: #111;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        #section__news .newsStatus {
+            display: none !important;
         }
 
         #section__news .latestNews-Prev,
@@ -5785,7 +5819,7 @@
             const el = document.querySelector(".swiper.eventSlider.latestNews.newsAuto");
             if (!el || typeof Swiper === "undefined") return;
             // eslint-disable-next-line no-new
-            new Swiper(el, {
+            window.latestNewsSwiper = new Swiper(el, {
                 slidesPerView: 1.15,
                 spaceBetween: 16,
                 speed: 450,
@@ -6052,7 +6086,7 @@
         ];
     
     
-        function bindLatestNews(latestNewsArray) {
+        function bindLatestNews(latestNewsArray, mode) {
             const container = document.getElementById('latestNewsHome');
             if (!container) return;
             container.innerHTML = '';
@@ -6062,6 +6096,8 @@
                 const slideHtml = `
                     <div class="swiper-slide">
                         <a class="newsCardOnly"
+                           data-mode="${mode || 'latest'}"
+                           data-url="${news.nextLink ? String(news.nextLink).replace(/"/g, '&quot;') : ''}"
                            target="_blank"
                            rel="noopener noreferrer"
                            href="${news.nextLink}"
@@ -6071,11 +6107,121 @@
                     </div>`;
                 container.insertAdjacentHTML('beforeend', slideHtml);
             });
+
+            // Rebuild Swiper loop when switching between Latest News and Events.
+            // This ensures the last slide flows into the first slide continuously.
+            try {
+                const swiper = window.latestNewsSwiper;
+                if (swiper) {
+                    if (typeof swiper.loopDestroy === 'function') swiper.loopDestroy();
+                    if (typeof swiper.loopCreate === 'function') swiper.loopCreate();
+                    if (typeof swiper.update === 'function') swiper.update();
+
+                    if (swiper.autoplay && typeof swiper.autoplay.start === 'function') {
+                        swiper.autoplay.start();
+                    }
+                }
+            } catch (e) {
+                // If loop rebuild fails, fall back to a simple update
+                try {
+                    if (window.latestNewsSwiper && typeof window.latestNewsSwiper.update === 'function') {
+                        window.latestNewsSwiper.update();
+                    }
+                } catch (e2) { }
+            }
         }
     
-        // Only bind if the Latest News slider exists
+        // --- News / Events tabs + data sources ---
+
+        const staticEvents = [
+            {
+                id: 'event-1',
+                newsTitle: 'AITD Business Conclave 2025',
+                newsBannerCDN: '/images/Life%20at%20AITD/Life4.jpg',
+                nextLink: '/brochures/aitd-business-conclave-2025.pdf'
+            },
+            {
+                id: 'event-2',
+                newsTitle: 'Industry Speaker Series: Emerging Markets',
+                newsBannerCDN: '/images/Life%20at%20AITD/Life5.jpg',
+                nextLink: '/brochures/aitd-industry-speaker-series.pdf'
+            }
+        ];
+
+        function setNewsStatus(message) {
+            const el = document.getElementById('newsStatus');
+            if (!el) return;
+            el.textContent = message || '';
+        }
+
+        function loadLatestNews() {
+            bindLatestNews(latestNewsArray, 'latest');
+            setNewsStatus('');
+        }
+
+        function loadEventsIntoNews() {
+            bindLatestNews(staticEvents, 'events');
+            setNewsStatus('Showing upcoming events. Click a card to download the brochure.');
+        }
+
+        function setupNewsTabs() {
+            const wrapper = document.getElementById('section__news');
+            const container = document.getElementById('latestNewsHome');
+            if (!wrapper || !container) return;
+
+            // Delegate click for events brochure download
+            container.addEventListener('click', function (event) {
+                const link = event.target.closest('.newsCardOnly');
+                if (!link) return;
+                const mode = link.getAttribute('data-mode') || 'latest';
+                const url = link.getAttribute('data-url');
+
+                if (mode === 'events') {
+                    event.preventDefault();
+                    if (!url) return;
+                    const anchor = document.createElement('a');
+                    anchor.href = url;
+                    anchor.download = '';
+                    anchor.target = '_blank';
+                    document.body.appendChild(anchor);
+                    anchor.click();
+                    document.body.removeChild(anchor);
+                }
+                // In "latest" mode default anchor behaviour (open article) remains
+            }, { passive: false });
+
+            const tabs = wrapper.querySelectorAll('.newsTabBtn');
+            let currentMode = 'latest';
+
+            function setActiveMode(mode) {
+                if (mode === currentMode) return;
+                currentMode = mode;
+                tabs.forEach((btn) => {
+                    const btnMode = btn.getAttribute('data-mode');
+                    btn.classList.toggle('active', btnMode === mode);
+                });
+
+                if (mode === 'latest') {
+                    loadLatestNews();
+                } else if (mode === 'events') {
+                    loadEventsIntoNews();
+                }
+            }
+
+            tabs.forEach((btn) => {
+                btn.addEventListener('click', function () {
+                    const mode = btn.getAttribute('data-mode') || 'latest';
+                    setActiveMode(mode);
+                });
+            });
+
+            // Initial state: Latest News active
+            loadLatestNews();
+        }
+
+        // Initialise tabs only if the Latest News slider exists
         if (document.getElementById('latestNewsHome')) {
-            bindLatestNews(latestNewsArray);
+            setupNewsTabs();
         }
         ///    - - - END LATEST NEWS BIND - --   
     
@@ -6510,10 +6656,20 @@
         });
     </script>
     <div id="ugprograme">
+        <style>
+            /* Remove the red decorative outline on the active "Our Specialisations" tab */
+            .ourProgramme .programmeTabsWeb li.active svg.icon-active {
+                display: none !important;
+            }
+
+            .ourProgramme .programmeTabsWeb li.active svg.icon-default {
+                display: block !important;
+            }
+        </style>
         <section class="ourProgramme mob-hide">
             <div class="container">
                 <div class="programHeroHeading">
-                    <h2 class="go-HighlightHeading ">Our <span class="fr-HeadingItalic">Programmes</span>
+                    <h2 class="go-HighlightHeading ">Our <span class="fr-HeadingItalic">Specialisations</span>
                     </h2>
         
         
@@ -6543,8 +6699,6 @@
                                                 <stop offset="1" stop-color="#E38330" />
                                             </linearGradient>
                                         </defs>
-                                    </svg>
-                                    MBA Specialisations
                                 </span>
                             </li>
                             <li data-rel="ugTab2" style="display: none;">
@@ -6880,11 +7034,11 @@
                         videoId: null,
                         format: "Format",
                         formatDetails: "Full Time On Campus",
-                        eligibility: "Graduates in any discipline",
+                        eligibility: "Passed Bachelor Degree of minimum 3 or 4 years duration.<br>Obtained at least 50% marks (45% marks in case of candidates belonging to reserved category) in the qualifying examination.<br>Appearance in any National Level Management Aptitude Tests such as CMAT, ATMA, MAT, XAT, etc.",
                         duration: "Duration",
                         durationDetails: "2 Years",
                         deadline: "Applications Open",
-                        link: "/pgp-technology-and-business-management"
+                        link: "https://apply.aitdgoa.edu.in/?_gl=1*1jitw18*_gcl_au*Mzg5OTg1NzU3LjE3NzUwNTA2NzA.*_ga*MTA4MjUwODM0Mi4xNzc1MDUwNjcw*_ga_M4M081L7F4*czE3NzYzNDUzNjgkbzM0JGcxJHQxNzc2MzQ1NTAxJGo1OSRsMCRoMA.."
                     },
                     {
                         id: "mba-marketing",
@@ -6894,11 +7048,11 @@
                         videoId: null,
                         format: "Format",
                         formatDetails: "Full Time On Campus",
-                        eligibility: "Graduates in any discipline",
+                        eligibility: "Passed Bachelor Degree of minimum 3 or 4 years duration.<br>Obtained at least 50% marks (45% marks in case of candidates belonging to reserved category) in the qualifying examination.<br>Appearance in any National Level Management Aptitude Tests such as CMAT, ATMA, MAT, XAT, etc.",
                         duration: "Duration",
                         durationDetails: "2 Years",
                         deadline: "Applications Open",
-                        link: "/pgp-technology-and-business-management"
+                        link: "https://apply.aitdgoa.edu.in/?_gl=1*1jitw18*_gcl_au*Mzg5OTg1NzU3LjE3NzUwNTA2NzA.*_ga*MTA4MjUwODM0Mi4xNzc1MDUwNjcw*_ga_M4M081L7F4*czE3NzYzNDUzNjgkbzM0JGcxJHQxNzc2MzQ1NTAxJGo1OSRsMCRoMA.."
                     },
                     {
                         id: "mba-finance",
@@ -6908,11 +7062,11 @@
                         videoId: null,
                         format: "Format",
                         formatDetails: "Full Time On Campus",
-                        eligibility: "Graduates in any discipline",
+                        eligibility: "Passed Bachelor Degree of minimum 3 or 4 years duration.<br>Obtained at least 50% marks (45% marks in case of candidates belonging to reserved category) in the qualifying examination.<br>Appearance in any National Level Management Aptitude Tests such as CMAT, ATMA, MAT, XAT, etc.",
                         duration: "Duration",
                         durationDetails: "2 Years",
                         deadline: "Applications Open",
-                        link: "/pgp-technology-and-business-management"
+                        link: "https://apply.aitdgoa.edu.in/?_gl=1*1jitw18*_gcl_au*Mzg5OTg1NzU3LjE3NzUwNTA2NzA.*_ga*MTA4MjUwODM0Mi4xNzc1MDUwNjcw*_ga_M4M081L7F4*czE3NzYzNDUzNjgkbzM0JGcxJHQxNzc2MzQ1NTAxJGo1OSRsMCRoMA.."
                     },
                     {
                         id: "mba-human-resource",
@@ -6922,11 +7076,11 @@
                         videoId: null,
                         format: "Format",
                         formatDetails: "Full Time On Campus",
-                        eligibility: "Graduates in any discipline",
+                        eligibility: "Passed Bachelor Degree of minimum 3 or 4 years duration.<br>Obtained at least 50% marks (45% marks in case of candidates belonging to reserved category) in the qualifying examination.<br>Appearance in any National Level Management Aptitude Tests such as CMAT, ATMA, MAT, XAT, etc.",
                         duration: "Duration",
                         durationDetails: "2 Years",
                         deadline: "Applications Open",
-                        link: "/pgp-technology-and-business-management"
+                        link: "https://apply.aitdgoa.edu.in/?_gl=1*1jitw18*_gcl_au*Mzg5OTg1NzU3LjE3NzUwNTA2NzA.*_ga*MTA4MjUwODM0Mi4xNzc1MDUwNjcw*_ga_M4M081L7F4*czE3NzYzNDUzNjgkbzM0JGcxJHQxNzc2MzQ1NTAxJGo1OSRsMCRoMA.."
                     },
                     {
                         id: "mba-operations",
@@ -6936,11 +7090,11 @@
                         videoId: null,
                         format: "Format",
                         formatDetails: "Full Time On Campus",
-                        eligibility: "Graduates in any discipline",
+                        eligibility: "Passed Bachelor Degree of minimum 3 or 4 years duration.<br>Obtained at least 50% marks (45% marks in case of candidates belonging to reserved category) in the qualifying examination.<br>Appearance in any National Level Management Aptitude Tests such as CMAT, ATMA, MAT, XAT, etc.",
                         duration: "Duration",
                         durationDetails: "2 Years",
                         deadline: "Applications Open",
-                        link: "/pgp-technology-and-business-management"
+                        link: "https://apply.aitdgoa.edu.in/?_gl=1*1jitw18*_gcl_au*Mzg5OTg1NzU3LjE3NzUwNTA2NzA.*_ga*MTA4MjUwODM0Mi4xNzc1MDUwNjcw*_ga_M4M081L7F4*czE3NzYzNDUzNjgkbzM0JGcxJHQxNzc2MzQ1NTAxJGo1OSRsMCRoMA.."
                     }
                 ],
                 postgraduate: [],
@@ -7749,7 +7903,7 @@
         
                         <div class="deadlineParent">
                             <a href="${program.link}" class="btnBlack borderGradient hoverWhiteEffect">
-                                Explore Programme
+                                Apply Now!!
                                 <span class="arrowWrap">
                                     <svg class="arrow arrow1" xmlns="https://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                                         <path d="M16.0831 5.06611L3.4375 17.6676L4.32808 18.5625L16.9737 5.96104L16.0831 5.06611Z" fill="white"></path>
@@ -13505,6 +13659,133 @@
 
 
 
+    <style>
+        /* Life at AITD: disable all hover overlays/animations so images never go black */
+        .beatingHearts .gridBox::before {
+            opacity: 0 !important;
+            background: transparent !important;
+            transition: none !important;
+        }
+
+        .beatingHearts .gridBox:hover::before {
+            opacity: 0 !important;
+        }
+
+        .beatingHearts .gridBox .overLayDetail,
+        .beatingHearts .gridBox:hover .overLayDetail {
+            bottom: -100% !important;
+            transition: none !important;
+        }
+
+        .beatingHearts .lifeMuCard,
+        .beatingHearts .lifeMuCard:hover {
+            border: 1px solid var(--grey3) !important;
+            transition: none !important;
+        }
+
+        .beatingHearts .lifeCardOverlay,
+        .beatingHearts .lifeMuCard:hover .lifeCardOverlay {
+            background: transparent !important;
+            opacity: 0 !important;
+            transition: none !important;
+        }
+
+        /* Ensure the overlay SVG doesn't paint even if something sets opacity differently */
+        .beatingHearts .lifeCardOverlay svg rect {
+            fill-opacity: 0 !important;
+        }
+        .beatingHearts .lifeCardOverlay svg path {
+            opacity: 0 !important;
+        }
+
+        .beatingHearts .lifeCardHeadWrapper,
+        .beatingHearts .lifeMuCard:hover .lifeCardHeadWrapper {
+            opacity: 1 !important;
+            transition: none !important;
+        }
+
+        /* Life at AITD: remove borders/boxing artifacts from the left image grid */
+        .beatingHearts .gridboxClubs .gridBox {
+            border: none !important;
+            background: transparent !important;
+        }
+
+        /* Manga-style layout (desktop mob-hide) */
+        .beatingHearts .mangaMosaic {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            grid-auto-rows: 58px;
+            gap: 16px;
+            width: 100%;
+            margin-top: 60px;
+        }
+
+        .beatingHearts .mangaPanel {
+            grid-column: span 1;
+            grid-row: span 1;
+            position: relative;
+            overflow: hidden;
+            border-radius: 18px;
+            background: #0b0b0b;
+            border: 3px solid rgba(255, 255, 255, 0.92);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+        }
+
+        .beatingHearts .mangaPanel img,
+        .beatingHearts .mangaPanel video {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .beatingHearts .mangaPanel img {
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .beatingHearts .mangaPanel.placeholder {
+            background:
+                repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.08) 0 10px, rgba(0, 0, 0, 0) 10px 20px),
+                #0b0b0b;
+        }
+
+        .beatingHearts .mangaPanel.placeholder::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            color: rgba(255, 255, 255, 0.62);
+            font-family: var(--go-regular);
+        }
+
+        .beatingHearts .mangaLinkPanel {
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+        }
+
+        .beatingHearts .mangaSpeech {
+            position: absolute;
+            left: 14px;
+            top: 14px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, 0.55);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            font-size: 12px;
+            line-height: 1;
+            z-index: 2;
+            backdrop-filter: blur(6px);
+        }
+    </style>
+
     <section class="beatingHearts techDsaiHomePage dsaiMobView">
         <div class="container">
             <div class="headingWrap">
@@ -13524,50 +13805,57 @@
                         moments from AITD life. Real student stories, events and spaces in one place.</p>
                 </div>
                 <div class="beatingRight" style="flex: 0 0 62%; max-width: 62%;">
-                    <img src="/images/Life%20at%20AITD/Life7.jpeg"
-                        alt="AITD Campus Life" style="display:block !important; width:100%; height:520px; max-height:520px; object-fit:cover; border-radius:16px;" onerror="this.src='/images/Life%20at%20AITD/Life8.jpg';" >
+                    <video
+                            style="width:100%; height:100%; object-fit:contain; background:#000; display:block;"
+                            autoplay muted loop playsinline>
+                            <source src="/images/Life%20at%20AITD/Life12.mp4" type="video/mp4">
+                        </video>
                 </div>
             </div>
 
             <div class="mob-hide">
-                <div class="gridboxClubs flexbox">
-                    <div class="gridLeft flexbox tab-hide newGridBox">
-                        <div class="gridBox">
-                            <img src="/images/Life%20at%20AITD/Life3.jpg" class="mob-hide "
-                                alt="Life at AITD" style="display:block !important; width:100%; height:100%; object-fit:cover;">
-                            <img src="/images/Life%20at%20AITD/Life3.jpg"
-                                class="mob-visible" alt="Life at AITD" style="display:block !important; width:100%; height:100%; object-fit:cover;">
-                        </div>
-                        <div class="gridBox">
-                            <img src="/images/Life%20at%20AITD/Life4.jpg"
-                                alt="AITD Club Culture" class="mob-hide " style="display:block !important; width:100%; height:100%; object-fit:cover;">
-                            <img src="/images/Life%20at%20AITD/Life4.jpg"
-                                alt="AITD Club Culture" class="mob-visible" style="display:block !important; width:100%; height:100%; object-fit:cover;">
-                        </div>
-                        <div class="gridBox">
-                            <img src="/images/Life%20at%20AITD/Life5.jpg"
-                                alt="AITD Classrooms" class="mob-hide" style="display:block !important; width:100%; height:100%; object-fit:cover;">
-                            <img src="/images/Life%20at%20AITD/Life5.jpg"
-                                alt="AITD Classrooms" class="mob-visible" style="display:block !important; width:100%; height:100%; object-fit:cover;">
-                        </div>
+                <div class="mangaMosaic">
+                    <div class="mangaPanel" style="grid-column: 1 / span 2; grid-row: 1 / span 3;">
+                        <img src="/images/Life%20at%20AITD/Life3.jpg" alt="Life at AITD" />
                     </div>
-                    <div class="gridRight">
-                        <a href="student-life-campus.html" class=" visitHeding  font-white">
-                            Explore AITD Campus Moments
-                            <span class="arrowWrap">
-                                <img class="arrow arrow1"
-                                    src="../images.mastersunion.link/uploads/18022025/v1/black_arrow_image.svg"
-                                    alt="arrow" />
-                                <img class="arrow arrow2"
-                                    src="../images.mastersunion.link/uploads/18022025/v1/black_arrow_image.svg"
-                                    alt="arrow" />
-                            </span>
-                        </a>
 
-                        <video class="mt20" width="100%" height="480px" style="object-fit: cover;" autoplay muted loop playsinline>
-                            <source src="/images/Life%20at%20AITD/Life10.mp4" type="video/mp4">
-                            <img src="/images/Life%20at%20AITD/Life6.JPG" alt="AITD Event" style="display:block; width:100%; height:100%; object-fit:cover;" />
-                        </video>
+                    <div class="mangaPanel placeholder" style="grid-column: 3 / span 1; grid-row: 1 / span 2;">
+                        <img src="/images/Life%20at%20AITD/Life1.jpg" alt="AITD Campus Culture"/>
+                    </div>
+
+                    <a href="student-life-campus.html" target="_blank" rel="noopener noreferrer"
+                        class="mangaPanel mangaLinkPanel"
+                        style="grid-column: 4 / span 3; grid-row: 1 / span 5;">
+                        <img src="/images/Life%20at%20AITD/Life11.jpg" alt="Line follower bot"
+                            style="display:block; width:100%; height:100%; object-fit:cover; object-position:center bottom; background:#000;" />
+                    </a>
+
+                    <div class="mangaPanel" style="grid-column: 1 / span 2; grid-row: 4 / span 2;">
+                        <img src="/images/Life%20at%20AITD/Life14.jpg" alt="AITD Campus Culture" style="display:block; width:100%; height:100%; object-fit:cover; object-position:center bottom; background:#000;"/>
+                    </div>
+
+                    <div class="mangaPanel placeholder" style="grid-column: 3 / span 1; grid-row: 3 / span 2;">
+                        <img src="/images/Life%20at%20AITD/Life10.jpg" alt="AITD Campus Culture" style="display:block; width:100%; height:100%; object-fit:cover; object-position:center bottom; background:#000;"/>
+                    </div>
+
+                    <div class="mangaPanel placeholder" style="grid-column: 3 / span 1; grid-row: 5 / span 2;">
+                        <img src="/images/Life%20at%20AITD/Life6.jpg" alt="AITD Campus Culture" style="display:block; width:100%; height:100%; object-fit:cover; object-position:center bottom; background:#000;"/>
+                    </div>
+
+                    <div class="mangaPanel" style="grid-column: 1 / span 2; grid-row: 6 / span 3;">
+                        <img src="/images/Life%20at%20AITD/Life5.jpg" alt="AITD Classrooms" />
+                    </div>
+
+                    <div class="mangaPanel placeholder" style="grid-column: 3 / span 1; grid-row: 7 / span 2;">
+                        <img src="/images/Life%20at%20AITD/Life16.jpg" alt="AITD Campus Culture" style="display:block; width:100%; height:100%; object-fit:cover; object-position:center bottom; background:#000;"/>
+                    </div>
+
+                    <div class="mangaPanel" style="grid-column: 4 / span 2; grid-row: 6 / span 3;">
+                        <img src="/images/Life%20at%20AITD/Life13.jpg" alt="AITD Campus Life" style="display:block; width:100%; height:100%; object-fit:cover; object-position:center bottom; background:#000;" />
+                    </div>
+
+                    <div class="mangaPanel placeholder" style="grid-column: 6 / span 1; grid-row: 6 / span 3;">
+                        <img src="/images/Life%20at%20AITD/Life8.jpg" alt="AITD Campus Culture" style="display:block; width:100%; height:100%; object-fit:cover; object-position:center bottom; background:#000;" />
                     </div>
                 </div>
             </div>
@@ -13778,6 +14066,119 @@
 
 
 
+    <section id="contact-us" class="sectionPadding">
+        <style>
+            #contact-us .contact-form-card {
+                max-width: 920px;
+                margin: 0 auto;
+                padding: 28px;
+                border: 1px solid #e7e7e7;
+                border-radius: 18px;
+                background: #ffffff;
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+            }
+
+            #contact-us .contact-form-grid {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 16px;
+            }
+
+            #contact-us .contact-field,
+            #contact-us .contact-select,
+            #contact-us .contact-textarea {
+                width: 100%;
+                padding: 14px 16px;
+                border-radius: 12px;
+                border: 1px solid #cfcfcf;
+                background: #ffffff;
+                color: #141414;
+                font-size: 15px;
+                line-height: 1.35;
+                outline: none;
+                transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            #contact-us .contact-field:focus,
+            #contact-us .contact-select:focus,
+            #contact-us .contact-textarea:focus {
+                border-color: #111111;
+                box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.08);
+            }
+
+            #contact-us .contact-textarea {
+                grid-column: 1 / -1;
+                min-height: 130px;
+                resize: vertical;
+            }
+
+            #contact-us .contact-actions {
+                grid-column: 1 / -1;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+
+            #contact-us .contact-thanks {
+                display: none;
+                color: #1f7a38;
+            }
+
+            #contact-us .contact-submit {
+                border: none;
+                cursor: pointer;
+            }
+
+            @media (max-width: 768px) {
+                #contact-us .contact-form-card {
+                    padding: 20px;
+                }
+
+                #contact-us .contact-form-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+        <div class="container">
+            <div class="titleWrap">
+                <h2 class="sectionHeading">Contact Us</h2>
+                <p class="sectionPara">
+                    Share your details and we'll get in touch with the next steps.
+                </p>
+            </div>
+
+            <div class="contact-form-card">
+                <form id="contactUsForm" class="contact-form-grid">
+                    <input name="fullName" type="text" placeholder="Full name" required
+                        class="contact-field" />
+                    <input name="email" type="email" placeholder="Email address" required
+                        class="contact-field" />
+                    <input name="phone" type="tel" placeholder="Phone number" required
+                        class="contact-field" />
+                    <textarea name="message" placeholder="Message (optional)" rows="4"
+                        class="contact-textarea"></textarea>
+
+                    <div class="contact-actions">
+                        <button type="submit" class="btnWhite contact-submit">
+                            Submit Details
+                            <span class="arrowWrap">
+                                <img class="arrow arrow1"
+                                    src="../images.mastersunion.link/uploads/18022025/v1/black_arrow_image.svg"
+                                    alt="arrow" />
+                                <img class="arrow arrow2"
+                                    src="../images.mastersunion.link/uploads/18022025/v1/black_arrow_image.svg"
+                                    alt="arrow" />
+                            </span>
+                        </button>
+                        <div id="contactUsThanks" class="font-14 font-regular contact-thanks">
+                            Thanks - we've received your details.
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <script>
 
 
@@ -13796,6 +14197,21 @@
             $("#form22").css("display", "none")
             $("#form33").css("display", "none")
         }
+
+        (function () {
+            const form = document.getElementById('contactUsForm');
+            const thanks = document.getElementById('contactUsThanks');
+            if (!form) return;
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (thanks) thanks.style.display = 'block';
+                form.reset();
+                setTimeout(function () {
+                    if (thanks) thanks.style.display = 'none';
+                }, 6000);
+            });
+        })();
 
 
 
@@ -14023,5 +14439,8 @@
 
 
 <!-- Mirrored from mastersunion.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Apr 2026 06:10:36 GMT -->
+</html>
+
+CO'2014], Thu, 02 Apr 2026 06:10:36 GMT -->
 </html>
 
