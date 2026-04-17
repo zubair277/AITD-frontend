@@ -118,6 +118,94 @@
             letter-spacing: 0.12em;
         }
 
+        .trustedLogosSection {
+            padding: 36px 0 18px;
+            background: #f3f5fa;
+            overflow: hidden;
+        }
+
+        .trustedLogosSection .trustedLogosHeader {
+            margin-bottom: 30px;
+        }
+
+        .trustedLogosSection .trustedLogosTitle {
+            margin: 0;
+            color: #242745;
+            font-family: "Fraunces", serif;
+            font-size: clamp(42px, 4.2vw, 72px);
+            font-weight: 600;
+            line-height: 1;
+            letter-spacing: -0.03em;
+        }
+
+        .trustedLogosMarquee {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .trustedLogosTrack {
+            display: flex;
+            width: max-content;
+            gap: 18px;
+            will-change: transform;
+        }
+
+        .trustedLogosTrack.rowTop {
+            animation: trustedLogosMoveRight 28s linear infinite;
+        }
+
+        .trustedLogosTrack.rowBottom {
+            animation: trustedLogosMoveLeft 28s linear infinite;
+        }
+
+        .trustedLogosSection:hover .trustedLogosTrack {
+            animation-play-state: paused;
+        }
+
+        .trustedLogoPill {
+            flex: 0 0 auto;
+            min-width: 220px;
+            height: 78px;
+            padding: 0 32px;
+            border-radius: 999px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 24px rgba(36, 39, 69, 0.08);
+        }
+
+        .trustedLogoPill img {
+            max-width: 150px;
+            max-height: 30px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: saturate(0) brightness(0.2);
+            opacity: 0.95;
+        }
+
+        @keyframes trustedLogosMoveLeft {
+            from {
+                transform: translate3d(0, 0, 0);
+            }
+
+            to {
+                transform: translate3d(-50%, 0, 0);
+            }
+        }
+
+        @keyframes trustedLogosMoveRight {
+            from {
+                transform: translate3d(-50%, 0, 0);
+            }
+
+            to {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
         @media (max-width: 768px) {
             .meetMastersSection .meetMastersRight .masterImage {
                 min-height: 380px;
@@ -137,6 +225,25 @@
                 font-size: clamp(18px, 4.8vw, 22px) !important;
                 line-height: 148% !important;
                 max-width: 100%;
+            }
+
+            .trustedLogosSection {
+                padding: 22px 0 10px;
+            }
+
+            .trustedLogosSection .trustedLogosHeader {
+                margin-bottom: 22px;
+            }
+
+            .trustedLogoPill {
+                min-width: 170px;
+                height: 62px;
+                padding: 0 22px;
+            }
+
+            .trustedLogoPill img {
+                max-width: 120px;
+                max-height: 24px;
             }
         }
 
@@ -5655,8 +5762,6 @@
         </script>
     </section>
 
-    
-
 <section class="eventsMU homeEvents bg-white hoempageEvents" id="section__news">
         <div class="container">
             <div class="headingWrapperButton">
@@ -6841,12 +6946,80 @@
             .ourProgramme .programmeTabsWeb li.active svg.icon-default {
                 display: block !important;
             }
+
+            .specialisationLogos {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 18px;
+            }
+
+            .specialisationLogoItem {
+                flex: 0 0 auto;
+                height: 44px;
+                padding: 0 16px;
+                border-radius: 999px;
+                background: rgba(255, 255, 255, 0.06);
+                border: 1px solid rgba(255, 255, 255, 0.14);
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                backdrop-filter: blur(6px);
+            }
+
+            .specialisationLogoItem img {
+                height: 22px;
+                width: auto;
+                max-width: 140px;
+                object-fit: contain;
+                display: block;
+                filter: saturate(0) brightness(0.95);
+                opacity: 0.95;
+            }
+
+            @media (max-width: 768px) {
+                .specialisationLogos {
+                    gap: 10px;
+                    margin-top: 14px;
+                }
+
+                .specialisationLogoItem {
+                    height: 40px;
+                    padding: 0 14px;
+                }
+
+                .specialisationLogoItem img {
+                    height: 20px;
+                    max-width: 120px;
+                }
+            }
         </style>
         <section class="ourProgramme mob-hide">
             <div class="container">
                 <div class="programHeroHeading">
                     <h2 class="go-HighlightHeading ">Our <span class="fr-HeadingItalic">Specialisations</span>
                     </h2>
+
+                    <div class="specialisationLogos" aria-label="Company logos">
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Capgemini-Logo.jpg" alt="Capgemini"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/citrix-logo.jpg" alt="Citrix"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Godrej_Logo.jpg" alt="Godrej"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/IBM_logo.jpg" alt="IBM"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/ibm-log0.png" alt="IBM"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Kinceo.jpg" alt="Kinceo"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/lakood.jpg" alt="Lakood"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Mahindra_Auto.jpg" alt="Mahindra Auto"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/one%20shield.jpg" alt="One Shield"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Open-Destinations-Logo.jpg" alt="Open Destinations"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Persistent_Systems_Logo.jpg" alt="Persistent Systems"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/rsspl-logo.jpg" alt="RSSPL"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Siemens-logo.jpg" alt="Siemens"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/tangentia-inc.jpg" alt="Tangentia"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Tata_Consultancy_Services.jpg" alt="Tata Consultancy Services"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Wipro_Primary_Logo.jpg" alt="Wipro"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Worley_Logo.jpg" alt="Worley"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/zepto.png" alt="Zepto"></span>
+                    </div>
         
         
                 </div>
@@ -7163,6 +7336,27 @@
             <div class="container">
                 <div class="programmeWrapper">
                     <h2 class="programmeMobHeading font-white">Our <span class="programmeSpan">Programmes</span></h2>
+
+                    <div class="specialisationLogos" aria-label="Company logos">
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Capgemini-Logo.jpg" alt="Capgemini"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/citrix-logo.jpg" alt="Citrix"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Godrej_Logo.jpg" alt="Godrej"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/IBM_logo.jpg" alt="IBM"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/ibm-log0.png" alt="IBM"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Kinceo.jpg" alt="Kinceo"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/lakood.jpg" alt="Lakood"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Mahindra_Auto.jpg" alt="Mahindra Auto"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/one%20shield.jpg" alt="One Shield"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Open-Destinations-Logo.jpg" alt="Open Destinations"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Persistent_Systems_Logo.jpg" alt="Persistent Systems"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/rsspl-logo.jpg" alt="RSSPL"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Siemens-logo.jpg" alt="Siemens"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/tangentia-inc.jpg" alt="Tangentia"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Tata_Consultancy_Services.jpg" alt="Tata Consultancy Services"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Wipro_Primary_Logo.jpg" alt="Wipro"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/Worley_Logo.jpg" alt="Worley"></span>
+                        <span class="specialisationLogoItem"><img loading="lazy" src="/images/logos/zepto.png" alt="Zepto"></span>
+                    </div>
         
                     <ul class="programFilters"
                         style="overflow-x: auto; white-space: nowrap; scroll-behavior: smooth; -webkit-overflow-scrolling: touch;">
@@ -12153,6 +12347,42 @@
     
                     <div class="swiper-pagination-homepage"></div>
     
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trustedLogosSection">
+        <div class="container">
+            <div class="trustedLogosHeader">
+                <h2 class="trustedLogosTitle">Trusted by</h2>
+            </div>
+
+            <div class="trustedLogosMarquee">
+                <div class="trustedLogosTrack rowTop">
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Capgemini-Logo.jpg" alt="Capgemini"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/citrix-logo.jpg" alt="Citrix"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Godrej_Logo.jpg" alt="Godrej"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/IBM_logo.jpg" alt="IBM"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/zepto.png" alt="Zepto"></div>
+                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/Capgemini-Logo.jpg" alt=""></div>
+                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/citrix-logo.jpg" alt=""></div>
+                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/Godrej_Logo.jpg" alt=""></div>
+                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/IBM_logo.jpg" alt=""></div>
+                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/zepto.png" alt=""></div>
+                </div>
+
+                <div class="trustedLogosTrack rowBottom">
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Siemens-logo.jpg" alt="Siemens"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Tata_Consultancy_Services.jpg" alt="Tata Consultancy Services"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Wipro_Primary_Logo.jpg" alt="Wipro"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Worley_Logo.jpg" alt="Worley"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Persistent_Systems_Logo.jpg" alt="Persistent Systems"></div>
+                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/Siemens-logo.jpg" alt=""></div>
+                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/Tata_Consultancy_Services.jpg" alt=""></div>
+                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/Wipro_Primary_Logo.jpg" alt=""></div>
+                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/Worley_Logo.jpg" alt=""></div>
+                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/Persistent_Systems_Logo.jpg" alt=""></div>
                 </div>
             </div>
         </div>
