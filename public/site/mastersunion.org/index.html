@@ -49,45 +49,66 @@
             display: none !important;
         }
 
-        .meetMastersSection .meetMastersRight .masterImage {
-            min-height: 520px;
-            background: #232323;
-            border-radius: 14px;
+        .meetMastersSection {
+            position: relative;
+            overflow: hidden;
+            padding: 72px 0;
+            background-image: url("/images/Life%20at%20AITD/college9.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
         }
 
-        .meetMastersSection .meetMastersRight .masterImage img {
-            display: block !important;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .meetMastersSection::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: inherit;
+            background-size: inherit;
+            background-position: left center;
+            background-repeat: inherit;
+            filter: blur(16px) brightness(0.55);
+            transform: scale(1.08);
+            clip-path: polygon(0 0, 48% 0, 35% 100%, 0 100%);
+            z-index: 0;
         }
 
-        .meetMastersSection .meetMastersRight .masterImage .masterPlay {
-            display: none !important;
+        .meetMastersSection::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(5, 8, 18, 0.72) 0%, rgba(5, 8, 18, 0.55) 36%, rgba(5, 8, 18, 0.25) 58%, rgba(5, 8, 18, 0.15) 100%);
+            z-index: 1;
         }
 
-        .meetMastersSection .meetMastersRight {
-            max-width: 860px;
-            width: 100%;
-        }
-
-        .meetMastersSection .meetMastersLeft {
-            max-width: 520px;
-            width: 100%;
+        .meetMastersSection .container,
+        .meetMastersSection .meetMastersWrapper {
             position: relative;
             z-index: 2;
         }
 
+        .meetMastersSection .meetMastersRight {
+            display: none !important;
+        }
+
+        .meetMastersSection .meetMastersLeft {
+            max-width: 640px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            transform: none !important;
+        }
+
         .aboutAitdSnippet {
             margin-top: 0;
-            width: 420px;
+            width: 560px;
             max-width: 100%;
-            padding: 30px 32px;
+            padding: 24px 26px;
             border-radius: 22px;
             border: 1px solid rgba(255, 255, 255, 0.16);
-            background: linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
+            background: linear-gradient(145deg, rgba(8, 12, 26, 0.74), rgba(8, 12, 26, 0.46));
             box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
-            backdrop-filter: blur(4px);
+            backdrop-filter: blur(8px);
         }
 
         .aboutAitdSnippet h3 {
@@ -95,16 +116,16 @@
         }
 
         .aboutAitdSnippet .go-BlockHeading {
-            font-size: clamp(56px, 4.6vw, 74px) !important;
-            line-height: 108% !important;
-            letter-spacing: -0.02em !important;
+            font-size: clamp(32px, 2.2vw, 42px) !important;
+            line-height: 114% !important;
+            letter-spacing: -0.01em !important;
         }
 
         .aboutAitdSnippet .headingPara {
-            font-size: clamp(21px, 1.35vw, 26px) !important;
-            line-height: 152% !important;
+            font-size: clamp(15px, 0.95vw, 17px) !important;
+            line-height: 158% !important;
             color: rgba(255, 255, 255, 0.92) !important;
-            max-width: 26ch;
+            max-width: 100%;
         }
 
         .meetMastersSection .meetmastersSwiperBtn {
@@ -207,23 +228,29 @@
         }
 
         @media (max-width: 768px) {
-            .meetMastersSection .meetMastersRight .masterImage {
-                min-height: 380px;
+            .meetMastersSection {
+                padding: 46px 0;
+                background-position: 64% center;
+            }
+
+            .meetMastersSection::before {
+                clip-path: polygon(0 0, 92% 0, 70% 100%, 0 100%);
+                filter: blur(14px) brightness(0.52);
             }
 
             .aboutAitdSnippet {
-                padding: 22px 18px;
+                padding: 20px 16px;
                 border-radius: 16px;
             }
 
             .aboutAitdSnippet .go-BlockHeading {
-                font-size: clamp(46px, 13vw, 56px) !important;
-                line-height: 108% !important;
+                font-size: clamp(24px, 7.2vw, 30px) !important;
+                line-height: 118% !important;
             }
 
             .aboutAitdSnippet .headingPara {
-                font-size: clamp(18px, 4.8vw, 22px) !important;
-                line-height: 148% !important;
+                font-size: clamp(13px, 3.7vw, 15px) !important;
+                line-height: 152% !important;
                 max-width: 100%;
             }
 
@@ -249,7 +276,7 @@
 
         @media (min-width: 769px) {
             .meetMastersSection .meetMastersLeft {
-                transform: translateX(-120px);
+                transform: none;
             }
         }
     </style>
@@ -5297,9 +5324,12 @@
             <div class="meetMastersWrapper">
                 <div class="meetMastersLeft">
                     <div class="aboutAitdSnippet" id="about-aitd">
-                        <h3 class="go-BlockHeading font-white">About AITD</h3>
-                        <p class="headingPara">AITD is focused on practical, industry-led learning where students build
-                            real-world skills through live projects, mentorship, and outcome-driven career preparation.</p>
+                        <h3 class="go-BlockHeading font-white">About Agnel Institute of Technology and Design (AITD)</h3>
+                        <p class="headingPara">Nestled in Assagao, AITD blends rigorous academics with hands-on, skill-based
+                            learning through modern ICT infrastructure and advanced labs. Guided by expert faculty and
+                            industry exposure, students turn classroom concepts into real-world impact across specialized
+                            undergraduate programs and a premier MBA. With affordable world-class education and strong
+                            placement support, AITD continues to shape future-ready professionals and leaders.</p>
                     </div>
 
                     <div class="meetmastersSwiperBtn mob-hide ">
@@ -5708,57 +5738,10 @@
             </div>
         </div>
         <script>
-
-            const aitdCardImages = [
-                '/images/cards/card-1.png',
-                '/images/cards/card-2.png',
-                '/images/cards/card-3.png'
-            ];
-
-            document.querySelectorAll('.meetMastersSwiper .swiper-slide').forEach(function (slide, index) {
-                const img = slide.querySelector('.masterImage img');
-
-                if (!img) return;
-
-                img.src = aitdCardImages[index % aitdCardImages.length];
-                img.alt = 'AITD Card';
-            });
-
-            var swiper = new Swiper(".meetMastersSwiper", {
-                slidesPerView: 1.4,
-                spaceBetween: 16,
-                speed: 300,
-                loop: false,
-                cssMode: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: ".meetMastersSwiper-Next",
-                    prevEl: ".meetMastersSwiper-Prev",
-                },
-                breakpoints: {
-                    768: {
-                        slidesPerView: 1.4,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                    },
-                    1366: {
-                        slidesPerView: 3,
-                    },
-                    1440: {
-                        slidesPerView: 3,
-                    },
-                    1600: {
-                        slidesPerView: 3,
-                    },
-                    1920: {
-                        slidesPerView: 3,
-                    },
-                },
-            });
+            const meetMastersNav = document.querySelector('.meetmastersSwiperBtn');
+            if (meetMastersNav) {
+                meetMastersNav.style.display = 'none';
+            }
         </script>
     </section>
 
@@ -8912,7 +8895,7 @@
 
                 <div class="getpreppedSwipCard">
                     <div class="getimgWrap">
-                        <img src="images/faculty/faculty-2.jpeg" alt="Mr. Frazer Rodrigues">
+                        <img src="images/faculty/Faculty3.png" alt="Mr. Frazer Rodrigues">
                     </div>
                     <div class="getpreppedTextWrap">
                         <h3>Mr. Frazer Rodrigues</h3>
