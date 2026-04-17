@@ -7496,7 +7496,7 @@
               <div class="speciallyBtn">
               <div class="eligibilityParent">
                 <div class="eachInfoWrapper">
-                  <img src="https://images.mastersunion.link/uploads/01052025/v1/Frame1321317004.svg" alt="icon">
+                  <img src="/images/icons/eligibility.png?v=20260418a" alt="eligibility icon">
                   <div class="advancedDivi">
                     <p class="cardParaEligibility">${program.eligibility.includes('Work') ? 'Eligibility' : 'Eligibility'}</p>
                     <p class="cardPara infoText">${program.eligibilityDetails || program.eligibility}</p>
@@ -7504,7 +7504,7 @@
                 </div>
         
                 <div class="eachInfoWrapper">
-                  <img src="https://images.mastersunion.link/uploads/01052025/v1/Frame13213170071.svg" alt="icon">
+                  <img src="/images/icons/format.png?v=20260418a" alt="format icon">
                   <div class="advancedDivi">
                     <p class="cardParaEligibility">${program.format}</p>
                     <p class="cardPara infoText">${program.formatDetails}</p>
@@ -7512,7 +7512,7 @@
                 </div>
         
                 <div class="eachInfoWrapper">
-                  <img src="https://images.mastersunion.link/uploads/01052025/v1/Frame4273217554.svg" alt="icon">
+                  <img src="/images/icons/duration.png?v=20260418a" alt="duration icon">
                   <div class="advancedDivi">
                     <p class="cardParaEligibility">${program.duration}</p>
                     <p class="cardPara infoText">${program.durationDetails}</p>
@@ -7520,7 +7520,7 @@
                 </div>
         
                 <div class="eachInfoWrapper">
-                  <img src="https://images.mastersunion.link/uploads/01052025/v1/Frame13213170072.svg" alt="icon">
+                  <img src="/images/icons/deadline.png?v=20260418a" alt="deadline icon">
                   <div class="advancedDivi">
                     <p class="cardParaEligibility">
                         ${['pgp-in-applied-ai-and-agentic-systems', 'pg-in-ui-ux-and-product-design', 'pgp-sustainability-and-business-management'].includes(program.id) ? 'Admission Status' : 'Deadline'}
@@ -8130,7 +8130,7 @@
         
                         <div class="campusDiviParent">
                             <div class="programFlexi">
-                                <img class="campusImage" src="https://images.mastersunion.link/uploads/23062025/v2/GreyColorIcon.svg" alt="icon">
+                                <img class="campusImage" src="/images/icons/format.png?v=20260418a" alt="format icon">
                                 <div class="campusBoxContent">
                                     <p class="campusHeading">${program.format}</p>
                                     <p class="campusPara">${program.formatDetails}</p>
@@ -8138,7 +8138,7 @@
                             </div>
         
                             <div class="programFlexi">
-                                <img class="campusImage" src="https://images.mastersunion.link/uploads/23062025/v3/GreyColorIcon.svg" alt="icon">
+                                <img class="campusImage" src="/images/icons/eligibility.png?v=20260418a" alt="eligibility icon">
                                 <div class="campusBoxContent">
                                     <p class="campusHeading">${program.eligibility.includes('Work') ? 'Eligibility' : 'Eligibility'}</p>
                                     <p class="campusPara">${program.eligibilityDetails || program.eligibility}</p>
@@ -8146,7 +8146,7 @@
                             </div>
         
                             <div class="programFlexi">
-                                <img class="campusImage" src="https://images.mastersunion.link/uploads/23062025/v4/GreyColorIcon.svg"alt="icon">
+                                <img class="campusImage" src="/images/icons/duration.png?v=20260418a" alt="duration icon">
                                 <div class="campusBoxContent">
                                     <p class="campusHeading">${program.duration}</p>
                                     <p class="campusPara">${program.durationDetails}</p>
@@ -8154,7 +8154,7 @@
                             </div>
         
                             <div class="programFlexi">
-                                <img class="campusImage" src="https://images.mastersunion.link/uploads/23062025/v5/GreyColorIcon.svg" alt="icon">
+                                <img class="campusImage" src="/images/icons/deadline.png?v=20260418a" alt="deadline icon">
                                 <div class="campusBoxContent">
                                     <p class="campusHeading">
                                         ${['pgp-in-applied-ai-and-agentic-systems', 'pg-in-ui-ux-and-product-design', 'pgp-sustainability-and-business-management'].includes(program.id) ? 'Admission Status' : 'Deadline'}
@@ -11559,26 +11559,20 @@
     <style>
         /* Disable mouse hover effects for Shark Tank section cards */
         .selectingStudents.sharkTank .gridBox,
-        .selectingStudents.sharkTank .sharkFront,
-        .selectingStudents.sharkTank .overLayDetail,
         .selectingStudents.sharkTank .imageBoxiShark img {
             transition: none !important;
             animation: none !important;
             transform: none !important;
         }
 
+        .selectingStudents.sharkTank .sharkFront,
         .selectingStudents.sharkTank .overLayDetail,
+        .selectingStudents.sharkTank .gridBox:hover .sharkFront,
         .selectingStudents.sharkTank .gridBox:hover .overLayDetail {
+            display: none !important;
             opacity: 0 !important;
             visibility: hidden !important;
             pointer-events: none !important;
-        }
-
-        .selectingStudents.sharkTank .gridBox:hover .sharkFront,
-        .selectingStudents.sharkTank .gridBox .sharkFront {
-            opacity: 1 !important;
-            visibility: visible !important;
-            transform: none !important;
         }
     </style>
 
