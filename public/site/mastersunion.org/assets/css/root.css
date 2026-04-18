@@ -989,6 +989,7 @@ button.BlackBtn {
     border-radius: 20px;
     overflow: hidden;
     line-height: 0;
+    border: 4px solid var(--white);
 }
 
 video.video-element {
@@ -1003,6 +1004,11 @@ video.video-element {
     margin: auto;
     border-radius: 20px;
     overflow: hidden;
+}
+
+.video-container {
+    border: 4px solid var(--white);
+    border-radius: 20px;
 }
 
 .video-controls {

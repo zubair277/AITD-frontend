@@ -5750,8 +5750,8 @@
             <div class="headingWrapperButton">
                 <div class="headingWrapper">
                     <div class="newsTabs">
-                        <button type="button" class="newsTabBtn" data-mode="latest">Latest News</button>
                         <button type="button" class="newsTabBtn active" data-mode="events">Events</button>
+                        <button type="button" class="newsTabBtn" data-mode="latest">Latest News</button>
                     </div>
                     <div id="newsStatus" class="newsStatus"></div>
                 </div>
@@ -14367,10 +14367,226 @@
 
 
 
+    <section id="testimonials" class="testimonialsSection">
+        <div class="container">
+            <div class="headingWrap">
+                <p class="headingSmall font-white">Student testimonials</p>
+                <h2 class="sectionHeading font-white">AITD student experiences</h2>
+                <p class="sectionPara font-grey4" style="max-width:720px; margin-top:12px;">Real stories from the AITD campus, featuring practical learning, live projects, leadership growth and finance-focused exposure.</p>
+            </div>
+
+            <div class="swiper testimonialsSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide testimonialCard">
+                        <div class="testimonialStars">★★★★★</div>
+                        <p class="testimonialText">"My experience at AITD has been very enriching. The dedicated faculty deliver both theory and practical learning, and the departmental library gives me the extra edge to prepare for classes thoroughly."</p>
+                        <div class="testimonialAuthor">
+                            <img src="/images/testimonies/Gauri.png" alt="Gauri Halvekar" class="testimonialAvatar" />
+                            <div>
+                                <h4>Gauri Halvekar</h4>
+                                <span>Student, AITD</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide testimonialCard">
+                        <div class="testimonialStars">★★★★★</div>
+                        <p class="testimonialText">"In Finance & Business Analytics, expert-led sessions made financial concepts real and showed tools like NAV and CAGR in actual market situations. Visiting faculty from Christ University added strong practical insight."</p>
+                        <div class="testimonialAuthor">
+                            <img src="/images/testimonies/Suhesha.png" alt="Suhesha Gaunkar" class="testimonialAvatar" />
+                            <div>
+                                <h4>Suhesha Gaunkar</h4>
+                                <span>MBA Finance & Business Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide testimonialCard">
+                        <div class="testimonialStars">★★★★★</div>
+                        <p class="testimonialText">"Live projects gave me real-time exposure to real business challenges. They helped me apply theory, develop solutions from research, and prepare for future workplace demands."</p>
+                        <div class="testimonialAuthor">
+                            <img src="/images/testimonies/Louella.png" alt="Louella Rodrigues" class="testimonialAvatar" />
+                            <div>
+                                <h4>Louella Rodrigues</h4>
+                                <span>HR Specialization</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide testimonialCard">
+                        <div class="testimonialStars">★★★★★</div>
+                        <p class="testimonialText">"As BLINC council chair, AITD empowered my leadership through events like Tech Urja and Ventura. The training also strengthened our interview readiness and organizational skills."</p>
+                        <div class="testimonialAuthor">
+                            <img src="/images/testimonies/Kieth.png" alt="Keith Rodrigues" class="testimonialAvatar" />
+                            <div>
+                                <h4>Keith Rodrigues</h4>
+                                <span>BLINC Council Chairman</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide testimonialCard">
+                        <div class="testimonialStars">★★★★★</div>
+                        <p class="testimonialText">"MBA at AITD gave me national event exposure, from Varchasva to Nexus, and chances to not just learn but also organize and lead. This made the MBA experience practical and growth-focused."</p>
+                        <div class="testimonialAuthor">
+                            <img src="/images/testimonies/Sathvik.png" alt="Sathvik Satardekar" class="testimonialAvatar" />
+                            <div>
+                                <h4>Sathvik Satardekar</h4>
+                                <span>MBA Finance & Business Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination testimonial-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .testimonialsSection {
+            padding: 80px 0 60px;
+            background: radial-gradient(circle at top, rgba(255,255,255,0.05), transparent 45%), #04070f;
+        }
+
+        .testimonialsSection .headingWrap {
+            max-width: 760px;
+            margin-bottom: 40px;
+        }
+
+        .testimonialsSection .sectionHeading {
+            font-size: clamp(2rem, 2.25vw, 3.5rem);
+            line-height: 1.05;
+        }
+
+        .testimonialCard {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255,255,255,0.16);
+            border-radius: 28px;
+            padding: 32px 28px 28px;
+            min-height: 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 24px 48px rgba(0,0,0,0.24);
+            transition: transform 0.4s ease;
+        }
+
+        .testimonialCard:hover {
+            transform: translateY(-6px);
+        }
+
+        .testimonialStars {
+            color: #ffd24b;
+            letter-spacing: 0.25em;
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+
+        .testimonialText {
+            color: #e8ebf7;
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 28px;
+            min-height: 136px;
+        }
+
+        .testimonialAuthor {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .testimonialAvatar {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255,255,255,0.9);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+        }
+
+        .testimonialAuthor h4 {
+            margin: 0;
+            font-size: 1.05rem;
+            color: #ffffff;
+        }
+
+        .testimonialAuthor span {
+            display: block;
+            margin-top: 4px;
+            color: #a9b2ca;
+            font-size: 0.92rem;
+        }
+
+        .testimonialsSwiper .swiper-pagination {
+            margin-top: 28px;
+            text-align: center;
+        }
+
+        .testimonialsSwiper .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.35);
+            opacity: 1;
+        }
+
+        .testimonialsSwiper .swiper-pagination-bullet-active {
+            width: 20px;
+            background: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .testimonialsSection {
+                padding: 60px 0 40px;
+            }
+
+            .testimonialCard {
+                padding: 24px;
+                min-height: auto;
+            }
+
+            .testimonialText {
+                min-height: unset;
+            }
+        }
+    </style>
+
+    <script>
+        new Swiper('.testimonialsSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            loop: true,
+            speed: 900,
+            autoplay: {
+                delay: 5500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.testimonial-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 1.1,
+                },
+                1024: {
+                    slidesPerView: 1.3,
+                },
+                1366: {
+                    slidesPerView: 1.8,
+                },
+            },
+        });
+    </script>
+
     <section id="contact-us" class="sectionPadding">
         <style>
             #contact-us .contact-form-card {
                 max-width: 920px;
+                margin: 0 auto;
+                padding: 28px;
+                border: 1px solid #e7e7e7;
                 margin: 0 auto;
                 padding: 28px;
                 border: 1px solid #e7e7e7;
