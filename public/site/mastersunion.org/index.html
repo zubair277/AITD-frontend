@@ -5757,15 +5757,15 @@
                 </div>
 
                 <div class="headingRight mob-hide">
-                    <div class="latestNews-Prev prev cursor-pointer" aria-label="Previous news">
-                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
                     <div class="latestNews-Next cursor-pointer" aria-label="Next news">
                         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="latestNews-Prev prev cursor-pointer" aria-label="Previous news">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
                     </div>
@@ -6964,6 +6964,8 @@
                                                 <stop offset="1" stop-color="#E38330" />
                                             </linearGradient>
                                         </defs>
+                                    </svg>
+                                    Postgraduate
                                 </span>
                             </li>
                             <li data-rel="ugTab2" style="display: none;">
@@ -7496,7 +7498,7 @@
               <div class="speciallyBtn">
               <div class="eligibilityParent">
                 <div class="eachInfoWrapper">
-                  <img src="https://images.mastersunion.link/uploads/01052025/v1/Frame1321317004.svg" alt="icon">
+                  <img src="/images/icons/eligibility.png?v=20260418a" alt="eligibility icon">
                   <div class="advancedDivi">
                     <p class="cardParaEligibility">${program.eligibility.includes('Work') ? 'Eligibility' : 'Eligibility'}</p>
                     <p class="cardPara infoText">${program.eligibilityDetails || program.eligibility}</p>
@@ -7504,7 +7506,7 @@
                 </div>
         
                 <div class="eachInfoWrapper">
-                  <img src="https://images.mastersunion.link/uploads/01052025/v1/Frame13213170071.svg" alt="icon">
+                  <img src="/images/icons/format.png?v=20260418a" alt="format icon">
                   <div class="advancedDivi">
                     <p class="cardParaEligibility">${program.format}</p>
                     <p class="cardPara infoText">${program.formatDetails}</p>
@@ -7512,7 +7514,7 @@
                 </div>
         
                 <div class="eachInfoWrapper">
-                  <img src="https://images.mastersunion.link/uploads/01052025/v1/Frame4273217554.svg" alt="icon">
+                  <img src="/images/icons/duration.png?v=20260418a" alt="duration icon">
                   <div class="advancedDivi">
                     <p class="cardParaEligibility">${program.duration}</p>
                     <p class="cardPara infoText">${program.durationDetails}</p>
@@ -7520,7 +7522,7 @@
                 </div>
         
                 <div class="eachInfoWrapper">
-                  <img src="https://images.mastersunion.link/uploads/01052025/v1/Frame13213170072.svg" alt="icon">
+                  <img src="/images/icons/deadline.png?v=20260418a" alt="deadline icon">
                   <div class="advancedDivi">
                     <p class="cardParaEligibility">
                         ${['pgp-in-applied-ai-and-agentic-systems', 'pg-in-ui-ux-and-product-design', 'pgp-sustainability-and-business-management'].includes(program.id) ? 'Admission Status' : 'Deadline'}
@@ -8130,7 +8132,7 @@
         
                         <div class="campusDiviParent">
                             <div class="programFlexi">
-                                <img class="campusImage" src="https://images.mastersunion.link/uploads/23062025/v2/GreyColorIcon.svg" alt="icon">
+                                <img class="campusImage" src="/images/icons/format.png?v=20260418a" alt="format icon">
                                 <div class="campusBoxContent">
                                     <p class="campusHeading">${program.format}</p>
                                     <p class="campusPara">${program.formatDetails}</p>
@@ -8138,7 +8140,7 @@
                             </div>
         
                             <div class="programFlexi">
-                                <img class="campusImage" src="https://images.mastersunion.link/uploads/23062025/v3/GreyColorIcon.svg" alt="icon">
+                                <img class="campusImage" src="/images/icons/eligibility.png?v=20260418a" alt="eligibility icon">
                                 <div class="campusBoxContent">
                                     <p class="campusHeading">${program.eligibility.includes('Work') ? 'Eligibility' : 'Eligibility'}</p>
                                     <p class="campusPara">${program.eligibilityDetails || program.eligibility}</p>
@@ -8146,7 +8148,7 @@
                             </div>
         
                             <div class="programFlexi">
-                                <img class="campusImage" src="https://images.mastersunion.link/uploads/23062025/v4/GreyColorIcon.svg"alt="icon">
+                                <img class="campusImage" src="/images/icons/duration.png?v=20260418a" alt="duration icon">
                                 <div class="campusBoxContent">
                                     <p class="campusHeading">${program.duration}</p>
                                     <p class="campusPara">${program.durationDetails}</p>
@@ -8154,7 +8156,7 @@
                             </div>
         
                             <div class="programFlexi">
-                                <img class="campusImage" src="https://images.mastersunion.link/uploads/23062025/v5/GreyColorIcon.svg" alt="icon">
+                                <img class="campusImage" src="/images/icons/deadline.png?v=20260418a" alt="deadline icon">
                                 <div class="campusBoxContent">
                                     <p class="campusHeading">
                                         ${['pgp-in-applied-ai-and-agentic-systems', 'pg-in-ui-ux-and-product-design', 'pgp-sustainability-and-business-management'].includes(program.id) ? 'Admission Status' : 'Deadline'}
@@ -11559,26 +11561,20 @@
     <style>
         /* Disable mouse hover effects for Shark Tank section cards */
         .selectingStudents.sharkTank .gridBox,
-        .selectingStudents.sharkTank .sharkFront,
-        .selectingStudents.sharkTank .overLayDetail,
         .selectingStudents.sharkTank .imageBoxiShark img {
             transition: none !important;
             animation: none !important;
             transform: none !important;
         }
 
+        .selectingStudents.sharkTank .sharkFront,
         .selectingStudents.sharkTank .overLayDetail,
+        .selectingStudents.sharkTank .gridBox:hover .sharkFront,
         .selectingStudents.sharkTank .gridBox:hover .overLayDetail {
+            display: none !important;
             opacity: 0 !important;
             visibility: hidden !important;
             pointer-events: none !important;
-        }
-
-        .selectingStudents.sharkTank .gridBox:hover .sharkFront,
-        .selectingStudents.sharkTank .gridBox .sharkFront {
-            opacity: 1 !important;
-            visibility: visible !important;
-            transform: none !important;
         }
     </style>
 
@@ -14847,26 +14843,6 @@
                 <div class="wrapperImg">
         
                     <div class="footerMainWrapper">
-                    <p class="footerHeading ">Accreditations/Memberships</p>
-
-                    <div class="footer-imgs mob-hide">
-                        <img src="../files.mastersunion.link/media/img/Legacy-tbm/footer-Pic.webp"
-                            alt="EFMD Global Member">
-                        <img src="../files.mastersunion.link/media/img/Legacy-tbm/footer-PicUpdate.webp"
-                            alt="Business Education Alliance">
-                        <img src="../images.mastersunion.link/uploads/28082025/v1/BSISPartnersWhite3.svg"
-                            alt="BSIS Partners">
-                    </div>
-
-                    <div class="footer-imgs mob-visible">
-                        <img src="../files.mastersunion.link/media/img/Legacy-tbm/footer-Pic.webp"
-                            alt="EFMD Global Member">
-                        <img src="../files.mastersunion.link/media/img/Legacy-tbm/footer-PicUpdate.webp"
-                            alt="Business Education Alliance">
-                        <img src="../images.mastersunion.link/uploads/28082025/v1/BSISPartnersWhite3.svg"
-                            alt="BSIS Partners">
-                    </div>
-
                     <div class="addressWrapper">
                         <div class="address font-18 font-regular ">
                             <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="https://www.w3.org/2000/svg">
@@ -14950,14 +14926,56 @@
             s.async=true;
             s.src="../track.nopaperforms.com/js/track.js";
             document.body.appendChild(s);
-        </script>    </section>
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                function normalizeText(value) {
+                    return (value || "").replace(/\s+/g, " ").trim().toLowerCase();
+                }
+
+                function findSectionByHeadingText(needle) {
+                    var target = normalizeText(needle);
+                    var headings = document.querySelectorAll("h1, h2, h3");
+
+                    for (var i = 0; i < headings.length; i += 1) {
+                        var text = normalizeText(headings[i].textContent);
+                        if (text.indexOf(target) !== -1) {
+                            return headings[i].closest("section");
+                        }
+                    }
+
+                    return null;
+                }
+
+                var facultySection = findSectionByHeadingText("meet our faculty");
+                if (!facultySection || !facultySection.parentNode) {
+                    return;
+                }
+
+                var sectionsToMove = [
+                    findSectionByHeadingText("where talent meets opportunity"),
+                    findSectionByHeadingText("trusted by"),
+                    findSectionByHeadingText("unlock the best career opportunities")
+                ];
+
+                var moved = [];
+                for (var j = 0; j < sectionsToMove.length; j += 1) {
+                    var section = sectionsToMove[j];
+                    if (!section || section === facultySection || moved.indexOf(section) !== -1) {
+                        continue;
+                    }
+
+                    facultySection.parentNode.insertBefore(section, facultySection);
+                    moved.push(section);
+                }
+            });
+        </script>
+    </section>
 
 </body>
 
 
 <!-- Mirrored from mastersunion.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Apr 2026 06:10:36 GMT -->
-</html>
-
-CO'2014], Thu, 02 Apr 2026 06:10:36 GMT -->
 </html>
 
