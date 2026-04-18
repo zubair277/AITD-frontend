@@ -5750,22 +5750,22 @@
             <div class="headingWrapperButton">
                 <div class="headingWrapper">
                     <div class="newsTabs">
-                        <button type="button" class="newsTabBtn" data-mode="latest">Latest News</button>
                         <button type="button" class="newsTabBtn active" data-mode="events">Events</button>
+                        <button type="button" class="newsTabBtn" data-mode="latest">Latest News</button>
                     </div>
                     <div id="newsStatus" class="newsStatus"></div>
                 </div>
 
                 <div class="headingRight mob-hide">
-                    <div class="latestNews-Prev prev cursor-pointer" aria-label="Previous news">
-                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
                     <div class="latestNews-Next cursor-pointer" aria-label="Next news">
                         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="latestNews-Prev prev cursor-pointer" aria-label="Previous news">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
                     </div>
@@ -6964,6 +6964,8 @@
                                                 <stop offset="1" stop-color="#E38330" />
                                             </linearGradient>
                                         </defs>
+                                    </svg>
+                                    Postgraduate
                                 </span>
                             </li>
                             <li data-rel="ugTab2" style="display: none;">
@@ -14625,26 +14627,6 @@
                 <div class="wrapperImg">
         
                     <div class="footerMainWrapper">
-                    <p class="footerHeading ">Accreditations/Memberships</p>
-
-                    <div class="footer-imgs mob-hide">
-                        <img src="../files.mastersunion.link/media/img/Legacy-tbm/footer-Pic.webp"
-                            alt="EFMD Global Member">
-                        <img src="../files.mastersunion.link/media/img/Legacy-tbm/footer-PicUpdate.webp"
-                            alt="Business Education Alliance">
-                        <img src="../images.mastersunion.link/uploads/28082025/v1/BSISPartnersWhite3.svg"
-                            alt="BSIS Partners">
-                    </div>
-
-                    <div class="footer-imgs mob-visible">
-                        <img src="../files.mastersunion.link/media/img/Legacy-tbm/footer-Pic.webp"
-                            alt="EFMD Global Member">
-                        <img src="../files.mastersunion.link/media/img/Legacy-tbm/footer-PicUpdate.webp"
-                            alt="Business Education Alliance">
-                        <img src="../images.mastersunion.link/uploads/28082025/v1/BSISPartnersWhite3.svg"
-                            alt="BSIS Partners">
-                    </div>
-
                     <div class="addressWrapper">
                         <div class="address font-18 font-regular ">
                             <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="https://www.w3.org/2000/svg">
@@ -14728,14 +14710,56 @@
             s.async=true;
             s.src="../track.nopaperforms.com/js/track.js";
             document.body.appendChild(s);
-        </script>    </section>
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                function normalizeText(value) {
+                    return (value || "").replace(/\s+/g, " ").trim().toLowerCase();
+                }
+
+                function findSectionByHeadingText(needle) {
+                    var target = normalizeText(needle);
+                    var headings = document.querySelectorAll("h1, h2, h3");
+
+                    for (var i = 0; i < headings.length; i += 1) {
+                        var text = normalizeText(headings[i].textContent);
+                        if (text.indexOf(target) !== -1) {
+                            return headings[i].closest("section");
+                        }
+                    }
+
+                    return null;
+                }
+
+                var facultySection = findSectionByHeadingText("meet our faculty");
+                if (!facultySection || !facultySection.parentNode) {
+                    return;
+                }
+
+                var sectionsToMove = [
+                    findSectionByHeadingText("where talent meets opportunity"),
+                    findSectionByHeadingText("trusted by"),
+                    findSectionByHeadingText("unlock the best career opportunities")
+                ];
+
+                var moved = [];
+                for (var j = 0; j < sectionsToMove.length; j += 1) {
+                    var section = sectionsToMove[j];
+                    if (!section || section === facultySection || moved.indexOf(section) !== -1) {
+                        continue;
+                    }
+
+                    facultySection.parentNode.insertBefore(section, facultySection);
+                    moved.push(section);
+                }
+            });
+        </script>
+    </section>
 
 </body>
 
 
 <!-- Mirrored from mastersunion.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Apr 2026 06:10:36 GMT -->
-</html>
-
-CO'2014], Thu, 02 Apr 2026 06:10:36 GMT -->
 </html>
 
