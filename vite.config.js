@@ -187,7 +187,7 @@ function rewriteHtml(html, domains, currentDomain) {
   // Home hero: replace heading text only.
   out = out.replace(
     /<h1 class="homeheroHeading">[\s\S]*?<\/h1>/i,
-    '<h1 class="homeheroHeading">MBA designed to get Hired!</h1>',
+    '<h1 class="homeheroHeading">AITD MBA – Where Future CEOs and Founders are built</h1>',
   )
 
   const logoSizeStyle = `<style id="aitd-logo-size-override">
