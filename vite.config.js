@@ -239,6 +239,21 @@ function rewriteHtml(html, domains, currentDomain) {
     opacity: 1 !important;
   }
 
+  .homeHeroSection .homeheroHeading {
+    font-size: clamp(44px, 5.8vw, 88px) !important;
+    line-height: 1.05 !important;
+    max-width: 1120px;
+  }
+
+  .homeHeroSection .homeheroSubtext {
+    margin-top: 14px;
+    max-width: 840px;
+    color: rgba(255, 255, 255, 0.92);
+    font-family: "go-regular";
+    font-size: clamp(16px, 1.7vw, 24px);
+    line-height: 1.45;
+  }
+
   @media (max-width: 1024px) {
     .topHeader .upperHeader {
       display: none !important;
@@ -260,6 +275,18 @@ function rewriteHtml(html, domains, currentDomain) {
     .topHeader .logo img[src*="aitd logo"] {
       width: 200px !important;
       max-width: 200px !important;
+    }
+
+    .homeHeroSection .homeheroHeading {
+      font-size: clamp(28px, 8.8vw, 46px) !important;
+      max-width: 100%;
+    }
+
+    .homeHeroSection .homeheroSubtext {
+      margin-top: 12px;
+      max-width: 100%;
+      font-size: 15px;
+      line-height: 1.5;
     }
   }
   </style>`

@@ -7711,7 +7711,12 @@ footer {
   position: relative;
   display: block;
   background: url("https://files.mastersunion.link/resources/img/footerBG.webp");
+  background-color: #090909;
+  background-repeat: no-repeat;
+  background-position: center bottom;
   background-size: cover;
+  padding-bottom: 24px;
+  overflow: hidden;
 }
 
 footer .addressWrapper .address.mailaddressfooter {

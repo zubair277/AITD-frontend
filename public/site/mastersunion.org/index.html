@@ -5299,6 +5299,37 @@
 <link rel="stylesheet" href="../cdn.jsdelivr.net/npm/swiper%4011/swiper-bundle.min.css" />
 <script src="../cdn.jsdelivr.net/npm/swiper%4011/swiper-bundle.min.js"></script>
 
+<style id="aitd-hero-copy-override">
+    .homeHeroSection .homeheroHeading {
+        font-size: clamp(44px, 5.8vw, 88px) !important;
+        line-height: 1.05 !important;
+        max-width: 1120px;
+    }
+
+    .homeHeroSection .homeheroSubtext {
+        margin-top: 14px;
+        max-width: 840px;
+        color: rgba(255, 255, 255, 0.92);
+        font-family: "go-regular";
+        font-size: clamp(16px, 1.7vw, 24px);
+        line-height: 1.45;
+    }
+
+    @media (max-width: 991px) {
+        .homeHeroSection .homeheroHeading {
+            font-size: clamp(28px, 8.8vw, 46px) !important;
+            max-width: 100%;
+        }
+
+        .homeHeroSection .homeheroSubtext {
+            margin-top: 12px;
+            max-width: 100%;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+    }
+</style>
+
 
 <main class="homepage ">
     <section class="homeHeroSection">
@@ -5319,6 +5350,7 @@
             <div class="overlayHero">
                 <div class="heroLeft">
                     <h1 class="homeheroHeading">AITD MBA – Where Future CEOs and Founders are built</h1>
+                    <p class="homeheroSubtext">Industry-focused programs designed to equip you with real-world skills, leadership mindset, and career opportunities beyond the classroom.</p>
 
 
                     <div class="muHeroButtonWrap">
@@ -5459,8 +5491,8 @@
                                     </svg>
                                 </div>
                                 <div class="aboutAitdBody">
-                                    <h4 class="aboutAitdItemTitle">Academic Excellence</h4>
-                                    <p class="aboutAitdItemText">Expert faculty and industry exposure turn classroom concepts into real-world impact.</p>
+                                    <h4 class="aboutAitdItemTitle">Mission</h4>
+                                    <p class="aboutAitdItemText">AITD shapes future-ready professionals and leaders with affordable, world class education and strong placement support.</p>
                                 </div>
                             </article>
 
@@ -5475,7 +5507,7 @@
                                     </svg>
                                 </div>
                                 <div class="aboutAitdBody">
-                                    <h4 class="aboutAitdItemTitle">Academics Excellence</h4>
+                                    <h4 class="aboutAitdItemTitle">Academic Excellence</h4>
                                     <p class="aboutAitdItemText">Expert faculty and industry exposure turn classroom concepts into real-world impact.</p>
                                 </div>
                             </article>
@@ -5958,6 +5990,17 @@
             </div>
         </div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const aboutSection = document.querySelector('.meetMastersSection');
+            const newsSection = document.querySelector('#section__news');
+
+            if (aboutSection && newsSection && newsSection.parentNode) {
+                newsSection.insertAdjacentElement('afterend', aboutSection);
+            }
+        });
+    </script>
 
     <style>
         /* News: card-only, uniform sizing */
@@ -7096,12 +7139,20 @@
                 display: block !important;
             }
 
-            /* Show the 5 specialisation cards in a 2,1,2 grid on desktop */
+            /* Show the specialisation cards in a 3-column grid on desktop */
             .ourProgramme #ugTab1 .ugBoxiParent.ugHomeSwiper .swiper-wrapper {
                 display: grid !important;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 24px;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 16px;
+                align-items: stretch;
+                justify-content: center;
                 transform: none !important;
+            }
+
+            .ourProgramme #ugTab1 .ugBoxiParent.ugHomeSwiper {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 auto;
             }
 
             .ourProgramme #ugTab1 .ugBoxiParent.ugHomeSwiper .swiper-slide {
@@ -7110,10 +7161,52 @@
                 height: auto;
             }
 
-            .ourProgramme #ugTab1 .ugBoxiParent.ugHomeSwiper .swiper-slide:nth-child(3) {
-                grid-column: 1 / -1;
-                width: calc((100% - 24px) / 2);
-                justify-self: center;
+            .ourProgramme #ugTab1 .ProgrammeCardMob {
+                padding: 16px;
+                gap: 12px;
+                min-height: 220px;
+                border-radius: 18px;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                background: linear-gradient(135deg, #1f2142 0%, #2a2d58 100%);
+                box-shadow: 0 16px 40px rgba(4, 6, 20, 0.38);
+            }
+
+            .ourProgramme #ugTab1 .ProgrammeCardMob .headingWrapper {
+                order: 1;
+                flex: 1 1 auto;
+                min-width: 0;
+                gap: 8px;
+            }
+
+            .ourProgramme #ugTab1 .ProgrammeCardMob .cardHeading {
+                font-size: 15px;
+                line-height: 1.2;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            .ourProgramme #ugTab1 .ProgrammeCardMob .cardPara {
+                font-size: 12px;
+                line-height: 1.45;
+            }
+
+            .ourProgramme #ugTab1 .ProgrammeCardMob .speciallyBtn {
+                order: 2;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                margin-top: auto;
+            }
+
+            .ourProgramme #ugTab1 .ProgrammeCardMob .btnBlack {
+                align-self: flex-start;
+                padding: 9px 14px;
+                min-height: 34px;
+                font-size: 12px;
+                margin-top: 8px;
             }
 
             .ourProgramme .programSwiperBtn1 {
@@ -7126,11 +7219,6 @@
                     transform: translate3d(0, 0, 0) !important;
                 }
 
-                .ourProgramme #ugTab1 .ugBoxiParent.ugHomeSwiper .swiper-slide:nth-child(3) {
-                    grid-column: auto;
-                    width: auto;
-                    justify-self: auto;
-                }
             }
 
         </style>
@@ -7502,12 +7590,6 @@
                         description: "Designed for aspiring founders and business builders, focusing on opportunity recognition, venture creation, fundraising, and scaling startups sustainably.",
                         image: "https://images.mastersunion.link/uploads/24062025/v1/img1.webp",
                         videoId: null,
-                        format: "Format",
-                        formatDetails: "Full Time On Campus",
-                        eligibility: "1) Bachelor’s degree (3–4 years) <br>2) Minimum 50% marks (45% for reserved categories) <br>3) Must have appeared in a national-level test (CMAT, ATMA, MAT, XAT, etc.)",
-                        duration: "Duration",
-                        durationDetails: "2 Years",
-                        deadline: "Applications Open",
                         link: "https://apply.aitdgoa.edu.in/?_gl=1*1jitw18*_gcl_au*Mzg5OTg1NzU3LjE3NzUwNTA2NzA.*_ga*MTA4MjUwODM0Mi4xNzc1MDUwNjcw*_ga_M4M081L7F4*czE3NzYzNDUzNjgkbzM0JGcxJHQxNzc2MzQ1NTAxJGo1OSRsMCRoMA.."
                     },
                     {
@@ -7516,12 +7598,6 @@
                         description: "Focuses on consumer behavior, branding, digital marketing, and sales strategy to help you promote products, build brand value, and drive business growth.",
                         image: "/images/Specialisations/Marketing.png",
                         videoId: null,
-                        format: "Format",
-                        formatDetails: "Full Time On Campus",
-                        eligibility: "1) Bachelor’s degree (3–4 years) <br>2) Minimum 50% marks (45% for reserved categories) <br>3) Must have appeared in a national-level test (CMAT, ATMA, MAT, XAT, etc.)",
-                        duration: "Duration",
-                        durationDetails: "2 Years",
-                        deadline: "Applications Open",
                         link: "https://apply.aitdgoa.edu.in/?_gl=1*1jitw18*_gcl_au*Mzg5OTg1NzU3LjE3NzUwNTA2NzA.*_ga*MTA4MjUwODM0Mi4xNzc1MDUwNjcw*_ga_M4M081L7F4*czE3NzYzNDUzNjgkbzM0JGcxJHQxNzc2MzQ1NTAxJGo1OSRsMCRoMA.."
                     },
                     {
@@ -7530,12 +7606,6 @@
                         description: "Covers financial management, investment analysis, banking, and corporate finance to build skills in risk analysis and strategic financial decision-making.",
                         image: "/images/Specialisations/Finance.png",
                         videoId: null,
-                        format: "Format",
-                        formatDetails: "Full Time On Campus",
-                        eligibility: "1) Bachelor’s degree (3–4 years) <br>2) Minimum 50% marks (45% for reserved categories) <br>3) Must have appeared in a national-level test (CMAT, ATMA, MAT, XAT, etc.)",
-                        duration: "Duration",
-                        durationDetails: "2 Years",
-                        deadline: "Applications Open",
                         link: "https://apply.aitdgoa.edu.in/?_gl=1*1jitw18*_gcl_au*Mzg5OTg1NzU3LjE3NzUwNTA2NzA.*_ga*MTA4MjUwODM0Mi4xNzc1MDUwNjcw*_ga_M4M081L7F4*czE3NzYzNDUzNjgkbzM0JGcxJHQxNzc2MzQ1NTAxJGo1OSRsMCRoMA.."
                     },
                     {
@@ -7544,12 +7614,6 @@
                         description: "Centers on recruitment, training, performance management, and employee relations to help you create productive and positive workplace environments.",
                         image: "/images/Specialisations/HR.png",
                         videoId: null,
-                        format: "Format",
-                        formatDetails: "Full Time On Campus",
-                        eligibility: "1) Bachelor’s degree (3–4 years) <br>2) Minimum 50% marks (45% for reserved categories) <br>3) Must have appeared in a national-level test (CMAT, ATMA, MAT, XAT, etc.)",
-                        duration: "Duration",
-                        durationDetails: "2 Years",
-                        deadline: "Applications Open",
                         link: "https://apply.aitdgoa.edu.in/?_gl=1*1jitw18*_gcl_au*Mzg5OTg1NzU3LjE3NzUwNTA2NzA.*_ga*MTA4MjUwODM0Mi4xNzc1MDUwNjcw*_ga_M4M081L7F4*czE3NzYzNDUzNjgkbzM0JGcxJHQxNzc2MzQ1NTAxJGo1OSRsMCRoMA.."
                     },
                     {
@@ -7558,12 +7622,6 @@
                         description: "Deals with planning, organizing, and optimizing business processes with strong focus on supply chain, logistics, and efficient resource utilization.",
                         image: "/images/Specialisations/Operations.png",
                         videoId: null,
-                        format: "Format",
-                        formatDetails: "Full Time On Campus",
-                        eligibility: "1) Bachelor’s degree (3–4 years) <br>2) Minimum 50% marks (45% for reserved categories) <br>3) Must have appeared in a national-level test (CMAT, ATMA, MAT, XAT, etc.)",
-                        duration: "Duration",
-                        durationDetails: "2 Years",
-                        deadline: "Applications Open",
                         link: "https://apply.aitdgoa.edu.in/?_gl=1*1jitw18*_gcl_au*Mzg5OTg1NzU3LjE3NzUwNTA2NzA.*_ga*MTA4MjUwODM0Mi4xNzc1MDUwNjcw*_ga_M4M081L7F4*czE3NzYzNDUzNjgkbzM0JGcxJHQxNzc2MzQ1NTAxJGo1OSRsMCRoMA.."
                     }
                 ],
@@ -7665,7 +7723,7 @@
             // Create program card HTML
             function createProgramCard(program, category) {
                 return `
-            <div class="ProgrammeCardMob" data-category="${category}" style="flex: 0 0 300px; min-width: 300px; max-width: 300px; white-space: normal;">
+            <div class="ProgrammeCardMob" data-category="${category}" style="flex: 1 1 auto; min-width: 0; max-width: none; width: 100%; white-space: normal;">
               <div class="headingWrapper">
                 <h2 class="cardHeading font-white">
                   ${program.title.includes(' in ') ?
@@ -7678,66 +7736,9 @@
                 <p class="cardPara">${program.description}</p>
               </div>
         
-              <div class="imageWrappper">
-                                <img src="${program.image}" alt="${program.title}" onerror="this.onerror=null;this.src='https://images.mastersunion.link/uploads/24062025/v1/img1.webp';">
-                ${program.videoId ? `
-                <div class="masterPlay" onclick="openPopup('${program.videoId}');" plerdy-tracking-id="51983069601">
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="https://www.w3.org/2000/svg">
-                    <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" fill="white" fill-opacity="0.15" />
-                    <rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="url(#paint0_linear_5101_43974)" />
-                    <path d="M32.75 23.9999C32.7505 24.2121 32.6961 24.4208 32.5921 24.6058C32.488 24.7907 32.3379 24.9456 32.1562 25.0554L20.9 31.9413C20.7102 32.0575 20.4929 32.121 20.2704 32.1251C20.0479 32.1292 19.8283 32.0738 19.6344 31.9647C19.4423 31.8573 19.2822 31.7007 19.1708 31.5109C19.0593 31.3212 19.0003 31.1051 19 30.8851V17.1147C19.0003 16.8947 19.0593 16.6786 19.1708 16.4889C19.2822 16.2991 19.4423 16.1425 19.6344 16.0351C19.8283 15.926 20.0479 15.8706 20.2704 15.8747C20.4929 15.8788 20.7102 15.9423 20.9 16.0585L32.1562 22.9444C32.3379 23.0542 32.488 23.2091 32.5921 23.394C32.6961 23.579 32.7505 23.7877 32.75 23.9999Z" fill="white" />
-                    <defs>
-                      <linearGradient id="paint0_linear_5101_43974" x1="1.19623e-07" y1="40.5" x2="48.0164" y2="41.5488" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#39B5D7" />
-                        <stop offset="0.502211" stop-color="#F7D544" />
-                        <stop offset="1" stop-color="#E38330" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
-                ` : ''}
-              </div>
-        
               <div class="speciallyBtn">
-              <div class="eligibilityParent">
-                <div class="eachInfoWrapper">
-                  <img src="/images/icons/eligibility.png?v=20260418a" alt="eligibility icon">
-                  <div class="advancedDivi">
-                    <p class="cardParaEligibility">${program.eligibility.includes('Work') ? 'Eligibility' : 'Eligibility'}</p>
-                    <p class="cardPara infoText">${program.eligibilityDetails || program.eligibility}</p>
-                  </div>
-                </div>
-        
-                <div class="eachInfoWrapper">
-                  <img src="/images/icons/format.png?v=20260418a" alt="format icon">
-                  <div class="advancedDivi">
-                    <p class="cardParaEligibility">${program.format}</p>
-                    <p class="cardPara infoText">${program.formatDetails}</p>
-                  </div>
-                </div>
-        
-                <div class="eachInfoWrapper">
-                  <img src="/images/icons/duration.png?v=20260418a" alt="duration icon">
-                  <div class="advancedDivi">
-                    <p class="cardParaEligibility">${program.duration}</p>
-                    <p class="cardPara infoText">${program.durationDetails}</p>
-                  </div>
-                </div>
-        
-                <div class="eachInfoWrapper">
-                  <img src="/images/icons/deadline.png?v=20260418a" alt="deadline icon">
-                  <div class="advancedDivi">
-                    <p class="cardParaEligibility">
-                        ${['pgp-in-applied-ai-and-agentic-systems', 'pg-in-ui-ux-and-product-design', 'pgp-sustainability-and-business-management'].includes(program.id) ? 'Admission Status' : 'Deadline'}
-                    </p>
-                    <p class="cardPara infoText">
-                        ${['pgp-in-applied-ai-and-agentic-systems', 'pg-in-ui-ux-and-product-design', 'pgp-sustainability-and-business-management'].includes(program.id) ? '- Application Open' : getDisplayDeadline(program)}
-                    </p>
-                  </div>
-                </div>
-              </div>
                <a href="${program.link}" class="btnBlack btnMd borderGradient">
-                Explore Programme
+                Apply Now
                 <span class="arrowWrap">
                   <svg class="arrow arrow1" xmlns="https://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
                     <path d="M15.121 5.10555L3.625 16.5614L4.43461 17.375L16.9737 5.96104L16.0831 5.06611Z" fill="white" />
@@ -8333,47 +8334,9 @@
                             ` : ''}
                         </div>
         
-                        <div class="campusDiviParent">
-                            <div class="programFlexi">
-                                <img class="campusImage" src="/images/icons/format.png?v=20260418a" alt="format icon">
-                                <div class="campusBoxContent">
-                                    <p class="campusHeading">${program.format}</p>
-                                    <p class="campusPara">${program.formatDetails}</p>
-                                </div>
-                            </div>
-        
-                            <div class="programFlexi">
-                                <img class="campusImage" src="/images/icons/eligibility.png?v=20260418a" alt="eligibility icon">
-                                <div class="campusBoxContent">
-                                    <p class="campusHeading">${program.eligibility.includes('Work') ? 'Eligibility' : 'Eligibility'}</p>
-                                    <p class="campusPara">${program.eligibilityDetails || program.eligibility}</p>
-                                </div>
-                            </div>
-        
-                            <div class="programFlexi">
-                                <img class="campusImage" src="/images/icons/duration.png?v=20260418a" alt="duration icon">
-                                <div class="campusBoxContent">
-                                    <p class="campusHeading">${program.duration}</p>
-                                    <p class="campusPara">${program.durationDetails}</p>
-                                </div>
-                            </div>
-        
-                            <div class="programFlexi">
-                                <img class="campusImage" src="/images/icons/deadline.png?v=20260418a" alt="deadline icon">
-                                <div class="campusBoxContent">
-                                    <p class="campusHeading">
-                                        ${['pgp-in-applied-ai-and-agentic-systems', 'pg-in-ui-ux-and-product-design', 'pgp-sustainability-and-business-management'].includes(program.id) ? 'Admission Status' : 'Deadline'}
-                                    </p>
-                                    <p class="campusPara">
-                                        ${['pgp-in-applied-ai-and-agentic-systems', 'pg-in-ui-ux-and-product-design', 'pgp-sustainability-and-business-management'].includes(program.id) ? 'Applications Open' : getDisplayDeadline(program)}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-        
                         <div class="deadlineParent">
                             <a href="${program.link}" class="btnBlack borderGradient hoverWhiteEffect">
-                                Apply Now!!
+                                Apply Now
                                 <span class="arrowWrap">
                                     <svg class="arrow arrow1" xmlns="https://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                                         <path d="M16.0831 5.06611L3.4375 17.6676L4.32808 18.5625L16.9737 5.96104L16.0831 5.06611Z" fill="white"></path>
