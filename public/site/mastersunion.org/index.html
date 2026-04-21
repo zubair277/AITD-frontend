@@ -49,6 +49,26 @@
             display: none !important;
         }
 
+        .homeHeroSection,
+        .homeHeroSection .bgHeroVideoWrap {
+            background: url('/images/aitd-bg.jpeg') center center / cover no-repeat !important;
+        }
+
+        .homeHeroSection .bgHeroVideoWrap::before,
+        .homeHeroSection .bgHeroVideoWrap::after {
+            display: none !important;
+            background: transparent !important;
+        }
+
+        .homeHeroSection .bgHeroVideoWrap .bgHeroImage {
+            display: block !important;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
         .meetMastersSection {
             position: relative;
             overflow: hidden;
@@ -5336,12 +5356,12 @@
         <div class="bgHeroVideoWrap">
             <div class="animationweb">
 
-                <img src="../images.mastersunion.link/uploads/24122025/v1/Group1171280098.webp"
+                <img src="/images/aitd-bg.jpeg"
                     fetchpriority="high" class="bgHeroImage mob-hide" alt="Learn business">
 
             </div>
             <div class="animationmob mobVisible">
-                <img src="../images.mastersunion.link/uploads/24122025/v1/Frame1321317322.webp"
+                <img src="/images/aitd-bg.jpeg"
                     fetchpriority="high" class="bgHeroImage " alt="mobileHomepageBackground">
 
             </div>
