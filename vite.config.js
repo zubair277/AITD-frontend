@@ -174,11 +174,11 @@ function rewriteHtml(html, domains, currentDomain) {
   // Home hero: replace background images with the user's custom background.
   out = out.replace(
     /<img\s+src="[^"]+"\s+fetchpriority="high"\s+class="bgHeroImage\s*mob-hide"\s+alt="[^"]*">/i,
-    '<img src="/images/aitd-bg.png" fetchpriority="high" class="bgHeroImage mob-hide" alt="AITD background">',
+    '<img src="/images/aitd-bg.jpeg" fetchpriority="high" class="bgHeroImage mob-hide" alt="" aria-hidden="true">',
   )
   out = out.replace(
     /<img\s+src="[^"]+"\s+fetchpriority="high"\s+class="bgHeroImage\s*"\s+alt="mobileHomepageBackground">/i,
-    '<img src="/images/aitd-bg.png" fetchpriority="high" class="bgHeroImage" alt="AITD background">',
+    '<img src="/images/aitd-bg.jpeg" fetchpriority="high" class="bgHeroImage" alt="" aria-hidden="true">',
   )
 
   // Home hero: remove accreditation logos block permanently.
