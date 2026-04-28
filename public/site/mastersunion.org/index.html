@@ -638,7 +638,7 @@
                 <div class="upperHeader">
                     <nav class="topNav">
                         <div class="navList megaLink navMenu " data-rel="enterprise">
-                            <a class="dropdownItems caseSense" href="#">
+                            <a class="dropdownItems caseSense" href="#enterprise">
                                 Enterprise L&D
                                 <svg width="16" height="17" class="dropdown-icon" viewBox="0 0 16 17" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -662,64 +662,39 @@
                     </a>
         
                     <ul class="navMenu">
-                        <li class="navList megaLink" data-rel="aboutus">
-                            <a class="dropdownItems" href="#">
-                                About Us
-                                <svg width="16" height="17" class="dropdown-icon" viewBox="0 0 16 17" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13 6.49976L8 11.4998L3 6.49976" stroke="white" stroke-width="1.33333"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="navList megaLink" data-rel="academics">
-                            <a href="#" class="dropdownItems">
-                                Academics
-                                <svg width="16" height="17" class="dropdown-icon" viewBox="0 0 16 17" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13 6.49976L8 11.4998L3 6.49976" stroke="white" stroke-width="1.33333"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
+                        <li class="navList">
+                            <a class="dropdownItems" href="#contact-us">
+                                Contact Us
                             </a>
                         </li>
                         <li class="navList">
-                            <a class="dropdownItems" href="#" id="nav__careers">Careers</a>
-                        </li>
-                        <li class="navList megaLink" data-rel="studentlife">
-                            <a class="dropdownItems" href="#">
-                                Student Life
-                                <svg width="16" height="17" class="dropdown-icon" viewBox="0 0 16 17" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13 6.49976L8 11.4998L3 6.49976" stroke="white" stroke-width="1.33333"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
+                            <a class="dropdownItems" href="#testimonials">
+                                Testimonials
                             </a>
                         </li>
-                        <li class="navList megaLink" data-rel="innovation">
-                            <a class="dropdownItems" href="#">
-                                Innovation
-                                <svg width="16" height="17" class="dropdown-icon" viewBox="0 0 16 17" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13 6.49976L8 11.4998L3 6.49976" stroke="white" stroke-width="1.33333"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
+                        <li class="navList">
+                            <a class="dropdownItems" href="#section__news">Events</a>
+                        </li>
+                        <li class="navList">
+                            <a class="dropdownItems" href="#lifeAtAITD">
+                                Life at AITD
+                            </a>
+                        </li>
+<li class="navList">
+                            <a class="dropdownItems" href="#placements">
+                                Placements
                             </a>
                         </li>
         
                         <li class="navList">
-                            <a class="dropdownItems" href="#" id="nav__faculty">
+                            <a class="dropdownItems" href="#faculty" id="nav__faculty">
                                 Faculty
                             </a>
                         </li>
         
-                        <li class="navList megaLink" data-rel="venture">
-                            <a class="dropdownItems" href="#">
-                                MU Ventures
-                                <svg width="16" height="17" class="dropdown-icon" viewBox="0 0 16 17" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13 6.49976L8 11.4998L3 6.49976" stroke="white" stroke-width="1.33333"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
+                        <li class="navList">
+                            <a class="dropdownItems" href="#ourSpecialisations">
+                                Our Specialisations
                             </a>
                         </li>
         
@@ -3894,9 +3869,14 @@
         
             // Top nav: open/close menu on click only
             $(".megaLink").on("click", function (e) {
-                e.preventDefault();
+                const $anchor = $(e.target).closest("a[href^='#']");
                 const id = $(this).attr("data-rel");
                 if (!id) return;
+                e.preventDefault();
+                const hash = $anchor.attr("href");
+                if (hash && hash.startsWith("#")) {
+                    history.replaceState(null, "", hash);
+                }
                 if ($(this).hasClass("active")) {
                     hideMenu();
                     $(".megaLink").removeClass("active");
@@ -3906,6 +3886,16 @@
                     showMenu(id);
                 }
             });
+
+            if (window.location.hash) {
+                const hashTarget = window.location.hash.replace("#", "");
+                const $initialLink = $(".megaLink[data-rel='" + hashTarget + "']");
+                if ($initialLink.length) {
+                    $(".megaLink").removeClass("active");
+                    $initialLink.addClass("active");
+                    showMenu(hashTarget);
+                }
+            }
         
             // Academic tab switching: hover only (no click)
             $(".academicTabs .aboutItems")
@@ -7242,7 +7232,7 @@
             }
 
         </style>
-        <section class="ourProgramme mob-hide">
+        <section id="ourSpecialisations" class="ourProgramme mob-hide">
             <div class="container">
                 <div class="programHeroHeading">
                     <h2 class="go-HighlightHeading ">Our <span class="fr-HeadingItalic">Specialisations</span>
@@ -8964,7 +8954,7 @@
         }
     </style>
 
-    <section class="facultySectionCustom">
+    <section id="faculty" class="facultySectionCustom">
         <div class="container">
             <div class="facultyRowWrap">
                 <div class="facultyScrollControls" aria-label="Faculty carousel controls">
@@ -10442,7 +10432,7 @@
         </div>
     </section>
 
-    <section class="bestOpportunity">
+    <section id="placements" class="bestOpportunity">
         <div class="container">
             <div class="bestOpportunityHeadWrap">
                 <div class="headingsLeft">
@@ -11865,7 +11855,7 @@
         }
     </style>
 
-    <section class="beatingHearts techDsaiHomePage dsaiMobView">
+    <section id="lifeAtAITD" class="beatingHearts techDsaiHomePage dsaiMobView">
         <div class="container">
             <div class="headingWrap">
 
@@ -12623,12 +12613,12 @@
                         <button type="submit" class="btnWhite contact-submit">
                             Submit Details
                             <span class="arrowWrap">
-                                <img class="arrow arrow1"
-                                    src="../images.mastersunion.link/uploads/18022025/v1/black_arrow_image.svg"
-                                    alt="arrow" />
-                                <img class="arrow arrow2"
-                                    src="../images.mastersunion.link/uploads/18022025/v1/black_arrow_image.svg"
-                                    alt="arrow" />
+                                <svg class="arrow arrow1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor" />
+                                </svg>
+                                <svg class="arrow arrow2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor" />
+                                </svg>
                             </span>
                         </button>
                         <div id="contactUsThanks" class="font-14 font-regular contact-thanks">
@@ -12653,12 +12643,12 @@
                     <button type="submit" class="btnWhite contact-submit">
                         Submit Details
                         <span class="arrowWrap">
-                            <img class="arrow arrow1"
-                                src="../images.mastersunion.link/uploads/18022025/v1/black_arrow_image.svg"
-                                alt="arrow" />
-                            <img class="arrow arrow2"
-                                src="../images.mastersunion.link/uploads/18022025/v1/black_arrow_image.svg"
-                                alt="arrow" />
+                            <svg class="arrow arrow1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor" />
+                            </svg>
+                            <svg class="arrow arrow2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor" />
+                            </svg>
                         </span>
                     </button>
                     <div id="popupContactThanks" class="font-14 font-regular contact-thanks">
