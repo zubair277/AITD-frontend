@@ -271,10 +271,6 @@
             animation: trustedLogosMoveLeft 28s linear infinite;
         }
 
-        .trustedLogosSection:hover .trustedLogosTrack {
-            animation-play-state: paused;
-        }
-
         .trustedLogoPill {
             flex: 0 0 auto;
             min-width: 220px;
@@ -5316,7 +5312,7 @@
 
     .homeHeroSection .heroLeft {
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: center;
         width: 100%;
         height: 100%;
@@ -5325,27 +5321,27 @@
     .homeHeroSection .muHeroButtonWrap {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
         justify-content: center;
         width: 100%;
-        padding-right: 60px;
+        padding-left: 0;
     }
 
     .homeHeroSection .heroRightButtons {
         display: flex;
         gap: 16px;
         flex-wrap: wrap;
-        justify-content: flex-end;
+        justify-content: flex-start;
     }
 
     @media (max-width: 991px) {
         .homeHeroSection .muHeroButtonWrap {
-            padding-right: 20px;
+            padding-left: 0;
         }
 
         .homeHeroSection .heroRightButtons {
             flex-direction: column;
-            align-items: flex-end;
+            align-items: flex-start;
         }
     }
 </style>
@@ -5375,7 +5371,7 @@
 
                     <div class="muHeroButtonWrap">
                         <div class="heroRightButtons">
-                            <button type="button" id="openContactPopup" class="btnWhite">
+                            <button type="button" id="openContactPopup" class="btnBlack">
                                 Contact Us
                                 <span class="arrowWrap">
                                     <img class="arrow arrow1"
@@ -5386,24 +5382,6 @@
                                         alt="arrow" />
                                 </span>
                             </button>
-                            <a href="https://files.mastersunion.link/MasterUnion/Masters_Union_Year_Book.pdf"
-                                target="_blank" class="btnWhite blurBg">
-
-                                Download Yearbook
-
-                                <svg class="icon-Download" xmlns="https://www.w3.org/2000/svg" width="19" height="20"
-                                    viewBox="0 0 19 20" fill="none" plerdy-tracking-id="79912533601">
-                                    <!-- Arrow path -->
-                                    <path class="arrowDownload"
-                                        d="M9.07992 11.6076C9.13506 11.6628 9.20055 11.7066 9.27263 11.7365C9.34471 11.7663 9.42197 11.7817 9.5 11.7817C9.57803 11.7817 9.65529 11.7663 9.72737 11.7365C9.79945 11.7066 9.86494 11.6628 9.92008 11.6076L12.8888 8.63883C12.944 8.58366 12.9878 8.51817 13.0176 8.44609C13.0475 8.37402 13.0628 8.29677 13.0628 8.21875C13.0628 8.14073 13.0475 8.06348 13.0176 7.99141C12.9878 7.91933 12.944 7.85384 12.8888 7.79867C12.8337 7.74351 12.7682 7.69975 12.6961 7.66989C12.624 7.64004 12.5468 7.62467 12.4688 7.62467C12.3907 7.62467 12.3135 7.64004 12.2414 7.66989C12.1693 7.69975 12.1038 7.74351 12.0487 7.79867L10.0938 9.75434V2.875C10.0938 2.71753 10.0312 2.56651 9.91985 2.45516C9.8085 2.34381 9.65747 2.28125 9.5 2.28125C9.34253 2.28125 9.19151 2.34381 9.08016 2.45516C8.96881 2.56651 8.90625 2.71753 8.90625 2.875V9.75434L6.95133 7.79867C6.83992 7.68726 6.68881 7.62467 6.53125 7.62467C6.37369 7.62467 6.22258 7.68726 6.11117 7.79867C5.99976 7.91008 5.93717 8.06119 5.93717 8.21875C5.93717 8.37631 5.99976 8.52742 6.11117 8.63883L9.07992 11.6076Z"
-                                        fill="#090909"></path>
-
-                                    <!-- Bottom line path -->
-                                    <path
-                                        d="M16.625 11.1875V15.9375C16.625 16.095 16.5624 16.246 16.4511 16.3573C16.3397 16.4687 16.1887 16.5312 16.0312 16.5312H2.96875C2.81128 16.5312 2.66026 16.4687 2.54891 16.3573C2.43756 16.246 2.375 16.095 2.375 15.9375V11.1875C2.375 11.03 2.43756 10.879 2.54891 10.7677C2.66026 10.6563 2.81128 10.5938 2.96875 10.5938C3.12622 10.5938 3.27724 10.6563 3.38859 10.7677C3.49994 10.879 3.5625 11.03 3.5625 11.1875V15.3438H15.4375V11.1875C15.4375 11.03 15.5001 10.879 15.6114 10.7677C15.7228 10.6563 15.8738 10.5938 16.0312 10.5938C16.1887 10.5938 16.3397 10.6563 16.4511 10.7677C16.5624 10.879 16.625 11.03 16.625 11.1875Z"
-                                        fill="#090909"></path>
-                                </svg>
-                            </a>
                         </div>
                         <div class="muHeroLogos">
                             <img src="../images.mastersunion.link/uploads/28082025/v1/BSISPartners.webp"
