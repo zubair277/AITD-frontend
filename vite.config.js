@@ -496,6 +496,12 @@ function rewriteHtml(html, domains, currentDomain) {
       const title = escapeHtml(safeText(item?.title, 'Event'));
       const dateText = escapeHtml(safeText(item?.meta?.date, ''));
       const locationText = escapeHtml(safeText(item?.meta?.location, ''));
+      const rawStatus = safeText(item?.meta?.status || item?.status, 'upcoming').toLowerCase();
+      const normalizedStatus = rawStatus === 'completed' ? 'completed' : 'upcoming';
+      const statusText = normalizedStatus === 'completed' ? 'Completed' : 'Upcoming';
+      const statusStyle = normalizedStatus === 'completed'
+        ? 'background:#dcfce7;color:#166534;'
+        : 'background:#fef3c7;color:#92400e;';
       const descText = escapeHtml(safeText(item?.description, ''));
       const imageUrl = escapeHtml(safeText(item?.imageUrl, ''));
       const detailUrl = '/event-details.html?id=' + encodeURIComponent(safeText(item?.id, ''));
@@ -507,6 +513,7 @@ function rewriteHtml(html, domains, currentDomain) {
             '<div class="eventMetaRow">' +
               (dateText ? '<span class="eventPill">' + dateText + '</span>' : '') +
               (locationText ? '<span class="eventPill eventPillDark">' + locationText + '</span>' : '') +
+              '<span class="eventPill" style="' + statusStyle + '">' + statusText + '</span>' +
             '</div>' +
             '<p class="eventTitle">' + title + '</p>' +
             (descText ? '<p class="eventDesc">' + descText + '</p>' : '') +
