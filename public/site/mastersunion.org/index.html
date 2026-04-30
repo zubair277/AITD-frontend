@@ -4005,14 +4005,10 @@
                     const st = safeNumber(stRaw);
                     const bannerOffset = getBannerOffset();
         
-                    // Remove shrikIt if we reach top 80px or less
+                    // Keep the header pinned and visible while scrolling.
                     if (st <= 80) {
                         $menu.css("top", bannerOffset + "px");
                         $menu.removeClass("shrikIt");
-                        // Remove custom -2.25rem top if present
-                        if ($menu.css("top") === "-2.25rem") {
-                            $menu.css("top", bannerOffset + "px");
-                        }
                         lastScrollTop = st;
                         return;
                     }
@@ -4030,8 +4026,8 @@
                                     st > menuHeight &&
                                     st + windowHeight < safeNumber($(document).height())
                                 ) {
-                                    $menu.css("top", "-2.25rem");
-                                    $menu.addClass("shrikIt");
+                                    $menu.css("top", bannerOffset + "px");
+                                    $menu.removeClass("shrikIt");
                                 }
                             } else {
                                 // Scrolling up
@@ -4051,8 +4047,8 @@
                                 st > menuHeight &&
                                 st + windowHeight < safeNumber($(document).height())
                             ) {
-                                $menu.css("top", "-2.25rem");
-                                $menu.addClass("shrikIt");
+                                $menu.css("top", bannerOffset + "px");
+                                $menu.removeClass("shrikIt");
                             }
                         } else {
                             // Scrolling up
@@ -4061,7 +4057,7 @@
                                 $menu.css("top", bannerOffset + "px");
                                 $menu.removeClass("shrikIt");
                             }
-                            // Otherwise, keep it shrunk
+                            // Otherwise, keep it pinned.
                         }
                         lastScrollTop = st;
                     }
@@ -4253,7 +4249,7 @@
                     var st = $(this).scrollTop();
                     var bannerOffset = getBannerOffset();
         
-                    // Remove shrikIt if we reach top 80px or less
+                    // Keep the header pinned and visible while scrolling.
                     if (st <= 80) {
                         $menu.css("top", bannerOffset + "px");
                         $menu.removeClass("shrikIt");
@@ -4266,8 +4262,8 @@
                             if (st > lastScrollTop) {
                                 // Scrolling down
                                 if (st > menuHeight && st + windowHeight < $(document).height()) {
-                                    $menu.css("top", -menuHeight + "px");
-                                    $menu.addClass("shrikIt");
+                                    $menu.css("top", bannerOffset + "px");
+                                    $menu.removeClass("shrikIt");
                                 }
                             } else {
                                 // Scrolling up
@@ -4284,8 +4280,8 @@
                         if (st > lastScrollTop) {
                             // Scrolling down
                             if (st > menuHeight && st + windowHeight < $(document).height()) {
-                                $menu.css("top", -menuHeight + "px");
-                                $menu.addClass("shrikIt");
+                                $menu.css("top", bannerOffset + "px");
+                                $menu.removeClass("shrikIt");
                             }
                         } else {
                             // Scrolling up
@@ -4294,14 +4290,14 @@
                                 $menu.css("top", bannerOffset + "px");
                                 $menu.removeClass("shrikIt");
                             }
-                            // Otherwise, keep it shrunk
+                            // Otherwise, keep it pinned.
                         }
                         lastScrollTop = st;
                     }
                 });
         
                 if (documentHeight > sectionHeight) {
-                    $menu.css("top", -menuHeight + "px");
+                    $menu.css("top", bannerOffset + "px");
                     $menu.addClass("darkHeader");
                 } else {
                     // Set initial position based on banner visibility (includes hero banner)

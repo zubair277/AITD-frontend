@@ -215,9 +215,9 @@ function rewriteHtml(html, domains, currentDomain) {
   .topHeader .menuLogo,
   .mobileHeader .menuLogo,
   .topHeader .logo {
-    width: 260px !important;
-    min-width: 260px !important;
-    max-width: 260px !important;
+    width: 180px !important;
+    min-width: 180px !important;
+    max-width: 180px !important;
     overflow: visible !important;
     display: inline-flex;
     align-items: center;
@@ -229,8 +229,8 @@ function rewriteHtml(html, domains, currentDomain) {
   .mobileHeader .menuLogo img[src*="aitd logo"],
   .topHeader .logo img[src*="aitd%20logo"],
   .topHeader .logo img[src*="aitd logo"] {
-    width: 260px !important;
-    max-width: 260px !important;
+    width: 180px !important;
+    max-width: 180px !important;
     height: auto !important;
     object-fit: contain;
     image-rendering: -webkit-optimize-contrast;
@@ -262,9 +262,9 @@ function rewriteHtml(html, domains, currentDomain) {
     .topHeader .menuLogo,
     .mobileHeader .menuLogo,
     .topHeader .logo {
-      width: 200px !important;
-      min-width: 200px !important;
-      max-width: 200px !important;
+      width: 140px !important;
+      min-width: 140px !important;
+      max-width: 140px !important;
     }
 
     .topHeader .menuLogo img[src*="aitd%20logo"],
@@ -273,8 +273,8 @@ function rewriteHtml(html, domains, currentDomain) {
     .mobileHeader .menuLogo img[src*="aitd logo"],
     .topHeader .logo img[src*="aitd%20logo"],
     .topHeader .logo img[src*="aitd logo"] {
-      width: 200px !important;
-      max-width: 200px !important;
+      width: 140px !important;
+      max-width: 140px !important;
     }
 
     .homeHeroSection .homeheroHeading {
