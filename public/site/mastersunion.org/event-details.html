@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Details</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f4f4f5;
+      color: #334155;
+      font-family: Arial, sans-serif;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 32px auto;
+      background: #f4f4f5;
+      padding: 24px 24px 40px;
+    }
+    .meta {
+      color: #b59d3b;
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      color: #0f172a;
+      font-size: 34px;
+      line-height: 1.2;
+    }
+    .submeta {
+      color: #64748b;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .desc {
+      font-size: 20px;
+      line-height: 1.6;
+      color: #475569;
+      white-space: pre-line;
+      margin-bottom: 30px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 2px;
+      display: block;
+    }
+    .status {
+      font-size: 18px;
+      color: #64748b;
+      text-align: center;
+      margin-top: 60px;
+    }
+    @media (max-width: 768px) {
+      .wrap { padding: 18px 14px 30px; margin: 16px auto; }
+      h1 { font-size: 26px; }
+      .desc { font-size: 17px; }
+      .gallery { grid-template-columns: 1fr; }
+      .gallery img { height: 210px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap" id="eventDetailRoot">
+    <div class="status">Loading event details...</div>
+  </main>
+
+  <script>
+    (() => {
+      const root = document.getElementById('eventDetailRoot');
+      const params = new URLSearchParams(window.location.search);
+      const eventId = params.get('id');
+
+      const safeText = (value, fallback = '') => {
+        const text = String(value ?? '').trim();
+        return text || fallback;
+      };
+
+      const escapeHtml = (value) =>
+        String(value ?? '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+
+      if (!eventId) {
+        root.innerHTML = '<div class="status">Event not found.</div>';
+        return;
+      }
+
+      fetch('/api/content/events')
+        .then((res) => (res.ok ? res.json() : Promise.reject(new Error('events fetch failed'))))
+        .then((payload) => {
+          const items = Array.isArray(payload?.items) ? payload.items : [];
+          const item = items.find((event) => String(event?.id) === String(eventId));
+          if (!item) {
+            root.innerHTML = '<div class="status">Event not found.</div>';
+            return;
+          }
+
+          const title = escapeHtml(safeText(item.title, 'Event'));
+          const summary = escapeHtml(safeText(item.description, ''));
+          const detailDescription = escapeHtml(safeText(item?.meta?.detailDescription, summary));
+          const date = escapeHtml(safeText(item?.meta?.date, 'Date not available'));
+          const location = escapeHtml(safeText(item?.meta?.location, 'Location not available'));
+
+          const gallery = Array.isArray(item?.meta?.galleryImages) ? item.meta.galleryImages : [];
+          const images = gallery.length
+            ? gallery.map((src) => String(src))
+            : (item.imageUrl ? [String(item.imageUrl)] : []);
+
+          root.innerHTML =
+            '<div class="meta">Access, MBA activities, News and Events</div>' +
+            '<h1>' + title + '</h1>' +
+            '<div class="submeta">' + date + ' • ' + location + '</div>' +
+            '<div class="desc">' + detailDescription + '</div>' +
+            (images.length
+              ? '<div class="gallery">' +
+                  images.map((src) => (
+                    '<img src="' + escapeHtml(src) + '" alt="' + title + '" loading="lazy" />'
+                  )).join('') +
+                '</div>'
+              : '');
+        })
+        .catch(() => {
+          root.innerHTML = '<div class="status">Unable to load event details right now.</div>';
+        });
+    })();
+  </script>
+</body>
+</html>

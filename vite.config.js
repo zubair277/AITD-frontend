@@ -498,9 +498,10 @@ function rewriteHtml(html, domains, currentDomain) {
       const locationText = escapeHtml(safeText(item?.meta?.location, ''));
       const descText = escapeHtml(safeText(item?.description, ''));
       const imageUrl = escapeHtml(safeText(item?.imageUrl, ''));
+      const detailUrl = '/event-details.html?id=' + encodeURIComponent(safeText(item?.id, ''));
 
       return '<div class="swiper-slide">' +
-        '<a class="eventCard" href="' + imageUrl + '" data-mode="events" aria-label="' + title + '">' +
+        '<a class="eventCard" href="' + detailUrl + '" data-mode="events" aria-label="' + title + '">' +
           '<div class="eventCardImage" style="background-image:url(\\'' + imageUrl + '\\')"></div>' +
           '<div class="eventCardBody">' +
             '<div class="eventMetaRow">' +
@@ -509,6 +510,7 @@ function rewriteHtml(html, domains, currentDomain) {
             '</div>' +
             '<p class="eventTitle">' + title + '</p>' +
             (descText ? '<p class="eventDesc">' + descText + '</p>' : '') +
+            '<div class="eventHint">Click to view full event details</div>' +
           '</div>' +
         '</a>' +
       '</div>';
@@ -518,10 +520,14 @@ function rewriteHtml(html, domains, currentDomain) {
       const title = escapeHtml(safeText(item?.title, 'Latest News'));
       const link = escapeHtml(safeText(item?.meta?.link, '#'));
       const dateText = escapeHtml(safeText(item?.meta?.date, ''));
+      const description = escapeHtml(safeText(item?.description, ''));
+      const imageUrl = escapeHtml(safeText(item?.imageUrl, ''));
       return '<div class="swiper-slide">' +
         '<a class="latestTextCard" data-mode="latest" href="' + link + '" target="_blank" rel="noopener noreferrer" aria-label="' + title + '">' +
+          (imageUrl ? '<div class="latestTextImageWrap"><img class="latestTextImage" src="' + imageUrl + '" alt="' + title + '" loading="lazy" /></div>' : '') +
           (dateText ? '<div class="latestTextDate">' + dateText + '</div>' : '') +
           '<p class="latestTextTitle">' + title + '</p>' +
+          (description ? '<p class="latestTextDesc">' + description + '</p>' : '') +
         '</a>' +
       '</div>';
     };
@@ -532,15 +538,27 @@ function rewriteHtml(html, domains, currentDomain) {
       if (!wrapper || !container) return;
 
       const renderMode = (mode) => {
+        const selectedItems = mode === 'latest' ? latestNews : events;
         if (mode === 'latest') {
-          container.innerHTML = latestNews.map(buildLatestNewsSlide).join('');
+          container.innerHTML = selectedItems.map(buildLatestNewsSlide).join('');
         } else {
-          container.innerHTML = events.map(buildEventSlide).join('');
+          container.innerHTML = selectedItems.map(buildEventSlide).join('');
         }
         const swiper = document.querySelector('.testimonialsSwiper')?.swiper;
         if (swiper && typeof swiper.update === 'function') swiper.update();
         const newsSwiper = document.querySelector('.swiper.eventSlider.latestNews.newsAuto')?.swiper;
-        if (newsSwiper && typeof newsSwiper.update === 'function') newsSwiper.update();
+        if (newsSwiper) {
+          const isSmallSet = selectedItems.length <= 2;
+          newsSwiper.params.loop = !isSmallSet;
+          newsSwiper.params.freeMode = isSmallSet ? false : { enabled: true, momentum: false };
+          newsSwiper.params.allowTouchMove = isSmallSet;
+          if (newsSwiper.params.autoplay) {
+            newsSwiper.params.autoplay.delay = isSmallSet ? 3500 : 0;
+          }
+          if (typeof newsSwiper.loopDestroy === 'function') newsSwiper.loopDestroy();
+          if (!isSmallSet && typeof newsSwiper.loopCreate === 'function') newsSwiper.loopCreate();
+          if (typeof newsSwiper.update === 'function') newsSwiper.update();
+        }
       };
 
       const tabs = Array.from(wrapper.querySelectorAll('.newsTabBtn'));

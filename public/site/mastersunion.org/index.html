@@ -6159,7 +6159,7 @@
             }
         }
 
-        /* Latest News: text cards (date + title) */
+        /* Latest News: text cards (date + title + description) */
         #section__news .latestTextCard {
             display: flex;
             flex-direction: column;
@@ -6173,6 +6173,21 @@
             padding: 14px 14px 16px;
             text-decoration: none;
             color: inherit;
+        }
+
+        #section__news .latestTextImageWrap {
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #f8fafc;
+        }
+
+        #section__news .latestTextImage {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            display: block;
         }
 
         #section__news .latestTextDate {
@@ -6195,6 +6210,13 @@
             line-height: 1.25;
             color: #0b0b0b;
             margin: 0;
+        }
+
+        #section__news .latestTextDesc {
+            font-size: 13px;
+            line-height: 1.45;
+            color: #475569;
+            margin: 8px 0 0;
         }
 
         /* Events: detailed card */
@@ -6499,8 +6521,9 @@
             if (!container) return;
             container.innerHTML = '';
 
-            // Render exactly the provided items (no manual duplication of cards)
-            (Array.isArray(latestNewsArray) ? latestNewsArray : []).forEach((item) => {
+            const renderItems = Array.isArray(latestNewsArray) ? latestNewsArray : [];
+
+            renderItems.forEach((item) => {
                 const currentMode = mode || 'latest';
                 const safeTitle = String(item.newsTitle || item.title || 'View').replace(/"/g, '&quot;');
                 const imageUrl = item.newsBannerCDN || item.imageUrl || '';
@@ -6510,19 +6533,15 @@
                     const dateText = item.eventDate || item.dateText || '';
                     const locationText = item.location || item.venue || '';
                     const descText = item.description || item.desc || '';
-                    const filename = (item.downloadFilename || safeTitle || 'event-image')
-                        .toLowerCase()
-                        .replace(/[^a-z0-9]+/g, '-')
-                        .replace(/(^-|-$)/g, '') + '.jpg';
+                    const eventId = item.id || '';
+                    const detailUrl = `/event-details.html?id=${encodeURIComponent(eventId)}`;
 
                     const slideHtml = `
                         <div class="swiper-slide">
                             <a class="eventCard"
-                               href="${imageUrl}"
+                               href="${detailUrl}"
                                data-mode="events"
-                               data-download-image="${String(imageUrl).replace(/"/g, '&quot;')}"
-                               data-download-filename="${filename}"
-                               aria-label="Download image: ${safeTitle}">
+                               aria-label="View event details: ${safeTitle}">
                                 <div class="eventCardImage" style="background-image:url('${imageUrl}')"></div>
                                 <div class="eventCardBody">
                                     <div class="eventMetaRow">
@@ -6531,7 +6550,7 @@
                                     </div>
                                     <p class="eventTitle">${safeTitle}</p>
                                     ${descText ? `<p class="eventDesc">${String(descText).replace(/</g, '&lt;')}</p>` : ``}
-                                    <div class="eventHint">Click to download image</div>
+                                    <div class="eventHint">Click to view full event details</div>
                                 </div>
                             </a>
                         </div>`;
@@ -6539,8 +6558,10 @@
                     return;
                 }
 
-                // Latest News: text card (date + title)
+                // Latest News: text card (date + title + description)
                 const dateText = item.newsDate || item.dateText || '';
+                const latestImageUrl = item.newsBannerCDN || item.imageUrl || '';
+                const summaryText = item.summary || item.description || '';
                 const slideHtml = `
                     <div class="swiper-slide">
                         <a class="latestTextCard"
@@ -6550,8 +6571,10 @@
                            rel="noopener noreferrer"
                            href="${url}"
                            aria-label="${safeTitle}">
+                            ${latestImageUrl ? `<div class="latestTextImageWrap"><img class="latestTextImage" src="${String(latestImageUrl).replace(/"/g, '&quot;')}" alt="${safeTitle}" loading="lazy" /></div>` : ``}
                             ${dateText ? `<div class="latestTextDate">${String(dateText).replace(/</g, '&lt;')}</div>` : ``}
                             <p class="latestTextTitle">${safeTitle}</p>
+                            ${summaryText ? `<p class="latestTextDesc">${String(summaryText).replace(/</g, '&lt;')}</p>` : ``}
                         </a>
                     </div>`;
                 container.insertAdjacentHTML('beforeend', slideHtml);
@@ -6562,8 +6585,16 @@
             try {
                 const swiper = window.latestNewsSwiper;
                 if (swiper) {
+                    const isSmallSet = renderItems.length <= 2;
+                    swiper.params.loop = !isSmallSet;
+                    swiper.params.freeMode = isSmallSet ? false : { enabled: true, momentum: false };
+                    swiper.params.allowTouchMove = isSmallSet;
+                    if (swiper.params.autoplay) {
+                        swiper.params.autoplay.delay = isSmallSet ? 3500 : 0;
+                    }
+
                     if (typeof swiper.loopDestroy === 'function') swiper.loopDestroy();
-                    if (typeof swiper.loopCreate === 'function') swiper.loopCreate();
+                    if (!isSmallSet && typeof swiper.loopCreate === 'function') swiper.loopCreate();
                     if (typeof swiper.update === 'function') swiper.update();
 
                     if (swiper.autoplay && typeof swiper.autoplay.start === 'function') {
@@ -6638,7 +6669,7 @@
 
         function loadEventsIntoNews() {
             bindLatestNews(staticEvents, 'events');
-            setNewsStatus('Showing upcoming events. Click a card to download the image.');
+            setNewsStatus('Showing upcoming events. Click a card to open full details.');
         }
 
         function setupNewsTabs() {
@@ -6646,45 +6677,13 @@
             const container = document.getElementById('latestNewsHome');
             if (!wrapper || !container) return;
 
-            async function downloadUrlToDevice(url, filename) {
-                if (!url) return;
-                try {
-                    const res = await fetch(url, { cache: 'no-store' });
-                    const blob = await res.blob();
-                    const objectUrl = URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = objectUrl;
-                    a.download = filename || '';
-                    document.body.appendChild(a);
-                    a.click();
-                    a.remove();
-                    URL.revokeObjectURL(objectUrl);
-                } catch (e) {
-                    // Fallback: attempt direct download via anchor
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = filename || '';
-                    a.target = '_blank';
-                    document.body.appendChild(a);
-                    a.click();
-                    a.remove();
-                }
-            }
-
-            // Delegate click for events image download
+            // Delegate click handling for tabs content
             container.addEventListener('click', function (event) {
                 const link = event.target.closest('.newsCardOnly, .eventCard');
                 if (!link) return;
                 const mode = link.getAttribute('data-mode') || 'latest';
-                const url = link.getAttribute('data-url') || '';
-
-                if (mode === 'events') {
-                    event.preventDefault();
-                    const img = link.getAttribute('data-download-image') || link.getAttribute('href') || '';
-                    const filename = link.getAttribute('data-download-filename') || 'event-image.jpg';
-                    downloadUrlToDevice(img, filename);
-                }
-                // In "latest" mode default anchor behaviour (open article) remains
+                // In both modes we keep normal anchor navigation.
+                if (mode === 'events') return;
             }, { passive: false });
 
             const tabs = wrapper.querySelectorAll('.newsTabBtn');
@@ -7612,7 +7611,7 @@
                         id: "mba-entrepreneurship",
                         title: "MBA Specialisation in Entrepreneurship",
                         description: "Designed for aspiring founders and business builders, focusing on opportunity recognition, venture creation, fundraising, and scaling startups sustainably.",
-                        image: "https://images.mastersunion.link/uploads/24062025/v1/img1.webp",
+                        image: "/images/Specialisations/Entrepreneur.jpg",
                         videoId: null,
                         link: "https://apply.aitdgoa.edu.in/?_gl=1*1jitw18*_gcl_au*Mzg5OTg1NzU3LjE3NzUwNTA2NzA.*_ga*MTA4MjUwODM0Mi4xNzc1MDUwNjcw*_ga_M4M081L7F4*czE3NzYzNDUzNjgkbzM0JGcxJHQxNzc2MzQ1NTAxJGo1OSRsMCRoMA.."
                     },
@@ -7628,7 +7627,7 @@
                         id: "mba-finance",
                         title: "MBA Specialisation in Finance",
                         description: "Covers financial management, investment analysis, banking, and corporate finance to build skills in risk analysis and strategic financial decision-making.",
-                        image: "/images/Specialisations/Finance.png",
+                        image: "/images/Specialisations/Finance.jpg",
                         videoId: null,
                         link: "https://apply.aitdgoa.edu.in/?_gl=1*1jitw18*_gcl_au*Mzg5OTg1NzU3LjE3NzUwNTA2NzA.*_ga*MTA4MjUwODM0Mi4xNzc1MDUwNjcw*_ga_M4M081L7F4*czE3NzYzNDUzNjgkbzM0JGcxJHQxNzc2MzQ1NTAxJGo1OSRsMCRoMA.."
                     },
@@ -7644,7 +7643,7 @@
                         id: "mba-operations",
                         title: "MBA Specialisation in Operations",
                         description: "Deals with planning, organizing, and optimizing business processes with strong focus on supply chain, logistics, and efficient resource utilization.",
-                        image: "/images/Specialisations/Operations.png",
+                        image: "/images/Specialisations/Operations.jpg",
                         videoId: null,
                         link: "https://apply.aitdgoa.edu.in/?_gl=1*1jitw18*_gcl_au*Mzg5OTg1NzU3LjE3NzUwNTA2NzA.*_ga*MTA4MjUwODM0Mi4xNzc1MDUwNjcw*_ga_M4M081L7F4*czE3NzYzNDUzNjgkbzM0JGcxJHQxNzc2MzQ1NTAxJGo1OSRsMCRoMA.."
                     }
