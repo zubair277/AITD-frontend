@@ -127,6 +127,62 @@
         font-family: "go-semibold";
     }
 
+    .navSocials {
+        position: relative;
+    }
+
+    .navSocials .dropdownItems {
+        cursor: pointer;
+    }
+
+    .navSocials .dropdown-icon {
+        transition: transform 0.25s ease;
+    }
+
+    .socialDropdown {
+        position: absolute;
+        top: calc(100% + 12px);
+        right: 0;
+        min-width: 170px;
+        background: #0f0f0f;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        padding: 10px;
+        list-style: none;
+        display: none;
+        z-index: 10020;
+    }
+
+    .socialDropdown li+li {
+        margin-top: 6px;
+    }
+
+    .socialDropdown a {
+        display: block;
+        padding: 8px 10px;
+        border-radius: 8px;
+        color: var(--white);
+        font-size: 13px;
+        font-family: var(--go-medium);
+        text-transform: uppercase;
+        transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    .socialDropdown a:hover {
+        background: rgba(170, 24, 52, 0.18);
+        color: #AA1834;
+    }
+
+    .navSocials:hover .socialDropdown,
+    .navSocials:focus-within .socialDropdown {
+        display: block;
+    }
+
+    .navSocials:hover .dropdown-icon,
+    .navSocials:focus-within .dropdown-icon {
+        transform: rotate(180deg);
+    }
+
     .menuDown {
         padding: 0;
         background: var(--black);

@@ -7823,6 +7823,24 @@ footer .addressWrapper .address.mailaddressfooter {
   max-width: 35%;
 }
 
+.bottomFooter .footerLinksWrap.quickLinksWrap {
+  max-width: 100%;
+}
+
+.bottomFooter .quickLinksList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, max-content));
+  column-gap: 32px;
+  row-gap: 12px;
+  align-items: start;
+}
+
+.bottomFooter .quickLinksList .footerLink {
+  display: inline-flex;
+  min-width: 0;
+  margin-top: 0 !important;
+}
+
 .multiListBox {
   justify-content: flex-start;
   gap: 26px;
