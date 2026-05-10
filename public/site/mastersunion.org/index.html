@@ -51,7 +51,7 @@
 
         .homeHeroSection,
         .homeHeroSection .bgHeroVideoWrap {
-            background: url('/images/aitd-bg.jpeg') center center / cover no-repeat !important;
+            background: transparent !important;
         }
 
         .homeHeroSection .bgHeroVideoWrap::before,
@@ -60,13 +60,18 @@
             background: transparent !important;
         }
 
+        html, body {
+            overflow-x: hidden !important;
+        }
+
         .homeHeroSection .bgHeroVideoWrap .bgHeroImage {
-            display: block !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
             width: 100% !important;
             height: 100% !important;
             object-fit: cover !important;
             opacity: 1 !important;
-            visibility: visible !important;
         }
 
         .meetMastersSection {

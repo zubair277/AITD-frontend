@@ -18153,12 +18153,26 @@
 
     .homeHeroSection {
       padding-bottom: 0 !important;
-      zoom: 95%;
       min-height: 112vh;
       border-bottom: 1px solid var(--black5);
+      overflow: hidden;
+      width: 100%;
+
+      .animationweb {
+        display: none !important;
+      }
 
       .animationmob.mobVisible {
+        display: block !important;
         min-height: 112vh;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .animationmob.mobVisible .bgHeroImage {
+        object-position: center center;
+        width: 100%;
+        height: 100%;
       }
 
       .heroLeft {
@@ -18176,6 +18190,8 @@
 
       .bgHeroVideoWrap {
         max-height: 100%;
+        width: 100%;
+        overflow: hidden;
       }
 
       .homeheroHeading {
