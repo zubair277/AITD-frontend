@@ -297,7 +297,16 @@
   }
 
   #lifeAtAITD .lifeAtMuSection .lifeCardsWrapper.lifeMobileGallery {
-    grid-template-columns: 1fr;
+    display: flex !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 20px;
+  }
+
+  #lifeAtAITD .lifeAtMuSection .lifeMobileTile {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
   }
 }
 @media (min-width: 786px) and (max-width: 1023px) {
