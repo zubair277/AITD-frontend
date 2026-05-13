@@ -178,7 +178,7 @@ function rewriteHtml(html, domains, currentDomain) {
   )
   out = out.replace(
     /<img\s+src="[^"]+"\s+fetchpriority="high"\s+class="bgHeroImage\s*"\s+alt="mobileHomepageBackground">/i,
-    '<img src="/images/aitd-bg.jpeg" fetchpriority="high" class="bgHeroImage" alt="" aria-hidden="true">',
+    '<img src="/images/aitd-bg-mobile.jpeg" fetchpriority="high" class="bgHeroImage" alt="" aria-hidden="true">',
   )
 
   // Home hero: remove accreditation logos block permanently.
