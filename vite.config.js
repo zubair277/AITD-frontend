@@ -171,6 +171,16 @@ function rewriteHtml(html, domains, currentDomain) {
     '/images/aitd%20logo.png',
   )
 
+  // Fix broken SVG icons.
+  out = out.replace(
+    /(?:\.\.\/|\.\.\.\/)?files\.mastersunion\.link\/resources\/svg\//gi,
+    '/images/files.mastersunion.link/resources/svg/',
+  )
+  out = out.replace(
+    /https?:\/\/files\.mastersunion\.link\/resources\/svg\//gi,
+    '/images/files.mastersunion.link/resources/svg/',
+  )
+
   // Home hero: replace background images with the user's custom background.
   out = out.replace(
     /<img\s+src="[^"]+"\s+fetchpriority="high"\s+class="bgHeroImage\s*mob-hide"\s+alt="[^"]*">/i,
