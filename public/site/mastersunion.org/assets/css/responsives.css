@@ -18178,7 +18178,7 @@
         overflow: hidden;
       }
 
-      .animationmob.mobVisible .bgHeroImage {
+      .homeHeroSection .bgHeroVideoWrap .animationmob.mobVisible .bgHeroImage {
         object-position: top center !important;
         object-fit: cover !important;
         width: 100%;
