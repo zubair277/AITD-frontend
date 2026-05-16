@@ -252,7 +252,7 @@
     .selectingStudents {
         padding: 0;
         padding-top: 80px;
-        background: url(https://images.mastersunion.link/uploads/10042025/v1/Vector1351.svg), var(--black);
+        background: url(https://images.aitd.link/uploads/10042025/v1/Vector1351.svg), var(--black);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -1550,7 +1550,7 @@
         bottom: -49%;
         left: 0;
         width: 100%;
-        background: url(https://images.mastersunion.link/uploads/27022025/v1/Rectangle50090.svg);
+        background: url(https://images.aitd.link/uploads/27022025/v1/Rectangle50090.svg);
         background-repeat: no-repeat;
         height: 100%;
     }
@@ -2275,25 +2275,25 @@
         }
 
         .gridBox.academicsImg {
-            background: url("../../../images.mastersunion.link/uploads/08052025/v2/Frame13213165641.webp") !important;
+            background: url("../../../images.aitd.link/uploads/08052025/v2/Frame13213165641.webp") !important;
             background-repeat: no-repeat !important;
             background-size: cover !important;
         }
 
         .gridBox.academicsImg:nth-child(2) {
-            background: url("../../../images.mastersunion.link/uploads/24022025/v1/P10293431.webp") !important;
+            background: url("../../../images.aitd.link/uploads/24022025/v1/P10293431.webp") !important;
             background-repeat: no-repeat !important;
             background-size: cover !important;
         }
 
         .gridBox.academicsImg:nth-child(3) {
-            background: url("../../../images.mastersunion.link/uploads/24022025/v1/image440021.webp") !important;
+            background: url("../../../images.aitd.link/uploads/24022025/v1/image440021.webp") !important;
             background-repeat: no-repeat !important;
             background-size: cover !important;
         }
 
         .gridBox.academicsImg:nth-child(4) {
-            background: url("../../../images.mastersunion.link/uploads/24022025/v1/image7321.webp") !important;
+            background: url("../../../images.aitd.link/uploads/24022025/v1/image7321.webp") !important;
             background-repeat: no-repeat !important;
             background-size: cover !important;
         }
@@ -2329,7 +2329,7 @@
     }
 
     .gradientVector::after {
-        background: url(https://images.mastersunion.link/uploads/01032025/v1/Vector13471.svg);
+        background: url(https://images.aitd.link/uploads/01032025/v1/Vector13471.svg);
         background-repeat: no-repeat;
     }
 
@@ -2798,7 +2798,7 @@
     content: "";
     top: 25px;
     right: 25px;
-    background: url("https://images.mastersunion.link/uploads/26022025/v1/Frame1321316511.svg"),
+    background: url("https://images.aitd.link/uploads/26022025/v1/Frame1321316511.svg"),
         no-repeat;
     width: 30px;
     height: 30px;
@@ -3572,7 +3572,7 @@
     }
 
     .vector .illinoisWrapper {
-        background: url(https://images.mastersunion.link/uploads/26032025/v1/tradingVector.svg), var(--black);
+        background: url(https://images.aitd.link/uploads/26032025/v1/tradingVector.svg), var(--black);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -3694,7 +3694,7 @@
         .impactLeftBox::after {
             content: '';
             position: absolute;
-            background: url('https://images.mastersunion.link/uploads/18042025/v1/dollar.svg');
+            background: url('https://images.aitd.link/uploads/18042025/v1/dollar.svg');
             background-repeat: no-repeat;
             width: 40px;
             height: 40px;
@@ -3708,19 +3708,19 @@
 
         .impactLeftBox:nth-of-type(2)::after {
             content: '';
-            background: url('https://images.mastersunion.link/uploads/22042025/v1/userLogo.svg');
+            background: url('https://images.aitd.link/uploads/22042025/v1/userLogo.svg');
 
         }
 
         .impactLeftBox:nth-of-type(3)::after {
             content: '';
-            background: url('https://images.mastersunion.link/uploads/22042025/v1/applicationLogo.svg');
+            background: url('https://images.aitd.link/uploads/22042025/v1/applicationLogo.svg');
         }
 
 
         .impactLeftBox:nth-of-type(4)::after {
             content: '';
-            background: url('https://images.mastersunion.link/uploads/22042025/v1/tradingLogo.svg');
+            background: url('https://images.aitd.link/uploads/22042025/v1/tradingLogo.svg');
 
         }
 
@@ -3987,7 +3987,7 @@
     }
 
     .sebiCertified {
-        background: url(https://images.mastersunion.link/uploads/18042025/v1/Vector_1351.svg), linear-gradient(to top, var(--white) 44%, var(--black) 43%);
+        background: url(https://images.aitd.link/uploads/18042025/v1/Vector_1351.svg), linear-gradient(to top, var(--white) 44%, var(--black) 43%);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -4144,7 +4144,7 @@
     .selectingStudents .cardsWrapper {
         display: flex;
         gap: 20px;
-        background: url(https://images.mastersunion.link/uploads/10042025/v1/Vector1351.svg), var(--black);
+        background: url(https://images.aitd.link/uploads/10042025/v1/Vector1351.svg), var(--black);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: top;
@@ -4160,19 +4160,19 @@
     }
 
     .techAdmission .gridBox.academicsImg {
-        background: url(https://images.mastersunion.link/uploads/17042025/v1/Frame1321316564.webp) !important;
+        background: url(https://images.aitd.link/uploads/17042025/v1/Frame1321316564.webp) !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
     }
 
     .techAdmission .gridBox.academicsImg:nth-child(2) {
-        background: url(https://images.mastersunion.link/uploads/17042025/v1/grid.webp) !important;
+        background: url(https://images.aitd.link/uploads/17042025/v1/grid.webp) !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
     }
 
     .techAdmission .gridBox.academicsImg:nth-child(3) {
-        background: url(https://images.mastersunion.link/uploads/17042025/v1/criticalThinking.webp) !important;
+        background: url(https://images.aitd.link/uploads/17042025/v1/criticalThinking.webp) !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
     }
@@ -4201,7 +4201,7 @@
 
 
     .fellowshipVideo {
-        background: url(https://images.mastersunion.link/uploads/17042025/v1/gradientVector.svg), linear-gradient(100deg, #459EE7 -19.33%, #4040DD 40.46%, #AA1834 100.24%);
+        background: url(https://images.aitd.link/uploads/17042025/v1/gradientVector.svg), linear-gradient(100deg, #459EE7 -19.33%, #4040DD 40.46%, #AA1834 100.24%);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -4415,7 +4415,7 @@
     }
 
     .topTalent {
-        background: url(https://images.mastersunion.link/uploads/04042025/v1/topTalentVector.svg), var(--grey17);
+        background: url(https://images.aitd.link/uploads/04042025/v1/topTalentVector.svg), var(--grey17);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -4455,7 +4455,7 @@
     }
 
     .whyApply {
-        background: url(https://images.mastersunion.link/uploads/04042025/v1/netVector.svg);
+        background: url(https://images.aitd.link/uploads/04042025/v1/netVector.svg);
         background-repeat: no-repeat;
         background-position: left;
     }
@@ -4612,7 +4612,7 @@
 
 
     .details {
-        background: url(https://images.mastersunion.link/uploads/04042025/v1/detailsVector.svg), var(--black);
+        background: url(https://images.aitd.link/uploads/04042025/v1/detailsVector.svg), var(--black);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: bottom;
@@ -4767,7 +4767,7 @@
     }
 
     .getpreppedMasters {
-        background: url("https://files.mastersunion.link/resources/svg/linebg.svg"),
+        background: url("https://files.aitd.link/resources/svg/linebg.svg"),
             var(--black);
         background-repeat: repeat-y;
         background-position: left;
@@ -5070,7 +5070,7 @@
         }
 
         .overLayDetail {
-            background: url('https://images.mastersunion.link/uploads/19052025/v1/Vector1352.svg'), var(--white);
+            background: url('https://images.aitd.link/uploads/19052025/v1/Vector1352.svg'), var(--white);
             background-repeat: no-repeat;
             display: flex;
             flex-direction: column;
@@ -5856,19 +5856,19 @@
     }
 
     .impactLeftBox::after {
-        background: url(https://images.mastersunion.link/uploads/07052025/v1/Frame11712814191.svg);
+        background: url(https://images.aitd.link/uploads/07052025/v1/Frame11712814191.svg);
         background-repeat: no-repeat;
     }
 
     .impactLeftBox:nth-of-type(3)::after {
         content: '';
-        background: url(https://images.mastersunion.link/uploads/07052025/v1/Frame11712814193.svg);
+        background: url(https://images.aitd.link/uploads/07052025/v1/Frame11712814193.svg);
         height: 41px;
     }
 
     .impactLeftBox:nth-of-type(4)::after {
         content: '';
-        background: url(https://images.mastersunion.link/uploads/07052025/v1/Frame11712814194.svg);
+        background: url(https://images.aitd.link/uploads/07052025/v1/Frame11712814194.svg);
         height: 41px;
     }
 
@@ -6128,7 +6128,7 @@
     }
 
     .selectingStudents {
-        background: url(https://images.mastersunion.link/uploads/08052025/v2/Vector13518.svg), #000;
+        background: url(https://images.aitd.link/uploads/08052025/v2/Vector13518.svg), #000;
         background-repeat: no-repeat;
         padding: 80px 0;
         background-position-y: 34px;

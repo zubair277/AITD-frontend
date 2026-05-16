@@ -365,7 +365,7 @@
     content: "";
     width: 100%;
     height: 100%;
-    background-image: url("https://images.mastersunion.link/uploads/25032025/v1/image6.svg");
+    background-image: url("https://images.aitd.link/uploads/25032025/v1/image6.svg");
     position: absolute;
     left: 88%;
     bottom: 46.4%;
@@ -439,7 +439,7 @@
     font-size: 14px;
   }
   .secondPosition .curricularImageWrapper::after {
-    background-image: url("https://images.mastersunion.link/uploads/25032025/v1/image7.svg");
+    background-image: url("https://images.aitd.link/uploads/25032025/v1/image7.svg");
   }
 
   .projectsDivi {
@@ -534,7 +534,7 @@
 
 
   .arrowWrapper:hover img {
-    content: url("https://images.mastersunion.link/uploads/25032025/v1/Frame13213165115.svg");
+    content: url("https://images.aitd.link/uploads/25032025/v1/Frame13213165115.svg");
     transform: translate(2px, -2px);
   }
 
@@ -766,7 +766,7 @@
   }
 
   .profileParent {
-    background: url(https://files.mastersunion.link/resources/img/oppertunityBG.webp),
+    background: url(https://files.aitd.link/resources/img/oppertunityBG.webp),
       var(--white3);
     background-position: top;
     background-repeat: no-repeat;
@@ -1618,7 +1618,7 @@ padding-top: 16px;
   }
 
   .peerstunitie {
-    background: url(https://files.mastersunion.link/resources/img/oppertunityBG.webp),
+    background: url(https://files.aitd.link/resources/img/oppertunityBG.webp),
       var(--white);
     background-position: top;
     background-repeat: no-repeat;
@@ -1885,7 +1885,7 @@ padding-top: 16px;
 }
 
 .formField .dropdown-selected::after {
-  background: url('https://images.mastersunion.link/uploads/18062025/v1/CaretDown.svg');
+  background: url('https://images.aitd.link/uploads/18062025/v1/CaretDown.svg');
   content: '';
   position: absolute;
   right: 0;

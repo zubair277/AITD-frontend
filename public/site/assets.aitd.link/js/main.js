@@ -206,6 +206,7 @@ addClassOnScroll2();
 
 
 
+
 // js tabs
 
 // (function () {
@@ -1082,7 +1083,7 @@ async function pushToNPF(lead) {
         : "Desktop";
     return new Promise((resolve, reject) => {
         $.ajax({
-            url: "https://api.mastersunion.org/api/leads/pushToNPF",
+            url: "https://api.aitd.org/api/leads/pushToNPF",
             type: "POST",
             contentType: "application/json",
             data: JSON.stringify({
@@ -1134,7 +1135,7 @@ async function pushToNPF_PGP_TBM(lead) {
         : "Desktop";
     return new Promise((resolve, reject) => {
         $.ajax({
-            url: "https://api.mastersunion.org/api/leads/pushToNPF_PGP_TBM",
+            url: "https://api.aitd.org/api/leads/pushToNPF_PGP_TBM",
             type: "POST",
             contentType: "application/json",
             data: JSON.stringify({
@@ -1186,7 +1187,7 @@ async function pushToNPF_UG(lead) {
         : "Desktop";
     return new Promise((resolve, reject) => {
         $.ajax({
-            url: "https://api.mastersunion.org/api/leads/pushToNPF_UG",
+            url: "https://api.aitd.org/api/leads/pushToNPF_UG",
             type: "POST",
             contentType: "application/json",
             data: JSON.stringify({
@@ -1238,7 +1239,7 @@ async function pushToNPF_MENACheck(lead) {
         : "Desktop";
     return new Promise((resolve, reject) => {
         $.ajax({
-            url: `https://api.mastersunion.org/api/leads/${APIpushToNPFendPoint}`,
+            url: `https://api.aitd.org/api/leads/${APIpushToNPFendPoint}`,
             type: "POST",
             contentType: "application/json",
             data: JSON.stringify({
@@ -2072,7 +2073,7 @@ $(document).ready(async function () {
             $(".hideFortheMENA").addClass("hide");
             $("#MENAimgChange").attr(
                 "src",
-                "https://cdn.mastersunion.link/assets/imgV2/InseadNew.png"
+                "https://cdn.aitd.link/assets/imgV2/InseadNew.png"
             );
 
             isCountryCodeFound = true;
@@ -2416,77 +2417,6 @@ function validateStream() {
     return true;
 }
 
-function validatePercentage() {
-    const inputElement = document.getElementById("expectedPercentage");
-    const errorElement = document.getElementById("percentageError");
-
-    if (!inputElement || !errorElement) return false;
-
-    const value = inputElement.value.trim();
-    errorElement.textContent = "";
-
-    if (value === "") {
-        errorElement.textContent = "Percentage cannot be empty";
-        return false;
-    }
-
-    const num = Number(value);
-
-    if (isNaN(num)) {
-        errorElement.textContent = "Enter a valid number";
-        return false;
-    }
-
-    if (num < 0 || num > 100) {
-        errorElement.textContent = "Percentage must be between 0 and 100";
-        return false;
-    }
-
-    return true;
-}
-
-
-
-function validateLinkedin() {
-    const inputElement = document.getElementById("linkedinProfile12");
-    const errorElement = document.getElementById("linkedin12Error");
-
-    if (!inputElement || !errorElement) return false;
-
-    const value = inputElement.value.trim();
-    errorElement.textContent = "";
-
-    if (value === "") {
-        return true; // optional field
-    }
-
-    const pattern = /^(https?:\/\/)?(www\.)?linkedin\.com\/.+$/i;
-
-    if (!pattern.test(value)) {
-        errorElement.textContent = "Enter a valid LinkedIn URL";
-        return false;
-    }
-
-    return true;
-}
-
-function validateSlot() {
-    const inputElement = document.getElementById("eventSlot");
-    const errorElement = document.getElementById("slotError");
-
-    if (!inputElement || !errorElement) return false;
-
-    const value = inputElement.value;
-    errorElement.textContent = "";
-
-    if (value === "") {
-        errorElement.textContent = "Please select a slot";
-        return false;
-    }
-
-    return true;
-}
-
 function validateGraduation() {
     const inputElement = document.getElementById("graduationUser");
     const errorElement = document.getElementById("graduationError");
@@ -2528,10 +2458,6 @@ function validateLinkedIn(inputId, errorId) {
       return true;
     }
   }
-
-
-
-
 function validateDOB(dobInput1, dobError1) {
   const dobInput = document.getElementById(dobInput1);
   const dobError = document.getElementById(dobError1);
@@ -6029,7 +5955,7 @@ function convertJson() {
 // to store the every url in the DB
 
 function captureURLonEveryPageRender() {
-    const apiUrl = `https://api.mastersunion.org/api/leads/captureClicks`;
+    const apiUrl = `https://api.aitd.org/api/leads/captureClicks`;
     const pageUrl = window.location.href; // Get the full URL of the current web page
 
     fetch(apiUrl, {

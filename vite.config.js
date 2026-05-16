@@ -5,7 +5,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 const SITE_ROOT = path.join(process.cwd(), 'public', 'site')
-const DEFAULT_DOMAIN = 'mastersunion.org'
+const DEFAULT_DOMAIN = 'aitd.org'
 
 const CONTENT_TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -163,22 +163,22 @@ function rewriteHtml(html, domains, currentDomain) {
 
   // Replace the mirrored MU header logo with the user's custom logo.
   out = out.replace(
-    /(?:\.\.\/|\.\.\.\/)?files\.mastersunion\.link\/resources\/animateds\/logoanimationblack\.gif/gi,
+    /(?:\.\.\/|\.\.\.\/)?files\.aitd\.link\/resources\/animateds\/logoanimationblack\.gif/gi,
     '/images/aitd%20logo.png',
   )
   out = out.replace(
-    /https?:\/\/files\.mastersunion\.link\/resources\/animateds\/logoanimationblack\.gif/gi,
+    /https?:\/\/files\.aitd\.link\/resources\/animateds\/logoanimationblack\.gif/gi,
     '/images/aitd%20logo.png',
   )
 
   // Fix broken SVG icons.
   out = out.replace(
-    /(?:\.\.\/|\.\.\.\/)?files\.mastersunion\.link\/resources\/svg\//gi,
-    '/images/files.mastersunion.link/resources/svg/',
+    /(?:\.\.\/|\.\.\.\/)?files\.aitd\.link\/resources\/svg\//gi,
+    '/images/files.aitd.link/resources/svg/',
   )
   out = out.replace(
-    /https?:\/\/files\.mastersunion\.link\/resources\/svg\//gi,
-    '/images/files.mastersunion.link/resources/svg/',
+    /https?:\/\/files\.aitd\.link\/resources\/svg\//gi,
+    '/images/files.aitd.link/resources/svg/',
   )
 
   // Home hero: replace background images with the user's custom background.
@@ -200,7 +200,15 @@ function rewriteHtml(html, domains, currentDomain) {
     '<h1 class="homeheroHeading">AITD MBA – Where Future CEOs and Founders are built</h1>',
   )
 
-  const logoSizeStyle = `<style id="aitd-logo-size-override">
+  const logoSizeStyle = `<link rel="preload" as="image" href="/images/aitd-bg.jpeg" fetchpriority="high">
+  <style id="aitd-logo-size-override">
+  #preloader, .preloader {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
   .muHeroLogos {
     display: none !important;
     visibility: hidden !important;
@@ -650,3 +658,4 @@ export default defineConfig({
     },
   ],
 })
+

@@ -473,7 +473,7 @@ header:hover {
   }
 
   .builtSection {
-    background: url("https://images.mastersunion.link/uploads/28112025/v1/Vector1374.svg"),
+    background: url("https://images.aitd.link/uploads/28112025/v1/Vector1374.svg"),
       var(--black);
     padding: 60px 0 !important;
     background-size: cover;
@@ -617,7 +617,7 @@ header:hover {
   }
 
   .superSection {
-    background: url("https://images.mastersunion.link/uploads/28112025/v1/div.ubggridtop_rightwrapper.svg"),
+    background: url("https://images.aitd.link/uploads/28112025/v1/div.ubggridtop_rightwrapper.svg"),
       var(--black);
     background-repeat: no-repeat;
     background-position: left;
@@ -709,7 +709,7 @@ header:hover {
   }
 
   .stakeSection {
-    background: url("https://images.mastersunion.link/uploads/28112025/v1/Vector1376.svg"),
+    background: url("https://images.aitd.link/uploads/28112025/v1/Vector1376.svg"),
       var(--grey17);
     background-size: cover;
     background-repeat: no-repeat;
@@ -1125,7 +1125,7 @@ header:hover {
   }
 
   .podcastSection.redefining {
-    background: url("https://images.mastersunion.link/uploads/25072025/v1/Vector1351.svg") no-repeat,
+    background: url("https://images.aitd.link/uploads/25072025/v1/Vector1351.svg") no-repeat,
       linear-gradient(125deg, #459EE7 -20%, #4040DD 50%, #AA1834 100%);
     background-size: cover;
     background-repeat: no-repeat;
@@ -1731,7 +1731,7 @@ header:hover {
   }
 
   .abroadSection {
-    background: url("https://images.mastersunion.link/uploads/06102025/v1/Vector13741.svg"),
+    background: url("https://images.aitd.link/uploads/06102025/v1/Vector13741.svg"),
       var(--black);
     background-repeat: no-repeat;
     background-size: cover;
@@ -2337,8 +2337,8 @@ header:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(https://images.mastersunion.link/uploads/05062025/v1/Vector1352.webp) no-repeat center 0%,
-      url(https://images.mastersunion.link/uploads/07082025/v1/Group1171280497.svg) no-repeat right 9%,
+    background: url(https://images.aitd.link/uploads/05062025/v1/Vector1352.webp) no-repeat center 0%,
+      url(https://images.aitd.link/uploads/07082025/v1/Group1171280497.svg) no-repeat right 9%,
       linear-gradient(to bottom, white 50%, black 50%);
     background-size: contain,
       /* Vector1350 */
@@ -2509,7 +2509,7 @@ header:hover {
       max-width: 447px;
       /* transition: transform 0.3s ease-out; */
       /* height: 100vh; */
-      background: url(https://images.mastersunion.link/uploads/13102025/v1/Property1Variant3.webp);
+      background: url(https://images.aitd.link/uploads/13102025/v1/Property1Variant3.webp);
       background-repeat: no-repeat;
       background-position: center center;
     }
@@ -2540,7 +2540,7 @@ header:hover {
   }
 
   .lifeHero {
-    background: url("https://images.mastersunion.link/uploads/13102025/v1/herosection7.webp"),
+    background: url("https://images.aitd.link/uploads/13102025/v1/herosection7.webp"),
       var(--black);
     background-repeat: no-repeat;
     display: flex;
@@ -2669,7 +2669,7 @@ header:hover {
     right: -4%;
     width: 22%;
     height: 22%;
-    background-image: url(https://images.mastersunion.link/uploads/05062025/v1/592c6be215af46a58949a108aa2c8e5e1.svg);
+    background-image: url(https://images.aitd.link/uploads/05062025/v1/592c6be215af46a58949a108aa2c8e5e1.svg);
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -2681,7 +2681,7 @@ header:hover {
     left: 0%;
     width: 19%;
     height: 15%;
-    background-image: url(https://images.mastersunion.link/uploads/05062025/v1/tapeyellowaestheticlinelanebandribbonsinglesimplestamprectanglesquareborderframefreetoedit.svg);
+    background-image: url(https://images.aitd.link/uploads/05062025/v1/tapeyellowaestheticlinelanebandribbonsinglesimplestamprectanglesquareborderframefreetoedit.svg);
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 2;
@@ -3020,7 +3020,7 @@ header:hover {
   /* .ruleScroll .masterImage::after{
     content: "";
     position: absolute;
-    background: url(https://images.mastersunion.link/uploads/03062025/v1/yellowTapeLeft.webp);
+    background: url(https://images.aitd.link/uploads/03062025/v1/yellowTapeLeft.webp);
     width: 100%;
     background-repeat: no-repeat;
     height: 40%;
@@ -3861,13 +3861,13 @@ input[type="file"]:focus {
   }
 
   .blackSvgBg.transformIdea {
-    background: url(https://images.mastersunion.link/uploads/05022025/v1/grid.svg) var(--black7);
+    background: url(https://images.aitd.link/uploads/05022025/v1/grid.svg) var(--black7);
     background-repeat: no-repeat;
     background-position: right;
   }
 
   .journeyPart {
-    background: url(https://images.mastersunion.link/uploads/24012025/v1/Maskgroup.webp),
+    background: url(https://images.aitd.link/uploads/24012025/v1/Maskgroup.webp),
       var(--white);
     background-size: contain;
     background-repeat: no-repeat;
@@ -3876,7 +3876,7 @@ input[type="file"]:focus {
   }
 
   .gradientUnderline::after {
-    background: url(https://images.mastersunion.link/uploads/24012025/v1/Vector1347.webp);
+    background: url(https://images.aitd.link/uploads/24012025/v1/Vector1347.webp);
     background-repeat: no-repeat;
   }
 
@@ -3971,7 +3971,7 @@ input[type="file"]:focus {
   .techHome .masterRight::after {
     position: absolute;
     content: "";
-    background: url(https://images.mastersunion.link/uploads/05022025/v1/gradientLiveBg.svg);
+    background: url(https://images.aitd.link/uploads/05022025/v1/gradientLiveBg.svg);
     background-repeat: no-repeat;
     width: 115%;
     height: 128%;
@@ -3988,7 +3988,7 @@ input[type="file"]:focus {
   }
 
   .collaboration.techHome {
-    background: url(https://images.mastersunion.link/uploads/05022025/v1/Maskgroup.svg) var(--white);
+    background: url(https://images.aitd.link/uploads/05022025/v1/Maskgroup.svg) var(--white);
     background-repeat: no-repeat;
   }
 
@@ -4709,7 +4709,7 @@ header.menuActive {
   position: absolute;
   width: 100%;
   height: 50%;
-  background: url("https://files.mastersunion.link/resources/svg/herosvg.svg");
+  background: url("https://files.aitd.link/resources/svg/herosvg.svg");
   background-repeat: no-repeat;
   left: 0;
   bottom: -27%;
@@ -4726,7 +4726,7 @@ header.menuActive {
   position: absolute;
   width: 100%;
   height: 40%;
-  background: url("https://images.mastersunion.link/uploads/12052025/v1/Vector1348.svg");
+  background: url("https://images.aitd.link/uploads/12052025/v1/Vector1348.svg");
   background-repeat: no-repeat;
   left: 0.5rem;
   bottom: -26px;
@@ -4812,7 +4812,7 @@ header.menuActive {
   position: absolute;
   width: 100%;
   height: 75%;
-  background: url("https://files.mastersunion.link/resources/svg/lightmuvector.svg");
+  background: url("https://files.aitd.link/resources/svg/lightmuvector.svg");
   background-repeat: no-repeat;
   left: 0;
   bottom: -25%;
@@ -4874,7 +4874,7 @@ header.menuActive {
   position: absolute;
   width: 100%;
   height: 75%;
-  background: url("https://images.mastersunion.link/uploads/31122024/lightMuVectorThin.svg");
+  background: url("https://images.aitd.link/uploads/31122024/lightMuVectorThin.svg");
   background-repeat: no-repeat;
   left: 0;
   bottom: -25%;
@@ -4943,7 +4943,7 @@ section {
   top: -13px;
   width: 290px;
   height: 90px;
-  background: url("https://files.mastersunion.link/resources/svg/highlight.svg");
+  background: url("https://files.aitd.link/resources/svg/highlight.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -5167,7 +5167,7 @@ section {
   padding: 80px 0 120px;
   background: var(--grey3);
 
-  background: url("https://files.mastersunion.link/resources/img/classGrid.webp") var(--grey7) fixed;
+  background: url("https://files.aitd.link/resources/img/classGrid.webp") var(--grey7) fixed;
   background-position: top right;
   background-repeat: no-repeat;
 
@@ -5578,12 +5578,12 @@ section {
 
 .leaderMU {
   padding-bottom: 0;
-  background: url("https://files.mastersunion.link/resources/img/leaaderBG.webp") fixed;
+  background: url("https://files.aitd.link/resources/img/leaaderBG.webp") fixed;
   background-size: contain;
   background-position: top;
   position: relative;
   background-size: cover;
-  /* cursor: url('https://files.mastersunion.link/resources/img/paralaxCursor.png'),auto; */
+  /* cursor: url('https://files.aitd.link/resources/img/paralaxCursor.png'),auto; */
   overflow: hidden;
   position: relative;
   height: 80vh;
@@ -5958,7 +5958,7 @@ section {
   content: "";
   width: 57%;
   height: 100%;
-  background: url("https://files.mastersunion.link/resources/svg/backgroundImgVector.svg");
+  background: url("https://files.aitd.link/resources/svg/backgroundImgVector.svg");
   background-repeat: no-repeat;
   top: 12%;
   right: -23%;
@@ -5974,13 +5974,13 @@ section {
 /* journey */
 
 .journey .lightMuVector::after {
-  background: url("https://files.mastersunion.link/resources/svg/lightVectorMu.svg");
+  background: url("https://files.aitd.link/resources/svg/lightVectorMu.svg");
   background-repeat: no-repeat;
   bottom: -40%;
 }
 
 .ctcCompontentWrap .lightMuVector::after {
-  background: url("https://files.mastersunion.link/resources/svg/markgraylite.svg");
+  background: url("https://files.aitd.link/resources/svg/markgraylite.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
@@ -6068,7 +6068,7 @@ section {
 }
 
 .beatingHearts.ugbeatingHearts {
-  background: url("https://files.mastersunion.link/resources/svg/lightlineblack.svg") var(--black);
+  background: url("https://files.aitd.link/resources/svg/lightlineblack.svg") var(--black);
   background-repeat: no-repeat;
   background-position-x: right;
 }
@@ -6263,7 +6263,7 @@ section {
   float: right;
   transform: rotate(0);
   transition: all 0.5s;
-  background: url("https://files.mastersunion.link/resources/svg/arrowdown.svg");
+  background: url("https://files.aitd.link/resources/svg/arrowdown.svg");
   width: 30px;
   height: 30px;
   display: none;
@@ -6441,7 +6441,7 @@ section {
   right: 0;
   width: 30%;
   height: 100%;
-  background: url("https://files.mastersunion.link/resources/img/businessschoolbgline.webp");
+  background: url("https://files.aitd.link/resources/img/businessschoolbgline.webp");
   background-repeat: no-repeat;
 }
 
@@ -6459,7 +6459,7 @@ section {
 
 .whiteCard {
   padding: 88px 60px 40px;
-  background: var(--grey7) url("https://files.mastersunion.link/resources/img/grid3.webp");
+  background: var(--grey7) url("https://files.aitd.link/resources/img/grid3.webp");
   background-size: contain;
   background-position: left;
   position: relative;
@@ -6480,7 +6480,7 @@ section {
   content: "";
   top: 0;
   right: 0;
-  background: url("https://files.mastersunion.link/resources/svg/gradientboxbg.svg");
+  background: url("https://files.aitd.link/resources/svg/gradientboxbg.svg");
   background-repeat: no-repeat;
   width: 70%;
   height: 100%;
@@ -6580,7 +6580,7 @@ section {
 /* best opportunity */
 
 .meetopportunity {
-  background: url("https://files.mastersunion.link/resources/img/oppertunityBG.webp"),
+  background: url("https://files.aitd.link/resources/img/oppertunityBG.webp"),
     white;
   background-position: top;
   background-size: contain;
@@ -6932,27 +6932,27 @@ img.playsvg {
 .recuiterWrap {
   padding: 128px 0;
   position: relative;
-  background: url("https://files.mastersunion.link/resources/img/Recruitersnew.webp");
+  background: url("https://files.aitd.link/resources/img/Recruitersnew.webp");
   background-position: center;
   background-size: cover;
   z-index: 9;
 }
 
 .recuiterWrap.stucentClub {
-  background: url("https://files.mastersunion.link/resources/img/studentclubcampus.webp");
+  background: url("https://files.aitd.link/resources/img/studentclubcampus.webp");
 }
 
 .gettingbreaker {
   padding: 100px 0;
   position: relative;
-  background: url("https://files.mastersunion.link/resources/img/pgptbmadmission.webp");
+  background: url("https://files.aitd.link/resources/img/pgptbmadmission.webp");
   background-position: top;
   background-size: cover;
   z-index: 9;
 }
 
 .recuiterWrapbtn {
-  background: url("https://cdn.mastersunion.org/assets/img/newmu/Dayarmucom_prepration.webp");
+  background: url("https://cdn.aitd.org/assets/img/newmu/Dayarmucom_prepration.webp");
   background-size: cover;
 }
 
@@ -6964,7 +6964,7 @@ img.playsvg {
 
 .exploreHub {
   padding: 80px 0;
-  background: url("https://files.mastersunion.link/resources/img/exploreBG.webp");
+  background: url("https://files.aitd.link/resources/img/exploreBG.webp");
   background-size: cover;
   background-position: left top;
 }
@@ -7029,7 +7029,7 @@ img.playsvg {
 }
 
 .exploreLeft .whitePreviewBox {
-  background-image: url("https://files.mastersunion.link/resources/img/wave.png");
+  background-image: url("https://files.aitd.link/resources/img/wave.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -7630,7 +7630,7 @@ img.playsvg {
 .journeyStarts {
   padding: 50px 0;
   position: relative;
-  background: url("https://files.mastersunion.link/resources/img/MasterJourney.webp"),
+  background: url("https://files.aitd.link/resources/img/MasterJourney.webp"),
     var(--white);
   background-size: cover;
   background-position: left top;
@@ -7710,7 +7710,7 @@ img.playsvg {
 footer {
   position: relative;
   display: block;
-  background: url("https://files.mastersunion.link/resources/img/footerBG.webp");
+  background: url("https://files.aitd.link/resources/img/footerBG.webp");
   background-color: #090909;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -7958,7 +7958,7 @@ footer .addressWrapper .address.mailaddressfooter {
 }
 
 .heroHeading .gradientUnderline::after {
-  background: url("https://files.mastersunion.link/resources/svg/gradientunderline2.svg");
+  background: url("https://files.aitd.link/resources/svg/gradientunderline2.svg");
   width: 80%;
   background-repeat: no-repeat;
 }
@@ -7973,7 +7973,7 @@ footer .addressWrapper .address.mailaddressfooter {
   bottom: -75%;
   left: 0;
   width: 100%;
-  background: url("https://files.mastersunion.link/resources/svg/pgpSvg.svg");
+  background: url("https://files.aitd.link/resources/svg/pgpSvg.svg");
   background-repeat: no-repeat;
   height: 100%;
   z-index: 0;
@@ -7989,7 +7989,7 @@ footer .addressWrapper .address.mailaddressfooter {
   bottom: -75%;
   left: 0;
   width: 100%;
-  background: url("https://files.mastersunion.link/media/img/menaImages/underlineHeading.svg");
+  background: url("https://files.aitd.link/media/img/menaImages/underlineHeading.svg");
   background-repeat: no-repeat;
   height: 100%;
   z-index: 0;
@@ -8550,7 +8550,7 @@ footer .addressWrapper .address.mailaddressfooter {
 }
 
 .collaboration {
-  background: url("https://files.mastersunion.link/resources/img/Collaborationbg.webp") var(--white3);
+  background: url("https://files.aitd.link/resources/img/Collaborationbg.webp") var(--white3);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -8752,7 +8752,7 @@ footer .addressWrapper .address.mailaddressfooter {
 
 .careerplacement {
   padding: 80px 0;
-  background: url("https://files.mastersunion.link/resources/img/Collaborationbg.webp") var(--white3);
+  background: url("https://files.aitd.link/resources/img/Collaborationbg.webp") var(--white3);
   background-repeat: no-repeat;
   top: 0;
   background-size: cover;
@@ -8857,7 +8857,7 @@ footer .addressWrapper .address.mailaddressfooter {
 }
 
 .cohort {
-  background: url("https://files.mastersunion.link/resources/svg/blacksvgMu.svg") var(--black);
+  background: url("https://files.aitd.link/resources/svg/blacksvgMu.svg") var(--black);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -8906,7 +8906,7 @@ footer .addressWrapper .address.mailaddressfooter {
 
 .recruiter {
   padding: 80px 0;
-  background: url("https://files.mastersunion.link/resources/img/Quizbg.webp");
+  background: url("https://files.aitd.link/resources/img/Quizbg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -9055,7 +9055,7 @@ footer .addressWrapper .address.mailaddressfooter {
 }
 
 .careerjourney {
-  background: url("https://files.mastersunion.link/resources/svg/meetMasterbg.svg") var(--black);
+  background: url("https://files.aitd.link/resources/svg/meetMasterbg.svg") var(--black);
   background-repeat: no-repeat;
   background-position: top;
   background-position-x: left;
@@ -9111,7 +9111,7 @@ footer .addressWrapper .address.mailaddressfooter {
 
 .termsouter {
   padding: 60px 56px 80px;
-  background: url("https://files.mastersunion.link/resources/img/termsouter.webp");
+  background: url("https://files.aitd.link/resources/img/termsouter.webp");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -9463,7 +9463,7 @@ footer .addressWrapper .address.mailaddressfooter {
   position: absolute;
   top: -12px;
   right: -12px;
-  background: url("https://files.mastersunion.link/resources/img/carretright.webp");
+  background: url("https://files.aitd.link/resources/img/carretright.webp");
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
@@ -9495,7 +9495,7 @@ footer .addressWrapper .address.mailaddressfooter {
 
 .bg-vector {
   padding: 80px 0;
-  background-image: url("https://files.mastersunion.link/resources/img/oppertunityBG.webp");
+  background-image: url("https://files.aitd.link/resources/img/oppertunityBG.webp");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9510,7 +9510,7 @@ footer .addressWrapper .address.mailaddressfooter {
   z-index: -1;
   width: 547px;
   height: 100%;
-  background: url("https://files.mastersunion.link/resources/img/grid2.webp");
+  background: url("https://files.aitd.link/resources/img/grid2.webp");
   background-repeat: no-repeat;
 }
 
@@ -9601,7 +9601,7 @@ footer .addressWrapper .address.mailaddressfooter {
 
 .gallery {
   padding: 80px 0;
-  background: url("https://files.mastersunion.link/resources/img/Gallery.webp");
+  background: url("https://files.aitd.link/resources/img/Gallery.webp");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -9773,7 +9773,7 @@ footer .addressWrapper .address.mailaddressfooter {
 }
 
 .educationinner {
-  background: url("https://files.mastersunion.link/resources/img/edurightbg.webp");
+  background: url("https://files.aitd.link/resources/img/edurightbg.webp");
   background-repeat: no-repeat;
   padding: 20px;
   width: 45%;
@@ -9836,7 +9836,7 @@ footer .addressWrapper .address.mailaddressfooter {
   padding: 30px;
   border-radius: 10px;
   justify-content: center;
-  background: url("https://cdn.mastersunion.org/assets/img/newmu/ThanksBg.png");
+  background: url("https://cdn.aitd.org/assets/img/newmu/ThanksBg.png");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 350px;
@@ -9864,7 +9864,7 @@ footer .addressWrapper .address.mailaddressfooter {
   z-index: -1;
   height: 149px;
   background-repeat: no-repeat;
-  background: url("https://files.mastersunion.link/resources/img/rectanglepattern.webp");
+  background: url("https://files.aitd.link/resources/img/rectanglepattern.webp");
 }
 
 .login {
@@ -10345,7 +10345,7 @@ input:focus {
 .masters .masterRight::after {
   position: absolute;
   content: "";
-  background: url("https://files.mastersunion.link/resources/svg/gradientBoxLine.svg");
+  background: url("https://files.aitd.link/resources/svg/gradientBoxLine.svg");
   background-repeat: no-repeat;
   width: 106%;
   height: 128%;
@@ -10430,7 +10430,7 @@ input:focus {
 }
 
 .highlightsec .circleHighlight::before {
-  background: url("https://files.mastersunion.link/resources/svg/pgug.svg");
+  background: url("https://files.aitd.link/resources/svg/pgug.svg");
   left: -28px;
   top: -10px;
   width: 140px;
@@ -10481,7 +10481,7 @@ input:focus {
 }
 
 .blackbox {
-  background: url("https://files.mastersunion.link/resources/img/blackboxLine.webp") var(--black3);
+  background: url("https://files.aitd.link/resources/img/blackboxLine.webp") var(--black3);
   background-position: right;
   background-repeat: no-repeat;
   padding: 24px 24px 40px;
@@ -10519,7 +10519,7 @@ input:focus {
   position: absolute;
   width: 106%;
   height: 337px;
-  background: url("https://files.mastersunion.link/resources/svg/cardoutline.svg");
+  background: url("https://files.aitd.link/resources/svg/cardoutline.svg");
   left: -3%;
   background-repeat: no-repeat;
   z-index: -1;
@@ -10555,13 +10555,13 @@ input:focus {
 }
 
 .muafterCareer .heroWrapper .heroright::after {
-  background: url("https://files.mastersunion.link/resources/svg/muafterCareer.svg");
+  background: url("https://files.aitd.link/resources/svg/muafterCareer.svg");
   width: 107%;
   background-repeat: no-repeat;
 }
 
 .muafterCareer .heroWrapper .heroright::after {
-  background: url("https://files.mastersunion.link/resources/svg/muafterCareer.svg");
+  background: url("https://files.aitd.link/resources/svg/muafterCareer.svg");
   width: 107%;
   background-repeat: no-repeat;
 }
@@ -10739,7 +10739,7 @@ input:focus {
 }
 
 .vibrantcomm {
-  background: url("https://files.mastersunion.link/resources/svg/careerbg.svg") var(--black);
+  background: url("https://files.aitd.link/resources/svg/careerbg.svg") var(--black);
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
@@ -10798,7 +10798,7 @@ input:focus {
 }
 
 .highlightBanner {
-  background: url("https://files.mastersunion.link/resources/svg/requriterBg.svg");
+  background: url("https://files.aitd.link/resources/svg/requriterBg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 60px 0;
@@ -10921,7 +10921,7 @@ input:focus {
 }
 
 .aboutadmission {
-  background: url("https://files.mastersunion.link/resources/img/pgpriseadmission.png");
+  background: url("https://files.aitd.link/resources/img/pgpriseadmission.png");
   background-size: cover;
   padding: 60px 0;
 }
@@ -10954,7 +10954,7 @@ input:focus {
 }
 
 .aboutadmission .greybg {
-  background: url("https://files.mastersunion.link/resources/img/greycardBg.webp");
+  background: url("https://files.aitd.link/resources/img/greycardBg.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -11194,68 +11194,68 @@ input:focus {
 }
 
 #admissionfees .selectingStudents .cardsWrapper .gridBox:first-child {
-  background: url("https://files.mastersunion.link/resources/img/ugcr3.webp");
+  background: url("https://files.aitd.link/resources/img/ugcr3.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #admissionfees .selectingStudents .cardsWrapper .gridBox:nth-child(2) {
-  background: url("https://images.mastersunion.link/uploads/04022025/v1/academicscurriculum.webp");
+  background: url("https://images.aitd.link/uploads/04022025/v1/academicscurriculum.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #admissionfees .selectingStudents .cardsWrapper .gridBox:nth-child(3) {
-  background: url("https://images.mastersunion.link/uploads/04022025/v1/communication.webp");
+  background: url("https://images.aitd.link/uploads/04022025/v1/communication.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .selectingStudents.riseAd .cardsWrapper .gridBox:nth-child(2) {
-  background: url("https://files.mastersunion.link/media/img/hssl/co.neww.webp") !important;
+  background: url("https://files.aitd.link/media/img/hssl/co.neww.webp") !important;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .selectingStudents.riseAd .cardsWrapper .gridBox:nth-child(3) {
-  background: url("https://files.mastersunion.link/media/img/hssl/commu.new.webp") !important;
+  background: url("https://files.aitd.link/media/img/hssl/commu.new.webp") !important;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .selectingStudents .cardsWrapper .gridBox:first-child {
   width: 100%;
-  background: url("https://files.mastersunion.link/resources/img/GuestLectures.webp");
+  background: url("https://files.aitd.link/resources/img/GuestLectures.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .selectingStudents .cardsWrapper .gridBox.Gridug:first-child {
-  background: url("https://files.mastersunion.link/resources/img/Gridug1.webp");
+  background: url("https://files.aitd.link/resources/img/Gridug1.webp");
 }
 
 .selectingStudents .cardsWrapper .gridBox.Gridug:nth-child(2) {
-  background: url("https://files.mastersunion.link/resources/img/Gridug2.webp");
+  background: url("https://files.aitd.link/resources/img/Gridug2.webp");
 }
 
 .selectingStudents .cardsWrapper .gridBox.Gridug:last-child {
-  background: url("https://files.mastersunion.link/resources/img/Gridug3.webp");
+  background: url("https://files.aitd.link/resources/img/Gridug3.webp");
 }
 
 .selectingStudents .cardsWrapper .gridBox:nth-child(2) {
-  background: url("https://files.mastersunion.link/resources/img/studentsExp1neww.webp");
+  background: url("https://files.aitd.link/resources/img/studentsExp1neww.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .selectingStudents .cardsWrapper .gridBox:last-child {
-  background: url("https://files.mastersunion.link/media/img/studentsExpneww1.webp");
+  background: url("https://files.aitd.link/media/img/studentsExpneww1.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .ughighlight .selectingStudents .cardsWrapper .gridBox:nth-child(2) {
-  background: url("https://files.mastersunion.link/resources/img/studentsExp1.webp");
+  background: url("https://files.aitd.link/resources/img/studentsExp1.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -11459,7 +11459,7 @@ input:focus {
 }
 
 .blackMuBg.feestructure {
-  background: url("https://files.mastersunion.link/resources/svg/lightsvgBg.svg") var(--grey17);
+  background: url("https://files.aitd.link/resources/svg/lightsvgBg.svg") var(--grey17);
   padding: 50px 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11575,7 +11575,7 @@ input:focus {
 }
 
 .gradientMuBg.feestructure {
-  background: url("https://files.mastersunion.link/resources/svg/gradientBgMuLogo.svg"),
+  background: url("https://files.aitd.link/resources/svg/gradientBgMuLogo.svg"),
     linear-gradient(125deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   padding: 40px;
   background-repeat: no-repeat;
@@ -11958,26 +11958,26 @@ input:focus {
 }
 
 .masterbanner {
-  background: url("https://files.mastersunion.link/resources/img/masterbannerbg.webp");
+  background: url("https://files.aitd.link/resources/img/masterbannerbg.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .events .masterbanner {
-  background: url("https://files.mastersunion.link/resources/img/masterbannerbgevent.webp");
+  background: url("https://files.aitd.link/resources/img/masterbannerbgevent.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .inovation .masterbanner {
-  background: url("https://files.mastersunion.link/resources/img/masterbannerbg1.webp");
+  background: url("https://files.aitd.link/resources/img/masterbannerbg1.webp");
   background-repeat: no-repeat;
   padding: 120px 0;
   background-size: cover;
 }
 
 .masterbanner.companybannerteam {
-  background: url("https://files.mastersunion.link/resources/img/companyBanner.webp");
+  background: url("https://files.aitd.link/resources/img/companyBanner.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -12027,7 +12027,7 @@ input:focus {
 .graduateReviews {
   padding: 80px 0;
   position: relative;
-  background: url("https://files.mastersunion.link/resources/img/placementBoxBG.webp");
+  background: url("https://files.aitd.link/resources/img/placementBoxBG.webp");
   background-position: left top;
   background-size: contain;
   background-repeat: no-repeat;
@@ -12324,7 +12324,7 @@ input:focus {
   left: 8px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("https://files.mastersunion.link/resources/svg/backdropGradient.svg");
+  background-image: url("https://files.aitd.link/resources/svg/backdropGradient.svg");
   position: absolute;
   height: 140px;
   width: 140px;
@@ -12697,7 +12697,7 @@ input:focus {
 
 .gradiantSection {
   width: 100%;
-  background-image: url("https://files.mastersunion.link/resources/img/studentLifeBackground.webp");
+  background-image: url("https://files.aitd.link/resources/img/studentLifeBackground.webp");
   background-size: cover;
   background-position: center;
 }
@@ -12980,7 +12980,7 @@ input:focus {
   background-image: linear-gradient(0deg,
       #151515 21.69%,
       rgba(9, 9, 9, 0) 90.97%),
-    url("https://files.mastersunion.link/resources/img/studentGuestCardImg1.webp");
+    url("https://files.aitd.link/resources/img/studentGuestCardImg1.webp");
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -13065,7 +13065,7 @@ input:focus {
 .supplyChain {
   width: 100%;
   padding: 80px 0;
-  background-image: url("https://files.mastersunion.link/resources/img/supplyChain.webp");
+  background-image: url("https://files.aitd.link/resources/img/supplyChain.webp");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -13163,7 +13163,7 @@ input:focus {
 .dropshippingChallenge {
   width: 100%;
   padding: 115px 0;
-  background-image: url("https://files.mastersunion.link/resources/img/dropshippingImage.webp");
+  background-image: url("https://files.aitd.link/resources/img/dropshippingImage.webp");
   position: relative;
   background-position: center;
   background-size: cover;
@@ -13409,7 +13409,7 @@ input:focus {
   position: absolute;
   content: "";
   width: 2px;
-  background: url("https://files.mastersunion.link/resources/svg/bottomline.svg");
+  background: url("https://files.aitd.link/resources/svg/bottomline.svg");
   height: 100%;
   bottom: -160px;
   left: 47.8%;
@@ -13587,7 +13587,7 @@ input:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("https://images.mastersunion.link/uploads/01032025/v1/Vector13471.svg");
+  background: url("https://images.aitd.link/uploads/01032025/v1/Vector13471.svg");
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -14015,7 +14015,7 @@ input:focus {
 
 .ourteambanner {
   border-radius: 16px;
-  background: url("../../../files.mastersunion.link/resources/img/ourTeamBanner.png") var(--white);
+  background: url("../../../files.aitd.link/resources/img/ourTeamBanner.png") var(--white);
   box-shadow: 0px 0px 36px 2px rgba(192, 192, 192, 0.25);
   background-repeat: no-repeat;
   padding: 40px 50px;
@@ -14368,7 +14368,7 @@ input:focus {
 }
 
 .becomeamaster .highlightsec .circleHighlight::before {
-  background: url("https://files.mastersunion.link/resources/svg/inspireVector.webp");
+  background: url("https://files.aitd.link/resources/svg/inspireVector.webp");
   width: 161%;
   height: 100px;
   background-size: contain;
@@ -14598,7 +14598,7 @@ input:focus {
   height: 60%;
   scale: 0.5;
   content: "";
-  background: url("https://files.mastersunion.link/resources/svg/collon1.svg") no-repeat;
+  background: url("https://files.aitd.link/resources/svg/collon1.svg") no-repeat;
   top: 52%;
   left: 80%;
 }
@@ -15039,7 +15039,7 @@ input:focus {
 }
 
 .pgphighlight .highlightsec .circleHighlight::before {
-  background: url("https://files.mastersunion.link/resources/svg/pgug.svg");
+  background: url("https://files.aitd.link/resources/svg/pgug.svg");
   left: -21px;
   top: -5px;
   width: 140px;
@@ -15754,7 +15754,7 @@ body {
 }
 
 .degreeSection .gradientUnderline::after {
-  background: url("https://files.mastersunion.link/resources/svg/degreeSection.svg");
+  background: url("https://files.aitd.link/resources/svg/degreeSection.svg");
   background-repeat: no-repeat;
 }
 
@@ -15781,7 +15781,7 @@ body {
 
 .ugbannerWrap {
   border-radius: 16px;
-  /* background-image: url("https://files.mastersunion.link/resources/img/ugbannerpic.webp"); */
+  /* background-image: url("https://files.aitd.link/resources/img/ugbannerpic.webp"); */
   background-repeat: no-repeat;
   background-color: var(--black);
   padding: 50px 40px;
@@ -15789,7 +15789,7 @@ body {
 }
 
 .ugSwati {
-  background-image: url("https://files.mastersunion.link/resources/img/ugbannerpicNew.webp");
+  background-image: url("https://files.aitd.link/resources/img/ugbannerpicNew.webp");
   background-repeat: no-repeat;
   background-color: var(--black);
 }
@@ -16187,7 +16187,7 @@ body {
 }
 
 .unfoldFun.blackLineBg {
-  background: url("https://files.mastersunion.link/resources/img/oppertunityBG.webp"),
+  background: url("https://files.aitd.link/resources/img/oppertunityBG.webp"),
     var(--black3);
   background-repeat: no-repeat;
 }
@@ -16332,7 +16332,7 @@ body {
   background-repeat: no-repeat;
   background-position: right 0.7rem top 50%;
   background-size: 1rem auto;
-  background-image: url("https://files.mastersunion.link/resources/svg/caretDown.svg");
+  background-image: url("https://files.aitd.link/resources/svg/caretDown.svg");
 }
 
 .selector:focus {
@@ -16505,7 +16505,7 @@ body {
 }
 
 .wellness {
-  background-image: url("https://files.mastersunion.link/resources/img/gradientBackground.png");
+  background-image: url("https://files.aitd.link/resources/img/gradientBackground.png");
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
@@ -16549,7 +16549,7 @@ body {
 }
 
 .reality {
-  background: url("https://files.mastersunion.link/resources/img/oppertunityBG.webp"),
+  background: url("https://files.aitd.link/resources/img/oppertunityBG.webp"),
     var(--black);
   background-position: top;
   background-size: contain;
@@ -16574,7 +16574,7 @@ body {
 }
 
 .companiesWrap {
-  background: url("https://files.mastersunion.link/resources/img/companiesBG.webp");
+  background: url("https://files.aitd.link/resources/img/companiesBG.webp");
   background-size: cover;
   background-position: center;
 }
@@ -16865,7 +16865,7 @@ body {
   width: 100%;
   padding: 80px 0;
   position: relative;
-  background-image: url("https://files.mastersunion.link/resources/img/gradientBackground2.png");
+  background-image: url("https://files.aitd.link/resources/img/gradientBackground2.png");
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
@@ -16901,7 +16901,7 @@ body {
 }
 
 .newAchievements {
-  background: url("https://files.mastersunion.link/resources/img/newAchievementsBG.webp");
+  background: url("https://files.aitd.link/resources/img/newAchievementsBG.webp");
   background-size: cover;
   background-position: top left;
   padding: 80px 0;
@@ -16947,7 +16947,7 @@ body {
 }
 
 .topAchieveRight {
-  background: var(--black) url("https://files.mastersunion.link/resources/img/achievementBalck.png");
+  background: var(--black) url("https://files.aitd.link/resources/img/achievementBalck.png");
   background-size: cover;
   max-width: 30%;
   width: 100%;
@@ -17098,7 +17098,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url("https://files.mastersunion.link/resources/img/innovationBG.png");
+  background: url("https://files.aitd.link/resources/img/innovationBG.png");
   background-position: center;
   background-size: cover;
   z-index: -1;
@@ -17198,7 +17198,7 @@ body {
 }
 
 .newAchievements {
-  background: url("https://files.mastersunion.link/resources/img/newAchievementsBG.png");
+  background: url("https://files.aitd.link/resources/img/newAchievementsBG.png");
   background-size: cover;
   background-position: top left;
   padding: 80px 0;
@@ -17244,7 +17244,7 @@ body {
 }
 
 .topAchieveRight {
-  background: var(--black) url("https://files.mastersunion.link/resources/img/achievementBalck.png");
+  background: var(--black) url("https://files.aitd.link/resources/img/achievementBalck.png");
   background-size: cover;
   max-width: 30%;
   width: 100%;
@@ -17374,7 +17374,7 @@ body {
   z-index: 9;
   cursor: pointer;
   transition: 0.4s ease-in;
-  cursor: url("https://files.mastersunion.link/resources/img/dargCursor.png"),
+  cursor: url("https://files.aitd.link/resources/img/dargCursor.png"),
     auto;
 }
 
@@ -17385,7 +17385,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url("https://files.mastersunion.link/resources/img/innovationBG.png");
+  background: url("https://files.aitd.link/resources/img/innovationBG.png");
   background-position: center;
   background-size: cover;
   z-index: -1;
@@ -17675,7 +17675,7 @@ body {
   border-radius: 16px;
   box-shadow: 0px 2px 36px 0px rgba(192, 192, 192, 0.25);
   transition: 0.4s ease-in;
-  cursor: url("https://files.mastersunion.link/resources/img/dargCursor.webp"),
+  cursor: url("https://files.aitd.link/resources/img/dargCursor.webp"),
     auto;
 }
 
@@ -17910,7 +17910,7 @@ body {
   background-repeat: no-repeat;
   background-position: right 0.7rem top 50%;
   background-size: 1rem auto;
-  background-image: url("https://files.mastersunion.link/resources/svg/caretDown.svg");
+  background-image: url("https://files.aitd.link/resources/svg/caretDown.svg");
 }
 
 .labelHeader {
@@ -18860,7 +18860,7 @@ body {
   top: 40%;
   height: 10%;
   left: 44%;
-  background: url("https://files.mastersunion.link/resources/svg/curve.svg");
+  background: url("https://files.aitd.link/resources/svg/curve.svg");
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -19091,7 +19091,7 @@ body {
 }
 
 .faq .lightMuVector::after {
-  background: url("https://files.mastersunion.link/resources/svg/faqLightLine.svg");
+  background: url("https://files.aitd.link/resources/svg/faqLightLine.svg");
   background-repeat: no-repeat;
   bottom: -20%;
 }
@@ -19141,7 +19141,7 @@ body {
 }
 
 .newsWrapBox .gradientUnderline::after {
-  background: url("https://files.mastersunion.link/resources/svg/bloggradient.svg");
+  background: url("https://files.aitd.link/resources/svg/bloggradient.svg");
   background-repeat: no-repeat;
 }
 
@@ -19155,7 +19155,7 @@ body {
   bottom: -60%;
   left: 0;
   width: 100%;
-  background: url("https://files.mastersunion.link/resources/svg/degreeSection.svg");
+  background: url("https://files.aitd.link/resources/svg/degreeSection.svg");
   background-repeat: no-repeat;
   height: 100%;
   z-index: -1;
@@ -19167,7 +19167,7 @@ body {
   bottom: -75%;
   left: 0;
   width: 100%;
-  background: url("https://files.mastersunion.link/resources/svg/gradientUnderlineThin.svg");
+  background: url("https://files.aitd.link/resources/svg/gradientUnderlineThin.svg");
   background-repeat: no-repeat;
   height: 100%;
   z-index: -1;
@@ -19232,7 +19232,7 @@ body {
 
 @media (max-width: 767px) {
   .getprepped {
-    background: url("https://files.mastersunion.link/resources/img/blackndgradientmob.webp");
+    background: url("https://files.aitd.link/resources/img/blackndgradientmob.webp");
     position: relative;
   }
 
@@ -19330,7 +19330,7 @@ body {
   }
 
   .gradientUnderline::after {
-    background: url("https://files.mastersunion.link/resources/svg/degreeSectionMob.svg") no-repeat;
+    background: url("https://files.aitd.link/resources/svg/degreeSectionMob.svg") no-repeat;
   }
 }
 
@@ -19471,7 +19471,7 @@ body {
 }
 
 /* .gridBox.lastCard {
-  background: url("https://files.mastersunion.link/media/img/hssl/commu.new.webp") !important;
+  background: url("https://files.aitd.link/media/img/hssl/commu.new.webp") !important;
   background-repeat: no-repeat;
   background-size: cover;
 } */
@@ -19644,7 +19644,7 @@ body {
 
 .classEffect:hover::after {
   border: none;
-  background: url("https://files.mastersunion.link/resources/svg/circleGradient.svg");
+  background: url("https://files.aitd.link/resources/svg/circleGradient.svg");
   background-repeat: no-repeat;
   transition: 0.2s ease-in;
 }
@@ -19658,7 +19658,7 @@ body {
   content: "";
   height: 18px;
   width: 18px;
-  background: url("https://files.mastersunion.link/resources/svg/blackCircle.svg");
+  background: url("https://files.aitd.link/resources/svg/blackCircle.svg");
   left: 2px;
   top: 3%;
   box-shadow: 0px 0px 5px rgb(0 0 0 / 11%);
@@ -19764,7 +19764,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("https://files.mastersunion.link/resources/svg/lightinclass.svg");
+  background: url("https://files.aitd.link/resources/svg/lightinclass.svg");
   background-repeat: no-repeat;
   transition: 0.4s ease-in-out;
 }
@@ -19779,7 +19779,7 @@ body {
 }
 
 .inclassSection:hover .inClassHeading::after {
-  background: url("https://files.mastersunion.link/resources/svg/colorinclass.svg");
+  background: url("https://files.aitd.link/resources/svg/colorinclass.svg");
   background-repeat: no-repeat;
 }
 
@@ -19788,7 +19788,7 @@ body {
 }
 
 .outclassSection:hover .inClassHeading::after {
-  background: url("https://files.mastersunion.link/resources/svg/colorinclass.svg");
+  background: url("https://files.aitd.link/resources/svg/colorinclass.svg");
   background-repeat: no-repeat;
 }
 
@@ -20062,7 +20062,7 @@ body {
 }
 
 .aboutUGProgram {
-  background: url("https://files.mastersunion.link/resources/svg/greybgLine.svg") var(--grey17);
+  background: url("https://files.aitd.link/resources/svg/greybgLine.svg") var(--grey17);
   background-repeat: no-repeat;
   background-position: left;
   background-position-y: top;
@@ -20273,12 +20273,12 @@ body {
 }
 
 .teachingContent.two::after {
-  background: url("https://files.mastersunion.link/resources/svg/2.svg");
+  background: url("https://files.aitd.link/resources/svg/2.svg");
   background-repeat: no-repeat;
 }
 
 .teachingContent.three::after {
-  background: url("https://files.mastersunion.link/resources/svg/3.svg");
+  background: url("https://files.aitd.link/resources/svg/3.svg");
   background-repeat: no-repeat;
 }
 
@@ -20287,7 +20287,7 @@ body {
   content: "";
   bottom: 0;
   left: -8%;
-  background: url("https://files.mastersunion.link/resources/svg/1.svg");
+  background: url("https://files.aitd.link/resources/svg/1.svg");
   background-repeat: no-repeat;
   height: 120px;
   width: 100%;
@@ -20345,7 +20345,7 @@ body {
   bottom: -72%;
   left: 0%;
   width: 110%;
-  background: url("https://files.mastersunion.link/resources/svg/longgradientLine.svg");
+  background: url("https://files.aitd.link/resources/svg/longgradientLine.svg");
   background-repeat: no-repeat;
   height: 100%;
   z-index: -1;
@@ -20588,7 +20588,7 @@ body {
 }
 
 .rolesandresp .ourteambanner {
-  background: url("https://files.mastersunion.link/resources/img/ourTeamBannerNew.webp") var(--black);
+  background: url("https://files.aitd.link/resources/img/ourTeamBannerNew.webp") var(--black);
   box-shadow: 0px 0px 36px 2px rgba(192, 192, 192, 0.25);
   background-repeat: no-repeat;
   /* max-width: 1236px; */
@@ -20639,7 +20639,7 @@ body {
 }
 
 .nextgenWrap {
-  background: url("https://files.mastersunion.link/resources/img/nextgenbg.webp");
+  background: url("https://files.aitd.link/resources/img/nextgenbg.webp");
   background-repeat: no-repeat;
   margin-top: 30px;
   padding: 30px 0 30px 45px;
@@ -20981,20 +20981,20 @@ body {
 }
 
 .boxgraphiclite.multicard::after {
-  background: url("https://files.mastersunion.link/resources/img/greygraphic1.png");
+  background: url("https://files.aitd.link/resources/img/greygraphic1.png");
   z-index: -1;
 }
 
 .grayGraphicBox.multicard::after {
-  background: url("https://files.mastersunion.link/resources/img/boxgraphic.webp");
+  background: url("https://files.aitd.link/resources/img/boxgraphic.webp");
 }
 
 .pgphighlight .faqWrapBox.faqGraphic.multicard::after {
-  background: url("https://files.mastersunion.link/resources/img/faqgraphicbg.png");
+  background: url("https://files.aitd.link/resources/img/faqgraphicbg.png");
 }
 
 .boxshadeLine.multicard::after {
-  background: url("https://files.mastersunion.link/resources/img/shadeBoarderLine.webp");
+  background: url("https://files.aitd.link/resources/img/shadeBoarderLine.webp");
   background-repeat: no-repeat;
   background-position: right bottom;
   z-index: 1;
@@ -21159,7 +21159,7 @@ body {
 }
 
 .masterbanner.masterbanner1 {
-  background: url("https://files.mastersunion.link/resources/img/companiesbanner1.webp");
+  background: url("https://files.aitd.link/resources/img/companiesbanner1.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -21232,7 +21232,7 @@ body {
 }
 
 .masterbanner.ugMastervideo.newbannerCEO {
-  background: url("https://files.mastersunion.link/resources/img/newblackbg.png");
+  background: url("https://files.aitd.link/resources/img/newblackbg.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -21261,7 +21261,7 @@ body {
 }
 
 .masterbanner.events {
-  background: url("https://files.mastersunion.link/resources/img/eventsBanner.webp");
+  background: url("https://files.aitd.link/resources/img/eventsBanner.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -21516,7 +21516,7 @@ body {
 }
 
 .ugMastervideo.gitimageBanner {
-  background: url("https://files.mastersunion.link/resources/img/Recruitersnewimage.webp");
+  background: url("https://files.aitd.link/resources/img/Recruitersnewimage.webp");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -21532,7 +21532,7 @@ body {
 }
 
 .masterbanner.studentcampusBanner {
-  background: url("https://files.mastersunion.link/resources/img/studentcampusBanner.webp");
+  background: url("https://files.aitd.link/resources/img/studentcampusBanner.webp");
   background-size: cover;
 }
 
@@ -21963,7 +21963,7 @@ body {
 
 .inTheNews {
   overflow: hidden;
-  background: url("https://files.mastersunion.link/resources/svg/linebg.svg"),
+  background: url("https://files.aitd.link/resources/svg/linebg.svg"),
     var(--grey17);
   background-repeat: repeat-y;
   background-position: left;
@@ -22003,7 +22003,7 @@ body {
 }
 
 .perfectfix-bg {
-  background: url("https://files.mastersunion.link/resources/img/pgpriseadmission.png");
+  background: url("https://files.aitd.link/resources/img/pgpriseadmission.png");
   padding: 80px 0;
   background-repeat: no-repeat;
   background-size: contain;
@@ -22147,7 +22147,7 @@ body {
 }
 
 .feestructure {
-  background: url("https://files.mastersunion.link/resources/svg/blacklineSvg.svg") var(--black);
+  background: url("https://files.aitd.link/resources/svg/blacklineSvg.svg") var(--black);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 0;
@@ -22192,7 +22192,7 @@ body {
 }
 
 .getprepped {
-  background: url(https://files.mastersunion.link/media/svg/gradientBackground.svg),
+  background: url(https://files.aitd.link/media/svg/gradientBackground.svg),
     linear-gradient(125deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
   background-size: cover;
   overflow: hidden;
@@ -22559,7 +22559,7 @@ body {
 }
 
 .WhiteTabs {
-  background: url("https://files.mastersunion.link/resources/img/Greyrightbottom.png");
+  background: url("https://files.aitd.link/resources/img/Greyrightbottom.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -22786,7 +22786,7 @@ body {
 /* // Home Video Section */
 
 .spVideo {
-  background: url("https://files.mastersunion.link/resources/img/spVideoBg.webp");
+  background: url("https://files.aitd.link/resources/img/spVideoBg.webp");
   padding: 80px 0;
   background-position: center;
   background-repeat: no-repeat;
@@ -22842,7 +22842,7 @@ body {
 }
 
 .fellowshipVideo {
-  background: url("https://files.mastersunion.link/resources/img/spVideoBg.webp");
+  background: url("https://files.aitd.link/resources/img/spVideoBg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22945,7 +22945,7 @@ body {
 }
 
 .teaching .gradientUnderline::after {
-  background: url("https://files.mastersunion.link/resources/svg/gradientsvg.svg");
+  background: url("https://files.aitd.link/resources/svg/gradientsvg.svg");
   background-repeat: no-repeat;
   bottom: -76%;
 }
@@ -23469,7 +23469,7 @@ body {
 }
 
 .facultyResearch {
-  background: url("https://files.mastersunion.link/resources/img/oppertunityBG.webp"),
+  background: url("https://files.aitd.link/resources/img/oppertunityBG.webp"),
     var(--grey17);
   background-repeat: repeat-y;
   background-position: top left;
@@ -23725,7 +23725,7 @@ body {
 
 .blogsPage .newEventsShowcase {
   padding: 80px 0;
-  background: url("https://files.mastersunion.link/resources/img/meshVector.webp"),
+  background: url("https://files.aitd.link/resources/img/meshVector.webp"),
     var(--white3);
   background-position: top left;
   background-repeat: no-repeat;
@@ -24001,7 +24001,7 @@ body {
   content: "";
   font-size: 14px;
   position: absolute;
-  background: url("https://files.mastersunion.link/resources/svg/select-arrow-img.svg") no-repeat;
+  background: url("https://files.aitd.link/resources/svg/select-arrow-img.svg") no-repeat;
   top: 0.7rem;
   width: 24px;
   height: 20px;
@@ -24043,7 +24043,7 @@ body {
 }
 
 .featAmenities .lightMuVector::after {
-  background: url("https://files.mastersunion.link/resources/svg/faqLightLine.svg");
+  background: url("https://files.aitd.link/resources/svg/faqLightLine.svg");
   background-repeat: no-repeat;
   bottom: -20%;
 }
@@ -24266,7 +24266,7 @@ body {
 
 .gl-thankyoumain .cohortbox {
   border-radius: 10px;
-  background: url("https://cdn.mastersunion.org/assets/img/newmu/ThanksBg.png"),
+  background: url("https://cdn.aitd.org/assets/img/newmu/ThanksBg.png"),
     var(--white);
   width: 50%;
   margin: 0 auto;
@@ -24814,7 +24814,7 @@ body {
 }
 
 .bigFourChallenges .fourChallengesHero {
-  background: url(https://files.mastersunion.link/media/img/challenges/challengesHeroBg.webp) no-repeat;
+  background: url(https://files.aitd.link/media/img/challenges/challengesHeroBg.webp) no-repeat;
   min-height: 600px;
   background-size: cover;
 }
@@ -25305,7 +25305,7 @@ body {
 }
 
 .masterDetailPage .meetopportunity {
-  background: url("https://files.mastersunion.link/resources/img/oppertunityBG.webp"),
+  background: url("https://files.aitd.link/resources/img/oppertunityBG.webp"),
     var(--white3);
   background-repeat: no-repeat;
 }
@@ -25318,7 +25318,7 @@ body {
 /* Counsellor Component CSS Start */
 
 .counsellorBanner {
-  background: url("https://files.mastersunion.link/resources/img/spVideoBg.webp");
+  background: url("https://files.aitd.link/resources/img/spVideoBg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -25327,7 +25327,7 @@ body {
 }
 
 .counsellorWrap {
-  background: url(https://files.mastersunion.link/media/img/ugPsychology/counsellorVector.png),
+  background: url(https://files.aitd.link/media/img/ugPsychology/counsellorVector.png),
     var(--white);
   background-position: right;
   background-repeat: no-repeat;
@@ -25360,7 +25360,7 @@ body {
   position: absolute;
   width: 100%;
   height: 75%;
-  background: url(https://files.mastersunion.link/media/img/ugPsychology/vectorOnWhite.svg);
+  background: url(https://files.aitd.link/media/img/ugPsychology/vectorOnWhite.svg);
   background-repeat: no-repeat;
   left: 0;
   bottom: -25%;
@@ -25665,7 +25665,7 @@ body {
 /* start application component css start */
 
 .startApplication {
-  background: url("https://files.mastersunion.link/resources/img/spVideoBg.webp");
+  background: url("https://files.aitd.link/resources/img/spVideoBg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -25704,7 +25704,7 @@ body {
 /* Meet Alumini in your city CSS Start */
 
 .meetYourAlumini {
-  background: url("https://files.mastersunion.link/resources/img/oppertunityBG.webp"),
+  background: url("https://files.aitd.link/resources/img/oppertunityBG.webp"),
     var(--black);
   background-repeat: no-repeat;
   position: relative;
@@ -25712,7 +25712,7 @@ body {
 }
 
 .attentWebinar {
-  background: url("https://files.mastersunion.link/resources/img/oppertunityBG.webp"),
+  background: url("https://files.aitd.link/resources/img/oppertunityBG.webp"),
     var(--black);
   background-repeat: no-repeat;
   position: relative;
@@ -25896,7 +25896,7 @@ body {
 .leadRoles::after {
   content: "";
   position: absolute;
-  background: url(https://files.mastersunion.link/media/img/eventSlotClockIcon.svg);
+  background: url(https://files.aitd.link/media/img/eventSlotClockIcon.svg);
   top: 59%;
   right: 10px;
   width: 21px;
@@ -26157,7 +26157,7 @@ body {
 /* FBM page additional CSS End */
 
 .newBlackGreyBg {
-  background: url(https://files.mastersunion.link/resources/img/newblackbg.png);
+  background: url(https://files.aitd.link/resources/img/newblackbg.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -26171,14 +26171,14 @@ body {
 }
 
 .vectorRightBlackBg {
-  background: url(https://files.mastersunion.link/resources/svg/meetMasterbg.svg),
+  background: url(https://files.aitd.link/resources/svg/meetMasterbg.svg),
     var(--black);
   background-repeat: repeat-y;
   background-position: top left;
 }
 
 .newVectorOnWhiteBg {
-  background: url(https://files.mastersunion.link/media/img/menaImages/newVectorOnWhiteBg.png),
+  background: url(https://files.aitd.link/media/img/menaImages/newVectorOnWhiteBg.png),
     var(--white) no-repeat;
   background-position: top left;
   background-repeat: repeat-y;
@@ -26197,7 +26197,7 @@ body {
 .newThumbnailGradientBg::after {
   position: absolute;
   content: "";
-  background: url(https://files.mastersunion.link/media/img/menaImages/newThumbnailGradientBg.svg);
+  background: url(https://files.aitd.link/media/img/menaImages/newThumbnailGradientBg.svg);
   background-repeat: no-repeat;
   width: 105%;
   height: 116%;
@@ -26277,7 +26277,7 @@ body {
 }
 
 .menaImmersion {
-  background: url(https://files.mastersunion.link/media/img/menaImages/newVectorOnBlackRightBg.png),
+  background: url(https://files.aitd.link/media/img/menaImages/newVectorOnBlackRightBg.png),
     var(--black);
   background-position: top right;
   background-repeat: no-repeat;
@@ -26350,7 +26350,7 @@ body {
 .newCurriculum .box::after {
   position: absolute;
   content: "";
-  background: url(https://files.mastersunion.link/resources/svg/gradientBoxLine.svg);
+  background: url(https://files.aitd.link/resources/svg/gradientBoxLine.svg);
   background-repeat: no-repeat;
   width: 48%;
   height: 131%;
@@ -26379,17 +26379,17 @@ body {
 }
 
 .menaCardsWrapper .gridBox:first-child {
-  background: url("https://files.mastersunion.link/media/img/menaImages/menaWorkExp.png") !important;
+  background: url("https://files.aitd.link/media/img/menaImages/menaWorkExp.png") !important;
   background-size: cover !important;
 }
 
 #admissionfees .selectingStudents .menaCardsWrapper .gridBox:nth-child(2) {
-  background: url("https://files.mastersunion.link/media/img/menaImages/menaAcademic.png") !important;
+  background: url("https://files.aitd.link/media/img/menaImages/menaAcademic.png") !important;
   background-size: cover !important;
 }
 
 #admissionfees .selectingStudents .menaCardsWrapper .gridBox:nth-child(3) {
-  background: url("https://files.mastersunion.link/media/img/menaImages/menaCommunication.png") !important;
+  background: url("https://files.aitd.link/media/img/menaImages/menaCommunication.png") !important;
   background-size: cover !important;
 }
 
@@ -26442,20 +26442,20 @@ body {
 }
 
 .pgpRiseFbm #admissionfees .selectingStudents .cardsWrapper .gridBox:first-child {
-  background: url("https://files.mastersunion.link/media/img/hssl/fbm-admission1.webp");
+  background: url("https://files.aitd.link/media/img/hssl/fbm-admission1.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .pgpRiseFbm #admissionfees .selectingStudents .cardsWrapper .gridBox:nth-child(2) {
-  background: url("https://files.mastersunion.link/media/img/hssl/rise-fbm-adm-2.webp") !important;
+  background: url("https://files.aitd.link/media/img/hssl/rise-fbm-adm-2.webp") !important;
   background-repeat: no-repeat;
   background-size: cover !important;
   background-position-x: 50% !important;
 }
 
 .pgpRiseFbm #admissionfees .selectingStudents .cardsWrapper .gridBox:nth-child(3) {
-  background: url("https://files.mastersunion.link/media/img/hssl/rise-fbm-adm-3.webp") !important;
+  background: url("https://files.aitd.link/media/img/hssl/rise-fbm-adm-3.webp") !important;
   background-repeat: no-repeat;
   background-size: cover !important;
 }
@@ -26737,7 +26737,7 @@ body {
     position: absolute;
     width: 100%;
     height: 50%;
-    background: url(https://files.mastersunion.link/media/svg/futureEventvector.svg);
+    background: url(https://files.aitd.link/media/svg/futureEventvector.svg);
     background-repeat: no-repeat;
     left: 0;
     bottom: -27%;
@@ -27104,7 +27104,7 @@ body {
 /* pgpRise-growinfix end */
 
 .pgphightlight-tbm-fbm #admissionfees .selectingStudents .cardsWrapper .gridBox:nth-child(2) {
-  background: url("https://images.mastersunion.link/uploads/24012025/v1/co.neww.webp") !important;
+  background: url("https://images.aitd.link/uploads/24012025/v1/co.neww.webp") !important;
   background-repeat: no-repeat;
   background-size: cover !important;
   background-position-x: 50% !important;
@@ -27244,7 +27244,7 @@ body {
 .alignbox-gradient::after {
   position: absolute;
   content: "";
-  background: url("https://files.mastersunion.link/resources/svg/gradientBoxLine.svg");
+  background: url("https://files.aitd.link/resources/svg/gradientBoxLine.svg");
   background-repeat: no-repeat;
   width: 105%;
   height: 128%;
@@ -27258,7 +27258,7 @@ body {
 .alignbox-gradient-Immersion::after {
   position: absolute;
   content: "";
-  background: url("https://files.mastersunion.link/resources/svg/gradientBoxLine.svg");
+  background: url("https://files.aitd.link/resources/svg/gradientBoxLine.svg");
   background-repeat: no-repeat;
   width: 109%;
   height: 135%;
@@ -27272,7 +27272,7 @@ body {
 .alignbox-gradient-curriculum .box::after {
   position: absolute;
   content: "";
-  background: url(https://files.mastersunion.link/resources/svg/gradientBoxLine.svg);
+  background: url(https://files.aitd.link/resources/svg/gradientBoxLine.svg);
   background-repeat: no-repeat;
   width: 48%;
   height: 131%;
@@ -27447,7 +27447,7 @@ body {
 .vUgPsm .collaboration.psyMaster .masterRight::after {
   position: absolute;
   content: "";
-  background: url("https://files.mastersunion.link/resources/svg/gradientBoxLine.svg");
+  background: url("https://files.aitd.link/resources/svg/gradientBoxLine.svg");
   background-repeat: no-repeat;
   width: 105%;
   height: 130%;
@@ -27467,7 +27467,7 @@ body {
 .vUgPsm .psyImmersion.psyMaster .masterRight::after {
   position: absolute;
   content: "";
-  background: url("https://files.mastersunion.link/resources/svg/gradientBoxLine.svg");
+  background: url("https://files.aitd.link/resources/svg/gradientBoxLine.svg");
   background-repeat: no-repeat;
   width: 105%;
   height: 128%;
@@ -27572,7 +27572,7 @@ body {
 }
 
 .blogsPage .blogideal {
-  background: url("https://files.mastersunion.link/resources/img/meshVector.webp") white no-repeat;
+  background: url("https://files.aitd.link/resources/img/meshVector.webp") white no-repeat;
   background-position: top left;
 }
 
@@ -27837,13 +27837,13 @@ body {
   display: none;
 }
 
-.tab_visible_mastersUNion {
+.tab_visible_aitd {
   display: none;
 }
 
 .pagenotfound {
   padding: 160px 0 80px;
-  background: url("https://files.mastersunion.link/resources/svg/linebg.svg"),
+  background: url("https://files.aitd.link/resources/svg/linebg.svg"),
     var(--black);
   background-repeat: repeat-y;
   background-position: left;
@@ -28061,7 +28061,7 @@ body {
 }
 
 .ugIntersectProgramme .intersect4 {
-  background: url(https://images.mastersunion.link/uploads/18122024/intersectHero.webp),
+  background: url(https://images.aitd.link/uploads/18122024/intersectHero.webp),
     #000000;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28173,7 +28173,7 @@ body {
 
 .ugIntersectProgramme .pastSpeakersSection {
   width: 100%;
-  background: url("https://mastersunion.org/assets/svg/boxLineSpeakers.svg"), var(--black);
+  background: url("https://aitd.org/assets/svg/boxLineSpeakers.svg"), var(--black);
   background-repeat: no-repeat;
   background-position: left;
   background-size: contain;
@@ -28269,7 +28269,7 @@ body {
 
 .ugIntersectProgramme .rightSpeackerBlock::before {
   content: "";
-  background: url(https://mastersunion.org/assets/svg/designArrow.svg);
+  background: url(https://aitd.org/assets/svg/designArrow.svg);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
@@ -28332,7 +28332,7 @@ body {
   flex-direction: row-reverse;
   gap: 40px;
   justify-content: unset;
-  background: url("https://mastersunion.org/assets/svg/agendaLine.svg"), var(--white);
+  background: url("https://aitd.org/assets/svg/agendaLine.svg"), var(--white);
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -28390,7 +28390,7 @@ body {
 }
 
 .ugIntersectProgramme .supportingLeadersWrap {
-  background: url(https://mastersunion.org/assets/img/menaImages/newVectorOnWhiteBg.png),
+  background: url(https://aitd.org/assets/img/menaImages/newVectorOnWhiteBg.png),
     var(--white) no-repeat;
   background-position: top left;
   background-repeat: repeat-y;
@@ -28480,7 +28480,7 @@ body {
 }
 
 .ugIntersectProgramme .mutipleFormWrappper.blackLineBg {
-  background: url(https://mastersunion.org/assets/svg/partnerWithUs.svg), #090909;
+  background: url(https://aitd.org/assets/svg/partnerWithUs.svg), #090909;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -28492,7 +28492,7 @@ body {
 }
 
 .ugIntersectProgramme .risefaqWrapBox {
-  background: url(https://mastersunion.org/assets/svg/faqLine.svg);
+  background: url(https://aitd.org/assets/svg/faqLine.svg);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: contain;
@@ -28658,7 +28658,7 @@ body {
   bottom: -79%;
   left: 6%;
   width: 100%;
-  background: url(https://new.mastersunion.link/assets/img/Vectorintersect.png);
+  background: url(https://new.aitd.link/assets/img/Vectorintersect.png);
   background-repeat: no-repeat;
   height: 100%;
   z-index: -1;
@@ -28698,7 +28698,7 @@ body {
 }
 
 .ugPastIntersect .pastIntersect {
-  background: url(https://images.mastersunion.link/uploads/18122024/pastHero.webp),
+  background: url(https://images.aitd.link/uploads/18122024/pastHero.webp),
     #000000;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28724,7 +28724,7 @@ body {
 }
 
 .ugPastIntersect .speakerPast {
-  background: url("https://mastersunion.org/assets/svg/boxLineSpeakers.svg"), var(--white);
+  background: url("https://aitd.org/assets/svg/boxLineSpeakers.svg"), var(--white);
   background-repeat: no-repeat;
   background-position: top;
   background-position-x: left;
@@ -28799,7 +28799,7 @@ body {
 }
 
 .ugPastIntersect .masterPastSwiper {
-  background: url("https://mastersunion.org/assets/svg/boxLineSpeakers.svg"), var(--black);
+  background: url("https://aitd.org/assets/svg/boxLineSpeakers.svg"), var(--black);
   background-repeat: no-repeat;
   background-position: top;
   background-position-x: left;
@@ -28818,7 +28818,7 @@ body {
   bottom: -60%;
   left: -12px;
   width: 24%;
-  background: url(https://files.mastersunion.link/resources/svg/degreeSection.svg);
+  background: url(https://files.aitd.link/resources/svg/degreeSection.svg);
   background-repeat: no-repeat;
   height: 83%;
   z-index: -1;
@@ -28845,7 +28845,7 @@ body {
 }
 
 .ugPastIntersect .hightlightsPast {
-  background: url("https://mastersunion.org/assets/svg/boxLineSpeakers.svg"), var(--white);
+  background: url("https://aitd.org/assets/svg/boxLineSpeakers.svg"), var(--white);
   background-repeat: repeat-y;
   background-position: top;
   background-position-x: left;
@@ -28854,7 +28854,7 @@ body {
   /* .box::after{
           position: absolute;
           content: "";
-          background: url(https://new.mastersunion.link/assets/img/intersectboxgradient.png);
+          background: url(https://new.aitd.link/assets/img/intersectboxgradient.png);
           background-repeat: no-repeat;
           width: 48%;
           height: 161%;
@@ -28971,7 +28971,7 @@ body {
     .boxDev::after{
       position: absolute;
       content: "";
-      background: url(https://new.mastersunion.link/assets/img/intersectboxgradient.png);
+      background: url(https://new.aitd.link/assets/img/intersectboxgradient.png);
       background-repeat: no-repeat;
       width: 48%;
       height: 161%;
@@ -29053,7 +29053,7 @@ body {
 .journeyStarts.intersect4Past {
   padding: 50px 0;
   position: relative;
-  background: url(https://files.mastersunion.link/resources/img/MasterJourney.webp),
+  background: url(https://files.aitd.link/resources/img/MasterJourney.webp),
     var(--white3);
   background-size: cover;
   background-position: left top;
@@ -29095,7 +29095,7 @@ body {
 
 /* pgpRise-LandingPage css starts */
 .pgpRise_LandingPage .landingPageMainSection {
-  background: url("https://images.mastersunion.link/uploads/30122024/riselandingpage.webp");
+  background: url("https://images.aitd.link/uploads/30122024/riselandingpage.webp");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 120px 0 80px;
@@ -29151,7 +29151,7 @@ body {
 }
 
 .pgpRise_LandingPage .landingPageBlendedSection {
-  background: url(https://files.mastersunion.link/resources/img/spVideoBg.webp);
+  background: url(https://files.aitd.link/resources/img/spVideoBg.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -29171,7 +29171,7 @@ body {
 }
 
 .pgpRise_LandingPage .distinctiveProgrammingSection {
-  background: url(https://files.mastersunion.link/resources/img/oppertunityBG.webp),
+  background: url(https://files.aitd.link/resources/img/oppertunityBG.webp),
     var(--black3);
   background-position: top;
   background-repeat: no-repeat;
@@ -29373,7 +29373,7 @@ body {
 
 .pgp_rise_events {
   overflow: hidden;
-  background: url("https://files.mastersunion.link/resources/svg/linebg.svg"),
+  background: url("https://files.aitd.link/resources/svg/linebg.svg"),
     var(--black);
   background-repeat: repeat-y;
   background-position: left;
@@ -29410,7 +29410,7 @@ body {
 /* pgpTbm start */
 
 .fresherBanner {
-  background: url(https://mastersunion.org/assets/svg/freshergradientBg.svg);
+  background: url(https://aitd.org/assets/svg/freshergradientBg.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -29626,7 +29626,7 @@ body {
 
 .ughighlight .ugTestimonials {
   overflow: hidden;
-  background: url("https://files.mastersunion.link/resources/svg/linebg.svg"),
+  background: url("https://files.aitd.link/resources/svg/linebg.svg"),
     var(--grey17);
   background-repeat: repeat-y;
   background-position: left;
@@ -29959,7 +29959,7 @@ body {
   } */
 
   .degreeProgram {
-    background: url(https://files.mastersunion.link/resources/svg/blacklineSvg.svg) var(--black);
+    background: url(https://files.aitd.link/resources/svg/blacklineSvg.svg) var(--black);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -29986,7 +29986,7 @@ body {
   }
 
   .collaboration.studyAbroad {
-    background: url(https://files.mastersunion.link/resources/img/Collaborationbg.webp) var(--white3);
+    background: url(https://files.aitd.link/resources/img/Collaborationbg.webp) var(--white3);
     background-repeat: no-repeat;
   }
 
@@ -30008,19 +30008,19 @@ body {
   }
 
   #ugdatascienceadmissionfees .selectingStudents .cardsWrapper .gridBox:first-child {
-    background: url(https://files.mastersunion.link/resources/img/ugcr3.webp);
+    background: url(https://files.aitd.link/resources/img/ugcr3.webp);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   #ugdatascienceadmissionfees .selectingStudents .cardsWrapper .gridBox:nth-child(2) {
-    background: url(https://files.mastersunion.link/media/img/hssl/co.neww.webp) !important;
+    background: url(https://files.aitd.link/media/img/hssl/co.neww.webp) !important;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   #ugdatascienceadmissionfees .selectingStudents .cardsWrapper .gridBox:nth-child(3) {
-    background: url(https://files.mastersunion.link/resources/img/ugcr1.webp);
+    background: url(https://files.aitd.link/resources/img/ugcr1.webp);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -30058,7 +30058,7 @@ body {
 
 /* tangibleOutcomesSection css starts */
 .tangibleOutcomesSection {
-  background: url(https://files.mastersunion.link/resources/svg/linebg.svg),
+  background: url(https://files.aitd.link/resources/svg/linebg.svg),
     var(--black);
   background-repeat: repeat-y;
   background-position: left;
@@ -30317,12 +30317,12 @@ body {
 
 /* pgp-rise-opm start */
 .collaboration.tbmFbm-collab {
-  background: url(https://files.mastersunion.link/resources/img/oppertunityBG.webp) var(--white);
+  background: url(https://files.aitd.link/resources/img/oppertunityBG.webp) var(--white);
   background-repeat: no-repeat;
 }
 
 .onboardDirector {
-  background: url(https://files.mastersunion.link/resources/img/oppertunityBG.webp) var(--white3);
+  background: url(https://files.aitd.link/resources/img/oppertunityBG.webp) var(--white3);
   background-repeat: no-repeat;
 }
 
@@ -30815,7 +30815,7 @@ body {
 .ughighlight .collaboration.psyMaster .masterRight::after {
   position: absolute;
   content: "";
-  background: url(https://files.mastersunion.link/resources/svg/gradientBoxLine.svg);
+  background: url(https://files.aitd.link/resources/svg/gradientBoxLine.svg);
   background-repeat: no-repeat;
   width: 105%;
   height: 136%;
@@ -31047,7 +31047,7 @@ body {
 .sharkTank {
   padding: 80px 0 60px;
   overflow: hidden;
-  background: url("https://images.mastersunion.link/uploads/11032025/v1/slider.svg"),
+  background: url("https://images.aitd.link/uploads/11032025/v1/slider.svg"),
     black;
   background-repeat: no-repeat;
   background-size: cover;
@@ -31684,7 +31684,7 @@ body {
   }
 
   .festHero {
-    background: url("https://images.mastersunion.link/uploads/03062025/v1/MacBookPro14_5.webp"),
+    background: url("https://images.aitd.link/uploads/03062025/v1/MacBookPro14_5.webp"),
       var(--black);
     padding-bottom: 0;
     line-height: 0;
@@ -31775,7 +31775,7 @@ body {
   }
 
   .caseUnion {
-    background: url("https://images.mastersunion.link/uploads/03062025/v1/Desktop48.webp"),
+    background: url("https://images.aitd.link/uploads/03062025/v1/Desktop48.webp"),
       var(--black);
     background-repeat: no-repeat;
     width: 100%;
@@ -31823,7 +31823,7 @@ body {
   }
 
   .unMuteSection {
-    background: url("https://images.mastersunion.link/uploads/03062025/v1/Frame1321317436.webp"),
+    background: url("https://images.aitd.link/uploads/03062025/v1/Frame1321317436.webp"),
       var(--white);
     background-repeat: no-repeat;
     width: 100%;
@@ -32503,7 +32503,7 @@ body {
   }
 
   .intersectYearSection {
-    background: url(https://images.mastersunion.link/uploads/18032025/v1/Maskgroup.webp),
+    background: url(https://images.aitd.link/uploads/18032025/v1/Maskgroup.webp),
       white;
     background-repeat: no-repeat;
     position: relative;
@@ -32576,7 +32576,7 @@ body {
     }
 
     .influenceRight {
-      /* background: url('https://images.mastersunion.link/uploads/18032025/v1/OverlayShadow1.webp'); */
+      /* background: url('https://images.aitd.link/uploads/18032025/v1/OverlayShadow1.webp'); */
       /* background-repeat: no-repeat; */
       border: 20px solid white;
       border-bottom: none;
@@ -32864,7 +32864,7 @@ body {
   }
 
   .joinNewsletter {
-    background: url(https://images.mastersunion.link/uploads/19032025/v1/blackVector.svg),
+    background: url(https://images.aitd.link/uploads/19032025/v1/blackVector.svg),
       black;
     background-repeat: no-repeat;
     background-size: cover;
@@ -33168,13 +33168,13 @@ body {
 
       .hoverImg {
         transition: all 0.3s ease;
-        content: url("https://images.mastersunion.link/uploads/19032025/v1/gradientRightArrow.svg");
+        content: url("https://images.aitd.link/uploads/19032025/v1/gradientRightArrow.svg");
       }
     }
   }
 
   .memberLoginSection {
-    background: url("https://images.mastersunion.link/uploads/20032025/v1/Group1171280708.webp");
+    background: url("https://images.aitd.link/uploads/20032025/v1/Group1171280708.webp");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -33618,7 +33618,7 @@ body {
   }
 
   .select-form-arrow:after {
-    background: url(https://images.mastersunion.link/uploads/04042025/v1/CaretDown1.svg) no-repeat;
+    background: url(https://images.aitd.link/uploads/04042025/v1/CaretDown1.svg) no-repeat;
     top: 2.5rem !important;
     right: 0.5rem !important;
   }
@@ -33637,7 +33637,7 @@ body {
   .numberDivi::after {
     content: "";
     position: absolute;
-    background: url(https://images.mastersunion.link/uploads/04042025/v1/Calendar.svg) no-repeat;
+    background: url(https://images.aitd.link/uploads/04042025/v1/Calendar.svg) no-repeat;
     width: 24px;
     height: 20px;
     pointer-events: none;
@@ -33895,7 +33895,7 @@ body {
 
   .publishInsight {
     padding: 40px;
-    background: url(https://images.mastersunion.link/uploads/28032025/v1/Vector1351.svg),
+    background: url(https://images.aitd.link/uploads/28032025/v1/Vector1351.svg),
       black;
     background-repeat: no-repeat;
     border-radius: 12px;
@@ -34031,7 +34031,7 @@ body {
 
   .directoryDivi {
     padding: 20px;
-    background: url(https://images.mastersunion.link/uploads/28032025/v1/Vector1352.svg),
+    background: url(https://images.aitd.link/uploads/28032025/v1/Vector1352.svg),
       black;
     background-repeat: no-repeat;
     border-radius: 12px;
@@ -35234,7 +35234,7 @@ body {
 }
 
 .selectingStudents.sharkTank {
-  background: url("https://images.mastersunion.link/uploads/26062025/v1/Vector1348.svg"),
+  background: url("https://images.aitd.link/uploads/26062025/v1/Vector1348.svg"),
     var(--black);
   background-repeat: no-repeat;
   background-size: contain;
@@ -35510,7 +35510,7 @@ body {
 
 .muCareerPageDetail {
   padding: 160px 0 80px;
-  background: url("https://files.mastersunion.link/resources/img/meshVector.webp"),
+  background: url("https://files.aitd.link/resources/img/meshVector.webp"),
     var(--white);
   background-position: top left;
   background-repeat: no-repeat;
@@ -35644,7 +35644,7 @@ body {
   .jobUl li::after {
     position: absolute;
     content: "";
-    background: url("https://images.mastersunion.link/uploads/03042025/v1/Frame1171280289.svg") no-repeat;
+    background: url("https://images.aitd.link/uploads/03042025/v1/Frame1171280289.svg") no-repeat;
     width: 12px;
     height: 12px;
     left: -8px;
@@ -35852,7 +35852,7 @@ option:disabled {
   }
 
   .highSchool {
-    background: url(https://images.mastersunion.link/uploads/16052025/v1/DropshippingChallengeChallenge.svg);
+    background: url(https://images.aitd.link/uploads/16052025/v1/DropshippingChallengeChallenge.svg);
     background-position: 100% 25%;
     position: relative;
     background-repeat: no-repeat;
@@ -36242,8 +36242,8 @@ option:disabled {
   }
 
   .typeWriter {
-    background: url(https://images.mastersunion.link/uploads/28052025/v1/Vector1353.svg) no-repeat right center,
-      url(https://images.mastersunion.link/uploads/28052025/v1/Vector1352.svg) no-repeat left bottom;
+    background: url(https://images.aitd.link/uploads/28052025/v1/Vector1353.svg) no-repeat right center,
+      url(https://images.aitd.link/uploads/28052025/v1/Vector1352.svg) no-repeat left bottom;
   }
 
   .flowingWrapper {
@@ -36407,7 +36407,7 @@ option:disabled {
   }
 
   .cardBack {
-    background: url(https://images.mastersunion.link/uploads/29052025/v1/greySvg.svg),
+    background: url(https://images.aitd.link/uploads/29052025/v1/greySvg.svg),
       var(--white);
     transform: rotateY(180deg);
     display: flex;
@@ -36508,7 +36508,7 @@ option:disabled {
   }
 
   .sharkTank.studentExperience {
-    background: url(https://images.mastersunion.link/uploads/16052025/v1/sharkTankVector.svg),
+    background: url(https://images.aitd.link/uploads/16052025/v1/sharkTankVector.svg),
       var(--black);
     background-repeat: no-repeat;
   }
@@ -36961,7 +36961,7 @@ option:disabled {
 }
 
 .applyhero {
-  background: url("https://files.mastersunion.link/images/applyherobg.png"),
+  background: url("https://files.aitd.link/images/applyherobg.png"),
     black;
   /* padding: 120px 0 80px; */
   background-size: cover;
@@ -37597,7 +37597,7 @@ filter: brightness(2);
 }
 
 .enrollmentSection {
-  background: url(https://images.mastersunion.link/uploads/08052025/v2/Vector13518.svg),
+  background: url(https://images.aitd.link/uploads/08052025/v2/Vector13518.svg),
     #000;
   background-repeat: no-repeat;
   padding: 80px 0;
@@ -38044,7 +38044,7 @@ filter: brightness(2);
   .impactLeftBox::after {
     content: "";
     position: absolute;
-    background: url(https://images.mastersunion.link/uploads/30062025/v6/IconTag.svg) !important;
+    background: url(https://images.aitd.link/uploads/30062025/v6/IconTag.svg) !important;
     background-repeat: no-repeat;
     width: 40px;
     height: 40px;
@@ -38054,12 +38054,12 @@ filter: brightness(2);
 
   .impactLeftBox:nth-of-type(2)::after {
     content: "";
-    background: url(https://images.mastersunion.link/uploads/30062025/v3/IconTag.svg) !important;
+    background: url(https://images.aitd.link/uploads/30062025/v3/IconTag.svg) !important;
   }
 
   .impactLeftBox:nth-of-type(4)::after {
     content: "";
-    background: url(https://images.mastersunion.link/uploads/30062025/v5/IconTag.svg) !important;
+    background: url(https://images.aitd.link/uploads/30062025/v5/IconTag.svg) !important;
     height: 40px !important;
   }
 
@@ -38862,7 +38862,7 @@ filter: brightness(2);
   }
 
   .convocationSection {
-    background: url("https://images.mastersunion.link/uploads/30062025/v1/Vector1374.svg"),
+    background: url("https://images.aitd.link/uploads/30062025/v1/Vector1374.svg"),
       var(--black);
     padding: 60px 0;
     border-bottom: 1px solid var(--black5);
@@ -39295,7 +39295,7 @@ filter: brightness(2);
 }
 
 .meetMastersSection {
-  background: url("https://images.mastersunion.link/uploads/23062025/v1/Vector1374.svg"),
+  background: url("https://images.aitd.link/uploads/23062025/v1/Vector1374.svg"),
     var(--black);
   background-repeat: no-repeat;
   background-size: cover;
@@ -39519,7 +39519,7 @@ filter: brightness(2);
   .impactLeftBox::after {
     content: "";
     position: absolute;
-    background: url("https://images.mastersunion.link/uploads/20032025/v1/announce.svg");
+    background: url("https://images.aitd.link/uploads/20032025/v1/announce.svg");
     background-repeat: no-repeat;
     width: 40px;
     height: 40px;
@@ -39851,7 +39851,7 @@ filter: brightness(2);
   }
 
   .container {
-    background: url("https://images.mastersunion.link/uploads/04062025/v1/blackpng.webp"),
+    background: url("https://images.aitd.link/uploads/04062025/v1/blackpng.webp"),
       var(--black);
     padding: 150px 0;
     border-radius: 12px;
@@ -40379,7 +40379,7 @@ filter: brightness(2);
 /* end here  */
 
 .currentStudentsSection {
-  background: url(https://images.mastersunion.link/uploads/30062025/v1/Vector1374.svg),
+  background: url(https://images.aitd.link/uploads/30062025/v1/Vector1374.svg),
     var(--black);
   color: white;
   border-bottom: solid 1px var(--black5);
@@ -40432,7 +40432,7 @@ filter: brightness(2);
     width: 100%;
     height: 100%;
     opacity: 0.4;
-    background: url(https://images.mastersunion.link/uploads/09092025/v1/Rectangle50308.webp);
+    background: url(https://images.aitd.link/uploads/09092025/v1/Rectangle50308.webp);
   }
 
   .logo {
@@ -40461,7 +40461,7 @@ filter: brightness(2);
     justify-content: space-between;
     padding: 12px;
     z-index: 4;
-    /* background-image: url("https://images.mastersunion.link/uploads/06082025/v1/Rectangle50308.webp"); */
+    /* background-image: url("https://images.aitd.link/uploads/06082025/v1/Rectangle50308.webp"); */
     /* background: black; */
     /* max-width: 392px; */
     width: 100%;
@@ -40864,7 +40864,7 @@ filter: brightness(2);
 }
 
 .muafterCareer .outcomeSection {
-  background: url("https://images.mastersunion.link/uploads/22112025/v1/Vector3.svg"),
+  background: url("https://images.aitd.link/uploads/22112025/v1/Vector3.svg"),
     var(--black);
   background-repeat: no-repeat;
   background-size: cover;
@@ -41284,7 +41284,7 @@ filter: brightness(2);
 
 
 .pgpBreather {
-  background-image: url("https://images.mastersunion.link/uploads/08012026/v2/Vector1374.svg");
+  background-image: url("https://images.aitd.link/uploads/08012026/v2/Vector1374.svg");
   background-color: var(--black);
   background-repeat: no-repeat;
   background-size: cover;

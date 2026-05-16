@@ -782,7 +782,7 @@ button.BlackBtn {
 
 
 .blackMuBg {
-    background: url('https://files.mastersunion.link/resources/svg/blackbgMu.svg'), var(--black);
+    background: url('https://files.aitd.link/resources/svg/blackbgMu.svg'), var(--black);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -796,7 +796,7 @@ button.BlackBtn {
 }
 
 .blackLineBg {
-    background: url('https://files.mastersunion.link/resources/img/oppertunityBG.webp'), var(--black);
+    background: url('https://files.aitd.link/resources/img/oppertunityBG.webp'), var(--black);
     background-position: top;
     background-repeat: no-repeat;
     position: relative;
@@ -805,14 +805,14 @@ button.BlackBtn {
 
 
 .whiteMuBg {
-    background: url('https://files.mastersunion.link/resources/svg/whitebgLine.svg'), var(--white);
+    background: url('https://files.aitd.link/resources/svg/whitebgLine.svg'), var(--white);
     background-repeat: no-repeat;
     background-position-y: top;
     background-position-x: right;
 }
 
 .gradientMuBg {
-    background: url('https://files.mastersunion.link/resources/svg/gradientBgMuLogo.svg'), linear-gradient(125deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
+    background: url('https://files.aitd.link/resources/svg/gradientBgMuLogo.svg'), linear-gradient(125deg, #459EE7 0%, #4040DD 50%, #AA1834 100%);
     padding: 40px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1031,7 +1031,7 @@ video.video-element {
     top: 0;
     width: 100%;
     height: 100%;
-    background: url('https://files.mastersunion.link/resources/img/pauseWhite.webp');
+    background: url('https://files.aitd.link/resources/img/pauseWhite.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1107,7 +1107,7 @@ video.video-element {
     top: 0;
     width: 100%;
     height: 100%;
-    background: url('https://files.mastersunion.link/resources/img/playWhite.webp');
+    background: url('https://files.aitd.link/resources/img/playWhite.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1145,14 +1145,14 @@ video.video-element {
     top: 0;
     width: 100%;
     height: 100%;
-    background: url('https://files.mastersunion.link/resources/img/unmuteWhite.webp');
+    background: url('https://files.aitd.link/resources/img/unmuteWhite.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .video-controls .sound-muted:before {
-    background: url('https://files.mastersunion.link/resources/img/muteWhite.webp');
+    background: url('https://files.aitd.link/resources/img/muteWhite.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1196,7 +1196,7 @@ video.video-element {
     top: 0;
     width: 100%;
     height: 100%;
-    background: url('https://files.mastersunion.link/resources/img/fullScreen.png');
+    background: url('https://files.aitd.link/resources/img/fullScreen.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
