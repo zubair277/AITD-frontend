@@ -434,7 +434,6 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-
 </head>
 
 <div id="preloader" style="display: none !important; opacity: 0; pointer-events: none; visibility: hidden;">
@@ -10643,11 +10642,6 @@
             <script defer async src="../assets.aitd.link/js/main.js" ></script>
             <script defer async src="assets/js/sliders.js" ></script>
         
-        <script>
-            window.chtlConfig = { chatbotId: "8221523728" };
-        </script>
-        <script async data-id="8221523728" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
-
         <script type="text/javascript">
         _linkedin_partner_id = "3683610";
         window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
@@ -10720,6 +10714,44 @@
             });
         </script>
     </section>
+
+    <!-- Chatling.ai Chatbot -->
+    <style>
+        /* Ensure Chatling widget appears on the bottom right */
+        #chtl-iframe,
+        #chtl-button,
+        [data-id="3877218189"],
+        iframe[src*="chatling.ai"],
+        .chtl-iframe,
+        .chtl-button,
+        .chtl-widget,
+        .chtl-launcher {
+            z-index: 999999 !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        #chtl-iframe,
+        .chtl-iframe,
+        .chtl-button,
+        .chtl-widget,
+        .chtl-launcher,
+        iframe[src*="chatling.ai"] {
+            position: fixed !important;
+            right: 24px !important;
+            bottom: 24px !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        body > iframe[src*='chatling.ai'] {
+            display: block !important;
+        }
+    </style>
+    <script>
+        window.chtlConfig = { chatbotId: "3877218189" }
+    </script>
+    <script async data-id="3877218189" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
 
 </body>
 
