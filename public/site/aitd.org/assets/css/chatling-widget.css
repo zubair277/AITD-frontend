@@ -1,0 +1,18 @@
+/* Keep official Chatling launcher visible above site UI */
+#chtl-chat-icon-container {
+  z-index: 2147483647 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+#chtl-open-chat-icon,
+#chtl-close-chat-icon {
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+#chtl-chat-iframe.chtl-display-floating {
+  z-index: 2147483646 !important;
+}
