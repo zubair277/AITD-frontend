@@ -200,7 +200,7 @@ function rewriteHtml(html, domains, currentDomain) {
   // Home hero: replace heading text only.
   out = out.replace(
     /<h1 class="homeheroHeading">[\s\S]*?<\/h1>/i,
-    '<h1 class="homeheroHeading">AITD MBA – Where Future CEOs and Founders are built</h1>',
+    '<h1 class="homeheroHeading">AIEM MBA – Where Future CEOs and Founders are built</h1>',
   )
 
   const logoSizeStyle = `<link rel="preload" as="image" href="/images/aitd-bg.jpeg" fetchpriority="high">
@@ -535,7 +535,7 @@ function rewriteHtml(html, domains, currentDomain) {
 
       const html = items.map((item) => {
         const name = escapeHtml(safeText(item?.title, 'Student'));
-        const role = escapeHtml(safeText(item?.meta?.role || item?.subtitle, 'AITD Student'));
+        const role = escapeHtml(safeText(item?.meta?.role || item?.subtitle, 'AIEM Student'));
         const text = escapeHtml(safeText(item?.description, ''));
         const imageUrl = escapeHtml(safeText(item?.imageUrl, ''));
         return '<div class="swiper-slide testimonialCard">' +
