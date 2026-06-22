@@ -138,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function isElementInViewport($el) {
+    if (!$el || $el.length === 0) return;
     const rect = $el[0].getBoundingClientRect();
     return (
         rect.top >= 0 &&
@@ -261,6 +262,7 @@ $(".courseName").click(function () {
 
 // let hero = document.querySelector('.heroSection');
 // hero.addEventListener('mousemove', z => {
+//   if (!z || !z.target) return;
 //   let rect = z.target.getBoundingClientRect();
 //   let x = z.clientX - rect.left;
 //   let y = z.clientY - rect.top;
@@ -2072,7 +2074,7 @@ $(document).ready(async function () {
             $(".hideFortheMENA").addClass("hide");
             $("#MENAimgChange").attr(
                 "src",
-                "https://cdn.aitd.link/assets/imgV2/InseadNew.png"
+                "/assets/images/InseadNew.png"
             );
 
             isCountryCodeFound = true;
@@ -2086,7 +2088,7 @@ $(document).ready(async function () {
             console.log("2nd call get countries and set optionss");
 
             const response = await $.ajax({
-                url: "https://api.countrystatecity.in/v1/countries",
+                url: "/assets/json/countries.json",
                 type: "GET",
                 headers: {
                     "X-CSCAPI-KEY":
@@ -6029,7 +6031,8 @@ function convertJson() {
 // to store the every url in the DB
 
 function captureURLonEveryPageRender() {
-    const apiUrl = `https://api.aitd.org/api/leads/captureClicks`;
+    // const apiUrl = `https://api.aitd.org/api/leads/captureClicks`;
+    return; // API is dead, early return
     const pageUrl = window.location.href; // Get the full URL of the current web page
 
     fetch(apiUrl, {

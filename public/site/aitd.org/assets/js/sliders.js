@@ -1,6 +1,21 @@
+
+// Added to prevent Swiper runtime errors
+window.initSwiperSafe = function(selector, options) {
+    let el;
+    if (typeof selector === 'string') {
+        el = document.querySelector(selector);
+    } else {
+        el = selector;
+    }
+    if (!el) return null;
+    let slides = el.querySelectorAll('.swiper-slide');
+    if (!slides || slides.length === 0) return null;
+    return window.initSwiperSafe(selector, options);
+};
+
 // home page event swiper
 
-var swiper = new Swiper(".menaSwipe", {
+var swiper = window.initSwiperSafe(".menaSwipe", {
   slidesPerView: 2.5,
   spaceBetween: 20,
 
@@ -58,7 +73,7 @@ var swiper = new Swiper(".menaSwipe", {
   },
 });
 
-var swiper = new Swiper(".ugcard1", {
+var swiper = window.initSwiperSafe(".ugcard1", {
   slidesPerView: 2.5,
   spaceBetween: 20,
 
@@ -122,7 +137,7 @@ var swiper = new Swiper(".ugcard1", {
     },
   },
 });
-var swiper = new Swiper(".ugcard2", {
+var swiper = window.initSwiperSafe(".ugcard2", {
   slidesPerView: 2.5,
   spaceBetween: 20,
 
@@ -188,7 +203,7 @@ var swiper = new Swiper(".ugcard2", {
 });
 
 
-var swiper = new Swiper(".ugcard3", {
+var swiper = window.initSwiperSafe(".ugcard3", {
   slidesPerView: 2.5,
   spaceBetween: 20,
 
@@ -253,7 +268,7 @@ var swiper = new Swiper(".ugcard3", {
   },
 });
 
-var swiper160 = new Swiper(".sharkSwiperWrapper", {
+var swiper160 = window.initSwiperSafe(".sharkSwiperWrapper", {
   slidesPerView: 3,
   centeredSlides: true,
   loopAdditionalSlides: 20,
@@ -304,7 +319,7 @@ var swiper160 = new Swiper(".sharkSwiperWrapper", {
 });
 
 
-var swiper = new Swiper(".mastersScrolldsai", {
+var swiper = window.initSwiperSafe(".mastersScrolldsai", {
   // slidesPerView: "auto", // Adjusts dynamically
   centeredSlides: true, // Centers active slide
   spaceBetween: 20,
@@ -348,7 +363,7 @@ var swiper = new Swiper(".mastersScrolldsai", {
   },
 });
 
-var swiper = new Swiper(".logoSlider", {
+var swiper = window.initSwiperSafe(".logoSlider", {
   slidesPerView: 1,
   spaceBetween: 20,
   loop: true,
@@ -398,7 +413,7 @@ var swiper = new Swiper(".logoSlider", {
   },
 });
 
-var swiper = new Swiper(".newMeetMasterSwiper", {
+var swiper = window.initSwiperSafe(".newMeetMasterSwiper", {
   slidesPerView: 4.5,
   spaceBetween: 20,
   freeMode: true,
@@ -448,7 +463,7 @@ var swiper = new Swiper(".newMeetMasterSwiper", {
   },
 });
 
-var swiper = new Swiper(".newMeetMasterSwiper2", {
+var swiper = window.initSwiperSafe(".newMeetMasterSwiper2", {
   slidesPerView: 4.5,
   spaceBetween: 20,
   freeMode: true,
@@ -498,7 +513,7 @@ var swiper = new Swiper(".newMeetMasterSwiper2", {
   },
 });
 
-var menaLandingswiper = new Swiper(".menaLandingswiper", {
+var menaLandingswiper = window.initSwiperSafe(".menaLandingswiper", {
   slidesPerView: 3,
   spaceBetween: 20,
   loop: false,
@@ -550,7 +565,7 @@ var menaLandingswiper = new Swiper(".menaLandingswiper", {
   },
 });
 
-var swiper0 = new Swiper(".homePageSwiper", {
+var swiper0 = window.initSwiperSafe(".homePageSwiper", {
   slidesPerView: 1,
   freeMode: true,
   loop: true,
@@ -611,7 +626,7 @@ var swiper0 = new Swiper(".homePageSwiper", {
   },
 });
 
-var swiper0 = new Swiper(".stylesSwiper", {
+var swiper0 = window.initSwiperSafe(".stylesSwiper", {
   slidesPerView: 1,
   speed: 400,
   freeMode: true,
@@ -664,7 +679,7 @@ var swiper0 = new Swiper(".stylesSwiper", {
   },
 });
 
-var swiper0 = new Swiper(".germanSwiper", {
+var swiper0 = window.initSwiperSafe(".germanSwiper", {
   slidesPerView: 1,
   freeMode: true,
   loop: true,
@@ -737,7 +752,7 @@ var swiper0 = new Swiper(".germanSwiper", {
   },
 });
 
-var swiper0 = new Swiper(".germanSwiperTbm", {
+var swiper0 = window.initSwiperSafe(".germanSwiperTbm", {
   slidesPerView: 1,
   freeMode: true,
   loop: true,
@@ -810,7 +825,7 @@ var swiper0 = new Swiper(".germanSwiperTbm", {
   },
 });
 
-var swiper0 = new Swiper(".germanSwiperTbmGlobal", {
+var swiper0 = window.initSwiperSafe(".germanSwiperTbmGlobal", {
   slidesPerView: 1,
   freeMode: true,
   loop: true,
@@ -884,7 +899,7 @@ var swiper0 = new Swiper(".germanSwiperTbmGlobal", {
 });
 
 
-var swiper0 = new Swiper(".perspectiveSWiper", {
+var swiper0 = window.initSwiperSafe(".perspectiveSWiper", {
   slidesPerView: 1,
   freeMode: true,
   spaceBetween: 20,
@@ -946,7 +961,7 @@ var swiper0 = new Swiper(".perspectiveSWiper", {
 });
 
 
-var swiper0 = new Swiper(".swiperPodcast", {
+var swiper0 = window.initSwiperSafe(".swiperPodcast", {
   slidesPerView: 1,
   freeMode: true,
   spaceBetween: 20,
@@ -1007,7 +1022,7 @@ var swiper0 = new Swiper(".swiperPodcast", {
   },
 });
 
-var swiper0 = new Swiper(".masterSwiper2", {
+var swiper0 = window.initSwiperSafe(".masterSwiper2", {
   slidesPerView: 1,
   freeMode: true,
   loop: true,
@@ -1064,7 +1079,7 @@ var swiper0 = new Swiper(".masterSwiper2", {
   },
 });
 
-var swiper0 = new Swiper(".swiperPodcast", {
+var swiper0 = window.initSwiperSafe(".swiperPodcast", {
   slidesPerView: 1,
   freeMode: true,
   spaceBetween: 20,
@@ -1125,7 +1140,7 @@ var swiper0 = new Swiper(".swiperPodcast", {
   },
 });
 
-var swiper0 = new Swiper(".pgphome2", {
+var swiper0 = window.initSwiperSafe(".pgphome2", {
   slidesPerView: 2.3,
   spaceBetween: 20,
   freeMode: true,
@@ -1179,7 +1194,7 @@ var swiper0 = new Swiper(".pgphome2", {
     },
   },
 });
-var swiper0 = new Swiper(".pgphome", {
+var swiper0 = window.initSwiperSafe(".pgphome", {
   slidesPerView: 2.3,
   spaceBetween: 20,
   freeMode: true,
@@ -1234,7 +1249,7 @@ var swiper0 = new Swiper(".pgphome", {
   },
 });
 
-var menaSwiper1 = new Swiper(".menaSlider1", {
+var menaSwiper1 = window.initSwiperSafe(".menaSlider1", {
   slidesPerView: 2.3,
   spaceBetween: 20,
   freeMode: true,
@@ -1289,7 +1304,7 @@ var menaSwiper1 = new Swiper(".menaSlider1", {
   },
 });
 
-var menaSwiper2 = new Swiper(".menaSlider2", {
+var menaSwiper2 = window.initSwiperSafe(".menaSlider2", {
   slidesPerView: 2.3,
   spaceBetween: 20,
   freeMode: true,
@@ -1344,7 +1359,7 @@ var menaSwiper2 = new Swiper(".menaSlider2", {
   },
 });
 
-var menaSwiper3 = new Swiper(".menaSlider3", {
+var menaSwiper3 = window.initSwiperSafe(".menaSlider3", {
   slidesPerView: 2.3,
   spaceBetween: 20,
   freeMode: true,
@@ -1399,7 +1414,7 @@ var menaSwiper3 = new Swiper(".menaSlider3", {
   },
 });
 
-var swiper0 = new Swiper(".pgphome3", {
+var swiper0 = window.initSwiperSafe(".pgphome3", {
   slidesPerView: 2.4,
   spaceBetween: 20,
   speed: 400,
@@ -1451,7 +1466,7 @@ var swiper0 = new Swiper(".pgphome3", {
   },
 });
 
-var swiper0 = new Swiper(".studentLifeCampusSlider", {
+var swiper0 = window.initSwiperSafe(".studentLifeCampusSlider", {
   speed: 400,
   pagination: {
     el: ".swiper-pagination",
@@ -1467,7 +1482,7 @@ var swiper0 = new Swiper(".studentLifeCampusSlider", {
   },
 });
 
-var swiper0 = new Swiper(".commonAreaWrap", {
+var swiper0 = window.initSwiperSafe(".commonAreaWrap", {
   slidesPerView: 1,
   spaceBetween: 2,
   speed: 400,
@@ -1531,7 +1546,7 @@ var swiper0 = new Swiper(".commonAreaWrap", {
   },
 });
 
-var swiper0 = new Swiper(".studentBusinessClub", {
+var swiper0 = window.initSwiperSafe(".studentBusinessClub", {
   slidesPerView: 1.1,
   spaceBetween: 5,
   speed: 400,
@@ -1593,7 +1608,7 @@ var swiper0 = new Swiper(".studentBusinessClub", {
   },
 });
 
-var swiper = new Swiper(".eventSlider.events", {
+var swiper = window.initSwiperSafe(".eventSlider.events", {
   slidesPerView: 2.2,
   spaceBetween: 20,
   freeMode: true,
@@ -1634,7 +1649,7 @@ var swiper = new Swiper(".eventSlider.events", {
   },
 });
 
-var swiper = new Swiper(".eventSlider.latestNews", {
+var swiper = window.initSwiperSafe(".eventSlider.latestNews", {
   slidesPerView: 2.1,
   spaceBetween: 20,
   freeMode: true,
@@ -1675,7 +1690,7 @@ var swiper = new Swiper(".eventSlider.latestNews", {
   },
 });
 
-var swiper = new Swiper(".eventSlider.admissions", {
+var swiper = window.initSwiperSafe(".eventSlider.admissions", {
   slidesPerView: 2.1,
   spaceBetween: 20,
   freeMode: true,
@@ -1716,7 +1731,7 @@ var swiper = new Swiper(".eventSlider.admissions", {
   },
 });
 
-var swiper1 = new Swiper(".alumniSpotlight", {
+var swiper1 = window.initSwiperSafe(".alumniSpotlight", {
   slidesPerView: 1,
   spaceBetween: 0,
   // effect: "fade",
@@ -1776,7 +1791,7 @@ var swiper1 = new Swiper(".alumniSpotlight", {
   },
 });
 
-var swiper1 = new Swiper(".internshipSwiper", {
+var swiper1 = window.initSwiperSafe(".internshipSwiper", {
   slidesPerView: 1,
   spaceBetween: 0,
   // effect: "fade",
@@ -1836,7 +1851,7 @@ var swiper1 = new Swiper(".internshipSwiper", {
   },
 });
 
-var swiper1 = new Swiper(".internshipSwiperClassPsm", {
+var swiper1 = window.initSwiperSafe(".internshipSwiperClassPsm", {
   slidesPerView: 1,
   spaceBetween: 0,
   // effect: "fade",
@@ -1896,7 +1911,7 @@ var swiper1 = new Swiper(".internshipSwiperClassPsm", {
   },
 });
 
-var swiper1 = new Swiper(".internshipSwiperClassCareer", {
+var swiper1 = window.initSwiperSafe(".internshipSwiperClassCareer", {
   slidesPerView: 1,
   spaceBetween: 0,
   // effect: "fade",
@@ -1958,7 +1973,7 @@ var swiper1 = new Swiper(".internshipSwiperClassCareer", {
 
 
 
-var swiper1 = new Swiper(".internshipSwiperTbm", {
+var swiper1 = window.initSwiperSafe(".internshipSwiperTbm", {
   slidesPerView: 1,
   spaceBetween: 0,
   // effect: "fade",
@@ -2020,7 +2035,7 @@ var swiper1 = new Swiper(".internshipSwiperTbm", {
 
 
 
-var swiper01 = new Swiper(".internshipSwiperClass", {
+var swiper01 = window.initSwiperSafe(".internshipSwiperClass", {
   slidesPerView: 1,
   spaceBetween: 0,
   // effect: "fade",
@@ -2080,7 +2095,7 @@ var swiper01 = new Swiper(".internshipSwiperClass", {
   },
 });
 
-var swiper = new Swiper(".internshipSwiperClass3", {
+var swiper = window.initSwiperSafe(".internshipSwiperClass3", {
   slidesPerView: 1,
   spaceBetween: 0,
   // effect: "fade",
@@ -2140,7 +2155,7 @@ var swiper = new Swiper(".internshipSwiperClass3", {
   },
 });
 
-var swiper1 = new Swiper(".alumniSpotlight2", {
+var swiper1 = window.initSwiperSafe(".alumniSpotlight2", {
   slidesPerView: 1,
   spaceBetween: 0,
   effect: "fade",
@@ -2200,7 +2215,7 @@ var swiper1 = new Swiper(".alumniSpotlight2", {
   },
 });
 
-var swiper2 = new Swiper(".alumniSpotlightIntersect", {
+var swiper2 = window.initSwiperSafe(".alumniSpotlightIntersect", {
   slidesPerView: 1,
   spaceBetween: 0,
   effect: "fade",
@@ -2256,7 +2271,7 @@ var swiper2 = new Swiper(".alumniSpotlightIntersect", {
   },
 });
 
-var swiper1 = new Swiper(".intheNewsSlider", {
+var swiper1 = window.initSwiperSafe(".intheNewsSlider", {
   slidesPerView: 1,
   spaceBetween: 24,
   freeMode: true,
@@ -2301,7 +2316,7 @@ var swiper1 = new Swiper(".intheNewsSlider", {
 });
 
 
-var swiper2 = new Swiper(".studenteventslide", {
+var swiper2 = window.initSwiperSafe(".studenteventslide", {
   slidesPerView: 1.2,
   spaceBetween: 25,
   parallax: false,
@@ -2346,7 +2361,7 @@ var swiper2 = new Swiper(".studenteventslide", {
   },
 });
 
-var swiper3 = new Swiper(".innovationSlider", {
+var swiper3 = window.initSwiperSafe(".innovationSlider", {
   slidesPerView: 3,
   spaceBetween: 25,
   parallax: false,
@@ -2391,7 +2406,7 @@ var swiper3 = new Swiper(".innovationSlider", {
   },
 });
 
-var swiper4 = new Swiper(".innovationSlider2", {
+var swiper4 = window.initSwiperSafe(".innovationSlider2", {
   slidesPerView: 3,
   spaceBetween: 25,
   parallax: false,
@@ -2438,7 +2453,7 @@ var swiper4 = new Swiper(".innovationSlider2", {
 
 
 
-var swiper5 = new Swiper(".redefine-swiper", {
+var swiper5 = window.initSwiperSafe(".redefine-swiper", {
   slidesPerView: 1,
   spaceBetween: 0,
   loop: false,
@@ -2481,7 +2496,7 @@ var swiper5 = new Swiper(".redefine-swiper", {
   },
 });
 
-var swiper6 = new Swiper(".storyswiper", {
+var swiper6 = window.initSwiperSafe(".storyswiper", {
   slidesPerView: 2.5,
   spaceBetween: 20,
   speed: 300,
@@ -2524,7 +2539,7 @@ var swiper6 = new Swiper(".storyswiper", {
   },
 });
 
-var swiper7 = new Swiper(".storyswiper1", {
+var swiper7 = window.initSwiperSafe(".storyswiper1", {
   slidesPerView: 2.5,
   spaceBetween: 20,
   speed: 400,
@@ -2559,7 +2574,7 @@ var swiper7 = new Swiper(".storyswiper1", {
   },
 });
 
-var storyswiper1a = new Swiper(".storyswiper1a", {
+var storyswiper1a = window.initSwiperSafe(".storyswiper1a", {
   // slidesPerView: 2.5,
   spaceBetween: 20,
   speed: 400,
@@ -2594,7 +2609,7 @@ var storyswiper1a = new Swiper(".storyswiper1a", {
   },
 });
 
-var storyswiper1b = new Swiper(".storyswiper1b", {
+var storyswiper1b = window.initSwiperSafe(".storyswiper1b", {
   // slidesPerView: 2.5,
   spaceBetween: 20,
   speed: 400,
@@ -2629,7 +2644,7 @@ var storyswiper1b = new Swiper(".storyswiper1b", {
   },
 });
 
-var globalSwiper1 = new Swiper(".globalSwiper1", {
+var globalSwiper1 = window.initSwiperSafe(".globalSwiper1", {
   slidesPerView: 2.5,
   spaceBetween: 20,
   speed: 400,
@@ -2677,7 +2692,7 @@ var globalSwiper1 = new Swiper(".globalSwiper1", {
   },
 });
 
-var tbmFbmSwiper = new Swiper(".tbmFbmSwiper", {
+var tbmFbmSwiper = window.initSwiperSafe(".tbmFbmSwiper", {
   slidesPerView: 2.5,
   spaceBetween: 20,
   speed: 400,
@@ -2725,7 +2740,7 @@ var tbmFbmSwiper = new Swiper(".tbmFbmSwiper", {
   },
 });
 
-var tbmFbmSwiper2new = new Swiper(".tbmFbmSwiper2new", {
+var tbmFbmSwiper2new = window.initSwiperSafe(".tbmFbmSwiper2new", {
   slidesPerView: 2.5,
   spaceBetween: 20,
   speed: 400,
@@ -2773,7 +2788,7 @@ var tbmFbmSwiper2new = new Swiper(".tbmFbmSwiper2new", {
   },
 });
 
-var swiper22 = new Swiper(".panelistIntersect", {
+var swiper22 = window.initSwiperSafe(".panelistIntersect", {
   slidesPerView: 1.3,
   spaceBetween: 20,
 
@@ -2808,7 +2823,7 @@ var swiper22 = new Swiper(".panelistIntersect", {
   },
 });
 
-var swiper8 = new Swiper(".storyswiper2", {
+var swiper8 = window.initSwiperSafe(".storyswiper2", {
   slidesPerView: 2.5,
   spaceBetween: 20,
   speed: 400,
@@ -2851,7 +2866,7 @@ var swiper8 = new Swiper(".storyswiper2", {
   },
 });
 
-var swiper9 = new Swiper(".storyswiper3", {
+var swiper9 = window.initSwiperSafe(".storyswiper3", {
   slidesPerView: 2.5,
   spaceBetween: 20,
   speed: 400,
@@ -2899,7 +2914,7 @@ var swiper9 = new Swiper(".storyswiper3", {
   },
 });
 
-var swiper10 = new Swiper(".storyswiper4", {
+var swiper10 = window.initSwiperSafe(".storyswiper4", {
   slidesPerView: 2.5,
   spaceBetween: 20,
   speed: 400,
@@ -2942,7 +2957,7 @@ var swiper10 = new Swiper(".storyswiper4", {
   },
 });
 
-var swiper11 = new Swiper(".storyswiper5", {
+var swiper11 = window.initSwiperSafe(".storyswiper5", {
   slidesPerView: 2.5,
   spaceBetween: 20,
   speed: 400,
@@ -2985,7 +3000,7 @@ var swiper11 = new Swiper(".storyswiper5", {
   },
 });
 
-var swiper12 = new Swiper(".storyswiper6", {
+var swiper12 = window.initSwiperSafe(".storyswiper6", {
   slidesPerView: 2.5,
   spaceBetween: 20,
   speed: 400,
@@ -3028,7 +3043,7 @@ var swiper12 = new Swiper(".storyswiper6", {
   },
 });
 
-var swiper14 = new Swiper(".hrinsight", {
+var swiper14 = window.initSwiperSafe(".hrinsight", {
   slidesPerView: 2.5,
   spaceBetween: 20,
   speed: 400,
@@ -3073,7 +3088,7 @@ var swiper14 = new Swiper(".hrinsight", {
 
 // center swiper home
 
-var swiper15 = new Swiper(".cohortswiper", {
+var swiper15 = window.initSwiperSafe(".cohortswiper", {
   slidesPerView: 1,
   spaceBetween: 20,
   centeredSlides: true,
@@ -3120,7 +3135,7 @@ var swiper15 = new Swiper(".cohortswiper", {
 
 
 
-var swiper20 = new Swiper(".unfoldSwiper", {
+var swiper20 = window.initSwiperSafe(".unfoldSwiper", {
   slidesPerView: 2.4,
   spaceBetween: 20,
   centeredSlides: true,
@@ -3163,7 +3178,7 @@ var swiper20 = new Swiper(".unfoldSwiper", {
   },
 });
 
-var swiper20 = new Swiper(".networkingParent", {
+var swiper20 = window.initSwiperSafe(".networkingParent", {
   slidesPerView: 2.4,
   spaceBetween: 20,
   centeredSlides: true,
@@ -3203,7 +3218,7 @@ var swiper20 = new Swiper(".networkingParent", {
   },
 });
 
-var swiper21 = new Swiper(".dropshippingSwiper", {
+var swiper21 = window.initSwiperSafe(".dropshippingSwiper", {
   slidesPerView: 2.5,
   spaceBetween: 280,
   centeredSlides: true,
@@ -3245,7 +3260,7 @@ var swiper21 = new Swiper(".dropshippingSwiper", {
   },
 });
 
-var swiper22 = new Swiper(".mobSwiper", {
+var swiper22 = window.initSwiperSafe(".mobSwiper", {
   slidesPerView: 1.3,
   spaceBetween: 60,
   centeredSlides: true,
@@ -3288,7 +3303,7 @@ var swiper22 = new Swiper(".mobSwiper", {
   },
 });
 
-var swiper23 = new Swiper(".spotlightSwiper", {
+var swiper23 = window.initSwiperSafe(".spotlightSwiper", {
   slidesPerView: 3.1,
   spaceBetween: 60,
   centeredSlides: true,
@@ -3331,7 +3346,7 @@ var swiper23 = new Swiper(".spotlightSwiper", {
   },
 });
 
-var swiper24 = new Swiper(".hrSwiper", {
+var swiper24 = window.initSwiperSafe(".hrSwiper", {
   slidesPerView: 2.3,
   spaceBetween: 60,
   //centeredSlides: true,
@@ -3374,7 +3389,7 @@ var swiper24 = new Swiper(".hrSwiper", {
   },
 });
 
-var swiper26 = new Swiper(".unwindInteraction", {
+var swiper26 = window.initSwiperSafe(".unwindInteraction", {
   slidesPerView: 1,
   spaceBetween: 20,
   //centeredSlides: true,
@@ -3408,7 +3423,7 @@ var swiper26 = new Swiper(".unwindInteraction", {
   },
 });
 
-var swiper27 = new Swiper(".studentSlide", {
+var swiper27 = window.initSwiperSafe(".studentSlide", {
   slidesPerView: 1,
   spaceBetween: 60,
   centeredSlides: true,
@@ -3450,7 +3465,7 @@ var swiper27 = new Swiper(".studentSlide", {
     },
   },
 });
-var swiper28 = new Swiper(".sucessstory", {
+var swiper28 = window.initSwiperSafe(".sucessstory", {
   slidesPerView: 1,
   freeMode: true,
 
@@ -3492,7 +3507,7 @@ var swiper28 = new Swiper(".sucessstory", {
   },
 });
 
-var swiper29 = new Swiper(".elevateskill", {
+var swiper29 = window.initSwiperSafe(".elevateskill", {
   slidesPerView: 1,
   spaceBetween: 20,
   freeMode: true,
@@ -3528,7 +3543,7 @@ var swiper29 = new Swiper(".elevateskill", {
   },
 });
 
-var swiper30 = new Swiper(".facultyresearch", {
+var swiper30 = window.initSwiperSafe(".facultyresearch", {
   slidesPerView: 1,
   spaceBetween: 60,
   freeMode: true,
@@ -3564,7 +3579,7 @@ var swiper30 = new Swiper(".facultyresearch", {
   },
 });
 
-var swiper31 = new Swiper(".demodaySwiper", {
+var swiper31 = window.initSwiperSafe(".demodaySwiper", {
   slidesPerView: 1,
   spaceBetween: 20,
   freeMode: true,
@@ -3612,7 +3627,7 @@ var swiper31 = new Swiper(".demodaySwiper", {
   },
 });
 
-var swiper32 = new Swiper(".eventheld", {
+var swiper32 = window.initSwiperSafe(".eventheld", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -3645,7 +3660,7 @@ var swiper32 = new Swiper(".eventheld", {
   },
 });
 
-var swiper25 = new Swiper(".eventheld1", {
+var swiper25 = window.initSwiperSafe(".eventheld1", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -3693,7 +3708,7 @@ var swiper25 = new Swiper(".eventheld1", {
   },
 });
 
-var swiper35 = new Swiper(".eventheld2", {
+var swiper35 = window.initSwiperSafe(".eventheld2", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -3741,7 +3756,7 @@ var swiper35 = new Swiper(".eventheld2", {
   },
 });
 
-var swiper36 = new Swiper(".eventheld3", {
+var swiper36 = window.initSwiperSafe(".eventheld3", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -3789,7 +3804,7 @@ var swiper36 = new Swiper(".eventheld3", {
   },
 });
 
-var swiper37 = new Swiper(".eventheld4", {
+var swiper37 = window.initSwiperSafe(".eventheld4", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -3836,7 +3851,7 @@ var swiper37 = new Swiper(".eventheld4", {
     },
   },
 });
-var swiper38 = new Swiper(".eventheld5", {
+var swiper38 = window.initSwiperSafe(".eventheld5", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -3883,7 +3898,7 @@ var swiper38 = new Swiper(".eventheld5", {
     },
   },
 });
-var swiper39 = new Swiper(".eventheld6", {
+var swiper39 = window.initSwiperSafe(".eventheld6", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -3931,7 +3946,7 @@ var swiper39 = new Swiper(".eventheld6", {
   },
 });
 
-var swiper40 = new Swiper(".eventheld7", {
+var swiper40 = window.initSwiperSafe(".eventheld7", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -3978,7 +3993,7 @@ var swiper40 = new Swiper(".eventheld7", {
     },
   },
 });
-var swiper40 = new Swiper(".eventheld8", {
+var swiper40 = window.initSwiperSafe(".eventheld8", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4025,7 +4040,7 @@ var swiper40 = new Swiper(".eventheld8", {
     },
   },
 });
-var swiper40 = new Swiper(".eventheld9", {
+var swiper40 = window.initSwiperSafe(".eventheld9", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4072,7 +4087,7 @@ var swiper40 = new Swiper(".eventheld9", {
     },
   },
 });
-var swiper40 = new Swiper(".eventheld10", {
+var swiper40 = window.initSwiperSafe(".eventheld10", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4119,7 +4134,7 @@ var swiper40 = new Swiper(".eventheld10", {
     },
   },
 });
-var swiper40 = new Swiper(".eventheld11", {
+var swiper40 = window.initSwiperSafe(".eventheld11", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4166,7 +4181,7 @@ var swiper40 = new Swiper(".eventheld11", {
     },
   },
 });
-var swiper40 = new Swiper(".eventheld12", {
+var swiper40 = window.initSwiperSafe(".eventheld12", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4213,7 +4228,7 @@ var swiper40 = new Swiper(".eventheld12", {
     },
   },
 });
-var swiper40 = new Swiper(".eventheld13", {
+var swiper40 = window.initSwiperSafe(".eventheld13", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4261,7 +4276,7 @@ var swiper40 = new Swiper(".eventheld13", {
   },
 });
 
-var swiper40 = new Swiper(".eventheld14", {
+var swiper40 = window.initSwiperSafe(".eventheld14", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4308,7 +4323,7 @@ var swiper40 = new Swiper(".eventheld14", {
     },
   },
 });
-var swiper40 = new Swiper(".eventheld15", {
+var swiper40 = window.initSwiperSafe(".eventheld15", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4355,7 +4370,7 @@ var swiper40 = new Swiper(".eventheld15", {
     },
   },
 });
-var swiper40 = new Swiper(".eventheld16", {
+var swiper40 = window.initSwiperSafe(".eventheld16", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4402,7 +4417,7 @@ var swiper40 = new Swiper(".eventheld16", {
     },
   },
 });
-var swiper40 = new Swiper(".eventheld17", {
+var swiper40 = window.initSwiperSafe(".eventheld17", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4449,7 +4464,7 @@ var swiper40 = new Swiper(".eventheld17", {
     },
   },
 });
-var swiper40 = new Swiper(".eventheld18", {
+var swiper40 = window.initSwiperSafe(".eventheld18", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4496,7 +4511,7 @@ var swiper40 = new Swiper(".eventheld18", {
     },
   },
 });
-var swiper40 = new Swiper(".eventheld19", {
+var swiper40 = window.initSwiperSafe(".eventheld19", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4543,7 +4558,7 @@ var swiper40 = new Swiper(".eventheld19", {
     },
   },
 });
-var swiper40 = new Swiper(".eventheld20", {
+var swiper40 = window.initSwiperSafe(".eventheld20", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4590,7 +4605,7 @@ var swiper40 = new Swiper(".eventheld20", {
     },
   },
 });
-var swiper40 = new Swiper(".eventheld21", {
+var swiper40 = window.initSwiperSafe(".eventheld21", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4637,7 +4652,7 @@ var swiper40 = new Swiper(".eventheld21", {
     },
   },
 });
-var swiper40 = new Swiper(".eventheld22", {
+var swiper40 = window.initSwiperSafe(".eventheld22", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4684,7 +4699,7 @@ var swiper40 = new Swiper(".eventheld22", {
     },
   },
 });
-var swiper40 = new Swiper(".eventheld23", {
+var swiper40 = window.initSwiperSafe(".eventheld23", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4731,7 +4746,7 @@ var swiper40 = new Swiper(".eventheld23", {
     },
   },
 });
-var swiper40 = new Swiper(".eventheld24", {
+var swiper40 = window.initSwiperSafe(".eventheld24", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4779,7 +4794,7 @@ var swiper40 = new Swiper(".eventheld24", {
   },
 });
 
-var uniwnd = new Swiper(".unwind", {
+var uniwnd = window.initSwiperSafe(".unwind", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4812,7 +4827,7 @@ var uniwnd = new Swiper(".unwind", {
   },
 });
 
-var uniwnd = new Swiper(".unwind2", {
+var uniwnd = window.initSwiperSafe(".unwind2", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4845,7 +4860,7 @@ var uniwnd = new Swiper(".unwind2", {
   },
 });
 
-var uniwnd = new Swiper(".unwind1", {
+var uniwnd = window.initSwiperSafe(".unwind1", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4878,7 +4893,7 @@ var uniwnd = new Swiper(".unwind1", {
   },
 });
 
-var swiper33 = new Swiper(".fununfold", {
+var swiper33 = window.initSwiperSafe(".fununfold", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4911,7 +4926,7 @@ var swiper33 = new Swiper(".fununfold", {
   },
 });
 
-var swiper34 = new Swiper(".centeredSwiper5", {
+var swiper34 = window.initSwiperSafe(".centeredSwiper5", {
   slidesPerView: 1,
   spaceBetween: 25,
   freeMode: true,
@@ -4959,7 +4974,7 @@ var swiper34 = new Swiper(".centeredSwiper5", {
   },
 });
 
-var swiper = new Swiper(".newsSlide2", {
+var swiper = window.initSwiperSafe(".newsSlide2", {
   slidesPerView: 2.5,
   spaceBetween: 20,
 
@@ -5015,7 +5030,7 @@ var swiper = new Swiper(".newsSlide2", {
   },
 });
 
-var swiper = new Swiper(".curriculumdsai", {
+var swiper = window.initSwiperSafe(".curriculumdsai", {
   slidesPerView: 2.5,
   spaceBetween: 20,
 
@@ -5068,7 +5083,7 @@ var swiper = new Swiper(".curriculumdsai", {
 });
 
 
-var swiper = new Swiper(".highlightdsai", {
+var swiper = window.initSwiperSafe(".highlightdsai", {
   slidesPerView: 2.5,
   spaceBetween: 15,
 
@@ -5117,7 +5132,7 @@ var swiper = new Swiper(".highlightdsai", {
   },
 });
 
-var highlightdsai2 = new Swiper(".highlightdsai2", {
+var highlightdsai2 = window.initSwiperSafe(".highlightdsai2", {
   slidesPerView: 2.5,
   spaceBetween: 15,
 
@@ -5166,7 +5181,7 @@ var highlightdsai2 = new Swiper(".highlightdsai2", {
   },
 });
 
-var swiper = new Swiper(".intersectFiveSwiper", {
+var swiper = window.initSwiperSafe(".intersectFiveSwiper", {
   slidesPerView: 3,
   spaceBetween: 20,
 
@@ -5218,7 +5233,7 @@ var swiper = new Swiper(".intersectFiveSwiper", {
   },
 });
 
-var swiper1 = new Swiper(".voiceSwiper1", {
+var swiper1 = window.initSwiperSafe(".voiceSwiper1", {
   slidesPerView: 3,
   spaceBetween: 20,
 
@@ -5270,7 +5285,7 @@ var swiper1 = new Swiper(".voiceSwiper1", {
   },
 });
 
-var swiper2 = new Swiper(".voiceSwiper2", {
+var swiper2 = window.initSwiperSafe(".voiceSwiper2", {
   slidesPerView: 3,
   spaceBetween: 20,
 
@@ -5322,7 +5337,7 @@ var swiper2 = new Swiper(".voiceSwiper2", {
   },
 });
 
-var swiper = new Swiper(".intersectEventSwiper", {
+var swiper = window.initSwiperSafe(".intersectEventSwiper", {
   slidesPerView: 3,
   spaceBetween: 20,
 
@@ -5374,7 +5389,7 @@ var swiper = new Swiper(".intersectEventSwiper", {
   },
 });
 
-var swiper = new Swiper(".techIndustryImmersion", {
+var swiper = window.initSwiperSafe(".techIndustryImmersion", {
   slidesPerView: 2.5,
   spaceBetween: 20,
 
@@ -5426,7 +5441,7 @@ var swiper = new Swiper(".techIndustryImmersion", {
   },
 });
 
-var corpSlider = new Swiper(".psy-corporateSlider", {
+var corpSlider = window.initSwiperSafe(".psy-corporateSlider", {
   slidesPerView: 2.5,
   spaceBetween: 20,
 
@@ -5474,7 +5489,7 @@ var corpSlider = new Swiper(".psy-corporateSlider", {
   },
 });
 
-var swiper = new Swiper(".weekendSwiper", {
+var swiper = window.initSwiperSafe(".weekendSwiper", {
   slidesPerView: 1.2,
   spaceBetween: 20,
 
@@ -5522,7 +5537,7 @@ var swiper = new Swiper(".weekendSwiper", {
   },
 });
 
-var swiper = new Swiper(".LeaderSliderSummerSkill", {
+var swiper = window.initSwiperSafe(".LeaderSliderSummerSkill", {
   slidesPerView: 5,
   spaceBetween: 20,
 
@@ -5572,7 +5587,7 @@ var swiper = new Swiper(".LeaderSliderSummerSkill", {
 
 
 
-var swiper = new Swiper(".nextGenSlider", {
+var swiper = window.initSwiperSafe(".nextGenSlider", {
   slidesPerView: 5,
   spaceBetween: 20,
 
@@ -5620,7 +5635,7 @@ var swiper = new Swiper(".nextGenSlider", {
   },
 });
 
-var swiper = new Swiper(".LeaderSlider", {
+var swiper = window.initSwiperSafe(".LeaderSlider", {
   slidesPerView: 5,
   spaceBetween: 20,
 
@@ -5668,7 +5683,7 @@ var swiper = new Swiper(".LeaderSlider", {
   },
 });
 
-// var swiper = new Swiper(".LeaderSliderMentors", {
+// var swiper = window.initSwiperSafe(".LeaderSliderMentors", {
 //   slidesPerView: 5,
 //   spaceBetween: 20,
 
@@ -5716,7 +5731,7 @@ var swiper = new Swiper(".LeaderSlider", {
 //   },
 // });
 
-var swipermena = new Swiper(".LeaderSliderMenaLanding", {
+var swipermena = window.initSwiperSafe(".LeaderSliderMenaLanding", {
   slidesPerView: 5,
   spaceBetween: 20,
 
@@ -5764,7 +5779,7 @@ var swipermena = new Swiper(".LeaderSliderMenaLanding", {
   },
 });
 
-var swiper = new Swiper(".LeaderstudentSlider", {
+var swiper = window.initSwiperSafe(".LeaderstudentSlider", {
   slidesPerView: 4,
   spaceBetween: 20,
 
@@ -5811,7 +5826,7 @@ var swiper = new Swiper(".LeaderstudentSlider", {
     },
   },
 });
-var swiper = new Swiper(".summerWeekSlider", {
+var swiper = window.initSwiperSafe(".summerWeekSlider", {
   slidesPerView: 4,
   spaceBetween: 20,
 
@@ -5862,7 +5877,7 @@ var swiper = new Swiper(".summerWeekSlider", {
 
 
 
-var swiper = new Swiper(".psyAlmuniSwiper", {
+var swiper = window.initSwiperSafe(".psyAlmuniSwiper", {
   slidesPerView: 2.5,
   spaceBetween: 20,
 
@@ -5910,7 +5925,7 @@ var swiper = new Swiper(".psyAlmuniSwiper", {
   },
 });
 
-var swiper = new Swiper(".newsSlide3", {
+var swiper = window.initSwiperSafe(".newsSlide3", {
   slidesPerView: 2.5,
   spaceBetween: 20,
   navigation: {
@@ -5961,7 +5976,7 @@ var swiper = new Swiper(".newsSlide3", {
   },
 });
 
-var swiper = new Swiper(".historicSwiper", {
+var swiper = window.initSwiperSafe(".historicSwiper", {
   slidesPerView: 1,
   spaceBetween: 20,
 
@@ -6024,7 +6039,7 @@ var swiper = new Swiper(".historicSwiper", {
   },
 });
 
-var swiper = new Swiper(".historicSwiper2", {
+var swiper = window.initSwiperSafe(".historicSwiper2", {
   slidesPerView: 1,
   spaceBetween: 20,
 
@@ -6087,7 +6102,7 @@ var swiper = new Swiper(".historicSwiper2", {
   },
 });
 
-var swiper = new Swiper(".historicSwiper3", {
+var swiper = window.initSwiperSafe(".historicSwiper3", {
   slidesPerView: 1,
   spaceBetween: 20,
 
@@ -6150,7 +6165,7 @@ var swiper = new Swiper(".historicSwiper3", {
   },
 });
 
-var swiper = new Swiper(".newslide5", {
+var swiper = window.initSwiperSafe(".newslide5", {
   slidesPerView: 2.5,
   spaceBetween: 20,
 
@@ -6198,7 +6213,7 @@ var swiper = new Swiper(".newslide5", {
   },
 });
 
-var swiper = new Swiper(".newsSlide6", {
+var swiper = window.initSwiperSafe(".newsSlide6", {
   slidesPerView: 2.5,
   spaceBetween: 20,
 
@@ -6246,7 +6261,7 @@ var swiper = new Swiper(".newsSlide6", {
   },
 });
 
-var swiper = new Swiper(".newsSlide7", {
+var swiper = window.initSwiperSafe(".newsSlide7", {
   slidesPerView: 2.5,
   spaceBetween: 20,
 
@@ -6298,7 +6313,7 @@ var swiper = new Swiper(".newsSlide7", {
   },
 });
 
-var swiper = new Swiper(".newsSlide8", {
+var swiper = window.initSwiperSafe(".newsSlide8", {
   slidesPerView: 2.5,
   spaceBetween: 20,
 
@@ -6352,7 +6367,7 @@ var swiper = new Swiper(".newsSlide8", {
 
 
 
-var swiper = new Swiper(".mastersScrollTbm", {
+var swiper = window.initSwiperSafe(".mastersScrollTbm", {
   slidesPerView: "auto", // Adjusts dynamically
   // centeredSlides: true, // Centers active slide
   spaceBetween: 20,
@@ -6400,7 +6415,7 @@ var swiper = new Swiper(".mastersScrollTbm", {
   },
 });
 
-var swiperM = new Swiper(".mastersScrollCurriculum", {
+var swiperM = window.initSwiperSafe(".mastersScrollCurriculum", {
   slidesPerView: "auto", // Adjusts dynamically
   // centeredSlides: true, // Centers active slide
   spaceBetween: 20,
@@ -6449,7 +6464,7 @@ var swiperM = new Swiper(".mastersScrollCurriculum", {
 });
 
 // temperory slider
-var experienceMasterSlider = new Swiper(".itTheNews", {
+var experienceMasterSlider = window.initSwiperSafe(".itTheNews", {
   slidesPerView: 1,
   spaceBetween: 10,
   speed: 2000,
@@ -6484,7 +6499,7 @@ var experienceMasterSlider = new Swiper(".itTheNews", {
   },
 });
 
-var singleEvSlider = new Swiper(".highlight-swiper", {
+var singleEvSlider = window.initSwiperSafe(".highlight-swiper", {
   slidesPerView: 4,
   spaceBetween: 15,
   loop: false,
@@ -6535,7 +6550,7 @@ var singleEvSlider = new Swiper(".highlight-swiper", {
   },
 });
 
-var singleEvSlider = new Swiper(".highlight-swiper1", {
+var singleEvSlider = window.initSwiperSafe(".highlight-swiper1", {
   slidesPerView: 4,
   spaceBetween: 15,
   loop: false,
@@ -6587,7 +6602,7 @@ var singleEvSlider = new Swiper(".highlight-swiper1", {
     },
   },
 });
-var singleEvSlider = new Swiper(".researchSwiper", {
+var singleEvSlider = window.initSwiperSafe(".researchSwiper", {
   slidesPerView: 4,
   spaceBetween: 15,
   loop: false,
@@ -6645,7 +6660,7 @@ var singleEvSlider = new Swiper(".researchSwiper", {
 
 // HSSL Event Slider Start
 
-var highSchoolSlider = new Swiper(".highSchoolSlider", {
+var highSchoolSlider = window.initSwiperSafe(".highSchoolSlider", {
   slidesPerView: 4,
   spaceBetween: 20,
   loop: false,
@@ -6693,7 +6708,7 @@ var highSchoolSlider = new Swiper(".highSchoolSlider", {
   },
 });
 
-var highSchoolPreviousSlider = new Swiper(".highSchoolPreviousSlider", {
+var highSchoolPreviousSlider = window.initSwiperSafe(".highSchoolPreviousSlider", {
   slidesPerView: 3,
   spaceBetween: 15,
   loop: false,
@@ -6726,7 +6741,7 @@ var highSchoolPreviousSlider = new Swiper(".highSchoolPreviousSlider", {
   },
 });
 
-var StudentProfileSwiper = new Swiper(".StudentProfileSwiper", {
+var StudentProfileSwiper = window.initSwiperSafe(".StudentProfileSwiper", {
   slidesPerView: 3,
   spaceBetween: 15,
   loop: false,
@@ -6761,7 +6776,7 @@ var StudentProfileSwiper = new Swiper(".StudentProfileSwiper", {
 
 // HSSL Event Slider End
 
-var swiper = new Swiper(".newslide1", {
+var swiper = window.initSwiperSafe(".newslide1", {
   slidesPerView: 3,
   spaceBetween: 20,
   navigation: {
@@ -6807,7 +6822,7 @@ var swiper = new Swiper(".newslide1", {
     },
   },
 });
-var swiper = new Swiper(".newslide2", {
+var swiper = window.initSwiperSafe(".newslide2", {
   slidesPerView: 5,
   spaceBetween: 20,
 
@@ -6857,7 +6872,7 @@ var swiper = new Swiper(".newslide2", {
 
 // Challenges Page Sliders Start
 
-var DropshippingSlider = new Swiper(".DropshippingSlider", {
+var DropshippingSlider = window.initSwiperSafe(".DropshippingSlider", {
   slidesPerView: 4,
   spaceBetween: 20,
   loop: false,
@@ -6905,7 +6920,7 @@ var DropshippingSlider = new Swiper(".DropshippingSlider", {
   },
 });
 
-var ronitSwiper = new Swiper(".ronitSwiper", {
+var ronitSwiper = window.initSwiperSafe(".ronitSwiper", {
   slidesPerView: 4,
   spaceBetween: 20,
   loop: false,
@@ -6953,7 +6968,7 @@ var ronitSwiper = new Swiper(".ronitSwiper", {
   },
 });
 
-var studentChallengeSwiper = new Swiper(".studentChallengeSwiper", {
+var studentChallengeSwiper = window.initSwiperSafe(".studentChallengeSwiper", {
   slidesPerView: 4,
   spaceBetween: 20,
   loop: false,
@@ -7001,7 +7016,7 @@ var studentChallengeSwiper = new Swiper(".studentChallengeSwiper", {
   },
 });
 
-var madhusSwiper = new Swiper(".madhusSwiper", {
+var madhusSwiper = window.initSwiperSafe(".madhusSwiper", {
   slidesPerView: 4,
   spaceBetween: 20,
   loop: false,
@@ -7049,7 +7064,7 @@ var madhusSwiper = new Swiper(".madhusSwiper", {
   },
 });
 
-var arialSwiper = new Swiper(".arialSwiper", {
+var arialSwiper = window.initSwiperSafe(".arialSwiper", {
   slidesPerView: 4,
   spaceBetween: 20,
   loop: false,
@@ -7097,7 +7112,7 @@ var arialSwiper = new Swiper(".arialSwiper", {
   },
 });
 
-var ContentcreatorSlider = new Swiper(".challengeSwiper", {
+var ContentcreatorSlider = window.initSwiperSafe(".challengeSwiper", {
   slidesPerView: 4,
   spaceBetween: 20,
   loop: false,
@@ -7147,7 +7162,7 @@ var ContentcreatorSlider = new Swiper(".challengeSwiper", {
   },
 });
 
-var rajikSwiper = new Swiper(".rajikSwiper", {
+var rajikSwiper = window.initSwiperSafe(".rajikSwiper", {
   slidesPerView: 4,
   spaceBetween: 20,
   loop: false,
@@ -7197,7 +7212,7 @@ var rajikSwiper = new Swiper(".rajikSwiper", {
   },
 });
 
-var wildConsulting = new Swiper(".wildConsulting", {
+var wildConsulting = window.initSwiperSafe(".wildConsulting", {
   slidesPerView: 4,
   spaceBetween: 20,
   loop: false,
@@ -7247,7 +7262,7 @@ var wildConsulting = new Swiper(".wildConsulting", {
   },
 });
 
-var ventureProgram = new Swiper(".ventureProgram", {
+var ventureProgram = window.initSwiperSafe(".ventureProgram", {
   slidesPerView: 4,
   spaceBetween: 20,
   loop: false,
@@ -7297,7 +7312,7 @@ var ventureProgram = new Swiper(".ventureProgram", {
   },
 });
 
-var insta_slider = new Swiper(".insta_slider", {
+var insta_slider = window.initSwiperSafe(".insta_slider", {
   slidesPerView: 4,
   spaceBetween: 120,
   loop: false,
@@ -7355,7 +7370,7 @@ var insta_slider = new Swiper(".insta_slider", {
 
 // Challenges Page Sliders End
 
-var corpSlider = new Swiper(".psy-corporateSlider", {
+var corpSlider = window.initSwiperSafe(".psy-corporateSlider", {
   slidesPerView: 2.5,
   spaceBetween: 20,
 
@@ -7403,7 +7418,7 @@ var corpSlider = new Swiper(".psy-corporateSlider", {
   },
 });
 
-var shareEventSlider = new Swiper(".shareEventSlider", {
+var shareEventSlider = window.initSwiperSafe(".shareEventSlider", {
   slidesPerView: 3,
   spaceBetween: 25,
   loop: false,
@@ -7445,7 +7460,7 @@ var shareEventSlider = new Swiper(".shareEventSlider", {
   },
 });
 
-var swiper = new Swiper(".sneakPeakSwiperSlider", {
+var swiper = window.initSwiperSafe(".sneakPeakSwiperSlider", {
   slidesPerView: 1.3,
   spaceBetween: 20,
   loop: false,
@@ -7486,7 +7501,7 @@ var swiper = new Swiper(".sneakPeakSwiperSlider", {
   },
 });
 
-var swiper = new Swiper(".swiperSpeakersNew", {
+var swiper = window.initSwiperSafe(".swiperSpeakersNew", {
   slidesPerView: 1.2,
   loop: false,
   spaceBetween: 20,
@@ -7525,7 +7540,7 @@ var swiper = new Swiper(".swiperSpeakersNew", {
 
 //  get prepped swiper
 
-var swiper = new Swiper(".consultSlider", {
+var swiper = window.initSwiperSafe(".consultSlider", {
   slidesPerView: 1.2,
   spaceBetween: 20,
   freeMode: true,
@@ -7565,7 +7580,7 @@ var swiper = new Swiper(".consultSlider", {
   },
 });
 
-var swiper = new Swiper(".productSlider", {
+var swiper = window.initSwiperSafe(".productSlider", {
   slidesPerView: 1.2,
   spaceBetween: 20,
   freeMode: true,
@@ -7605,7 +7620,7 @@ var swiper = new Swiper(".productSlider", {
   },
 });
 
-var swiper = new Swiper(".uginthenews", {
+var swiper = window.initSwiperSafe(".uginthenews", {
   slidesPerView: 1.2,
   spaceBetween: 20,
   freeMode: true,
@@ -7648,7 +7663,7 @@ var swiper = new Swiper(".uginthenews", {
 });
 
 
-var swiper = new Swiper(".uginthenewsDsai", {
+var swiper = window.initSwiperSafe(".uginthenewsDsai", {
   slidesPerView: 1.2,
   spaceBetween: 15,
   freeMode: true,
@@ -7693,7 +7708,7 @@ var swiper = new Swiper(".uginthenewsDsai", {
   },
 });
 
-var swiper = new Swiper(".insightSwiper", {
+var swiper = window.initSwiperSafe(".insightSwiper", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".insightSwiper-Next",
@@ -7746,7 +7761,7 @@ var swiper = new Swiper(".insightSwiper", {
   },
 });
 
-var swiper = new Swiper(".outclassSwiper1", {
+var swiper = window.initSwiperSafe(".outclassSwiper1", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".outclassSwiper1-Next",
@@ -7799,7 +7814,7 @@ var swiper = new Swiper(".outclassSwiper1", {
   },
 });
 
-var swiper = new Swiper(".outclassSwiper2", {
+var swiper = window.initSwiperSafe(".outclassSwiper2", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".outclassSwiper2-Next",
@@ -7852,7 +7867,7 @@ var swiper = new Swiper(".outclassSwiper2", {
   },
 });
 
-var swiper = new Swiper(".outclassSwiper3", {
+var swiper = window.initSwiperSafe(".outclassSwiper3", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".outclassSwiper3-Next",
@@ -7905,7 +7920,7 @@ var swiper = new Swiper(".outclassSwiper3", {
   },
 });
 
-var swiper = new Swiper(".outclassSwiper4", {
+var swiper = window.initSwiperSafe(".outclassSwiper4", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".outclassSwiper4-Next",
@@ -7958,7 +7973,7 @@ var swiper = new Swiper(".outclassSwiper4", {
   },
 });
 
-var swiper = new Swiper(".outclassSwiperTbm1", {
+var swiper = window.initSwiperSafe(".outclassSwiperTbm1", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".outclassSwiperTbm1-Next",
@@ -8011,7 +8026,7 @@ var swiper = new Swiper(".outclassSwiperTbm1", {
   },
 });
 
-var swiper = new Swiper(".outclassSwiperTbm2", {
+var swiper = window.initSwiperSafe(".outclassSwiperTbm2", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".outclassSwiperTbm2-Next",
@@ -8064,7 +8079,7 @@ var swiper = new Swiper(".outclassSwiperTbm2", {
   },
 });
 
-var swiper = new Swiper(".outclassSwiperTbm3", {
+var swiper = window.initSwiperSafe(".outclassSwiperTbm3", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".outclassSwiperTbm3-Next",
@@ -8117,7 +8132,7 @@ var swiper = new Swiper(".outclassSwiperTbm3", {
   },
 });
 
-var swiper = new Swiper(".outclassSwiperTbm4", {
+var swiper = window.initSwiperSafe(".outclassSwiperTbm4", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".outclassSwiperTbm4-Next",
@@ -8170,7 +8185,7 @@ var swiper = new Swiper(".outclassSwiperTbm4", {
   },
 });
 
-var swiper = new Swiper(".outclassSwiperGlobalTbm4", {
+var swiper = window.initSwiperSafe(".outclassSwiperGlobalTbm4", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".outclassSwiperGlobalTbm4-Next",
@@ -8223,7 +8238,7 @@ var swiper = new Swiper(".outclassSwiperGlobalTbm4", {
   },
 });
 
-var swiper = new Swiper(".outclassSwiperPsm1", {
+var swiper = window.initSwiperSafe(".outclassSwiperPsm1", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".outclassSwiperPsm1-Next",
@@ -8278,7 +8293,7 @@ var swiper = new Swiper(".outclassSwiperPsm1", {
 
 
 
-var swiper = new Swiper(".outclassSwiperPsm2", {
+var swiper = window.initSwiperSafe(".outclassSwiperPsm2", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".outclassSwiperPsm2-Next",
@@ -8331,7 +8346,7 @@ var swiper = new Swiper(".outclassSwiperPsm2", {
   },
 });
 
-var swiper = new Swiper(".outclassSwiperPsm3", {
+var swiper = window.initSwiperSafe(".outclassSwiperPsm3", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".outclassSwiperPsm3-Next",
@@ -8384,7 +8399,7 @@ var swiper = new Swiper(".outclassSwiperPsm3", {
   },
 });
 
-var swiper = new Swiper(".outclassSwiperPsm4", {
+var swiper = window.initSwiperSafe(".outclassSwiperPsm4", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".outclassSwiperPsm4-Next",
@@ -8437,7 +8452,7 @@ var swiper = new Swiper(".outclassSwiperPsm4", {
   },
 });
 
-var swiper = new Swiper(".ourProgramSwiper", {
+var swiper = window.initSwiperSafe(".ourProgramSwiper", {
   spaceBetween: 10,
   navigation: {
     nextEl: ".ourProgramSwiper-Next",
@@ -8490,7 +8505,7 @@ var swiper = new Swiper(".ourProgramSwiper", {
   },
 });
 
-var swiper = new Swiper(".ourProgramTbmSwiper", {
+var swiper = window.initSwiperSafe(".ourProgramTbmSwiper", {
   spaceBetween: 16,
   navigation: {
     nextEl: ".ourProgramTbmSwiper-Next",
@@ -8543,7 +8558,7 @@ var swiper = new Swiper(".ourProgramTbmSwiper", {
   },
 });
 
-var swiper = new Swiper(".studentStoryTBm", {
+var swiper = window.initSwiperSafe(".studentStoryTBm", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".studentStoryTBm-Next",
@@ -8596,7 +8611,7 @@ var swiper = new Swiper(".studentStoryTBm", {
   },
 });
 
-var swiper = new Swiper(".studentStoryPsm", {
+var swiper = window.initSwiperSafe(".studentStoryPsm", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".studentStoryPsm-Next",
@@ -8651,7 +8666,7 @@ var swiper = new Swiper(".studentStoryPsm", {
 
 
 
-var swiper = new Swiper(".insightSwiperCurriculum", {
+var swiper = window.initSwiperSafe(".insightSwiperCurriculum", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".insightSwiperCurriculum-Next",
@@ -8704,7 +8719,7 @@ var swiper = new Swiper(".insightSwiperCurriculum", {
   },
 });
 
-var swiper = new Swiper(".insightSwipertbmCurriculum ", {
+var swiper = window.initSwiperSafe(".insightSwipertbmCurriculum ", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".insightSwipertbmCurriculum-Next",
@@ -8757,7 +8772,7 @@ var swiper = new Swiper(".insightSwipertbmCurriculum ", {
   },
 });
 
-var swiper = new Swiper(".insightSwipertbm", {
+var swiper = window.initSwiperSafe(".insightSwipertbm", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".insightSwipertbm-Next",
@@ -8803,7 +8818,7 @@ var swiper = new Swiper(".insightSwipertbm", {
 
 
 
-var swiper = new Swiper(".tbmFacultySwiper", {
+var swiper = window.initSwiperSafe(".tbmFacultySwiper", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".tbmFacultySwiper-Next",
@@ -8856,7 +8871,7 @@ var swiper = new Swiper(".tbmFacultySwiper", {
   },
 });
 
-var swiper = new Swiper(".smgFacultySwiper", {
+var swiper = window.initSwiperSafe(".smgFacultySwiper", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".smgFacultySwiper-Next",
@@ -8909,7 +8924,7 @@ var swiper = new Swiper(".smgFacultySwiper", {
   },
 });
 
-var swiper = new Swiper(".hrosFacultySwiper", {
+var swiper = window.initSwiperSafe(".hrosFacultySwiper", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".hrosFacultySwiper-Next",
@@ -8962,7 +8977,7 @@ var swiper = new Swiper(".hrosFacultySwiper", {
   },
 });
 
-var swiper = new Swiper(".hrOsSwiper", {
+var swiper = window.initSwiperSafe(".hrOsSwiper", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".hrOsSwiper-Next",
@@ -9015,7 +9030,7 @@ var swiper = new Swiper(".hrOsSwiper", {
   },
 });
 
-var swiper = new Swiper(".globalFinanceSwiper", {
+var swiper = window.initSwiperSafe(".globalFinanceSwiper", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".globalFinanceSwiper-Next",
@@ -9069,7 +9084,7 @@ var swiper = new Swiper(".globalFinanceSwiper", {
 });
 
 
-var swiper = new Swiper(".tbmFacultySwiperPgp", {
+var swiper = window.initSwiperSafe(".tbmFacultySwiperPgp", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".tbmFacultySwiperPgp-Next",
@@ -9122,7 +9137,7 @@ var swiper = new Swiper(".tbmFacultySwiperPgp", {
   },
 });
 
-var swiper = new Swiper(".tbmFacultyGlobalSwiper", {
+var swiper = window.initSwiperSafe(".tbmFacultyGlobalSwiper", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".tbmFacultyGlobalSwiper-Next",
@@ -9175,7 +9190,7 @@ var swiper = new Swiper(".tbmFacultyGlobalSwiper", {
   },
 });
 
-var swiper = new Swiper(".insightSwiperAdmission", {
+var swiper = window.initSwiperSafe(".insightSwiperAdmission", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".insightSwiperAdmission-Next",
@@ -9230,7 +9245,7 @@ var swiper = new Swiper(".insightSwiperAdmission", {
 
 
 
-var swiper = new Swiper(".insightSwiperClass", {
+var swiper = window.initSwiperSafe(".insightSwiperClass", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".insightSwiperClass-Next",
@@ -9283,7 +9298,7 @@ var swiper = new Swiper(".insightSwiperClass", {
   },
 });
 
-var swiper = new Swiper(".insightSwiperClassTbm", {
+var swiper = window.initSwiperSafe(".insightSwiperClassTbm", {
   spaceBetween: 15,
   navigation: {
     nextEl: ".insightSwiperClassTbm-Next",
@@ -9335,7 +9350,7 @@ var swiper = new Swiper(".insightSwiperClassTbm", {
     },
   },
 });
-var swiper = new Swiper(".hearFromAlumni", {
+var swiper = window.initSwiperSafe(".hearFromAlumni", {
   slidesPerView: 1,
   spaceBetween: 20,
   freeMode: true,
@@ -9376,7 +9391,7 @@ var swiper = new Swiper(".hearFromAlumni", {
   },
 });
 
-var swiper = new Swiper(".marketingSlider", {
+var swiper = window.initSwiperSafe(".marketingSlider", {
   slidesPerView: 1.2,
   spaceBetween: 20,
   freeMode: true,
@@ -9416,7 +9431,7 @@ var swiper = new Swiper(".marketingSlider", {
   },
 });
 
-var swiper = new Swiper(".financeSlider", {
+var swiper = window.initSwiperSafe(".financeSlider", {
   slidesPerView: 1.2,
   spaceBetween: 20,
   freeMode: true,
@@ -9456,7 +9471,7 @@ var swiper = new Swiper(".financeSlider", {
   },
 });
 
-var swiper = new Swiper(".homeDsaiSlider", {
+var swiper = window.initSwiperSafe(".homeDsaiSlider", {
   slidesPerView: 1.2,
   spaceBetween: 20,
   freeMode: true,
@@ -9496,7 +9511,7 @@ var swiper = new Swiper(".homeDsaiSlider", {
   },
 });
 
-var swiper = new Swiper(".teachingSwiper", {
+var swiper = window.initSwiperSafe(".teachingSwiper", {
   slidesPerView: 1.2,
   spaceBetween: 20,
   freeMode: true,
@@ -9536,7 +9551,7 @@ var swiper = new Swiper(".teachingSwiper", {
   },
 });
 
-var swiper = new Swiper(".vAlumniSwiper", {
+var swiper = window.initSwiperSafe(".vAlumniSwiper", {
   slidesPerView: 1.2,
   spaceBetween: 20,
   freeMode: true,
@@ -9576,7 +9591,7 @@ var swiper = new Swiper(".vAlumniSwiper", {
   },
 });
 
-var swiper = new Swiper(".intersectLeaderSlider", {
+var swiper = window.initSwiperSafe(".intersectLeaderSlider", {
   slidesPerView: 1.2,
   spaceBetween: 20,
   freeMode: false,
@@ -9612,7 +9627,7 @@ var swiper = new Swiper(".intersectLeaderSlider", {
   },
 });
 
-var swiper = new Swiper(".teachingSwiper1", {
+var swiper = window.initSwiperSafe(".teachingSwiper1", {
   slidesPerView: 1.2,
   spaceBetween: 20,
   freeMode: true,
@@ -9652,7 +9667,7 @@ var swiper = new Swiper(".teachingSwiper1", {
   },
 });
 
-var swiper8 = new Swiper(".experienceWorld", {
+var swiper8 = window.initSwiperSafe(".experienceWorld", {
   slidesPerView: 1,
   spaceBetween: 20,
   speed: 400,
@@ -9701,7 +9716,7 @@ var swiper8 = new Swiper(".experienceWorld", {
   },
 });
 
-var swiper8 = new Swiper(".mentorsTest", {
+var swiper8 = window.initSwiperSafe(".mentorsTest", {
   slidesPerView: 1,
   spaceBetween: 10,
   speed: 400,
@@ -9743,7 +9758,7 @@ var swiper8 = new Swiper(".mentorsTest", {
   },
 });
 
-var tracksSimulationSwiper = new Swiper(".tracksSimulationSwiper", {
+var tracksSimulationSwiper = window.initSwiperSafe(".tracksSimulationSwiper", {
   slidesPerView: 1,
   spaceBetween: 20,
   speed: 400,
@@ -9786,7 +9801,7 @@ var tracksSimulationSwiper = new Swiper(".tracksSimulationSwiper", {
   },
 });
 
-var swiper = new Swiper(".skillSlider", {
+var swiper = window.initSwiperSafe(".skillSlider", {
   slidesPerView: 1,
   spaceBetween: 20,
   speed: 400,
@@ -9836,7 +9851,7 @@ var swiper = new Swiper(".skillSlider", {
   },
 });
 
-var swiper = new Swiper(".businessesBuilt", {
+var swiper = window.initSwiperSafe(".businessesBuilt", {
   slidesPerView: 1,
   spaceBetween: 20,
   speed: 400,
@@ -9885,7 +9900,7 @@ var swiper = new Swiper(".businessesBuilt", {
   },
 });
 
-var businesSlider = new Swiper(".businesSlider", {
+var businesSlider = window.initSwiperSafe(".businesSlider", {
   slidesPerView: 1,
   spaceBetween: 20,
   speed: 400,
@@ -9928,7 +9943,7 @@ var businesSlider = new Swiper(".businesSlider", {
 
 
 
-var swiper0 = new Swiper(".sharkTank", {
+var swiper0 = window.initSwiperSafe(".sharkTank", {
   slidesPerView: 1,
   freeMode: true,
   loop: true,
@@ -9988,7 +10003,7 @@ var swiper0 = new Swiper(".sharkTank", {
   },
 });
 
-var swiper0 = new Swiper(".masterSwiper12", {
+var swiper0 = window.initSwiperSafe(".masterSwiper12", {
   slidesPerView: 1,
   freeMode: true,
   loop: true,
@@ -10048,7 +10063,7 @@ var swiper0 = new Swiper(".masterSwiper12", {
   },
 });
 
-var swiper0 = new Swiper(".outClassSwiper", {
+var swiper0 = window.initSwiperSafe(".outClassSwiper", {
   slidesPerView: 1,
   spaceBetween: 20,
   freeMode: true,
@@ -10086,7 +10101,7 @@ var swiper0 = new Swiper(".outClassSwiper", {
   },
 });
 
-var swiper = new Swiper(".industryTechSwiper", {
+var swiper = window.initSwiperSafe(".industryTechSwiper", {
   slidesPerView: 1.2,
   spaceBetween: 20,
   freeMode: true,
@@ -10126,7 +10141,7 @@ var swiper = new Swiper(".industryTechSwiper", {
   },
 });
 
-var swiper = new Swiper(".logoSwiper", {
+var swiper = window.initSwiperSafe(".logoSwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
@@ -10137,7 +10152,7 @@ var swiper = new Swiper(".logoSwiper", {
   },
 });
 
-var swiper = new Swiper(".mastersScrollPgp", {
+var swiper = window.initSwiperSafe(".mastersScrollPgp", {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
@@ -10164,7 +10179,7 @@ var swiper = new Swiper(".mastersScrollPgp", {
 
 
 
-var swiper = new Swiper(".roadMapSwiper", {
+var swiper = window.initSwiperSafe(".roadMapSwiper", {
   slidesPerView: 1.4,
   spaceBetween: 10,
   loop: true,
@@ -10207,7 +10222,7 @@ var swiper = new Swiper(".roadMapSwiper", {
   },
 });
 
-var swiper = new Swiper(".studentAlumniSwiper", {
+var swiper = window.initSwiperSafe(".studentAlumniSwiper", {
   slidesPerView: 1.2,
   spaceBetween: 20,
   freeMode: true,
@@ -10247,7 +10262,7 @@ var swiper = new Swiper(".studentAlumniSwiper", {
   },
 });
 
-var swiper = new Swiper(".phyMastersScroll", {
+var swiper = window.initSwiperSafe(".phyMastersScroll", {
   slidesPerView: "auto", // Adjusts dynamically
 
   spaceBetween: 20,
@@ -10295,7 +10310,7 @@ var swiper = new Swiper(".phyMastersScroll", {
   },
 });
 
-var swiper = new Swiper(".academicDsai", {
+var swiper = window.initSwiperSafe(".academicDsai", {
   slidesPerView: 2.5,
   spaceBetween: 30,
 
@@ -10347,7 +10362,7 @@ var swiper = new Swiper(".academicDsai", {
   },
 });
 
-var swiper = new Swiper(".facultySwiper21", {
+var swiper = window.initSwiperSafe(".facultySwiper21", {
   slidesPerView: 2.5,
   spaceBetween: 30,
 
@@ -10395,7 +10410,7 @@ var swiper = new Swiper(".facultySwiper21", {
   },
 });
 
-var swiper = new Swiper(".activitiesSlider", {
+var swiper = window.initSwiperSafe(".activitiesSlider", {
   slidesPerView: 2.5,
   spaceBetween: 30,
 
@@ -10447,7 +10462,7 @@ var swiper = new Swiper(".activitiesSlider", {
   },
 });
 
-var swiper = new Swiper(".committeClubSwiper", {
+var swiper = window.initSwiperSafe(".committeClubSwiper", {
   slidesPerView: 2.5,
   spaceBetween: 30,
 
@@ -10499,7 +10514,7 @@ var swiper = new Swiper(".committeClubSwiper", {
   },
 });
 
-var swiper = new Swiper(".mastersScrollerStudent", {
+var swiper = window.initSwiperSafe(".mastersScrollerStudent", {
   slidesPerView: "auto", // Adjusts dynamically
   centeredSlides: true, // Centers active slide
   spaceBetween: 20,
@@ -10548,7 +10563,7 @@ var swiper = new Swiper(".mastersScrollerStudent", {
 });
 
 
-var swiper = new Swiper(".revenueWrapper", {
+var swiper = window.initSwiperSafe(".revenueWrapper", {
   slidesPerView: "auto",
   centeredSlides: true,
   initialSlide: 1,
@@ -10597,7 +10612,7 @@ var swiper = new Swiper(".revenueWrapper", {
 });
 
 
-var swiper = new Swiper(".mastersScrollAi", {
+var swiper = window.initSwiperSafe(".mastersScrollAi", {
   slidesPerView: "auto", // Adjusts dynamically
   // centeredSlides: true, // Centers active slide
   spaceBetween: 20,
@@ -10645,7 +10660,7 @@ var swiper = new Swiper(".mastersScrollAi", {
   },
 });
 
-var swiper = new Swiper(".claimSwiper", {
+var swiper = window.initSwiperSafe(".claimSwiper", {
   slidesPerView: 1.01,
   spaceBetween: 10,
   freeMode: true,
@@ -10688,7 +10703,7 @@ var swiper = new Swiper(".claimSwiper", {
   },
 });
 
-var swiper = new Swiper(".bootcamp", {
+var swiper = window.initSwiperSafe(".bootcamp", {
   spaceBetween: 15,
   navigation: {
 
@@ -10743,7 +10758,7 @@ var swiper = new Swiper(".bootcamp", {
 });
 
 
-var swiper = new Swiper(".realConversationSwiper", {
+var swiper = window.initSwiperSafe(".realConversationSwiper", {
   spaceBetween: 15,
   navigation: {
 

@@ -1,3 +1,6 @@
+
+
+
 import fs from 'node:fs'
 import fsp from 'node:fs/promises'
 import path from 'node:path'
@@ -174,11 +177,11 @@ function rewriteHtml(html, domains, currentDomain) {
   // Fix broken SVG icons.
   out = out.replace(
     /(?:\.\.\/|\.\.\.\/)?files\.aitd\.link\/resources\/svg\//gi,
-    '/images/files.aitd.link/resources/svg/',
+    '/imag/assets/images/',
   )
   out = out.replace(
     /https?:\/\/files\.aitd\.link\/resources\/svg\//gi,
-    '/images/files.aitd.link/resources/svg/',
+    '/imag/assets/images/',
   )
 
   // Home hero: replace background images with the user's custom background.
@@ -554,7 +557,7 @@ function rewriteHtml(html, domains, currentDomain) {
       wrapper.innerHTML = html;
 
       if (typeof Swiper !== 'undefined') {
-        new Swiper('.testimonialsSwiper', {
+        window.initSwiperSafe('.testimonialsSwiper', {
           slidesPerView: 1,
           spaceBetween: 24,
           loop: true,
