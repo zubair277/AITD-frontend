@@ -3517,6 +3517,10 @@ window.initSwiperSafe = function(selector, options) {
             (function () {
                 const $menu = $("header.topHeader");
                 let lastScrollTop = 0;
+
+                function safeNumber(val) {
+                    return Number(val) || 0;
+                }
                 const menuHeight = safeNumber($menu.outerHeight());
                 const windowHeight = safeNumber($(window).height());
         
@@ -7325,6 +7329,7 @@ window.initSwiperSafe = function(selector, options) {
                 let minDistance = Infinity;
         
                 cards.forEach(card => {
+                    if (!card) return;
                     const cardRect = card.getBoundingClientRect();
                     const cardCenter = cardRect.left + cardRect.width / 2;
                     const distance = Math.abs(cardCenter - containerCenter);
@@ -8032,8 +8037,7 @@ window.initSwiperSafe = function(selector, options) {
                 },
             });
         
-        </script>    </div>
-    <script src="../unpkg.com/%40lottiefiles/lottie-player%402.0.12/dist/lottie-player.js"></script>
+        </script>    </section>
 
             <script>
                 document.addEventListener("DOMContentLoaded", () => {
@@ -8044,6 +8048,7 @@ window.initSwiperSafe = function(selector, options) {
                         const lotties = document.querySelectorAll('dotlottie-player');
 
                         const isActuallyVisible = (el) => {
+                            if (!el) return false;
                             const rect = el.getBoundingClientRect();
                             const topVisible = rect.top >= 0;
                             const bottomVisible = rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
@@ -8078,6 +8083,7 @@ window.initSwiperSafe = function(selector, options) {
                             const wrappers = document.querySelectorAll(".learnBelowWrapper");
 
                             wrappers.forEach((card) => {
+                                if (!card) return;
                                 const rect = card.getBoundingClientRect();
                                 const viewportMid = window.innerHeight / 2;
                                 const isMid = rect.top < viewportMid && rect.bottom > viewportMid;
@@ -8174,6 +8180,7 @@ window.initSwiperSafe = function(selector, options) {
 
             function checkPositionTrigger() {
                 const triggerCard = wrappers[wrappers.length - 1];
+                if (!triggerCard) return;
                 const rect = triggerCard.getBoundingClientRect();
                 const triggerPoint = 160;
 
@@ -8198,6 +8205,7 @@ window.initSwiperSafe = function(selector, options) {
 
             function checkMidpoints() {
                 wrappers.forEach((card) => {
+                    if (!card) return;
                     const rect = card.getBoundingClientRect();
                     const viewportMid = window.innerHeight / 2;
                     const isMid = rect.top < viewportMid && rect.bottom > viewportMid;
@@ -10559,34 +10567,7 @@ window.initSwiperSafe = function(selector, options) {
             <script defer async src="../assets.aitd.link/js/main.js" ></script>
             <script defer async src="assets/js/sliders.js" ></script>
         
-        <script type="text/javascript">
-        _linkedin_partner_id = "3683610";
-        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-        </script><script type="text/javascript">
-        (function(l) {
-        if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
-        window.lintrk.q=[]}
-        var s = document.getElementsByTagName("script")[0];
-        var b = document.createElement("script");
-        b.type = "text/javascript";b.async = true;
-        b.src = "../snap.licdn.com/li.lms-analytics/insight.min.js";
-        s.parentNode.insertBefore(b, s);})(window.lintrk);
-        </script>
-        <noscript>
-        <img height="1" width="1" style="display:none;" alt="Icon" src="https://px.ads.linkedin.com/collect/?pid=3683610&amp;fmt=gif" />
-        </noscript><script src="../cdn.jsdelivr.net/npm/jquery%403.5.1/dist/jquery.min.js"></script>
-        
-        <script type="text/javascript">
-            var npf_d='https://admissions.aitd.org,https://pgp-admissions.aitd.org,https://ug-admissions.aitd.org/ugadmissionsform';
-            var npf_c='391,6330,6276';
-            var npf_m='1';
-            var s=document.createElement("script");
-            s.type="text/javascript";
-            s.async=true;
-            s.src="../track.nopaperforms.com/js/track.js";
-            document.body.appendChild(s);
-        </script>
+
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {
