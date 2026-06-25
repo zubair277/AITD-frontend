@@ -608,6 +608,41 @@ function rewriteHtml(html, domains, currentDomain) {
   return out
 }
 
+function applyRewriteToDist() {
+  const distSiteRoot = path.join(process.cwd(), 'dist', 'site')
+  if (!fs.existsSync(distSiteRoot)) return
+
+  const domains = fs
+    .readdirSync(distSiteRoot, { withFileTypes: true })
+    .filter((d) => d.isDirectory() && d.name.includes('.'))
+    .map((d) => d.name)
+
+  function walk(dir) {
+    let results = []
+    const list = fs.readdirSync(dir)
+    list.forEach(function (file) {
+      file = path.join(dir, file)
+      const stat = fs.statSync(file)
+      if (stat && stat.isDirectory()) {
+        results = results.concat(walk(file))
+      } else {
+        if (file.endsWith('.html')) results.push(file)
+      }
+    })
+    return results
+  }
+
+  const htmlFiles = walk(distSiteRoot)
+  for (const file of htmlFiles) {
+    const rel = path.relative(distSiteRoot, file).replace(/\\/g, '/')
+    const currentDomain = domains.includes(rel.split('/')[0]) ? rel.split('/')[0] : DEFAULT_DOMAIN
+    const originalHtml = fs.readFileSync(file, 'utf8')
+    const rewrittenHtml = rewriteHtml(originalHtml, domains, currentDomain)
+    fs.writeFileSync(file, rewrittenHtml, 'utf8')
+  }
+  console.log(`Rewrote ${htmlFiles.length} HTML files in dist/site for production.`)
+}
+
 function mirrorMiddleware() {
   return async (req, res, next) => {
     try {
@@ -657,6 +692,9 @@ export default defineConfig({
       },
       configurePreviewServer(server) {
         server.middlewares.use(mirrorMiddleware())
+      },
+      closeBundle() {
+        applyRewriteToDist()
       },
     },
   ],

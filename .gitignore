@@ -24,3 +24,10 @@ dist-ssr
 *.sw?
 
 .env
+
+# HTTrack-generated root artifacts – must never be served in production
+public/site/index.html
+public/site/home.html
+public/site/backblue.gif
+public/site/fade.gif
+public/site/cookies.txt
