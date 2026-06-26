@@ -320,6 +320,17 @@ function rewriteHtml(html, domains, currentDomain) {
     }
   }
 
+  // Inject a runtime API base so production builds can point to the real backend.
+  const apiBase = process.env.VITE_API_TARGET || '/api'
+  const apiBaseScript = `<script id="aitd-api-base">window.AITD_API_BASE='${String(apiBase).replace(/'/g, "\\'")}'</script>`
+  if (!out.includes('aitd-api-base')) {
+    if (out.includes('</head>')) {
+      out = out.replace('</head>', `${apiBaseScript}</head>`)
+    } else {
+      out = `${apiBaseScript}${out}`
+    }
+  }
+
   const placementSyncScript = `<script id="aitd-placement-sync">
   (() => {
     const section = document.querySelector('.bestOpportunity');
@@ -389,7 +400,7 @@ function rewriteHtml(html, domains, currentDomain) {
       });
     };
 
-    fetch('/api/content/placements')
+    fetch((window.AITD_API_BASE || '/api') + '/content/placements')
       .then((response) => (response.ok ? response.json() : Promise.reject(new Error('placements fetch failed'))))
       .then((payload) => {
         const incoming = Array.isArray(payload?.items) ? payload.items : [];
@@ -579,9 +590,9 @@ function rewriteHtml(html, domains, currentDomain) {
     };
 
     Promise.all([
-      fetch('/api/content/events').then((res) => (res.ok ? res.json() : { items: [] })).catch(() => ({ items: [] })),
-      fetch('/api/content/latest-news').then((res) => (res.ok ? res.json() : { items: [] })).catch(() => ({ items: [] })),
-      fetch('/api/content/testimonials').then((res) => (res.ok ? res.json() : { items: [] })).catch(() => ({ items: [] }))
+      fetch((window.AITD_API_BASE || '/api') + '/content/events').then((res) => (res.ok ? res.json() : { items: [] })).catch(() => ({ items: [] })),
+      fetch((window.AITD_API_BASE || '/api') + '/content/latest-news').then((res) => (res.ok ? res.json() : { items: [] })).catch(() => ({ items: [] })),
+      fetch((window.AITD_API_BASE || '/api') + '/content/testimonials').then((res) => (res.ok ? res.json() : { items: [] })).catch(() => ({ items: [] }))
     ]).then(([eventsPayload, latestPayload, testimonialPayload]) => {
       const events = Array.isArray(eventsPayload?.items) ? eventsPayload.items : [];
       const latestNews = Array.isArray(latestPayload?.items) ? latestPayload.items : [];
