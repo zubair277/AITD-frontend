@@ -1,0 +1,15 @@
+<svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="-8" y="-8" width="63" height="63"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(4px);clip-path:url(#bgblur_0_13335_6475_clip_path);height:100%;width:100%"></div></foreignObject><g data-figma-bg-blur-radius="8">
+<rect x="0.5" y="0.5" width="46" height="46" rx="23" stroke="url(#paint0_linear_13335_6475)"/>
+<path d="M32.7081 22.9108L13.9822 22.8912L13.9805 24.5466L32.7063 24.5662L32.7081 22.9108Z" fill="white"/>
+<path d="M25.4239 31.933C25.6299 30.7905 25.9296 29.723 26.4165 28.7304C26.8847 27.7378 27.5028 26.8388 28.2332 26.0522C28.9542 25.2562 29.8532 24.6382 30.7803 24.1231C31.7261 23.6268 32.7374 23.271 33.805 23.0462L33.7956 23.0369L33.7582 24.4415C31.6699 24.0201 29.7128 22.9807 28.2332 21.4075C26.7536 19.8342 25.8453 17.7647 25.5175 15.5828L27.6151 15.4705C27.4747 17.2403 28.1021 19.0851 29.3007 20.4336C30.4806 21.8008 32.2224 22.6997 34.0204 23.0369L33.9735 24.4509L33.9642 24.4415C33.0465 24.479 32.1288 24.7412 31.2953 25.1626C30.4432 25.5652 29.7315 26.1833 29.1228 26.8856C28.5141 27.5879 28.0834 28.4307 27.8492 29.3016C27.6245 30.1819 27.5402 31.1089 27.7275 31.9705L25.4051 31.9517L25.4239 31.933Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="bgblur_0_13335_6475_clip_path" transform="translate(8 8)"><rect x="0.5" y="0.5" width="46" height="46" rx="23"/>
+</clipPath><linearGradient id="paint0_linear_13335_6475" x1="0.5" y1="39.3125" x2="46.5157" y2="40.3176" gradientUnits="userSpaceOnUse">
+<stop stop-color="#39B5D7"/>
+<stop offset="0.502211" stop-color="#F7D544"/>
+<stop offset="1" stop-color="#E38330"/>
+</linearGradient>
+</defs>
+</svg>
