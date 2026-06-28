@@ -10,6 +10,17 @@ import react from '@vitejs/plugin-react'
 const SITE_ROOT = path.join(process.cwd(), 'public', 'site')
 const DEFAULT_DOMAIN = 'aitd.org'
 
+const EXTERNAL_CDNS = new Set([
+  'code.jquery.com',
+  'cdn.jsdelivr.net',
+  'fonts.googleapis.com',
+  'fonts.gstatic.com',
+  'www.googletagmanager.com',
+  'www.google-analytics.com',
+  'www.youtube.com',
+  'static.filestackapi.com'
+])
+
 const CONTENT_TYPES = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
@@ -49,7 +60,7 @@ const assetFallbackExts = new Set([
 function listDomains() {
   return fs
     .readdirSync(SITE_ROOT, { withFileTypes: true })
-    .filter((d) => d.isDirectory() && d.name.includes('.'))
+    .filter((d) => d.isDirectory() && d.name.includes('.') && !EXTERNAL_CDNS.has(d.name))
     .map((d) => d.name)
 }
 
@@ -614,7 +625,7 @@ function applyRewriteToDist() {
 
   const domains = fs
     .readdirSync(distSiteRoot, { withFileTypes: true })
-    .filter((d) => d.isDirectory() && d.name.includes('.'))
+    .filter((d) => d.isDirectory() && d.name.includes('.') && !EXTERNAL_CDNS.has(d.name))
     .map((d) => d.name)
 
   function walk(dir) {
