@@ -4,9 +4,9 @@
 import fs from 'node:fs'
 import fsp from 'node:fs/promises'
 import path from 'node:path'
+import zlib from 'node:zlib'
 import { defineConfig } from 'vite'
 import viteCompression from 'vite-plugin-compression'
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
 const SITE_ROOT = path.join(process.cwd(), 'public', 'site')
 const DEFAULT_DOMAIN = 'aitd.org'
@@ -697,8 +697,15 @@ export default defineConfig({
   },
   plugins: [
     viteCompression({ algorithm: 'gzip' }),
-    viteCompression({ algorithm: 'brotliCompress', ext: '.br' }),
-    ViteImageOptimizer(),
+    viteCompression({ 
+      algorithm: 'brotliCompress', 
+      ext: '.br',
+      compressionOptions: {
+        params: {
+          [zlib.constants.BROTLI_PARAM_QUALITY]: 4,
+        },
+      }
+    }),
     {
       name: 'mirror-routes-in-vite',
       configureServer(server) {
