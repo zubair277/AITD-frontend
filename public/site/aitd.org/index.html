@@ -41,7 +41,7 @@ window.initSwiperSafe = function(selector, options) {
     if (!el) return null;
     let slides = el.querySelectorAll('.swiper-slide');
     if (!slides || slides.length === 0) return null;
-    return window.initSwiperSafe(selector, options);
+    return new Swiper(el, options);
 };
 
 </script>

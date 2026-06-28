@@ -173,8 +173,9 @@ function rewriteHtml(html, domains, currentDomain) {
     out = out.replace(new RegExp(`//${esc}/`, 'gi'), `/${domain}/`)
   }
 
-  // Keep root-relative links inside the mirrored default domain.
-  out = out.replace(/\b(href|src|action|poster)=(["'])\/(?!\/)/gi, `$1=$2/${currentDomain}/`)
+  // Keep root-relative links inside the mirrored default domain,
+  // EXCEPT for images, assets, and site directories which exist at the root.
+  out = out.replace(/\b(href|src|action|poster)=(["'])\/(?!\/|(?:images|assets|site)\/)/gi, `$1=$2/${currentDomain}/`)
 
   // Replace the mirrored MU header logo with the user's custom logo.
   out = out.replace(
@@ -196,16 +197,6 @@ function rewriteHtml(html, domains, currentDomain) {
     '/imag/assets/images/',
   )
 
-  // Home hero: replace background images with the user's custom background.
-  out = out.replace(
-    /<img\s+src="[^"]+"\s+fetchpriority="high"\s+class="bgHeroImage\s*mob-hide"\s+alt="[^"]*">/i,
-    '<img src="/images/aitd-bg.jpeg" fetchpriority="high" class="bgHeroImage mob-hide" alt="" aria-hidden="true">',
-  )
-  out = out.replace(
-    /<img\s+src="[^"]+"\s+fetchpriority="high"\s+class="bgHeroImage\s*"\s+alt="mobileHomepageBackground">/i,
-    '<img src="/images/aitd-bg-mobile.jpeg" fetchpriority="high" class="bgHeroImage" alt="" aria-hidden="true">',
-  )
-
   // Home hero: remove accreditation logos block permanently.
   out = out.replace(/<div class="muHeroLogos">[\s\S]*?<\/div>/i, '')
 
@@ -215,7 +206,7 @@ function rewriteHtml(html, domains, currentDomain) {
     '<h1 class="homeheroHeading">AIEM MBA – Where Future CEOs and Founders are built</h1>',
   )
 
-  const logoSizeStyle = `<link rel="preload" as="image" href="/images/aitd-bg.jpeg" fetchpriority="high">
+  const logoSizeStyle = `<link rel="preload" as="image" href="/images/aitd-bg.webp" fetchpriority="high">
   <style id="aitd-logo-size-override">
   #preloader, .preloader {
     display: none !important;
