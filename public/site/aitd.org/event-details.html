@@ -125,7 +125,7 @@
             (images.length
               ? '<div class="gallery">' +
                   images.map((src) => (
-                    '<img src="' + escapeHtml(src) + '" alt="' + title + '" loading="lazy" />'
+                    '<img src="' + escapeHtml(src) + '" alt="' + title + '" loading="lazy" / decoding="async">'
                   )).join('') +
                 '</div>'
               : '');

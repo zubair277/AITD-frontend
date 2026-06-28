@@ -2075,7 +2075,7 @@ $(document).ready(async function () {
             $(".hideFortheMENA").addClass("hide");
             $("#MENAimgChange").attr(
                 "src",
-                "/assets/images/InseadNew.png"
+                "/assets/images/InseadNew.webp"
             );
 
             isCountryCodeFound = true;

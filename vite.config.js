@@ -4,11 +4,23 @@
 import fs from 'node:fs'
 import fsp from 'node:fs/promises'
 import path from 'node:path'
+import zlib from 'node:zlib'
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import viteCompression from 'vite-plugin-compression'
 
 const SITE_ROOT = path.join(process.cwd(), 'public', 'site')
 const DEFAULT_DOMAIN = 'aitd.org'
+
+const EXTERNAL_CDNS = new Set([
+  'code.jquery.com',
+  'cdn.jsdelivr.net',
+  'fonts.googleapis.com',
+  'fonts.gstatic.com',
+  'www.googletagmanager.com',
+  'www.google-analytics.com',
+  'www.youtube.com',
+  'static.filestackapi.com'
+])
 
 const CONTENT_TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -49,7 +61,7 @@ const assetFallbackExts = new Set([
 function listDomains() {
   return fs
     .readdirSync(SITE_ROOT, { withFileTypes: true })
-    .filter((d) => d.isDirectory() && d.name.includes('.'))
+    .filter((d) => d.isDirectory() && d.name.includes('.') && !EXTERNAL_CDNS.has(d.name))
     .map((d) => d.name)
 }
 
@@ -161,8 +173,9 @@ function rewriteHtml(html, domains, currentDomain) {
     out = out.replace(new RegExp(`//${esc}/`, 'gi'), `/${domain}/`)
   }
 
-  // Keep root-relative links inside the mirrored default domain.
-  out = out.replace(/\b(href|src|action|poster)=(["'])\/(?!\/)/gi, `$1=$2/${currentDomain}/`)
+  // Keep root-relative links inside the mirrored default domain,
+  // EXCEPT for images, assets, and site directories which exist at the root.
+  out = out.replace(/\b(href|src|action|poster)=(["'])\/(?!\/|(?:images|assets|site)\/)/gi, `$1=$2/${currentDomain}/`)
 
   // Replace the mirrored MU header logo with the user's custom logo.
   out = out.replace(
@@ -184,16 +197,6 @@ function rewriteHtml(html, domains, currentDomain) {
     '/imag/assets/images/',
   )
 
-  // Home hero: replace background images with the user's custom background.
-  out = out.replace(
-    /<img\s+src="[^"]+"\s+fetchpriority="high"\s+class="bgHeroImage\s*mob-hide"\s+alt="[^"]*">/i,
-    '<img src="/images/aitd-bg.jpeg" fetchpriority="high" class="bgHeroImage mob-hide" alt="" aria-hidden="true">',
-  )
-  out = out.replace(
-    /<img\s+src="[^"]+"\s+fetchpriority="high"\s+class="bgHeroImage\s*"\s+alt="mobileHomepageBackground">/i,
-    '<img src="/images/aitd-bg-mobile.jpeg" fetchpriority="high" class="bgHeroImage" alt="" aria-hidden="true">',
-  )
-
   // Home hero: remove accreditation logos block permanently.
   out = out.replace(/<div class="muHeroLogos">[\s\S]*?<\/div>/i, '')
 
@@ -203,7 +206,7 @@ function rewriteHtml(html, domains, currentDomain) {
     '<h1 class="homeheroHeading">AIEM MBA – Where Future CEOs and Founders are built</h1>',
   )
 
-  const logoSizeStyle = `<link rel="preload" as="image" href="/images/aitd-bg.jpeg" fetchpriority="high">
+  const logoSizeStyle = `<link rel="preload" as="image" href="/images/aitd-bg.webp" fetchpriority="high">
   <style id="aitd-logo-size-override">
   #preloader, .preloader {
     display: none !important;
@@ -625,7 +628,7 @@ function applyRewriteToDist() {
 
   const domains = fs
     .readdirSync(distSiteRoot, { withFileTypes: true })
-    .filter((d) => d.isDirectory() && d.name.includes('.'))
+    .filter((d) => d.isDirectory() && d.name.includes('.') && !EXTERNAL_CDNS.has(d.name))
     .map((d) => d.name)
 
   function walk(dir) {
@@ -695,7 +698,16 @@ export default defineConfig({
     },
   },
   plugins: [
-    react(),
+    viteCompression({ algorithm: 'gzip' }),
+    viteCompression({ 
+      algorithm: 'brotliCompress', 
+      ext: '.br',
+      compressionOptions: {
+        params: {
+          [zlib.constants.BROTLI_PARAM_QUALITY]: 4,
+        },
+      }
+    }),
     {
       name: 'mirror-routes-in-vite',
       configureServer(server) {
@@ -709,5 +721,24 @@ export default defineConfig({
       },
     },
   ],
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+    rollupOptions: {
+      treeshake: true,
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor'
+          }
+        },
+      },
+    },
+  },
 })
 
