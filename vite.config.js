@@ -5,7 +5,8 @@ import fs from 'node:fs'
 import fsp from 'node:fs/promises'
 import path from 'node:path'
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import viteCompression from 'vite-plugin-compression'
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
 const SITE_ROOT = path.join(process.cwd(), 'public', 'site')
 const DEFAULT_DOMAIN = 'aitd.org'
@@ -695,7 +696,9 @@ export default defineConfig({
     },
   },
   plugins: [
-    react(),
+    viteCompression({ algorithm: 'gzip' }),
+    viteCompression({ algorithm: 'brotliCompress', ext: '.br' }),
+    ViteImageOptimizer(),
     {
       name: 'mirror-routes-in-vite',
       configureServer(server) {
@@ -709,5 +712,24 @@ export default defineConfig({
       },
     },
   ],
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+    rollupOptions: {
+      treeshake: true,
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor'
+          }
+        },
+      },
+    },
+  },
 })
 
