@@ -602,13 +602,16 @@ function rewriteHtml(html, domains, currentDomain) {
     overflow-y: visible !important;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
-    padding-bottom: 28px;
+    padding-top: 12px;
+    padding-bottom: 34px;
+    margin-top: -12px;
   }
 
   .testimonialsSwiper .swiper-wrapper {
     display: flex !important;
     align-items: stretch;
     width: max-content !important;
+    overflow: visible !important;
   }
 
   .testimonialsSwiper .swiper-slide.testimonialCard,
@@ -616,6 +619,57 @@ function rewriteHtml(html, domains, currentDomain) {
     flex: 0 0 min(420px, calc(100vw - 48px));
     width: min(420px, calc(100vw - 48px)) !important;
     height: auto !important;
+    position: relative;
+    z-index: 1;
+  }
+
+  .testimonialsSwiper .swiper-slide.testimonialCard:hover,
+  .testimonialsSwiper .testimonialCard:hover {
+    z-index: 3;
+  }
+
+  #placements.bestOpportunity .opportunityWrapper {
+    flex-wrap: nowrap !important;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto !important;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    padding-bottom: 16px;
+    scroll-snap-type: x proximity;
+  }
+
+  #placements.bestOpportunity .opportunityWrapper.mobHide {
+    display: flex !important;
+  }
+
+  #placements.bestOpportunity .opportunityWrapper.mobVisible {
+    display: none !important;
+  }
+
+  #placements.bestOpportunity .opportunityWrapper .masterBox {
+    flex: 0 0 232px;
+    width: 232px !important;
+    min-width: 232px !important;
+    max-width: 232px !important;
+    scroll-snap-align: start;
+  }
+
+  #placements.bestOpportunity .opportunityWrapper::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  #placements.bestOpportunity .opportunityWrapper::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 999px;
+  }
+
+  #placements.bestOpportunity .opportunityWrapper::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.26);
+    border-radius: 999px;
   }
 
   @media (max-width: 767px) {
@@ -679,11 +733,15 @@ function rewriteHtml(html, domains, currentDomain) {
       font-size: 16px !important;
     }
 
+    #placements.bestOpportunity .opportunityWrapper.mobHide {
+      display: none !important;
+    }
+
     #placements.bestOpportunity .opportunityWrapper.mobVisible {
       display: flex !important;
       flex-wrap: nowrap !important;
       align-items: flex-start;
-      gap: 20px;
+      gap: 16px;
       width: 100%;
       max-width: 100%;
       margin-top: 18px !important;
@@ -691,7 +749,7 @@ function rewriteHtml(html, domains, currentDomain) {
       overflow-y: visible;
       -webkit-overflow-scrolling: touch;
       overscroll-behavior-x: contain;
-      padding-bottom: 12px;
+      padding-bottom: 14px;
     }
 
     #placements.bestOpportunity .opportunityWrapper.mobVisible .masterBox {
@@ -738,6 +796,24 @@ function rewriteHtml(html, domains, currentDomain) {
     const safeText = (value, fallback = '-') => {
       const text = String(value ?? '').trim();
       return text || fallback;
+    };
+
+    const placementKey = (item) => [
+      safeText(item.name, ''),
+      safeText(item.role, ''),
+      safeText(item.company, ''),
+      safeText(item.specialization, ''),
+      safeText(item.batch, ''),
+    ].join('|').replace(/\\s+/g, ' ').trim().toLowerCase();
+
+    const uniquePlacements = (items) => {
+      const seen = new Set();
+      return items.filter((item) => {
+        const key = placementKey(item);
+        if (!key || seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
     };
 
     const buildCard = (item) => {
@@ -821,14 +897,15 @@ function rewriteHtml(html, domains, currentDomain) {
         .then((response) => (response.ok ? response.json() : Promise.reject(new Error('placements fetch failed'))))
         .then((payload) => {
           const incoming = Array.isArray(payload?.items) ? payload.items : [];
-          const items = incoming.map((item) => ({
+          const items = uniquePlacements(incoming.map((item) => ({
+            id: safeText(item?.id, ''),
             name: safeText(item?.title, ''),
             role: safeText(item?.subtitle),
             company: safeText(item?.meta?.company, ''),
             specialization: safeText(item?.meta?.specialization, ''),
             batch: safeText(item?.meta?.batch, ''),
             imageUrl: typeof item?.imageUrl === 'string' ? item.imageUrl : '',
-          }));
+          })));
 
           applyCards(wrappers, items);
         })
