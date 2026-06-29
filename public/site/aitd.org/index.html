@@ -277,20 +277,30 @@ window.initSwiperSafe = function(selector, options) {
             display: flex;
             flex-direction: column;
             gap: 18px;
+            overflow: hidden;
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            position: relative;
+        }
+
+        .trustedLogosRow {
+            display: flex;
+            width: max-content;
+            gap: 18px;
         }
 
         .trustedLogosTrack {
             display: flex;
-            width: max-content;
+            flex-shrink: 0;
             gap: 18px;
             will-change: transform;
         }
 
-        .trustedLogosTrack.rowTop {
+        .trustedLogosRow.rowTop .trustedLogosTrack {
             animation: trustedLogosMoveRight 28s linear infinite;
         }
 
-        .trustedLogosTrack.rowBottom {
+        .trustedLogosRow.rowBottom .trustedLogosTrack {
             animation: trustedLogosMoveLeft 28s linear infinite;
         }
 
@@ -318,21 +328,19 @@ window.initSwiperSafe = function(selector, options) {
         }
 
         @keyframes trustedLogosMoveLeft {
-            from {
+            0% {
                 transform: translate3d(0, 0, 0);
             }
-
-            to {
-                transform: translate3d(-50%, 0, 0);
+            100% {
+                transform: translate3d(calc(-100% - 18px), 0, 0);
             }
         }
 
         @keyframes trustedLogosMoveRight {
-            from {
-                transform: translate3d(-50%, 0, 0);
+            0% {
+                transform: translate3d(calc(-100% - 18px), 0, 0);
             }
-
-            to {
+            100% {
                 transform: translate3d(0, 0, 0);
             }
         }
@@ -406,6 +414,11 @@ window.initSwiperSafe = function(selector, options) {
                 margin-bottom: 22px;
             }
 
+            .trustedLogosMarquee {
+                width: calc(100vw + 80px);
+                margin-left: -40px;
+            }
+
             .trustedLogoPill {
                 min-width: 130px;
                 height: 48px;
@@ -422,6 +435,27 @@ window.initSwiperSafe = function(selector, options) {
             .meetMastersSection .meetMastersLeft {
                 transform: none;
             }
+        }
+
+        .mobileNavIcon {
+            display: block;
+            width: 28px;
+            height: 28px;
+            color: #ffffff;
+        }
+
+        .hamburger .mobileNavIcon {
+            width: 34px;
+            height: 34px;
+        }
+
+        .closeIcon .mobileNavIcon,
+        .mobMenuItemHeader .mobileNavIcon {
+            color: #d9b469;
+        }
+
+        .mobMenuItemHeader .togglerDown {
+            transition: transform 0.3s ease;
         }
     </style>
 
@@ -628,8 +662,9 @@ window.initSwiperSafe = function(selector, options) {
                                 alt="AIEM Logo" / decoding="async">
                         </a>
                         <div class="hamburger" id="mobileHamburgerBtn" tabindex="0" aria-label="Open menu" role="button">
-                            <img loading="lazy" src="/assets/images/hamburger.svg"
-                                alt="Open menu" / decoding="async">
+                            <svg class="mobileNavIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M4 7H20M4 12H20M4 17H20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -643,8 +678,9 @@ window.initSwiperSafe = function(selector, options) {
                                 alt="AIEM Logo" / decoding="async">
                         </a>
                         <div class="closeIcon" id="mobileMenuCloseBtn" tabindex="0" aria-label="Close menu" role="button">
-                            <img loading="lazy" src="/assets/images/close.svg"
-                                alt="Close menu" / decoding="async">
+                            <svg class="mobileNavIcon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M6 6L18 18M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                            </svg>
                         </div>
                     </div>
         
@@ -671,8 +707,9 @@ window.initSwiperSafe = function(selector, options) {
                         <div class="mobMenuItem">
                             <div class="mobMenuItemHeader">
                                 <p class="heading">Socials</p>
-                                <img loading="lazy" src="/assets/images/toggler.svg"
-                                    alt="Icon" class="togglerDown" / decoding="async">
+                                <svg class="mobileNavIcon togglerDown" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path d="M7 10L12 15L17 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
                             </div>
                             <div class="mobMenuItemBody">
                                 <div class="mobMenuParent">
@@ -5410,32 +5447,82 @@ window.initSwiperSafe = function(selector, options) {
             <div class="trustedLogosHeader">
                 <h2 class="trustedLogosTitle">Our <span class="textGradient">career partners</span></h2>
             </div>
+        </div>
 
-            <div class="trustedLogosMarquee">
-                <div class="trustedLogosTrack rowTop">
+        <div class="trustedLogosMarquee">
+            <div class="trustedLogosRow rowTop">
+                <div class="trustedLogosTrack">
                     <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Capgemini-Logo.webp" alt="Capgemini" width="3000" height="2000" decoding="async"></div>
                     <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/citrix-logo.webp" alt="Citrix" width="2400" height="2400" decoding="async"></div>
                     <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Godrej_Logo.webp" alt="Godrej" width="1280" height="617" decoding="async"></div>
                     <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/IBM_logo.webp" alt="IBM" width="960" height="401" decoding="async"></div>
                     <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/zepto.webp" alt="Zepto" width="500" height="500" decoding="async"></div>
-                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/Capgemini-Logo.webp" alt="" width="3000" height="2000" decoding="async"></div>
-                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/citrix-logo.webp" alt="" width="2400" height="2400" decoding="async"></div>
-                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/Godrej_Logo.webp" alt="" width="1280" height="617" decoding="async"></div>
-                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/IBM_logo.webp" alt="" width="960" height="401" decoding="async"></div>
-                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/zepto.webp" alt="" width="500" height="500" decoding="async"></div>
                 </div>
-
-                <div class="trustedLogosTrack rowBottom">
+                <div class="trustedLogosTrack" aria-hidden="true">
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Capgemini-Logo.webp" alt="" width="3000" height="2000" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/citrix-logo.webp" alt="" width="2400" height="2400" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Godrej_Logo.webp" alt="" width="1280" height="617" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/IBM_logo.webp" alt="" width="960" height="401" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/zepto.webp" alt="" width="500" height="500" decoding="async"></div>
+                </div>
+                <div class="trustedLogosTrack" aria-hidden="true">
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Capgemini-Logo.webp" alt="" width="3000" height="2000" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/citrix-logo.webp" alt="" width="2400" height="2400" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Godrej_Logo.webp" alt="" width="1280" height="617" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/IBM_logo.webp" alt="" width="960" height="401" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/zepto.webp" alt="" width="500" height="500" decoding="async"></div>
+                </div>
+                <div class="trustedLogosTrack" aria-hidden="true">
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Capgemini-Logo.webp" alt="" width="3000" height="2000" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/citrix-logo.webp" alt="" width="2400" height="2400" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Godrej_Logo.webp" alt="" width="1280" height="617" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/IBM_logo.webp" alt="" width="960" height="401" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/zepto.webp" alt="" width="500" height="500" decoding="async"></div>
+                </div>
+                <div class="trustedLogosTrack" aria-hidden="true">
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Capgemini-Logo.webp" alt="" width="3000" height="2000" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/citrix-logo.webp" alt="" width="2400" height="2400" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Godrej_Logo.webp" alt="" width="1280" height="617" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/IBM_logo.webp" alt="" width="960" height="401" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/zepto.webp" alt="" width="500" height="500" decoding="async"></div>
+                </div>
+            </div>
+ 
+            <div class="trustedLogosRow rowBottom">
+                <div class="trustedLogosTrack">
                     <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Siemens-logo.webp" alt="Siemens" width="3840" height="2160" decoding="async"></div>
                     <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Tata_Consultancy_Services.webp" alt="Tata Consultancy Services" width="1280" height="515" decoding="async"></div>
                     <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Wipro_Primary_Logo.webp" alt="Wipro" width="1280" height="1008" decoding="async"></div>
                     <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Worley_Logo.webp" alt="Worley" width="574" height="174" decoding="async"></div>
                     <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Persistent_Systems_Logo.webp" alt="Persistent Systems" width="3840" height="900" decoding="async"></div>
-                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/Siemens-logo.webp" alt="" width="3840" height="2160" decoding="async"></div>
-                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/Tata_Consultancy_Services.webp" alt="" width="1280" height="515" decoding="async"></div>
-                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/Wipro_Primary_Logo.webp" alt="" width="1280" height="1008" decoding="async"></div>
-                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/Worley_Logo.webp" alt="" width="574" height="174" decoding="async"></div>
-                    <div class="trustedLogoPill" aria-hidden="true"><img loading="lazy" src="/images/logos/Persistent_Systems_Logo.webp" alt="" width="3840" height="900" decoding="async"></div>
+                </div>
+                <div class="trustedLogosTrack" aria-hidden="true">
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Siemens-logo.webp" alt="" width="3840" height="2160" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Tata_Consultancy_Services.webp" alt="" width="1280" height="515" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Wipro_Primary_Logo.webp" alt="" width="1280" height="1008" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Worley_Logo.webp" alt="" width="574" height="174" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Persistent_Systems_Logo.webp" alt="" width="3840" height="900" decoding="async"></div>
+                </div>
+                <div class="trustedLogosTrack" aria-hidden="true">
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Siemens-logo.webp" alt="" width="3840" height="2160" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Tata_Consultancy_Services.webp" alt="" width="1280" height="515" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Wipro_Primary_Logo.webp" alt="" width="1280" height="1008" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Worley_Logo.webp" alt="" width="574" height="174" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Persistent_Systems_Logo.webp" alt="" width="3840" height="900" decoding="async"></div>
+                </div>
+                <div class="trustedLogosTrack" aria-hidden="true">
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Siemens-logo.webp" alt="" width="3840" height="2160" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Tata_Consultancy_Services.webp" alt="" width="1280" height="515" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Wipro_Primary_Logo.webp" alt="" width="1280" height="1008" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Worley_Logo.webp" alt="" width="574" height="174" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Persistent_Systems_Logo.webp" alt="" width="3840" height="900" decoding="async"></div>
+                </div>
+                <div class="trustedLogosTrack" aria-hidden="true">
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Siemens-logo.webp" alt="" width="3840" height="2160" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Tata_Consultancy_Services.webp" alt="" width="1280" height="515" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Wipro_Primary_Logo.webp" alt="" width="1280" height="1008" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Worley_Logo.webp" alt="" width="574" height="174" decoding="async"></div>
+                    <div class="trustedLogoPill"><img loading="lazy" src="/images/logos/Persistent_Systems_Logo.webp" alt="" width="3840" height="900" decoding="async"></div>
                 </div>
             </div>
         </div>
@@ -5554,7 +5641,6 @@ window.initSwiperSafe = function(selector, options) {
                     <img src="../../images/placement/DSC09799.webp" alt="Icon" width="6000" height="3376" loading="lazy" decoding="async">
                     <div class="opprName font-12 font-regular font-grey2 flexbox">
                         Gautam Marwah
-                        <a href="https://www.linkedin.com/in/gautam-marwah/" target="_blank"> <img src="/assets/images/linkedin.svg" alt="Icon" loading="lazy" decoding="async"></a>
                     </div>
                     <hr class="lineSpace">
                     <div class="opprDesignation">
@@ -5569,7 +5655,6 @@ window.initSwiperSafe = function(selector, options) {
                     <img src="../../images/placement/DSC09801.webp" alt="Icon" width="6000" height="3376" loading="lazy" decoding="async">
                     <div class="opprName font-12 font-regular font-grey2 flexbox">
                         Radika Agarwal
-                        <a href="https://www.linkedin.com/in/radikaagarwal/" target="_blank"> <img src="/assets/images/linkedin.svg" alt="Icon" loading="lazy" decoding="async"></a>
                     </div>
                     <hr class="lineSpace">
                     <div class="opprDesignation">
@@ -5584,7 +5669,6 @@ window.initSwiperSafe = function(selector, options) {
                     <img src="../../images/placement/DSC09907.webp" alt="Icon" width="6000" height="3376" loading="lazy" decoding="async">
                     <div class="opprName font-12 font-regular font-grey2 flexbox">
                         Vanya Jain
-                        <a href="https://www.linkedin.com/in/vanya-jain/" target="_blank"> <img src="/assets/images/linkedin.svg" alt="Icon" loading="lazy" decoding="async"></a>
                     </div>
                     <hr class="lineSpace">
                     <div class="opprDesignation">
@@ -5599,7 +5683,6 @@ window.initSwiperSafe = function(selector, options) {
                     <img src="../../images/placement/DSC09949.webp" alt="Icon" width="6000" height="3376" loading="lazy" decoding="async">
                     <div class="opprName font-12 font-regular font-grey2 flexbox">
                         Tilottama Ghosh
-                        <a href="https://www.linkedin.com/in/tilottamaghosh/" target="_blank"> <img src="/assets/images/linkedin.svg" alt="Icon" loading="lazy" decoding="async"></a>
                     </div>
                     <hr class="lineSpace">
                     <div class="opprDesignation">

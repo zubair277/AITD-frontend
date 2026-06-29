@@ -334,96 +334,517 @@ function rewriteHtml(html, domains, currentDomain) {
     }
   }
 
+  // Existing mirrored inline scripts should respect the same backend target as
+  // the injected admin-content sync scripts.
+  out = out.replace(
+    /fetch\('\/api\/content\/latest-news'\)/g,
+    "fetch((window.AITD_API_BASE || '/api') + '/content/latest-news')",
+  )
+  out = out.replace(
+    /fetch\('\/api\/content\/events'\)/g,
+    "fetch((window.AITD_API_BASE || '/api') + '/content/events')",
+  )
+  out = out.replace(
+    /fetch\('\/api\/content\/testimonials'\)/g,
+    "fetch((window.AITD_API_BASE || '/api') + '/content/testimonials')",
+  )
+  out = out.replace(/allowTouchMove:\s*false/g, 'allowTouchMove: true')
+
+  const dynamicContentStyle = `<style id="aitd-dynamic-content-scroll-fixes">
+  #section__news .eventSlider.latestNews.newsAuto {
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    cursor: grab;
+    padding-bottom: 18px;
+  }
+
+  #section__news .eventSlider.latestNews.newsAuto:active {
+    cursor: grabbing;
+  }
+
+  #section__news .eventSlider.latestNews.newsAuto .swiper-wrapper {
+    width: max-content !important;
+  }
+
+  #section__news .eventSlider.latestNews.newsAuto .swiper-slide {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+
+  #section__news {
+    padding: 72px 0 80px !important;
+    background: #fafafa !important;
+  }
+
+  #section__news .container {
+    max-width: 1460px;
+  }
+
+  #section__news .headingWrapperButton {
+    align-items: center !important;
+    margin-bottom: 28px !important;
+  }
+
+  #section__news .newsTabs {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 10px !important;
+    padding: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+  }
+
+  #section__news .newsTabBtn {
+    height: 38px;
+    padding: 0 18px !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+    background: transparent !important;
+    color: #111 !important;
+    font-size: 14px !important;
+    line-height: 38px !important;
+    box-shadow: none !important;
+  }
+
+  #section__news .newsTabBtn.active {
+    background: #090909 !important;
+    color: #fff !important;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18) !important;
+  }
+
+  #section__news .headingRight {
+    gap: 12px !important;
+  }
+
+  #section__news .latestNews-Prev,
+  #section__news .latestNews-Next {
+    width: 46px !important;
+    height: 46px !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    background: #fff !important;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  #section__news .latestNews-Prev:hover,
+  #section__news .latestNews-Next:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 34px rgba(15, 23, 42, 0.12);
+  }
+
+  #section__news .eventSlider.latestNews.newsAuto {
+    padding: 4px 0 28px !important;
+  }
+
+  #section__news .eventSlider.latestNews.newsAuto .swiper-wrapper {
+    align-items: stretch;
+    gap: 22px;
+  }
+
+  #section__news .eventSlider.latestNews.newsAuto .swiper-slide {
+    width: clamp(320px, 28vw, 420px) !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+
+  #section__news .eventCard,
+  #section__news .latestTextCard {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    min-height: 382px !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    border-radius: 20px !important;
+    background: #fff !important;
+    border: 1px solid rgba(15, 23, 42, 0.08) !important;
+    box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08) !important;
+    color: #111 !important;
+    text-decoration: none !important;
+    transform: translateZ(0);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+
+  #section__news .eventCard:hover,
+  #section__news .latestTextCard:hover {
+    transform: translateY(-4px);
+    border-color: rgba(15, 23, 42, 0.16) !important;
+    box-shadow: 0 26px 58px rgba(15, 23, 42, 0.13) !important;
+  }
+
+  #section__news .eventCardImage,
+  #section__news .latestTextImageWrap {
+    width: 100% !important;
+    height: 196px !important;
+    flex: 0 0 196px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    overflow: hidden;
+    background-color: #eef2f7 !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  #section__news .latestTextImage {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    object-fit: cover;
+  }
+
+  #section__news .eventCardImage::after {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.16)) !important;
+  }
+
+  #section__news .eventCardBody,
+  #section__news .latestTextCard {
+    padding: 18px 20px 20px !important;
+  }
+
+  #section__news .latestTextCard:has(.latestTextImageWrap) {
+    padding-top: 0 !important;
+  }
+
+  #section__news .latestTextCard .latestTextImageWrap {
+    width: calc(100% + 40px) !important;
+    margin: 0 -20px 18px !important;
+  }
+
+  #section__news .latestTextDate {
+    margin-bottom: 12px !important;
+  }
+
+  #section__news .eventMetaRow {
+    gap: 8px !important;
+    margin-bottom: 12px !important;
+  }
+
+  #section__news .eventPill,
+  #section__news .latestTextDate {
+    height: 30px;
+    display: inline-flex !important;
+    align-items: center;
+    width: fit-content;
+    padding: 0 12px !important;
+    border-radius: 999px !important;
+    background: #f3f4f6 !important;
+    color: #111 !important;
+    font-size: 12px !important;
+    line-height: 30px !important;
+    font-family: var(--go-medium);
+    white-space: nowrap;
+  }
+
+  #section__news .eventPillDark {
+    background: #111 !important;
+    color: #fff !important;
+  }
+
+  #section__news .eventTitle,
+  #section__news .latestTextTitle {
+    margin: 0 0 8px !important;
+    color: #111 !important;
+    font-family: var(--go-medium);
+    font-size: 18px !important;
+    line-height: 1.28 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  #section__news .eventDesc,
+  #section__news .latestTextDesc {
+    margin: 0 !important;
+    color: rgba(17, 17, 17, 0.68) !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  #section__news .eventHint {
+    margin-top: auto !important;
+    padding-top: 14px;
+    color: rgba(17, 17, 17, 0.48) !important;
+    font-size: 13px !important;
+  }
+
+  #section__news .eventSlider.latestNews.newsAuto::-webkit-scrollbar,
+  .testimonialsSwiper::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  #section__news .eventSlider.latestNews.newsAuto::-webkit-scrollbar-track,
+  .testimonialsSwiper::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 999px;
+  }
+
+  #section__news .eventSlider.latestNews.newsAuto::-webkit-scrollbar-thumb,
+  .testimonialsSwiper::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 999px;
+  }
+
+  .testimonialsSwiper {
+    display: block !important;
+    width: 100% !important;
+    min-height: 300px;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    padding-bottom: 28px;
+  }
+
+  .testimonialsSwiper .swiper-wrapper {
+    display: flex !important;
+    align-items: stretch;
+    width: max-content !important;
+  }
+
+  .testimonialsSwiper .swiper-slide.testimonialCard,
+  .testimonialsSwiper .testimonialCard {
+    flex: 0 0 min(420px, calc(100vw - 48px));
+    width: min(420px, calc(100vw - 48px)) !important;
+    height: auto !important;
+  }
+
+  @media (max-width: 767px) {
+    #section__news {
+      padding: 46px 0 54px !important;
+    }
+
+    #section__news .headingWrapperButton {
+      margin-bottom: 20px !important;
+    }
+
+    #section__news .newsTabs {
+      gap: 6px !important;
+      max-width: 100%;
+    }
+
+    #section__news .newsTabBtn {
+      height: 34px;
+      padding: 0 14px !important;
+      font-size: 13px !important;
+      line-height: 34px !important;
+    }
+
+    #section__news .eventSlider.latestNews.newsAuto {
+      margin-right: -16px;
+      padding-right: 16px !important;
+    }
+
+    #section__news .eventSlider.latestNews.newsAuto .swiper-wrapper {
+      gap: 16px;
+    }
+
+    #section__news .eventSlider.latestNews.newsAuto .swiper-slide {
+      width: min(316px, calc(100vw - 40px)) !important;
+    }
+
+    #section__news .eventCard,
+    #section__news .latestTextCard {
+      min-height: 350px !important;
+      border-radius: 18px !important;
+    }
+
+    #section__news .eventCardImage,
+    #section__news .latestTextImageWrap {
+      height: 170px !important;
+      flex-basis: 170px !important;
+    }
+
+    #section__news .eventCardBody,
+    #section__news .latestTextCard {
+      padding: 15px 16px 17px !important;
+    }
+
+    #section__news .latestTextCard .latestTextImageWrap {
+      width: calc(100% + 32px) !important;
+      margin: 0 -16px 15px !important;
+    }
+
+    #section__news .eventTitle,
+    #section__news .latestTextTitle {
+      font-size: 16px !important;
+    }
+
+    #placements.bestOpportunity .opportunityWrapper.mobVisible {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      align-items: flex-start;
+      gap: 20px;
+      width: 100%;
+      max-width: 100%;
+      margin-top: 18px !important;
+      overflow-x: auto;
+      overflow-y: visible;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-x: contain;
+      padding-bottom: 12px;
+    }
+
+    #placements.bestOpportunity .opportunityWrapper.mobVisible .masterBox {
+      flex: 0 0 232px;
+      width: 232px !important;
+      min-width: 232px !important;
+      max-width: 232px !important;
+      min-height: 235px;
+      margin-bottom: 10px;
+    }
+
+    #placements.bestOpportunity .opportunityWrapper.mobVisible .masterBox > img {
+      display: block;
+      width: 100% !important;
+      height: auto !important;
+      min-height: 0 !important;
+      max-height: none !important;
+      aspect-ratio: auto;
+      object-fit: cover;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .testimonialsSwiper .swiper-slide.testimonialCard,
+    .testimonialsSwiper .testimonialCard {
+      flex-basis: 460px;
+      width: 460px !important;
+    }
+  }
+  </style>`
+  if (!out.includes('aitd-dynamic-content-scroll-fixes')) {
+    if (out.includes('</head>')) {
+      out = out.replace('</head>', `${dynamicContentStyle}</head>`)
+    } else {
+      out = `${dynamicContentStyle}${out}`
+    }
+  }
+
   const placementSyncScript = `<script id="aitd-placement-sync">
   (() => {
-    const section = document.querySelector('.bestOpportunity');
-    if (!section) return;
-
-    const wrappers = section.querySelectorAll('.opportunityWrapper');
-    if (!wrappers.length) return;
+    let synced = false;
+    let observer = null;
 
     const safeText = (value, fallback = '-') => {
       const text = String(value ?? '').trim();
       return text || fallback;
     };
 
-    const applyCards = (wrapper, items) => {
-      const cards = Array.from(wrapper.querySelectorAll('.masterBox'));
-      if (!cards.length) return;
+    const buildCard = (item) => {
+      const card = document.createElement('div');
+      card.className = 'masterBox';
 
-      cards.forEach((card, index) => {
-        const item = items[index];
-        if (!item) {
-          card.style.display = 'none';
+      const img = document.createElement('img');
+      img.alt = safeText(item.name, 'Placement image');
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      if (item.imageUrl) {
+        img.src = item.imageUrl;
+      }
+      card.appendChild(img);
+
+      const name = document.createElement('div');
+      name.className = 'opprName font-12 font-regular font-grey2 flexbox';
+      name.textContent = safeText(item.name, '');
+      card.appendChild(name);
+
+      const line = document.createElement('hr');
+      line.className = 'lineSpace';
+      card.appendChild(line);
+
+      const designation = document.createElement('div');
+      designation.className = 'opprDesignation';
+      const designationText = document.createElement('div');
+      designationText.className = 'font-16 font-semibold font-black1';
+      const role = safeText(item.role);
+      const company = safeText(item.company, '');
+      designationText.appendChild(document.createTextNode(company ? role + ', ' : role));
+      if (company) {
+        const companyEl = document.createElement('span');
+        companyEl.className = 'font-bold';
+        companyEl.textContent = company;
+        designationText.appendChild(companyEl);
+      }
+      designation.appendChild(designationText);
+      card.appendChild(designation);
+
+      const specialization = safeText(item.specialization, '');
+      const batch = safeText(item.batch, '');
+      if (specialization || batch) {
+        const tag = document.createElement('div');
+        tag.className = 'eventTag mt10 font-14 font-regular font-black2';
+        tag.appendChild(document.createTextNode('Specialization: '));
+        const strong = document.createElement('strong');
+        strong.className = 'black-medium';
+        strong.textContent = [specialization, batch].filter(Boolean).join(' ');
+        tag.appendChild(strong);
+        card.appendChild(tag);
+      }
+
+      return card;
+    };
+
+    const applyCards = (wrappers, items) => {
+      wrappers.forEach((wrapper) => {
+        wrapper.innerHTML = '';
+        if (!items.length) {
+          const empty = document.createElement('p');
+          empty.className = 'font-14 font-regular';
+          empty.style.padding = '20px';
+          empty.textContent = 'No placements available yet.';
+          wrapper.appendChild(empty);
           return;
         }
-        card.style.display = '';
-
-        const nameEl = card.querySelector('.opprName');
-        if (nameEl) {
-          nameEl.textContent = safeText(item.name, '');
-        }
-
-        const imageEl = card.querySelector('img');
-        if (imageEl) {
-          if (item.imageUrl) {
-            imageEl.src = item.imageUrl;
-            imageEl.alt = safeText(item.name, 'Placement image');
-          } else {
-            imageEl.removeAttribute('src');
-            imageEl.alt = 'No image';
-          }
-        }
-
-        const designationEl = card.querySelector('.opprDesignation div');
-        if (designationEl) {
-          const role = safeText(item.role);
-          const company = safeText(item.company);
-          designationEl.textContent = '';
-          designationEl.appendChild(document.createTextNode(role + ', '));
-          const companyEl = document.createElement('span');
-          companyEl.className = 'font-bold';
-          companyEl.textContent = company;
-          designationEl.appendChild(companyEl);
-        }
-
-        const specializationStrong = card.querySelector('.eventTag strong');
-        if (specializationStrong) {
-          const specialization = safeText(item.specialization);
-          const batch = String(item.batch ?? '').trim();
-          specializationStrong.textContent = batch ? specialization + ' ' + batch : specialization;
-        }
-
-        const packageTag = Array.from(card.querySelectorAll('.eventTag')).find((el) =>
-          /package:/i.test(el.textContent || '')
-        );
-        if (packageTag) {
-          packageTag.style.display = 'none';
-        }
+        items.forEach((item) => wrapper.appendChild(buildCard(item)));
       });
     };
 
-    fetch((window.AITD_API_BASE || '/api') + '/content/placements')
-      .then((response) => (response.ok ? response.json() : Promise.reject(new Error('placements fetch failed'))))
-      .then((payload) => {
-        const incoming = Array.isArray(payload?.items) ? payload.items : [];
-        if (!incoming.length) return;
+    const syncPlacements = () => {
+      const section = document.querySelector('.bestOpportunity');
+      const wrappers = section ? Array.from(section.querySelectorAll('.opportunityWrapper')) : [];
+      if (!wrappers.length || synced) return false;
 
-        const items = incoming.map((item) => ({
-          name: safeText(item?.title, ''),
-          role: safeText(item?.subtitle),
-          company: safeText(item?.meta?.company),
-          specialization: safeText(item?.meta?.specialization),
-          batch: safeText(item?.meta?.batch, ''),
-          imageUrl: typeof item?.imageUrl === 'string' ? item.imageUrl : '',
-        }));
+      synced = true;
+      if (observer) observer.disconnect();
 
-        applyCards(wrappers[0], items);
-        if (wrappers[1]) applyCards(wrappers[1], items);
-      })
-      .catch(() => {
-        // Keep static fallback content when API is not available.
-      });
+      fetch((window.AITD_API_BASE || '/api') + '/content/placements')
+        .then((response) => (response.ok ? response.json() : Promise.reject(new Error('placements fetch failed'))))
+        .then((payload) => {
+          const incoming = Array.isArray(payload?.items) ? payload.items : [];
+          const items = incoming.map((item) => ({
+            name: safeText(item?.title, ''),
+            role: safeText(item?.subtitle),
+            company: safeText(item?.meta?.company, ''),
+            specialization: safeText(item?.meta?.specialization, ''),
+            batch: safeText(item?.meta?.batch, ''),
+            imageUrl: typeof item?.imageUrl === 'string' ? item.imageUrl : '',
+          }));
+
+          applyCards(wrappers, items);
+        })
+        .catch(() => {
+          synced = false;
+        });
+
+      return true;
+    };
+
+    if (!syncPlacements()) {
+      observer = new MutationObserver(() => syncPlacements());
+      observer.observe(document.documentElement, { childList: true, subtree: true });
+      document.addEventListener('DOMContentLoaded', syncPlacements, { once: true });
+      window.addEventListener('load', syncPlacements, { once: true });
+    }
   })();
   </script>`
 
@@ -501,6 +922,16 @@ function rewriteHtml(html, domains, currentDomain) {
       const wrapper = document.getElementById('section__news');
       const container = document.getElementById('latestNewsHome');
       if (!wrapper || !container) return;
+      const scroller = wrapper.querySelector('.eventSlider.latestNews.newsAuto');
+
+      if (scroller && !scroller.dataset.aitdWheelScroll) {
+        scroller.dataset.aitdWheelScroll = 'true';
+        scroller.addEventListener('wheel', (event) => {
+          if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+          event.preventDefault();
+          scroller.scrollLeft += event.deltaY;
+        }, { passive: false });
+      }
 
       const renderMode = (mode) => {
         const selectedItems = mode === 'latest' ? latestNews : events;
@@ -514,12 +945,12 @@ function rewriteHtml(html, domains, currentDomain) {
         const newsSwiper = document.querySelector('.swiper.eventSlider.latestNews.newsAuto')?.swiper;
         if (newsSwiper) {
           const isSmallSet = selectedItems.length <= 2;
-          newsSwiper.params.loop = !isSmallSet;
-          newsSwiper.params.freeMode = isSmallSet ? false : { enabled: true, momentum: false };
-          newsSwiper.params.allowTouchMove = isSmallSet;
-          if (newsSwiper.params.autoplay) {
-            newsSwiper.params.autoplay.delay = isSmallSet ? 3500 : 0;
-          }
+            newsSwiper.params.loop = !isSmallSet;
+            newsSwiper.params.freeMode = isSmallSet ? false : { enabled: true, momentum: false };
+            newsSwiper.params.allowTouchMove = true;
+            if (newsSwiper.params.autoplay) {
+              newsSwiper.params.autoplay.delay = isSmallSet ? 3500 : 0;
+            }
           if (typeof newsSwiper.loopDestroy === 'function') newsSwiper.loopDestroy();
           if (!isSmallSet && typeof newsSwiper.loopCreate === 'function') newsSwiper.loopCreate();
           if (typeof newsSwiper.update === 'function') newsSwiper.update();
@@ -545,7 +976,7 @@ function rewriteHtml(html, domains, currentDomain) {
     const initTestimonials = (items) => {
       const swiperRoot = document.querySelector('.testimonialsSwiper');
       const wrapper = swiperRoot?.querySelector('.swiper-wrapper');
-      if (!swiperRoot || !wrapper) return;
+      if (!swiperRoot || !wrapper) return false;
 
       const html = items.map((item) => {
         const name = escapeHtml(safeText(item?.title, 'Student'));
@@ -562,13 +993,14 @@ function rewriteHtml(html, domains, currentDomain) {
         '</div>';
       }).join('');
 
-      if (!html) return;
+      if (!html) return true;
 
       const existingSwiper = swiperRoot.swiper;
       if (existingSwiper && typeof existingSwiper.destroy === 'function') {
         existingSwiper.destroy(true, true);
       }
       wrapper.innerHTML = html;
+      swiperRoot.style.display = 'block';
 
       if (typeof Swiper !== 'undefined') {
         window.initSwiperSafe('.testimonialsSwiper', {
@@ -576,6 +1008,7 @@ function rewriteHtml(html, domains, currentDomain) {
           spaceBetween: 24,
           loop: true,
           speed: 900,
+          allowTouchMove: true,
           autoplay: {
             delay: 5000,
             disableOnInteraction: false
@@ -590,6 +1023,19 @@ function rewriteHtml(html, domains, currentDomain) {
           }
         });
       }
+
+      return true;
+    };
+
+    const initTestimonialsWhenReady = (items) => {
+      if (!items.length || initTestimonials(items)) return;
+
+      const observer = new MutationObserver(() => {
+        if (initTestimonials(items)) observer.disconnect();
+      });
+      observer.observe(document.documentElement, { childList: true, subtree: true });
+      document.addEventListener('DOMContentLoaded', () => initTestimonials(items), { once: true });
+      window.addEventListener('load', () => initTestimonials(items), { once: true });
     };
 
     Promise.all([
@@ -605,7 +1051,7 @@ function rewriteHtml(html, domains, currentDomain) {
         initNewsTabs(events, latestNews);
       }
       if (testimonials.length) {
-        initTestimonials(testimonials);
+        initTestimonialsWhenReady(testimonials);
       }
     });
   })();
