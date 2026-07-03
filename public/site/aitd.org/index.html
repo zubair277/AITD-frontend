@@ -3342,6 +3342,13 @@ window.initSwiperSafe = function(selector, options) {
                     const eventId = item.id || '';
                     const detailUrl = `/event-details.html?id=${encodeURIComponent(eventId)}`;
 
+                    const rawStatus = String(item.status || 'upcoming').toLowerCase();
+                    const normalizedStatus = rawStatus === 'completed' ? 'completed' : 'upcoming';
+                    const statusText = normalizedStatus === 'completed' ? 'Completed' : 'Upcoming';
+                    const statusStyle = normalizedStatus === 'completed'
+                        ? 'background:#dcfce7;color:#166534;'
+                        : 'background:#fef3c7;color:#92400e;';
+
                     const slideHtml = `
                         <div class="swiper-slide">
                             <a class="eventCard"
@@ -3353,6 +3360,7 @@ window.initSwiperSafe = function(selector, options) {
                                     <div class="eventMetaRow">
                                         ${dateText ? `<span class="eventPill">${String(dateText).replace(/</g, '&lt;')}</span>` : ``}
                                         ${locationText ? `<span class="eventPill eventPillDark">${String(locationText).replace(/</g, '&lt;')}</span>` : ``}
+                                        <span class="eventPill" style="${statusStyle}">${statusText}</span>
                                     </div>
                                     <p class="eventTitle">${safeTitle}</p>
                                     ${descText ? `<p class="eventDesc">${String(descText).replace(/</g, '&lt;')}</p>` : ``}
@@ -3436,6 +3444,7 @@ window.initSwiperSafe = function(selector, options) {
                     newsTitle: item.title,
                     eventDate: item.meta?.date || '',
                     location: item.meta?.location || '',
+                    status: item.meta?.status || item.status || 'upcoming',
                     description: item.description || '',
                     newsBannerCDN: item.imageUrl || '',
                     nextLink: `/site/aitd.org/event-details.html?id=${encodeURIComponent(item.id)}`
