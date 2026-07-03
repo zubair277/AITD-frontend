@@ -469,6 +469,47 @@ window.initSwiperSafe = function(selector, options) {
         .mobMenuItemHeader .togglerDown {
             transition: transform 0.3s ease;
         }
+
+        @media (max-width: 768px) {
+            /* Career Partners Section full bleed */
+            .trustedLogosSection {
+                width: 100vw !important;
+                max-width: 100vw !important;
+                margin-left: calc(50% - 50vw) !important;
+                margin-right: calc(50% - 50vw) !important;
+                left: auto !important;
+                position: relative !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            .trustedLogosMarquee {
+                width: 100vw !important;
+                max-width: 100vw !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            /* Events & News carousels full bleed */
+            #section__news .content-section {
+                width: 100vw !important;
+                max-width: 100vw !important;
+                margin-left: calc(50% - 50vw) !important;
+                margin-right: calc(50% - 50vw) !important;
+                left: auto !important;
+                position: relative !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            #section__news .eventSlider {
+                width: 100vw !important;
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+        }
     </style>
 
 
