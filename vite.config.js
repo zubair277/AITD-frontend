@@ -577,31 +577,11 @@ function rewriteHtml(html, domains, currentDomain) {
     font-size: 13px !important;
   }
 
-  #section__news .eventSlider.latestNews.newsAuto::-webkit-scrollbar,
-  .testimonialsSwiper::-webkit-scrollbar {
-    height: 8px;
-  }
-
-  #section__news .eventSlider.latestNews.newsAuto::-webkit-scrollbar-track,
-  .testimonialsSwiper::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.06);
-    border-radius: 999px;
-  }
-
-  #section__news .eventSlider.latestNews.newsAuto::-webkit-scrollbar-thumb,
-  .testimonialsSwiper::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.28);
-    border-radius: 999px;
-  }
-
   .testimonialsSwiper {
     display: block !important;
     width: 100% !important;
     min-height: 300px;
-    overflow-x: auto !important;
-    overflow-y: visible !important;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: contain;
+    overflow: visible !important;
     padding-top: 12px;
     padding-bottom: 34px;
     margin-top: -12px;
@@ -610,7 +590,6 @@ function rewriteHtml(html, domains, currentDomain) {
   .testimonialsSwiper .swiper-wrapper {
     display: flex !important;
     align-items: stretch;
-    width: max-content !important;
     overflow: visible !important;
   }
 
@@ -669,6 +648,20 @@ function rewriteHtml(html, domains, currentDomain) {
 
   #placements.bestOpportunity .opportunityWrapper::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.26);
+    border-radius: 999px;
+  }
+
+  #section__news .eventSlider.latestNews.newsAuto::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  #section__news .eventSlider.latestNews.newsAuto::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 999px;
+  }
+
+  #section__news .eventSlider.latestNews.newsAuto::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.28);
     border-radius: 999px;
   }
 
