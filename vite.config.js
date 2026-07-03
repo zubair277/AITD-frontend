@@ -1076,7 +1076,8 @@ function rewriteHtml(html, domains, currentDomain) {
         window.initSwiperSafe('.testimonialsSwiper', {
           slidesPerView: 1,
           spaceBetween: 24,
-          loop: true,
+          loop: false,
+          rewind: true,
           speed: 900,
           allowTouchMove: true,
           autoplay: {
