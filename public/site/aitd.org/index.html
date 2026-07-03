@@ -7611,13 +7611,44 @@ window.initSwiperSafe = function(selector, options) {
             const thanks = document.getElementById('contactUsThanks');
             if (!form) return;
 
-            form.addEventListener('submit', function (e) {
+            form.addEventListener('submit', async function (e) {
                 e.preventDefault();
-                if (thanks) thanks.style.display = 'block';
-                form.reset();
-                setTimeout(function () {
-                    if (thanks) thanks.style.display = 'none';
-                }, 6000);
+                const btn = form.querySelector('button[type="submit"]');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = 'Submitting...';
+                btn.disabled = true;
+
+                const formData = new FormData(form);
+                const data = {
+                    fullName: formData.get('fullName'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    message: formData.get('message') || ''
+                };
+
+                try {
+                    const res = await fetch((window.AITD_API_BASE || '/api') + '/contact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data)
+                    });
+                    
+                    if (res.ok) {
+                        if (thanks) thanks.style.display = 'block';
+                        form.reset();
+                        setTimeout(function () {
+                            if (thanks) thanks.style.display = 'none';
+                        }, 6000);
+                    } else {
+                        alert('Something went wrong. Please try again.');
+                    }
+                } catch (err) {
+                    console.error('Contact submit error:', err);
+                    alert('Network error. Please try again later.');
+                } finally {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }
             });
         })();
 
@@ -7651,14 +7682,45 @@ window.initSwiperSafe = function(selector, options) {
                 }
             });
 
-            popupForm.addEventListener('submit', function (e) {
+            popupForm.addEventListener('submit', async function (e) {
                 e.preventDefault();
-                if (popupThanks) popupThanks.style.display = 'block';
-                popupForm.reset();
-                setTimeout(function () {
-                    if (popupThanks) popupThanks.style.display = 'none';
-                    closePopup();
-                }, 6000);
+                const btn = popupForm.querySelector('button[type="submit"]');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = 'Submitting...';
+                btn.disabled = true;
+
+                const formData = new FormData(popupForm);
+                const data = {
+                    fullName: formData.get('fullName'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    message: formData.get('message') || ''
+                };
+
+                try {
+                    const res = await fetch((window.AITD_API_BASE || '/api') + '/contact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data)
+                    });
+                    
+                    if (res.ok) {
+                        if (popupThanks) popupThanks.style.display = 'block';
+                        popupForm.reset();
+                        setTimeout(function () {
+                            if (popupThanks) popupThanks.style.display = 'none';
+                            closePopup();
+                        }, 3000);
+                    } else {
+                        alert('Something went wrong. Please try again.');
+                    }
+                } catch (err) {
+                    console.error('Contact popup submit error:', err);
+                    alert('Network error. Please try again later.');
+                } finally {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }
             });
         })();
 
