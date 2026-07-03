@@ -5516,35 +5516,33 @@ window.initSwiperSafe = function(selector, options) {
 
                     <div class="masterImage mob-visible">
                         <video poster="/assets/images/Frame1618873492.webp"
-                            src="/assets/videos/prathamsir.mp4" autoplay=""
+                            class="lazy-video"
+                            data-autoplay="true"
+                            data-src="/assets/videos/prathamsir.mp4"
                             playsinline="" muted="" loop="" controls=""
                             controlslist="nodownload nofullscreen noremoteplayback"
+                            preload="none"
                             title="Shark Tank India Campus Special Video"
                             style="width:100%;aspect-ratio:16/9;min-height:300px;background:#000;"></video>
 
-
-
                     </div>
-
-
 
                 </div>
 
                 <div class="masterRight">
 
-
                     <div class="masterImage mob-hide">
                         <video poster="/assets/images/Frame1618873492.webp"
-                            src="/assets/videos/prathamsir.mp4" autoplay=""
+                            class="lazy-video"
+                            data-autoplay="true"
+                            data-src="/assets/videos/prathamsir.mp4"
                             playsinline="" muted="" loop="" controls=""
                             controlslist="nodownload nofullscreen noremoteplayback"
+                            preload="none"
                             title="Shark Tank India Campus Special Video"
                             style="width:100%;aspect-ratio:16/9;min-height:300px;background:#000;"></video>
 
-
-
                     </div>
-
 
                 </div>
             </div>
@@ -6949,10 +6947,42 @@ window.initSwiperSafe = function(selector, options) {
                 </div>
                 <div class="beatingRight" style="flex: 0 0 62%; max-width: 62%;">
                     <video
+                            id="life12Video"
+                            class="lazy-video"
+                            data-autoplay="true"
                             style="width:100%; height:100%; object-fit:contain; background:#000; display:block;"
-                            autoplay muted loop playsinline>
-                            <source src="/images/Life%20at%20AITD/Life12.mp4" type="video/mp4">
+                            muted loop playsinline preload="none">
+                            <source data-src="/images/Life%20at%20AITD/Life12.mp4" type="video/mp4">
                         </video>
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function() {
+                                var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+                                if ("IntersectionObserver" in window) {
+                                    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+                                        entries.forEach(function(video) {
+                                            if (video.isIntersecting) {
+                                                for (var source in video.target.children) {
+                                                    var videoSource = video.target.children[source];
+                                                    if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                                                        videoSource.src = videoSource.dataset.src;
+                                                    }
+                                                }
+                                                video.target.load();
+                                                video.target.classList.remove("lazy-video");
+                                                if(video.target.hasAttribute("data-autoplay")) {
+                                                    video.target.play();
+                                                }
+                                                lazyVideoObserver.unobserve(video.target);
+                                            }
+                                        });
+                                    });
+
+                                    lazyVideos.forEach(function(lazyVideo) {
+                                        lazyVideoObserver.observe(lazyVideo);
+                                    });
+                                }
+                            });
+                        </script>
                 </div>
             </div>
 
