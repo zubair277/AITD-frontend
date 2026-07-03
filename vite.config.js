@@ -1074,10 +1074,9 @@ function rewriteHtml(html, domains, currentDomain) {
 
       if (typeof Swiper !== 'undefined') {
         window.initSwiperSafe('.testimonialsSwiper', {
-          slidesPerView: 1,
+          slidesPerView: 'auto',
           spaceBetween: 24,
-          loop: false,
-          rewind: true,
+          loop: true,
           speed: 900,
           allowTouchMove: true,
           autoplay: {
@@ -1087,10 +1086,6 @@ function rewriteHtml(html, domains, currentDomain) {
           pagination: {
             el: '.testimonial-pagination',
             clickable: true
-          },
-          breakpoints: {
-            768: { slidesPerView: 1.2 },
-            1024: { slidesPerView: 1.6 }
           }
         });
       }
