@@ -5516,12 +5516,9 @@ window.initSwiperSafe = function(selector, options) {
 
                     <div class="masterImage mob-visible">
                         <video poster="/assets/images/Frame1618873492.webp"
-                            class="lazy-video"
-                            data-autoplay="true"
-                            data-src="/assets/videos/prathamsir.mp4"
+                            src="/assets/videos/prathamsir.mp4" autoplay=""
                             playsinline="" muted="" loop="" controls=""
                             controlslist="nodownload nofullscreen noremoteplayback"
-                            preload="none"
                             title="Shark Tank India Campus Special Video"
                             style="width:100%;aspect-ratio:16/9;min-height:300px;background:#000;"></video>
 
@@ -5533,12 +5530,9 @@ window.initSwiperSafe = function(selector, options) {
 
                     <div class="masterImage mob-hide">
                         <video poster="/assets/images/Frame1618873492.webp"
-                            class="lazy-video"
-                            data-autoplay="true"
-                            data-src="/assets/videos/prathamsir.mp4"
+                            src="/assets/videos/prathamsir.mp4" autoplay=""
                             playsinline="" muted="" loop="" controls=""
                             controlslist="nodownload nofullscreen noremoteplayback"
-                            preload="none"
                             title="Shark Tank India Campus Special Video"
                             style="width:100%;aspect-ratio:16/9;min-height:300px;background:#000;"></video>
 
@@ -6947,45 +6941,10 @@ window.initSwiperSafe = function(selector, options) {
                 </div>
                 <div class="beatingRight" style="flex: 0 0 62%; max-width: 62%;">
                     <video
-                            id="life12Video"
-                            class="lazy-video"
-                            data-autoplay="true"
                             style="width:100%; height:100%; object-fit:contain; background:#000; display:block;"
-                            muted loop playsinline preload="none">
-                            <source data-src="/images/Life%20at%20AITD/Life12.mp4" type="video/mp4">
+                            autoplay muted loop playsinline>
+                            <source src="/images/Life%20at%20AITD/Life12.mp4" type="video/mp4">
                         </video>
-                        <script>
-                            document.addEventListener("DOMContentLoaded", function() {
-                                var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
-                                if ("IntersectionObserver" in window) {
-                                    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
-                                        entries.forEach(function(video) {
-                                            if (video.isIntersecting) {
-                                                if (video.target.hasAttribute("data-src")) {
-                                                    video.target.src = video.target.dataset.src;
-                                                }
-                                                var sources = video.target.querySelectorAll("source");
-                                                for (var i = 0; i < sources.length; i++) {
-                                                    if (sources[i].hasAttribute("data-src")) {
-                                                        sources[i].src = sources[i].dataset.src;
-                                                    }
-                                                }
-                                                video.target.load();
-                                                video.target.classList.remove("lazy-video");
-                                                if(video.target.hasAttribute("data-autoplay")) {
-                                                    video.target.play().catch(function(e) { console.error("Autoplay failed", e); });
-                                                }
-                                                lazyVideoObserver.unobserve(video.target);
-                                            }
-                                        });
-                                    });
-
-                                    lazyVideos.forEach(function(lazyVideo) {
-                                        lazyVideoObserver.observe(lazyVideo);
-                                    });
-                                }
-                            });
-                        </script>
                 </div>
             </div>
 
