@@ -6961,16 +6961,19 @@ window.initSwiperSafe = function(selector, options) {
                                     var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
                                         entries.forEach(function(video) {
                                             if (video.isIntersecting) {
-                                                for (var source in video.target.children) {
-                                                    var videoSource = video.target.children[source];
-                                                    if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-                                                        videoSource.src = videoSource.dataset.src;
+                                                if (video.target.hasAttribute("data-src")) {
+                                                    video.target.src = video.target.dataset.src;
+                                                }
+                                                var sources = video.target.querySelectorAll("source");
+                                                for (var i = 0; i < sources.length; i++) {
+                                                    if (sources[i].hasAttribute("data-src")) {
+                                                        sources[i].src = sources[i].dataset.src;
                                                     }
                                                 }
                                                 video.target.load();
                                                 video.target.classList.remove("lazy-video");
                                                 if(video.target.hasAttribute("data-autoplay")) {
-                                                    video.target.play();
+                                                    video.target.play().catch(function(e) { console.error("Autoplay failed", e); });
                                                 }
                                                 lazyVideoObserver.unobserve(video.target);
                                             }
